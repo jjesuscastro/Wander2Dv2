@@ -5,13 +5,14 @@ using UnityEngine;
 public class FollowCamera : MonoBehaviour
 {
 
-    [SerializeField]
+    // [SerializeField]
     private Transform cameraToFollow;
-    [SerializeField]
-    private BoxCollider2D collider2D;
+    // [SerializeField]
+    // private BoxCollider2D collider2D;
 
     public bool followX;
     public bool followY;
+    public float yOffset = 0;
 
     public float stopX;
 
@@ -39,15 +40,15 @@ public class FollowCamera : MonoBehaviour
 
         if(followY)
         {
-            newPos.y = cameraToFollow.position.y;
+            newPos.y = cameraToFollow.position.y + yOffset;
         }
 
         transform.position = newPos;
 
-        leftEdge = collider2D.bounds.center.x - collider2D.size.x/2;
-        rightEdge = collider2D.bounds.center.x + collider2D.size.x/2;
+        // leftEdge = collider2D.bounds.center.x - collider2D.size.x/2;
+        // rightEdge = collider2D.bounds.center.x + collider2D.size.x/2;
 
-        if(Input.GetKeyDown(KeyCode.Q))
-            Debug.Log(transform.name + " right edge = " + rightEdge);
+        // if(Input.GetKeyDown(KeyCode.Q))
+        //     Debug.Log(transform.name + " right edge = " + rightEdge);
     }
 }

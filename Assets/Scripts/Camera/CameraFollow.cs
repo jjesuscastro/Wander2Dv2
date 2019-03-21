@@ -64,6 +64,11 @@ public class CameraFollow : MonoBehaviour {
 		Gizmos.DrawCube (focusArea.centre, focusAreaSize);
 	}
 
+	public void switchTarget(PlayerMovement newTarget)
+	{
+		target = newTarget;
+	}
+
     public void setMinX(float newMinX)
     {
         minX = newMinX;
