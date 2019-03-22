@@ -10,7 +10,7 @@ public class EnvironmentFade : MonoBehaviour {
 	[SerializeField]
 	GameObject objectToFade;
 	SpriteRenderer[] objectToFadeRenderer;
-    bool fadeobjectToFade;
+    bool fadeobjectToFade = false;
 
 	// Use this for initialization
 	void Start () {
@@ -28,9 +28,16 @@ public class EnvironmentFade : MonoBehaviour {
             {
                 tmpColor = objectToFadeRenderer[i].color;
                 if(fadeIn)
-                    tmpColor.a += fadeRate;
+                    if(tmpColor.a < 1)
+                        tmpColor.a += fadeRate;
+                    else
+                        fadeobjectToFade = false;
                 else
-                    tmpColor.a -= fadeRate;
+                    if(tmpColor.a > 0)
+                        tmpColor.a -= fadeRate;
+                    else
+                        fadeobjectToFade = false;
+                        
                 objectToFadeRenderer[i].color = tmpColor;
             }
         }
