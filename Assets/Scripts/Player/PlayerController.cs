@@ -7,12 +7,37 @@ namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
+        public float fadeRate = 0.25f;
         public Interactable focus;
+        bool isRespawning = false;
+        Vector3 respawnPoint;
+        Color color;
+
+        void Start()
+        {
+            respawnPoint = transform.position;
+            color = gameObject.GetComponent<SpriteRenderer>().color;
+        }
+
+        void Update()
+        {
+            if(isRespawning)
+            {
+                if(color.a < 1)
+                {
+                    color.a += fadeRate;
+                    gameObject.GetComponent<SpriteRenderer>().color = color;
+                } else {
+                    isRespawning = false;
+                }
+            }
+        }
 
         public void respawn() {
-            Color transparent = gameObject.GetComponent<SpriteRenderer>().color;
-            transparent.a = 0;
-            gameObject.GetComponent<SpriteRenderer>().color = transparent;
+            color.a = 0;
+            gameObject.GetComponent<SpriteRenderer>().color = color;
+            isRespawning = true;
+            transform.position = respawnPoint;
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -21,6 +46,16 @@ namespace Player
             if(interactable != null)
             {
                 SetFocus(interactable);
+            }
+
+            if(other.gameObject.CompareTag("Checkpoint"))
+            {
+                respawnPoint = other.transform.position;
+            }
+
+            if(other.gameObject.CompareTag("FallDetector"))
+            {
+                respawn();
             }
         }
 
