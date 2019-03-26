@@ -2,8 +2,13 @@
 -target:library
 -nowarn:0169
 -langversion:4
--out:Temp/Unity.Analytics.DataPrivacy.dll
+-out:Temp/Assembly-CSharp.dll
 -nostdlib
+-r:Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
+-r:Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
+-r:Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll
+-r:Library/ScriptAssemblies/Unity.TextMeshPro.dll
+-r:Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -67,26 +72,15 @@
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEditor.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/Unity.Locator.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll"
--r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll"
--r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
--r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll"
--r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll"
--r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll"
--r:C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll
+-r:C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll
 -r:C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll
 -r:C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll
 -r:C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll
--r:C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll
+-r:C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.purchasing@2.0.3/UnityEngine.Purchasing.dll
 -r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\mscorlib.dll"
 -r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.dll"
 -r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Core.dll"
@@ -195,6 +189,28 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.analytics@3.2.2/DataPrivacy/AssemblyInfo.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.analytics@3.2.2/DataPrivacy/DataPrivacy.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.analytics@3.2.2/DataPrivacy/DataPrivacyButton.cs
+Assets/Scripts/Camera/CameraFollow.cs
+Assets/Scripts/Camera/FollowCamera.cs
+Assets/Scripts/DebugSize.cs
+Assets/Scripts/Environment/BackgroundScroll.cs
+Assets/Scripts/Environment/EnvironmentFade.cs
+Assets/Scripts/Environment/FadeOutIn.cs
+Assets/Scripts/GameManager/Inventory.cs
+Assets/Scripts/GameManager/Journal.cs
+Assets/Scripts/NPC/NPCFollow.cs
+Assets/Scripts/NPC/NPCInteract.cs
+Assets/Scripts/Objects/Entry.cs
+Assets/Scripts/Objects/EntryPickup.cs
+Assets/Scripts/Objects/Interactable.cs
+Assets/Scripts/Objects/Item.cs
+Assets/Scripts/Objects/ItemPickup.cs
+Assets/Scripts/Player/CharacterController2D.cs
+Assets/Scripts/Player/PlayerController.cs
+Assets/Scripts/Player/PlayerMentalHealth.cs
+Assets/Scripts/Player/PlayerMovement.cs
+Assets/Scripts/Player/PlayerSwitch.cs
+Assets/Scripts/UI/InventorySlot.cs
+Assets/Scripts/UI/InventoryUI.cs
+Assets/Scripts/UI/JournalSlot.cs
+Assets/Scripts/UI/JournalUI.cs
+Assets/Scripts/UI/MentalHealth.cs
