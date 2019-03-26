@@ -94,7 +94,7 @@ namespace Player
                 {
                     //We only want to use this for the slopeChecking not the movement so use this only for slope checking
                     float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
-                    Debug.Log(hit.collider.name + " " + slopeAngle);
+                    // Debug.Log(hit.collider.name + " " + slopeAngle);
                     if(i == 0 && slopeAngle <= maxClimbSlope)
                     {
                         ClimbSlope(ref velocity, slopeAngle);

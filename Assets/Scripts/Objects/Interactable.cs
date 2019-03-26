@@ -13,9 +13,10 @@ namespace Object
         bool hasInteracted = false;
         Transform player;
 
-        public virtual void Interact()
+        public virtual bool Interact()
         {
             Debug.Log("Interacted with " + gameObject.name);
+            return false;
         }
 
         // Update is called once per frame
@@ -28,8 +29,7 @@ namespace Object
                 float distance = Vector3.Distance(player.position, transform.position);
                 if(distance <= radius)
                 {
-                    Interact();
-                    hasInteracted = true;
+                    hasInteracted = Interact();
                 }
             }
         }

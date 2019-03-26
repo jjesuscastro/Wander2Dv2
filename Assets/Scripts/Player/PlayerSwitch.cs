@@ -1,50 +1,57 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Player;
 
-public class PlayerSwitch : MonoBehaviour
+namespace Player
 {
-    [SerializeField]
-    private PlayerMovement mc;
-
-    [SerializeField]
-    private PlayerMovement npc;
-
-    public bool obtainedNPC = false;    
-
-    CameraFollow mainCamera;
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerSwitch : MonoBehaviour
     {
-        mainCamera = Camera.main.GetComponent<CameraFollow>();
-        npc.gameObject.SetActive(false);
-    }
+        [SerializeField]
+        private PlayerMovement mc;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetButtonDown("Switch"))
+        [SerializeField]
+        private PlayerMovement npc;
+
+        public bool obtainedNPC = false;    
+
+        CameraFollow mainCamera;
+        // Start is called before the first frame update
+        void Start()
         {
-            if(obtainedNPC)
+            mainCamera = Camera.main.GetComponent<CameraFollow>();
+            npc.gameObject.SetActive(false);
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (Input.GetButtonDown("Switch"))
             {
-                if(mc.isActiveAndEnabled)
+                if(obtainedNPC)
                 {
-                    mc.enabled = false;
-                    npc.enabled = true;
-                    mainCamera.switchTarget(npc);
+                    if(mc.isActiveAndEnabled)
+                    {
+                        mc.enabled = false;
+                        npc.enabled = true;
+                        mainCamera.switchTarget(npc);
+                    }
+                    else
+                    {
+                        mc.enabled = true;
+                        npc.enabled = false;
+                        mainCamera.switchTarget(mc);
+                    }
                 }
                 else
                 {
-                    mc.enabled = true;
-                    npc.enabled = false;
-                    mainCamera.switchTarget(mc);
+                    Debug.Log("You have not obtained the NPC yet!");
                 }
             }
-            else
-            {
-                Debug.Log("You have not obtained the NPC yet!");
-            }
+        }
+
+        public void ObtainedNPC()
+        {
+            obtainedNPC = true;
         }
     }
 }

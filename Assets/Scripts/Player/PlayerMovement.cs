@@ -20,7 +20,7 @@ namespace Player
         Animator animator;
 
         // Use this for initialization
-        void Start()
+        void Awake()
         {
             animator = GetComponent<Animator>();
         }

@@ -9,9 +9,10 @@ namespace Object
     {
         public Entry entry;
         
-        public override void Interact()
+        public override bool Interact()
         {
             Pickup();
+            return true;
         }
 
         void Pickup()
