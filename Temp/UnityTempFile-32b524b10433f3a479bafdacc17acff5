@@ -2,7 +2,7 @@
 -target:library
 -nowarn:0169
 -langversion:4
--out:Temp/Unity.PackageManagerUI.Editor.dll
+-out:Temp/Unity.Analytics.DataPrivacy.dll
 -nostdlib
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
@@ -34,7 +34,6 @@
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ProfilerModule.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
--r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.StreamingModule.dll"
@@ -73,30 +72,29 @@
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll"
--r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll"
--r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
 -r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll"
--r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll"
 -r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll"
+-r:C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll
 -r:C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll
 -r:C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll
 -r:C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll
 -r:C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll
+-r:C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.purchasing@2.0.3/UnityEngine.Purchasing.dll
 -r:C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\mscorlib.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Core.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Runtime.Serialization.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Xml.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Xml.Linq.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\UnityScript.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\UnityScript.Lang.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\Boo.Lang.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\mscorlib.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Core.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Runtime.Serialization.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Xml.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Xml.Linq.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.Lang.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\Boo.Lang.dll"
 -define:UNITY_5_3_OR_NEWER
 -define:UNITY_5_4_OR_NEWER
 -define:UNITY_5_5_OR_NEWER
@@ -184,7 +182,7 @@
 -define:ENABLE_AR
 -define:ENABLE_WEBSOCKET_HOST
 -define:ENABLE_MONO
--define:NET_2_0
+-define:NET_2_0_SUBSET
 -define:NET_LEGACY
 -define:ENABLE_PROFILER
 -define:DEBUG
@@ -196,55 +194,6 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/AssemblyInfo.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/External/SemVersion.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/External/SemVersionExtension.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Common/ApplicationUtil.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Common/OperationSignal.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Common/Resources.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Common/ThreadedDelay.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Interfaces/IAddOperation.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Interfaces/IBaseOperation.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Interfaces/IListOperation.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Interfaces/IOperationFactory.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Interfaces/IRemoveOperation.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Interfaces/ISearchOperation.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/OperationFactory.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Packages/Package.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Packages/PackageAssetPostprocessor.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Packages/PackageCollection.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Packages/PackageError.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Packages/PackageFilter.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Packages/PackageGroupOrigins.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Packages/PackageInfo.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Packages/PackageInfoListExtensions.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Packages/PackageJsonHelper.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Packages/PackageListExtensions.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Packages/PackageOrigin.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Packages/PackageSearchFilter.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Packages/PackageState.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Packages/PackageTag.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Upm/UpmAddOperation.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Upm/UpmBaseOperation.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Upm/UpmListOperation.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Upm/UpmOperationFactory.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Upm/UpmRemoveOperation.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/Services/Upm/UpmSearchOperation.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/Common/Alert.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/Common/LoadingSpinner.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/Common/PopupField.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/Common/UIUtils.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/Common/VersionItem.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/Interfaces/IPackageManagerExtension.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/PackageAddFromUrlField.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/PackageDetails.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/PackageFiltering.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/PackageGroup.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/PackageItem.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/PackageList.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/PackageManagerExtensions.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/PackageManagerPrefs.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/PackageManagerToolbar.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/PackageManagerWindow.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/PackageSearchToolbar.cs
-C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.package-manager-ui@2.0.3/Editor/Sources/UI/PackageStatusBar.cs
+C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.analytics@3.2.2/DataPrivacy/AssemblyInfo.cs
+C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.analytics@3.2.2/DataPrivacy/DataPrivacy.cs
+C:/xampp/htdocs/Wander2Dv2/Library/PackageCache/com.unity.analytics@3.2.2/DataPrivacy/DataPrivacyButton.cs
