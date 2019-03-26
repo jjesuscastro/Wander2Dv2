@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using GameManager;
 using Player;
 
@@ -8,6 +9,7 @@ namespace Object
 {
     public class NPCInteract : Interactable
     {
+        public UnityEvent onInteract;
         public GameObject NPC;
         [SerializeField]
         private PlayerSwitch playerSwitch;
@@ -17,6 +19,10 @@ namespace Object
             if(Input.GetButtonDown("Interact"))
             {
                 Talk();
+
+                if(onInteract != null)
+                    onInteract.Invoke();
+
                 return true;
             }
 
