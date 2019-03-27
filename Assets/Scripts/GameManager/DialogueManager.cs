@@ -50,7 +50,8 @@ namespace GameManager
                 sentences.Enqueue(sentence);
             }
 
-            animator.SetBool("isOpen", true);
+            animator.SetBool("IsOpen", true);
+            Debug.Log("start " + animator.GetInteger("IsOpen"));
             DisplayNextSentence();
         }
 
@@ -71,7 +72,8 @@ namespace GameManager
 
         void EndDialogue()
         {
-            animator.SetBool("isOpen", false);
+            Debug.Log("end " + animator.GetInteger("IsOpen"));
+            animator.SetBool("IsOpen", false);
         }
     }
 }
