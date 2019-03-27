@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace GameManager
 {
@@ -13,8 +14,8 @@ namespace GameManager
         [SerializeField]
         private Animator animator;
 
-        public Text nameText;
-        public Text sentenceText;
+        public TextMeshProUGUI nameText;
+        public TextMeshProUGUI sentenceText;
 
         #region Singleton
         public static DialogueManager instance;
