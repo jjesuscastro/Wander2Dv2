@@ -5,13 +5,21 @@ using Player;
 
 public class EnvironmentHealthEffect : MonoBehaviour
 {
+    [Header("Delay of the effect in milliseconds")]
+    public int delay;
     public float effect;
+    float timer = 0;
     
     void OnTriggerStay2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
-            PlayerMentalHealth.instance.changeHealth(effect);
+            timer += Time.deltaTime * 100;
+            if(timer >= delay)
+            {
+                PlayerMentalHealth.instance.changeHealth(effect);
+                timer = 0;
+            }
         }
     }
 }
