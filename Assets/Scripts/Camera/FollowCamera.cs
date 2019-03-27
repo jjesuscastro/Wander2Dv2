@@ -26,7 +26,7 @@ public class FollowCamera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 newPos = transform.position;
 
@@ -43,7 +43,7 @@ public class FollowCamera : MonoBehaviour
             newPos.y = cameraToFollow.position.y + yOffset;
         }
 
-        transform.position = newPos;
+        transform.position = Vector3.Lerp(transform.position, newPos, Time.deltaTime * 10);
 
         // leftEdge = collider2D.bounds.center.x - collider2D.size.x/2;
         // rightEdge = collider2D.bounds.center.x + collider2D.size.x/2;
