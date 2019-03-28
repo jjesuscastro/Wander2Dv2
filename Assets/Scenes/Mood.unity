@@ -2018,7 +2018,7 @@ MonoBehaviour:
   maxClimbSlope: 80
   horizontalRayCount: 4
   verticalRayCount: 4
-  m_JumpForce: 950
+  m_JumpForce: 600
   m_CrouchSpeed: 0.7
   m_MovementSmoothing: 0.02
   m_AirControl: 1
@@ -7652,9 +7652,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 139463734}
   verticalOffset: 0
-  lookAheadDstX: 5
-  lookSmoothTimeX: 0.5
-  verticalSmoothTime: 0.5
+  lookAheadDstX: 3
+  lookSmoothTimeX: 0.1
+  verticalSmoothTime: 0.1
   maxX: 1950
   minX: -3.9
   focusAreaSize: {x: 7, y: 3}
@@ -12117,7 +12117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   names:
-  - MC
+  - Ziv
   sentences:
   - I can't cross the lake...
 --- !u!114 &732622968
