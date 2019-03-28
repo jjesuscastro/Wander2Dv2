@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Branch
   m_EditorClassIdentifier: 
   name: branch
-  description: A tree branch I found.
+  description: A tree branch I found. I might be able to use it for something
   icon: {fileID: 21300002, guid: 8b42e876771534142a8e443a49fceede, type: 3}
