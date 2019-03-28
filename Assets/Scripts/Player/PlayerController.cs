@@ -55,6 +55,7 @@ namespace Player
 
             if(other.gameObject.CompareTag("FallDetector"))
             {
+                PlayerMentalHealth.instance.changeHealth(-0.05f);
                 respawn();
             }
         }
