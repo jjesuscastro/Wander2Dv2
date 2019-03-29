@@ -50,7 +50,7 @@ namespace UI
                 itemPreview.sprite = item.icon;
                 itemPreview.enabled = true;
                 itemDesc.text = item.description;
-                Debug.Log("Viewing " + item.name);
+                // Debug.Log("Viewing " + item.name);
             }
         }
 

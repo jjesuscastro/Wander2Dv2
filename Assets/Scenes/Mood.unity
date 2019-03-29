@@ -7656,7 +7656,7 @@ MonoBehaviour:
   lookSmoothTimeX: 0.1
   verticalSmoothTime: 0.1
   maxX: 1950
-  minX: -3.9
+  minX: -10
   focusAreaSize: {x: 7, y: 3}
 --- !u!20 &519420031
 Camera:

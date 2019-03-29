@@ -37,7 +37,7 @@ namespace UI{
                 right.gameObject.SetActive(true);
             } 
             
-            if(currentPage > journal.entries.Count)
+            if(currentPage > journal.entries.Count - 1)
             {
                 currentPage = journal.entries.Count - 1;
                 center.gameObject.SetActive(true);
@@ -69,10 +69,19 @@ namespace UI{
 
         void SetImages()
         {
+            if(currentPage <= 0)
+                currentPage = 0;
+
+            if(currentPage > journal.entries.Count - 1)
+                currentPage = journal.entries.Count -1;
+
             if(currentPage == journal.entries.Count - 1)
                 center.SetImage(journal.entries[currentPage].icon);
+
             right.SetImage(journal.entries[currentPage].icon);
-            left.SetImage(journal.entries[currentPage-1].icon);
+            
+            if(currentPage > 0)
+                left.SetImage(journal.entries[currentPage-1].icon);
         }
 
         // public void UpdateUI()

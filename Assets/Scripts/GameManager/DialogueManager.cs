@@ -38,6 +38,8 @@ namespace GameManager
     
         public void StartDialogue(Dialogue dialogue)
         {
+            Time.timeScale = 0.0001f;
+            animator.speed = 10000f;
             names.Clear();
             sentences.Clear();
 
@@ -52,7 +54,7 @@ namespace GameManager
             }
 
             animator.SetBool("IsOpen", true);
-            Debug.Log("start " + animator.GetInteger("IsOpen"));
+            // Debug.Log("start " + animator.GetInteger("IsOpen"));
             DisplayNextSentence();
         }
 
@@ -73,7 +75,9 @@ namespace GameManager
 
         void EndDialogue()
         {
-            Debug.Log("end " + animator.GetInteger("IsOpen"));
+            // Debug.Log("end " + animator.GetInteger("IsOpen"));
+            Time.timeScale = 1f;
+            animator.speed = 1;
             animator.SetBool("IsOpen", false);
         }
     }

@@ -14,7 +14,7 @@ namespace GameManager
         public void TriggerDialogue()
         {
             DialogueManager.instance.StartDialogue(this);
-            Debug.Log(DialogueManager.instance.name);
+            // Debug.Log(DialogueManager.instance.name);
         }
     }
 }
