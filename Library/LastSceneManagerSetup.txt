@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Mood.unity
+- path: Assets/Scenes/Anxiety.unity
   isLoaded: 1
   isActive: 1
