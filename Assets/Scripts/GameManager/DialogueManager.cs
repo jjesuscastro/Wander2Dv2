@@ -19,6 +19,7 @@ namespace GameManager
 
         #region Singleton
         public static DialogueManager instance;
+        bool dialogueOpen = false;
 
         void Awake()
         {
@@ -35,9 +36,16 @@ namespace GameManager
             names = new Queue<string>();
             sentences = new Queue<string>();
         }
+
+        void Update()
+        {
+            if(dialogueOpen && Input.GetButtonDown("NextDialogue"))
+                DisplayNextSentence();
+        }
     
         public void StartDialogue(Dialogue dialogue)
         {
+            dialogueOpen = true;
             Time.timeScale = 0.0001f;
             animator.speed = 10000f;
             names.Clear();
@@ -79,6 +87,7 @@ namespace GameManager
             Time.timeScale = 1f;
             animator.speed = 1;
             animator.SetBool("IsOpen", false);
+            dialogueOpen = false;
         }
     }
 }
