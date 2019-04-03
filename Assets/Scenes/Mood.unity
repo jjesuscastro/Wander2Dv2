@@ -27454,6 +27454,8 @@ MonoBehaviour:
   - {fileID: 949055388564303397, guid: 898d1c4e03d7b68459671f8b992a7443, type: 3}
   - {fileID: 9001765273682725653, guid: fd522249b7e4b4e4ca87bff731a6fc98, type: 3}
   - {fileID: 5589571113270552001, guid: 13f1883a7930b4e42859d52361a895d9, type: 3}
+  newObj: {fileID: 0}
+  isEnabled: 0
   minX: -20
   maxX: 10
   fixedY: 0
