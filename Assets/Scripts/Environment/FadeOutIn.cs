@@ -1,11 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Player;
 
 public class FadeOutIn : MonoBehaviour
 {
     public float fadeRate;
     public int length;
+    public bool movePlayer;
+    public Transform newPosition;
+    [SerializeField]
+    private GameObject mainCharacter;
+    [SerializeField]
+    private GameObject nonPlayableCharacter;
 
 	[SerializeField]
 	GameObject cover;
@@ -32,6 +39,16 @@ public class FadeOutIn : MonoBehaviour
 
         if(timer % 60 >= length)
         {
+            if(movePlayer)
+            {
+                if(mainCharacter != null)
+                    mainCharacter.transform.position = newPosition.position;
+
+                if(nonPlayableCharacter != null)
+                    nonPlayableCharacter.transform.position = newPosition.position;
+                
+                movePlayer = false;
+            }
             fadecover = true;
         }
 

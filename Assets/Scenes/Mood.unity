@@ -14466,6 +14466,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeRate: 0.025
   length: 1
+  movePlayer: 0
+  newPosition: {fileID: 0}
+  mainCharacter: {fileID: 0}
+  nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
 --- !u!114 &835261561
 MonoBehaviour:
