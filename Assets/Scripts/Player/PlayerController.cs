@@ -33,6 +33,13 @@ namespace Player
             }
         }
 
+        public void FadeIn()
+        {
+            color.a = 0;
+            gameObject.GetComponent<SpriteRenderer>().color = color;
+            isRespawning = true;
+        }
+
         public void respawn() {
             color.a = 0;
             gameObject.GetComponent<SpriteRenderer>().color = color;

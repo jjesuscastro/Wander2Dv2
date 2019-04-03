@@ -23,6 +23,7 @@ namespace Player
         [SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
         [SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
         [SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
+        [SerializeField] private Collider2D m_GroundCollider;                       // A collider that collides with the ground
 
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
         private bool m_Grounded;            // Whether or not the player is grounded.
@@ -30,6 +31,7 @@ namespace Player
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
         private Vector3 m_Velocity = Vector3.zero;
+        private bool isSimulated = true;
 
         [Header("Events")]
         [Space]
@@ -45,6 +47,12 @@ namespace Player
         private void Start()
         {
             CalculateRaySpacing();
+        }
+
+        void Update()
+        {
+            if(!isSimulated)
+                DisableColliders();
         }
 
         private void Awake()
@@ -190,14 +198,14 @@ namespace Player
                     move *= m_CrouchSpeed;
 
                     // Disable one of the colliders when crouching
-                    if (m_CrouchDisableCollider != null)
-                        m_CrouchDisableCollider.enabled = false;
+                    // if (m_CrouchDisableCollider != null)
+                    //     m_CrouchDisableCollider.enabled = false;
                 }
                 else
                 {
                     // Enable the collider when not crouching
-                    if (m_CrouchDisableCollider != null)
-                        m_CrouchDisableCollider.enabled = true;
+                    // if (m_CrouchDisableCollider != null)
+                    //     m_CrouchDisableCollider.enabled = true;
 
                     if (m_wasCrouching)
                     {
@@ -238,6 +246,26 @@ namespace Player
             }
         }
 
+        public bool IsGrounded(){
+            return m_Grounded;
+        }
+
+        public void QueueDisableColliders()
+        {
+            isSimulated = false;
+        }
+
+        public void DisableColliders()
+        {
+            if(m_Grounded)
+                m_Rigidbody2D.simulated = false;
+        }
+
+        public void EnableColliders()
+        {
+            isSimulated = true;
+            m_Rigidbody2D.simulated = true;
+        }
 
         private void Flip()
         {

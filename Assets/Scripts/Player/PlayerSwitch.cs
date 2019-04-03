@@ -13,6 +13,7 @@ namespace Player
         private PlayerMovement npc;
 
         public bool obtainedNPC = false;
+        public float maxDistance;
 
         CameraFollow mainCamera;
         PlayerMentalHealth playerMentalHealth;
@@ -35,6 +36,9 @@ namespace Player
                     {
                         mc.enabled = false;
                         npc.enabled = true;
+                        mc.GetComponent<PlayerMovement>().StopAnimation();
+                        mc.GetComponent<CharacterController2D>().QueueDisableColliders();
+                        npc.GetComponent<CharacterController2D>().EnableColliders();
                         playerMentalHealth.SwitchTarget(npc.gameObject);
                         mainCamera.switchTarget(npc);
                     }
@@ -42,6 +46,9 @@ namespace Player
                     {
                         mc.enabled = true;
                         npc.enabled = false;
+                        npc.GetComponent<PlayerMovement>().StopAnimation();
+                        npc.GetComponent<CharacterController2D>().QueueDisableColliders();
+                        mc.GetComponent<CharacterController2D>().EnableColliders();
                         playerMentalHealth.SwitchTarget(mc.gameObject);
                         mainCamera.switchTarget(mc);
                     }
@@ -49,6 +56,37 @@ namespace Player
                 else
                 {
                     Debug.Log("You have not obtained the NPC yet!");
+                }
+            }
+
+            CheckDistance();
+        }
+
+        void CheckDistance()
+        {
+            Transform mcTransform = mc.GetComponent<Transform>();
+            Transform npcTransform = npc.GetComponent<Transform>();
+
+            if(obtainedNPC)
+            {
+                if(Vector3.Distance(mcTransform.position, npcTransform.position) > maxDistance)
+                {
+                    if(mc.isActiveAndEnabled)
+                    {
+                        if(mc.GetComponent<CharacterController2D>().IsGrounded())
+                        {
+                            npcTransform.position = mcTransform.position;
+                            npc.GetComponent<PlayerController>().FadeIn();
+                        }
+                    }
+                    else
+                    {
+                        if(npc.GetComponent<CharacterController2D>().IsGrounded())
+                        {
+                            mcTransform.position = npcTransform.position;
+                            mc.GetComponent<PlayerController>().FadeIn();
+                        }
+                    }
                 }
             }
         }

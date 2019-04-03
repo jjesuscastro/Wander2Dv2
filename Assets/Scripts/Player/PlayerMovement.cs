@@ -66,5 +66,10 @@ namespace Player
 
             jump = false;
         }
+
+        public void StopAnimation()
+        {
+            animator.SetBool("Walk", false);
+        }
     }
 }
