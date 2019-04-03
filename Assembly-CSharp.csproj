@@ -69,12 +69,15 @@
      <Compile Include="Assets\Scripts\NPC\NPCFollow.cs" />
      <Compile Include="Assets\Scripts\NPC\NPCInteract.cs" />
      <Compile Include="Assets\Scripts\Objects\DialogueTrigger.cs" />
+     <Compile Include="Assets\Scripts\Objects\DoorFade.cs" />
      <Compile Include="Assets\Scripts\Objects\Entry.cs" />
      <Compile Include="Assets\Scripts\Objects\EntryPickup.cs" />
      <Compile Include="Assets\Scripts\Objects\Interactable.cs" />
      <Compile Include="Assets\Scripts\Objects\Item.cs" />
      <Compile Include="Assets\Scripts\Objects\ItemPickup.cs" />
      <Compile Include="Assets\Scripts\Player\CharacterController2D.cs" />
+     <Compile Include="Assets\Scripts\Player\MentalHealthEffect.cs" />
+     <Compile Include="Assets\Scripts\Player\MoodMentalHealth.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMentalHealth.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />

@@ -11,6 +11,7 @@ namespace Player
         public GameObject player;
 
         [SerializeField] private MentalHealth mentalHealth;
+        [SerializeField] private MentalHealthEffect mentalHealthEffect;
         
         Vector3 checkPoint;
         bool criticalLevel = false;
@@ -32,12 +33,12 @@ namespace Player
         void Update() {
             mentalHealth.SetSize(health);
 
-            if(criticalLevel) {
-                timer += Time.deltaTime;
-                if(timer % 60 >= 5) {
-                    resetLevel();
-                }
-            }
+            // if(criticalLevel) {
+            //     timer += Time.deltaTime;
+            //     if(timer % 60 >= 5) {
+            //         resetLevel();
+            //     }
+            // }
         }
 
         void resetLevel() {
@@ -57,12 +58,14 @@ namespace Player
             if(health < 0f)
                 health = 0f;
 
-            if(health < 0.15f) {
+            if(health < 0.25f) {
                 timer = 0;
-                criticalLevel = true;
+                mentalHealthEffect.Trigger();
+                // criticalLevel = true;
             }
             else {
-                criticalLevel = false;
+                mentalHealthEffect.Stop();
+                // criticalLevel = false;
             }
 
             if(health <= 0) {

@@ -34,7 +34,7 @@ public class ThunderRandom : MonoBehaviour
             float interval = Random.Range(minInterval, maxInterval);
             float x = Random.Range(minX, maxX);
             Vector3 camera = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-            int objToSpawn = Random.Range(0, thunders.Length);
+            int objToSpawn = Random.Range(0, thunders.Length-1);
 
             GameObject newObj = Instantiate(thunders[objToSpawn], new Vector3(x, camera.y/2.5f, 0), Quaternion.identity);
             newObj.transform.SetParent(thunderManager);
