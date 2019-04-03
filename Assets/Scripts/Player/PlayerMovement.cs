@@ -15,6 +15,7 @@ namespace Player
         public Vector2 playerInput;
 
         float move = 0;
+        float moveV = 0;
         bool jump = false;
         bool crouch = false;
         Animator animator;
@@ -29,6 +30,7 @@ namespace Player
         void Update()
         {
             move = Input.GetAxisRaw("Horizontal") * moveSpeed;
+            moveV = Input.GetAxisRaw("Vertical");
             playerInput = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
 
             if (move != 0)
@@ -62,7 +64,7 @@ namespace Player
 
         void FixedUpdate()
         {
-            controller.Move(move * Time.fixedDeltaTime, crouch, jump);
+            controller.Move(move * Time.fixedDeltaTime, moveV, crouch, jump);
 
             jump = false;
         }

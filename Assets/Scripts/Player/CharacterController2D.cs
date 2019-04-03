@@ -19,6 +19,7 @@ namespace Player
         [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
         [SerializeField] private bool m_AirControl = false;                         // Whether or not a player can steer while jumping;
         [SerializeField] private LayerMask m_WhatIsGround;                          // A mask determining what is ground to the character
+        [SerializeField] private LayerMask m_PassThrough;                          // A mask determining what the character can pass through
         [SerializeField] private BoxCollider2D m_SlopeCheck;                        // A collider that will check the slope to climb
         [SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
         [SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
@@ -112,27 +113,36 @@ namespace Player
             }
         }
 
-        // void VerticalCollisions(ref Vector3 velocity)
-        // {
-        //     float directionY = Mathf.Sign(velocity.y);
-        //     float rayLength = Mathf.Abs(velocity.y);
+        void VerticalCollisions(ref Vector3 velocity)
+        {
+            float directionY = Mathf.Sign(velocity.y);
+            float rayLength = Mathf.Abs(velocity.y);
 
-        //     for(int i = 0; i < verticalRayCount; i++)
-        //     {
-        //         Vector2 rayOrigin = (directionY == -1) ? raycastOrigins.bottomLeft : raycastOrigins.topLeft;
-        //         rayOrigin += Vector2.right * (verticalRaySpacing * i + velocity.x);
-        //         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, m_WhatIsGround);
+            for(int i = 0; i < verticalRayCount; i++)
+            {
+                Vector2 rayOrigin = (directionY == -1) ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
+                rayOrigin += -Vector2.up * (verticalRaySpacing * i);
+                RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, 1f, m_PassThrough);
 
-        //         Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength, Color.red);
+                Debug.DrawRay(rayOrigin, Vector2.up * directionY * 1f, Color.red);
 
-        //         if(hit)
-        //         {
-        //             //We only want to use this for the slopeChecking not the movement so use this only for slope checking
-        //             Debug.Log("Ground detected");
-        //             rayLength = hit.distance;
-        //         }
-        //     }
-        // }
+                if(hit)
+                {
+                    //We only want to use this for the slopeChecking not the movement so use this only for slope checking
+                    Debug.Log("Ground detected");
+
+                    m_GroundCollider.enabled = false;
+                    m_CrouchDisableCollider.enabled = false;
+                    Invoke("ReenableColliders", .3f);
+                }
+            }
+        }
+
+        void ReenableColliders()
+        {
+            m_GroundCollider.enabled = true;
+            m_CrouchDisableCollider.enabled = true;
+        }
 
         void ClimbSlope(ref Vector3 velocity, float slopeAngle)
         {
@@ -168,7 +178,7 @@ namespace Player
             verticalRaySpacing = bounds.size.x / (verticalRayCount - 1);
         }
 
-        public void Move(float move, bool crouch, bool jump)
+        public void Move(float move, float moveV, bool crouch, bool jump)
         {
             UpdateRaycastOrigins();
             // If crouching, check to see if the character can stand up
@@ -219,8 +229,8 @@ namespace Player
                 if(targetVelocity.x != 0)
                     HorizontallCollisions(ref targetVelocity);
 
-                // if(targetVelocity.y != 0)
-                //     VerticalCollisions(ref targetVelocity);
+                if(moveV == -1)   
+                    VerticalCollisions(ref targetVelocity);
                 // And then smoothing it out and applying it to the character
                 m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
