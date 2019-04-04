@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Environment\EnvironmentFade.cs" />
      <Compile Include="Assets\Scripts\Environment\EnvironmentHealthEffect.cs" />
      <Compile Include="Assets\Scripts\Environment\FadeOutIn.cs" />
+     <Compile Include="Assets\Scripts\Environment\FlickerRandom.cs" />
      <Compile Include="Assets\Scripts\Environment\ThunderRandom.cs" />
      <Compile Include="Assets\Scripts\GameManager\Dialogue.cs" />
      <Compile Include="Assets\Scripts\GameManager\DialogueManager.cs" />
