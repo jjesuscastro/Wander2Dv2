@@ -6,13 +6,16 @@ public class MoodMentalHealth : MentalHealthEffect
 {
     public GameObject[] covers; //Slow
     
+    public float maxAlpha = 0.75f;
     public float fadeRate;
     public int color;
-    int length = 5;
+    public int length = 5;
     bool firstCall = true;
     bool fadecover;
+    bool callOnce = false;
     bool fadeIn = true;
-    bool fadeInBlack = true, fadeInYellow = false;
+    bool fadeInBlack = true;
+    bool fadeInYellow;
     Color tempColor;
     float timer = 0f;
 
@@ -23,46 +26,74 @@ public class MoodMentalHealth : MentalHealthEffect
 
     void Update()
     {
-        if(fadeInBlack)
-            color = 0;
-        
-        if(fadeInYellow)
-            color = 1;
-
-        if(isEnabled)
+        if(fadeIn)
         {
-
-            if(fadeIn)
+            //Fade in black
+            if(fadeInBlack)
             {
-                tempColor = covers[color].GetComponent<SpriteRenderer>().color;
-                tempColor.a += fadeRate;
-                covers[color].GetComponent<SpriteRenderer>().color = tempColor;
-                timer += Time.deltaTime;
-            }
-
-            if(timer % 60 >= length)
-            {
-                fadecover = true;
-            }
-
-            if(fadecover)
-            {
-                tempColor = covers[color].GetComponent<SpriteRenderer>().color;
-                tempColor.a -= fadeRate;
-                covers[color].GetComponent<SpriteRenderer>().color = tempColor;
-
-                fadeIn = false;
-                
-                if(fadeInBlack && tempColor.a <= 0)
+                if(callOnce)
                 {
-                    fadeInYellow = true;
-                    fadeInBlack = false;
+                    Time.timeScale = 0.5f;
+                    callOnce = false;
                 }
+                tempColor = covers[0].GetComponent<SpriteRenderer>().color;
+                tempColor.a +=fadeRate;
+                if(tempColor.a <= maxAlpha)
+                    covers[0].GetComponent<SpriteRenderer>().color = tempColor;
+            }
 
-                if(fadeInYellow && tempColor.a <= 0)
+            //Fade in yellow
+            if(fadeInYellow)
+            {
+                if(callOnce)
+                {
+                    Time.timeScale = 1.5f;
+                    callOnce = false;
+                }
+                tempColor = covers[1].GetComponent<SpriteRenderer>().color;
+                tempColor.a +=fadeRate;
+                if(tempColor.a <= maxAlpha)
+                    covers[1].GetComponent<SpriteRenderer>().color = tempColor;
+            }
+
+            timer += Time.deltaTime;
+        }
+
+        if(timer %60 >= length * Time.timeScale)
+        {
+            fadeIn = false;
+            fadecover = true;
+            timer = 0;
+        }
+
+        if(fadecover)
+        {
+            if(fadeInBlack) //Which means black is visible so supposedly yellow is not
+            {
+                //if you are here it means fadeblack is true and fadeyellow should be false
+                tempColor = covers[0].GetComponent<SpriteRenderer>().color;
+                tempColor.a -=fadeRate;
+                covers[0].GetComponent<SpriteRenderer>().color = tempColor;
+                if(tempColor.a <= 0)
+                {
+                    fadeInBlack = false;
+                    fadeInYellow = true;
+                    fadeIn = true;
+                    fadecover = false;
+                    callOnce = true;
+                }
+            } else if(fadeInYellow)
+            {
+                tempColor = covers[1].GetComponent<SpriteRenderer>().color;
+                tempColor.a -=fadeRate;
+                covers[1].GetComponent<SpriteRenderer>().color = tempColor;
+                if(tempColor.a <= 0)
                 {
                     fadeInBlack = true;
                     fadeInYellow = false;
+                    fadeIn = true;
+                    fadecover = false;
+                    callOnce = true;
                 }
             }
         }

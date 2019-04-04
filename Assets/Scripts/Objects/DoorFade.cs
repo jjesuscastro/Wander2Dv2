@@ -51,6 +51,8 @@ namespace Object
                 tmpColor = coverRenderer.color;
                 tmpColor.a -= fadeRate;
                 coverRenderer.color = tmpColor;
+                if(tmpColor.a <= 0)
+                    fadecover = false;
                 fadeIn = false;
             }
         }
