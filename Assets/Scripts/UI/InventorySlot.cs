@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using Object;
 using GameManager;
+using Player;
 
 namespace UI
 {
@@ -11,6 +12,8 @@ namespace UI
         public Text itemDesc;
         public Image icon;
         public Button removeButton;
+        public UseLocation useLocation;
+        public bool hasUseLocation;
         Item item;
 
         public void AddItem(Item newItem)
@@ -19,6 +22,23 @@ namespace UI
             icon.sprite = item.icon;
             icon.enabled = true;
             removeButton.interactable = true;
+            if(item.useLocationName != null || item.useLocationName != "")
+            {
+                useLocation = FindTransform(item.useLocationName);
+                hasUseLocation = true;
+            }
+        }
+
+        UseLocation FindTransform(string useLocationName){
+            UseLocation[] useLocations = GameObject.FindObjectsOfType<UseLocation>();
+
+            for(int i = 0; i < useLocations.Length; i++)
+            {
+                if(useLocations[i].name.CompareTo(useLocationName) == 0)
+                    return useLocations[i];
+            }
+
+            return null;
         }
 
         public void ClearSlot()
@@ -37,9 +57,15 @@ namespace UI
 
         public void UseItem()
         {
-            if(item != null)
+            if(item != null && !hasUseLocation)
             {
                 item.Use();
+            } else {
+                if(Vector3.Distance(PlayerSwitch.instance.GetCurrentPlayer().position, useLocation.transform.position) < useLocation.radius)
+                {
+                    item.Use();
+                    Inventory.instance.Remove(item);
+                }
             }
         }
 

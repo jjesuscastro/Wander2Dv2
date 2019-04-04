@@ -8,6 +8,7 @@ namespace Object
         new public string name = "New Item";
         public string description = "Item description";
         public Sprite icon = null;
+        public string useLocationName;
         [System.NonSerialized] public bool isUsed = false;
 
         public virtual void Use()

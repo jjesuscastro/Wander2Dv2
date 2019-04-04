@@ -13950,11 +13950,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 820489754}
-  - component: {fileID: 820489756}
   - component: {fileID: 820489755}
+  - component: {fileID: 820489756}
   m_Layer: 0
-  m_Name: brance_uselocation
-  m_TagString: Untagged
+  m_Name: branch_useLocation
+  m_TagString: UseLocations
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14002,8 +14002,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  requiredItem: {fileID: 11400000, guid: d038f3db1a46b814eb560a9a7d9c0af3, type: 2}
-  objectToEnable: {fileID: 1497581563}
+  item: {fileID: 11400000, guid: d038f3db1a46b814eb560a9a7d9c0af3, type: 2}
+  gameObjectToEnable: {fileID: 1497581563}
 --- !u!1 &820789252
 GameObject:
   m_ObjectHideFlags: 0

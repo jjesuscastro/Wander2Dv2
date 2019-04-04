@@ -1,30 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GameManager;
 
 namespace Object
 {
-    public class UseLocation : Interactable
+    [RequireComponent (typeof(CircleCollider2D))]
+    public class UseLocation : MonoBehaviour
     {
-        [SerializeField] private Item requiredItem;
-        [SerializeField] private GameObject objectToEnable;
+        public float radius = 3;
+        [SerializeField] Item item;
+        [SerializeField] GameObject gameObjectToEnable;
 
-        public override bool Interact()
+        // Update is called once per frame
+        void Update()
         {
-            if(requiredItem.isUsed)
-            {
-                Inventory.instance.Remove(requiredItem);
-                EnableComponent();
-            
-                return true;
-            }
-
-            return false;
+            if(item.isUsed)
+                EnableGameObject();
+            radius = GetComponent<CircleCollider2D>().radius;
         }
 
-        void EnableComponent(){
-            objectToEnable.SetActive(true);
+        void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, radius);
+        }
+
+        void EnableGameObject()
+        {
+            gameObjectToEnable.SetActive(true);
         }
     }
 }

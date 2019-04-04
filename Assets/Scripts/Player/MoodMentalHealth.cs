@@ -99,6 +99,21 @@ public class MoodMentalHealth : MentalHealthEffect
                     }
                 }
             }
+        } else {
+                Time.timeScale = 1f;
+                tempColor = covers[0].GetComponent<SpriteRenderer>().color;
+                tempColor.a -=fadeRate;
+                covers[0].GetComponent<SpriteRenderer>().color = tempColor;
+
+                tempColor = covers[1].GetComponent<SpriteRenderer>().color;
+                tempColor.a -=fadeRate;
+                covers[1].GetComponent<SpriteRenderer>().color = tempColor;
+
+                fadeInBlack = true;
+                fadeInYellow = false;
+                fadeIn = true;
+                fadecover = false;
+                callOnce = true;
         }
     }
 }
