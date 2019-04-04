@@ -6,9 +6,14 @@ public class MoodMentalHealth : MentalHealthEffect
 {
     public GameObject[] covers; //Slow
     
-    public float minDuration = 0, maxDuration = 3;
+    public float fadeRate;
     public int color;
+    int length = 5;
     bool firstCall = true;
+    bool fadecover;
+    bool fadeIn;
+    Color tempColor;
+    float timer = 0f;
 
     public override void Trigger()
     {
@@ -19,11 +24,11 @@ public class MoodMentalHealth : MentalHealthEffect
     {
         if(isEnabled)
         {
-            int color = Random.Range(0, covers.Length); //0 is black; 1 is yellow
+            int color = Random.Range(0, covers.Length-1); //0 is black; 1 is yellow
 
             if(firstCall)
             {
-                Invoke("StartEffect", 0);
+                Invoke("ChooseColor", 0);
                 firstCall = false;
             }
         } else if(!isEnabled){
@@ -33,13 +38,38 @@ public class MoodMentalHealth : MentalHealthEffect
 
     void StartEffect()
     {
-        Color tempColor;
+        Debug.Log("ey");
+        fadeIn = true;
         if(isEnabled)
         {
-            if(color == 0)
+            if(fadeIn)
             {
                 tempColor = covers[color].GetComponent<SpriteRenderer>().color;
+                tempColor.a += fadeRate;
+                covers[color].GetComponent<SpriteRenderer>().color = tempColor;
+                timer += Time.deltaTime;
+            }
+
+            if(timer % 60 >= length)
+            {
+                fadecover = true;
+            }
+
+            if(fadecover)
+            {
+                tempColor = covers[color].GetComponent<SpriteRenderer>().color;
+                tempColor.a -= fadeRate;
+                covers[color].GetComponent<SpriteRenderer>().color = tempColor;
+                fadeIn = false;
+                ChooseColor();
             }
         }
+    }
+
+    void ChooseColor()
+    {
+        int color = Random.Range(0, covers.Length-1); //0 is black; 1 is yellow
+
+        StartEffect();
     }
 }

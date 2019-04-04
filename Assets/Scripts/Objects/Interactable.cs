@@ -22,7 +22,6 @@ namespace Object
         // Update is called once per frame
         protected void Update()
         {
-            Debug.Log(name);
             radius = GetComponent<CircleCollider2D>().radius;
 
             if(isFocused && player != null && hasInteracted != true)

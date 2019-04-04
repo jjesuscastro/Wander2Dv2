@@ -35797,8 +35797,7 @@ MonoBehaviour:
   covers:
   - {fileID: 711397788}
   - {fileID: 647054413}
-  minDuration: 0
-  maxDuration: 3
+  fadeRate: 0.05
   color: 0
 --- !u!1 &1846538312
 GameObject:

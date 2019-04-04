@@ -65,10 +65,8 @@ namespace Object
 
         public override bool Interact()
         {
-            Debug.Log("near door");
             if(Input.GetButtonDown("Interact"))
             {
-                Debug.Log("open door");
                 fadeIn = true;
             
                 return true;
