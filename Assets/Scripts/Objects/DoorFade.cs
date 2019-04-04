@@ -43,6 +43,7 @@ namespace Object
             {
                 fadecover = true;
                 MovePlayers();
+                timer = 0;
             }
 
             if(fadecover)
