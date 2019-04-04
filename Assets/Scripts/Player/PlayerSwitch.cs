@@ -17,9 +17,26 @@ namespace Player
 
         CameraFollow mainCamera;
         PlayerMentalHealth playerMentalHealth;
+
+        private Transform currentPlayer;
+
+        #region Singleton
+        public static PlayerSwitch instance;
+
+        void Awake()
+        {
+            if(instance != null)
+            {
+                Debug.LogWarning("Multiple player switches found");
+            }
+            instance = this;
+        }
+        #endregion
+
         // Start is called before the first frame update
         void Start()
         {
+            currentPlayer = mc.transform;
             mainCamera = Camera.main.GetComponent<CameraFollow>();
             playerMentalHealth = GetComponent<PlayerMentalHealth>();
             npc.gameObject.SetActive(false);
@@ -36,6 +53,7 @@ namespace Player
                     {
                         mc.enabled = false;
                         npc.enabled = true;
+                        currentPlayer = npc.transform;
                         mc.GetComponent<PlayerMovement>().StopAnimation();
                         mc.GetComponent<CharacterController2D>().QueueDisableColliders();
                         npc.GetComponent<CharacterController2D>().EnableColliders();
@@ -46,6 +64,7 @@ namespace Player
                     {
                         mc.enabled = true;
                         npc.enabled = false;
+                        currentPlayer = mc.transform;
                         npc.GetComponent<PlayerMovement>().StopAnimation();
                         npc.GetComponent<CharacterController2D>().QueueDisableColliders();
                         mc.GetComponent<CharacterController2D>().EnableColliders();
@@ -94,6 +113,11 @@ namespace Player
         public void ObtainedNPC()
         {
             obtainedNPC = true;
+        }
+
+        public Transform GetCurrentPlayer()
+        {
+            return currentPlayer;
         }
     }
 }

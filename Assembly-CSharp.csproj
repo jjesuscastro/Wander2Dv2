@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\Objects\Interactable.cs" />
      <Compile Include="Assets\Scripts\Objects\Item.cs" />
      <Compile Include="Assets\Scripts\Objects\ItemPickup.cs" />
+     <Compile Include="Assets\Scripts\Objects\UseLocation.cs" />
      <Compile Include="Assets\Scripts\Player\CharacterController2D.cs" />
      <Compile Include="Assets\Scripts\Player\MentalHealthEffect.cs" />
      <Compile Include="Assets\Scripts\Player\MoodMentalHealth.cs" />

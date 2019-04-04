@@ -26,74 +26,77 @@ public class MoodMentalHealth : MentalHealthEffect
 
     void Update()
     {
-        if(fadeIn)
+        if(isEnabled)
         {
-            //Fade in black
-            if(fadeInBlack)
+            if(fadeIn)
             {
-                if(callOnce)
+                //Fade in black
+                if(fadeInBlack)
                 {
-                    Time.timeScale = 0.5f;
-                    callOnce = false;
+                    if(callOnce)
+                    {
+                        Time.timeScale = 0.5f;
+                        callOnce = false;
+                    }
+                    tempColor = covers[0].GetComponent<SpriteRenderer>().color;
+                    tempColor.a +=fadeRate;
+                    if(tempColor.a <= maxAlpha)
+                        covers[0].GetComponent<SpriteRenderer>().color = tempColor;
                 }
-                tempColor = covers[0].GetComponent<SpriteRenderer>().color;
-                tempColor.a +=fadeRate;
-                if(tempColor.a <= maxAlpha)
+
+                //Fade in yellow
+                if(fadeInYellow)
+                {
+                    if(callOnce)
+                    {
+                        Time.timeScale = 1.5f;
+                        callOnce = false;
+                    }
+                    tempColor = covers[1].GetComponent<SpriteRenderer>().color;
+                    tempColor.a +=fadeRate;
+                    if(tempColor.a <= maxAlpha)
+                        covers[1].GetComponent<SpriteRenderer>().color = tempColor;
+                }
+
+                timer += Time.deltaTime;
+            }
+
+            if(timer %60 >= length * Time.timeScale)
+            {
+                fadeIn = false;
+                fadecover = true;
+                timer = 0;
+            }
+
+            if(fadecover)
+            {
+                if(fadeInBlack) //Which means black is visible so supposedly yellow is not
+                {
+                    //if you are here it means fadeblack is true and fadeyellow should be false
+                    tempColor = covers[0].GetComponent<SpriteRenderer>().color;
+                    tempColor.a -=fadeRate;
                     covers[0].GetComponent<SpriteRenderer>().color = tempColor;
-            }
-
-            //Fade in yellow
-            if(fadeInYellow)
-            {
-                if(callOnce)
+                    if(tempColor.a <= 0)
+                    {
+                        fadeInBlack = false;
+                        fadeInYellow = true;
+                        fadeIn = true;
+                        fadecover = false;
+                        callOnce = true;
+                    }
+                } else if(fadeInYellow)
                 {
-                    Time.timeScale = 1.5f;
-                    callOnce = false;
-                }
-                tempColor = covers[1].GetComponent<SpriteRenderer>().color;
-                tempColor.a +=fadeRate;
-                if(tempColor.a <= maxAlpha)
+                    tempColor = covers[1].GetComponent<SpriteRenderer>().color;
+                    tempColor.a -=fadeRate;
                     covers[1].GetComponent<SpriteRenderer>().color = tempColor;
-            }
-
-            timer += Time.deltaTime;
-        }
-
-        if(timer %60 >= length * Time.timeScale)
-        {
-            fadeIn = false;
-            fadecover = true;
-            timer = 0;
-        }
-
-        if(fadecover)
-        {
-            if(fadeInBlack) //Which means black is visible so supposedly yellow is not
-            {
-                //if you are here it means fadeblack is true and fadeyellow should be false
-                tempColor = covers[0].GetComponent<SpriteRenderer>().color;
-                tempColor.a -=fadeRate;
-                covers[0].GetComponent<SpriteRenderer>().color = tempColor;
-                if(tempColor.a <= 0)
-                {
-                    fadeInBlack = false;
-                    fadeInYellow = true;
-                    fadeIn = true;
-                    fadecover = false;
-                    callOnce = true;
-                }
-            } else if(fadeInYellow)
-            {
-                tempColor = covers[1].GetComponent<SpriteRenderer>().color;
-                tempColor.a -=fadeRate;
-                covers[1].GetComponent<SpriteRenderer>().color = tempColor;
-                if(tempColor.a <= 0)
-                {
-                    fadeInBlack = true;
-                    fadeInYellow = false;
-                    fadeIn = true;
-                    fadecover = false;
-                    callOnce = true;
+                    if(tempColor.a <= 0)
+                    {
+                        fadeInBlack = true;
+                        fadeInYellow = false;
+                        fadeIn = true;
+                        fadecover = false;
+                        callOnce = true;
+                    }
                 }
             }
         }
