@@ -18,6 +18,7 @@ public class MoodMentalHealth : MentalHealthEffect
     bool fadeInYellow;
     Color tempColor;
     float timer = 0f;
+    bool isStop = false;
 
     public override void Trigger()
     {
@@ -28,6 +29,7 @@ public class MoodMentalHealth : MentalHealthEffect
     {
         if(isEnabled)
         {
+            isStop = false;
             if(fadeIn)
             {
                 //Fade in black
@@ -99,7 +101,10 @@ public class MoodMentalHealth : MentalHealthEffect
                     }
                 }
             }
-        } else {
+        } 
+        
+        if(!isEnabled && !isStop) 
+        {
                 Time.timeScale = 1f;
                 tempColor = covers[0].GetComponent<SpriteRenderer>().color;
                 tempColor.a -=fadeRate;
@@ -114,6 +119,9 @@ public class MoodMentalHealth : MentalHealthEffect
                 fadeIn = true;
                 fadecover = false;
                 callOnce = true;
+                
+                if(covers[0].GetComponent<SpriteRenderer>().color.a <= 0 && covers[1].GetComponent<SpriteRenderer>().color.a <= 0)
+                    isStop = true;
         }
     }
 }

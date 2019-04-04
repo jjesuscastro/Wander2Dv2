@@ -61,7 +61,7 @@ namespace UI
             {
                 item.Use();
             } else {
-                if(Vector3.Distance(PlayerSwitch.instance.GetCurrentPlayer().position, useLocation.transform.position) < useLocation.radius)
+                if(useLocation != null && Vector3.Distance(PlayerSwitch.instance.GetCurrentPlayer().position, useLocation.transform.position) < useLocation.radius)
                 {
                     item.Use();
                     Inventory.instance.Remove(item);
@@ -69,7 +69,7 @@ namespace UI
             }
         }
 
-        void OnMouseOver()
+        public void OnMouseOver()
         {
             if(item != null)
             {
@@ -80,7 +80,7 @@ namespace UI
             }
         }
 
-        void OnMouseExit()
+        public void OnMouseExit()
         {
             itemPreview.enabled = false;
             itemPreview.sprite = null;
