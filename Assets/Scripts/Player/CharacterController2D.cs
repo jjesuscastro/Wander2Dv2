@@ -80,7 +80,7 @@ namespace Player
                 if (colliders[i].gameObject != gameObject)
                 {
                     m_Grounded = true;
-                    if (!wasGrounded && m_Rigidbody2D.velocity.y < 0)
+                    if (m_Grounded && !wasGrounded) // && m_Rigidbody2D.velocity.y <= 0
                         OnLandEvent.Invoke();
                 }
             }
@@ -113,7 +113,7 @@ namespace Player
             }
         }
 
-        void VerticalCollisions(ref Vector3 velocity)
+        void VerticalCollisions(ref Vector3 velocity, float moveV)
         {
             float directionY = Mathf.Sign(velocity.y);
             float rayLength = Mathf.Abs(velocity.y);
@@ -122,7 +122,7 @@ namespace Player
             {
                 Vector2 rayOrigin = (directionY == -1) ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
                 rayOrigin += -Vector2.up * (verticalRaySpacing * i);
-                RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, 1f, m_PassThrough);
+                RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, 1f, m_WhatIsGround);
 
                 Debug.DrawRay(rayOrigin, Vector2.up * directionY * 1f, Color.red);
 
@@ -131,9 +131,17 @@ namespace Player
                     //We only want to use this for the slopeChecking not the movement so use this only for slope checking
                     Debug.Log("Ground detected");
 
-                    m_GroundCollider.enabled = false;
-                    m_CrouchDisableCollider.enabled = false;
-                    Invoke("ReenableColliders", .3f);
+                    if(moveV == -1 && hit.collider.gameObject.layer == LayerMask.NameToLayer("PlatformAbove"))
+                    {
+                        m_GroundCollider.enabled = false;
+                        m_CrouchDisableCollider.enabled = false;
+                        Invoke("ReenableColliders", .3f);
+                    }
+
+                    m_Grounded = true;
+
+                    if (OnLandEvent != null)
+                        OnLandEvent.Invoke();
                 }
             }
         }
@@ -229,8 +237,9 @@ namespace Player
                 if(targetVelocity.x != 0)
                     HorizontallCollisions(ref targetVelocity);
 
-                if(moveV == -1)   
-                    VerticalCollisions(ref targetVelocity);
+                //Changed vertical collisions to work even without pressing down
+                VerticalCollisions(ref targetVelocity, moveV);
+
                 // And then smoothing it out and applying it to the character
                 m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
