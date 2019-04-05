@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 using GameManager;
+using UI;
 
 namespace Object
 {
@@ -21,7 +23,10 @@ namespace Object
             bool wasPickedUp = Inventory.instance.Add(item);
             
             if(wasPickedUp)
+            {
                 Destroy(gameObject);
+                PopupNotification.instance.ShowPopup("Picked up " + item.name + "!");
+            }
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using GameManager;
+using UI;
 
 namespace Object
 {
@@ -21,7 +22,10 @@ namespace Object
             bool wasPickedUp = Journal.instance.Add(entry);
             
             if(wasPickedUp)
+            {
                 Destroy(gameObject);
+                PopupNotification.instance.ShowPopup("Journal entry picked up!");
+            }
         }
     }
 }

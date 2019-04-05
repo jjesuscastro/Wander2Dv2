@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using GameManager;
 using Player;
+using UI;
 
 namespace Object
 {
@@ -32,7 +33,7 @@ namespace Object
         void Talk()
         {
             Debug.Log("Talking to NPC " + NPC.name);
-            
+            PopupNotification.instance.ShowPopup("Press 'Q' to use Leo!");
             playerSwitch.ObtainedNPC();
             NPC.SetActive(true);
             Destroy(gameObject);

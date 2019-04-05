@@ -129,8 +129,6 @@ namespace Player
                 if(hit)
                 {
                     //We only want to use this for the slopeChecking not the movement so use this only for slope checking
-                    Debug.Log("Ground detected");
-
                     if(moveV == -1 && hit.collider.gameObject.layer == LayerMask.NameToLayer("PlatformAbove"))
                     {
                         m_GroundCollider.enabled = false;
