@@ -46,7 +46,10 @@ public class AnxietyMentalHealth : MentalHealthEffect
                 intenseVignette.color = tempColor;
 
                 if(tempColor.a >= 1)
+                {
                     fadeIn = false;
+                    fadeOut = true;
+                }
             }
         } else {
             if(fadeOut)
@@ -57,7 +60,10 @@ public class AnxietyMentalHealth : MentalHealthEffect
                 intenseVignette.color = tempColor;
 
                 if(tempColor.a <= 0)
+                {
                     fadeOut = false;
+                    fadeIn = true;
+                }
             }
         }
 
