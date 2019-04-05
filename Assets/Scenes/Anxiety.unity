@@ -1033,7 +1033,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -1608,9 +1608,9 @@ SurfaceEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Speed: -10
+  m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -3159,7 +3159,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -3559,9 +3559,9 @@ SurfaceEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Speed: -10
+  m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -6920,7 +6920,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -7995,7 +7995,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -8162,7 +8162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421056399}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 41.41234, y: -8.401054, z: 0.56825304}
+  m_LocalPosition: {x: 41.41234, y: -8.66, z: 0.56825304}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 94930919}
@@ -10197,6 +10197,7 @@ RectTransform:
   - {fileID: 1502922464}
   - {fileID: 1349980720}
   - {fileID: 106295738}
+  - {fileID: 811491093}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13077,7 +13078,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -13377,7 +13378,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -13532,7 +13533,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -14124,7 +14125,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -14154,6 +14155,141 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.01, y: 0.74}
   m_EdgeRadius: 0
+--- !u!1001 &811491092
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 570793003}
+    m_Modifications:
+    - target: {fileID: 6072343721966312117, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_Name
+      value: Popup
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -35.300003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 633.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 86.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343722103876314, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072343722103876314, guid: 8db38343dfc7dbc4db25031898b60349,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8db38343dfc7dbc4db25031898b60349, type: 3}
+--- !u!224 &811491093 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6072343721966312114, guid: 8db38343dfc7dbc4db25031898b60349,
+    type: 3}
+  m_PrefabInstance: {fileID: 811491092}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &814198647
 GameObject:
   m_ObjectHideFlags: 0
@@ -15358,7 +15494,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -18946,9 +19082,9 @@ SurfaceEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Speed: -10
+  m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -19022,9 +19158,9 @@ SurfaceEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Speed: -10
+  m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -21990,9 +22126,9 @@ SurfaceEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Speed: -10
+  m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -22209,7 +22345,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -24626,7 +24762,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -24884,9 +25020,9 @@ SurfaceEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Speed: -10
+  m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -26079,6 +26215,7 @@ GameObject:
   - component: {fileID: 1478588042}
   - component: {fileID: 1478588050}
   - component: {fileID: 1478588051}
+  - component: {fileID: 1478588052}
   m_Layer: 0
   m_Name: npc_m_stand
   m_TagString: Untagged
@@ -26144,7 +26281,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 2050946693}
   m_CeilingCheck: {fileID: 539016756}
   m_CrouchDisableCollider: {fileID: 1478588046}
-  m_GroundCollider: {fileID: 0}
+  m_GroundCollider: {fileID: 1478588045}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -26338,6 +26475,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.17, y: 1.070299}
   m_EdgeRadius: 0
+--- !u!114 &1478588052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478588041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a999802c86b124ab59ddc8ebce4467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  NPC: {fileID: 1478588041}
+  playerSwitch: {fileID: 264450803}
 --- !u!1 &1479341482
 GameObject:
   m_ObjectHideFlags: 0
@@ -28629,7 +28786,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -29367,7 +29524,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -31838,7 +31995,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -34389,6 +34546,63 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1861866878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1861866880}
+  - component: {fileID: 1861866879}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1861866879
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861866878}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 158.07, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1861866880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861866878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 185.9493, y: -12.9, z: -2.0828342}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1862084317
 GameObject:
   m_ObjectHideFlags: 0
@@ -35018,7 +35232,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -36533,7 +36747,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 10
   m_SpeedVariation: 0
-  m_ForceScale: 1
+  m_ForceScale: 0.5
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
