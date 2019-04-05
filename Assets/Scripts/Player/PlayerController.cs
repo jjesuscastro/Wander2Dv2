@@ -55,6 +55,11 @@ namespace Player
                 SetFocus(interactable);
             }
 
+            if(other.gameObject.CompareTag("MovingPlatform"))
+            {
+                transform.SetParent(other.transform);
+            }
+
             if(other.gameObject.CompareTag("Checkpoint"))
             {
                 respawnPoint = other.transform.position;
@@ -75,6 +80,11 @@ namespace Player
                 {
                     RemoveFocus();
                 }
+            }
+
+            if(other.gameObject.CompareTag("MovingPlatform"))
+            {
+                transform.parent = null;
             }
         }
 
