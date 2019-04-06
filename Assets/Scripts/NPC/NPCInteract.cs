@@ -14,9 +14,14 @@ namespace Object
         public GameObject NPC;
         [SerializeField]
         private PlayerSwitch playerSwitch;
+
+        /// <summary>
+        /// Update is called every frame, if the MonoBehaviour is enabled.
+        /// </summary>
         
         public override bool Interact()
         {
+            Debug.Log("NPC Available");
             if(Input.GetButtonDown("Interact"))
             {
                 Talk();
@@ -32,8 +37,7 @@ namespace Object
 
         void Talk()
         {
-            Debug.Log("Talking to NPC " + NPC.name);
-            PopupNotification.instance.ShowPopup("Press 'Q' to use Leo!");
+            PopupNotification.instance.ShowPopup("Press 'Q' to use NPC!");
             playerSwitch.ObtainedNPC();
             NPC.SetActive(true);
             Destroy(gameObject);

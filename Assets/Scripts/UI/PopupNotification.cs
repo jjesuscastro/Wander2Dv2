@@ -31,7 +31,6 @@ namespace UI
             Color tempColorPopup, tempColorText;
             if(showUp)
             {
-                Debug.Log("ey");
                 tempColorPopup = popup.color;
                 tempColorPopup.a += fadeRate;
 
