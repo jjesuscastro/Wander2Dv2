@@ -2,59 +2,62 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShizoMentalHealth : MentalHealthEffect
+namespace Player
 {
-    public float fadeRate;
-    public SpriteRenderer face;
-    public AudioSource whispers;
-    bool fadeIn = true;
-    bool fadeOut;
-
-    public override void Trigger()
+    public class ShizoMentalHealth : MentalHealthEffect
     {
-        base.Trigger();
-        fadeIn = true;
-        fadeOut = false;
-        Debug.Log("Anxiety MH");
-    }
+        public float fadeRate;
+        public SpriteRenderer face;
+        public AudioSource whispers;
+        bool fadeIn = true;
+        bool fadeOut;
 
-    void Stop()
-    {
-        base.Stop();
-        fadeIn = false;
-        fadeOut = true;
-    }
-
-    void Update()
-    {
-        Color tempColor;
-        if(isEnabled)
+        public override void Trigger()
         {
-            if(fadeIn)
-            {
-                whispers.volume += fadeRate;
-                tempColor = face.color;
-                tempColor.a += fadeRate;
-                face.color = tempColor;
+            base.Trigger();
+            fadeIn = true;
+            fadeOut = false;
+            Debug.Log("Anxiety MH");
+        }
 
-                if(tempColor.a >= 0.15)
+        void Stop()
+        {
+            base.Stop();
+            fadeIn = false;
+            fadeOut = true;
+        }
+
+        void Update()
+        {
+            Color tempColor;
+            if(isEnabled)
+            {
+                if(fadeIn)
                 {
-                    fadeIn = false;
-                    fadeOut = true;
+                    whispers.volume += fadeRate;
+                    tempColor = face.color;
+                    tempColor.a += fadeRate;
+                    face.color = tempColor;
+
+                    if(tempColor.a >= 0.15)
+                    {
+                        fadeIn = false;
+                        fadeOut = true;
+                    }
                 }
-            }
-        } else {
-            if(fadeOut)
-            {
-                whispers.volume -= fadeRate;
-                tempColor = face.color;
-                tempColor.a -= fadeRate;
-                face.color = tempColor;
-
-                if(tempColor.a <= 0)
+            } else {
+                if(fadeOut)
                 {
-                    fadeOut = false;
-                    fadeIn = true;
+                    whispers.volume -= fadeRate;
+                    tempColor = face.color;
+                    tempColor.a -= fadeRate;
+                    face.color = tempColor;
+
+                    if(tempColor.a <= 0)
+                    {
+                        fadeOut = false;
+                        fadeIn = true;
+                    }
                 }
             }
         }

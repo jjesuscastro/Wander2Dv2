@@ -11,7 +11,11 @@ namespace Player
         public GameObject player;
 
         [SerializeField] private MentalHealth mentalHealth;
-        [SerializeField] private MentalHealthEffect mentalHealthEffect;
+        [Header("Leave this blank.")]
+        public MentalHealthEffect mentalHealthEffect;
+        public MoodMentalHealth moodMentalHealth;
+        public AnxietyMentalHealth anxietyMentalHealth;
+        public ShizoMentalHealth schizoMentalHealth;
         
         Vector3 checkPoint;
         bool criticalLevel = false;
@@ -45,6 +49,30 @@ namespace Player
             changeHealth(1f);
             player.GetComponent<PlayerController>().respawn();
             player.transform.position = checkPoint;
+        }
+
+        public void SetLevel(string sceneName)
+        {
+            if(sceneName.CompareTo("Mood") == 0)
+            {
+                //Asign mood MH effect;
+                mentalHealthEffect = moodMentalHealth;
+                gameObject.GetComponent<MoodMentalHealth>().enabled = true;
+                gameObject.GetComponent<AnxietyMentalHealth>().enabled = false;
+                gameObject.GetComponent<ShizoMentalHealth>().enabled = false;
+            } else if(sceneName.CompareTo("Anxiety") == 0) {
+                //Asign anxiety MH effect;
+                mentalHealthEffect = anxietyMentalHealth;
+                gameObject.GetComponent<AnxietyMentalHealth>().enabled = true;
+                gameObject.GetComponent<MoodMentalHealth>().enabled = false;
+                gameObject.GetComponent<ShizoMentalHealth>().enabled = false;
+            } else if(sceneName.CompareTo("Schizo") == 0) {
+                //Asign schizo MH effect;
+                mentalHealthEffect = schizoMentalHealth;
+                gameObject.GetComponent<ShizoMentalHealth>().enabled = true;
+                gameObject.GetComponent<MoodMentalHealth>().enabled = false;
+                gameObject.GetComponent<AnxietyMentalHealth>().enabled = false;
+            }
         }
 
         public void changeHealth(float damageValue) {

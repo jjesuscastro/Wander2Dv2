@@ -110,6 +110,17 @@ namespace Player
             }
         }
 
+        public void SetLevel()
+        {
+            PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
+            for(int i = 0; i < players.Length; i++)
+            {
+                if(players[i].name.CompareTo("NPC") == 0)
+                    npc = players[i];
+            }
+            obtainedNPC = false;
+        }
+
         public void ObtainedNPC()
         {
             obtainedNPC = true;

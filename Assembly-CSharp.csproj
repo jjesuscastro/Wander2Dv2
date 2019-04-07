@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\GameManager\DialogueManager.cs" />
      <Compile Include="Assets\Scripts\GameManager\Inventory.cs" />
      <Compile Include="Assets\Scripts\GameManager\Journal.cs" />
+     <Compile Include="Assets\Scripts\GameManager\SceneController.cs" />
      <Compile Include="Assets\Scripts\NPC\NPCFollow.cs" />
      <Compile Include="Assets\Scripts\NPC\NPCInteract.cs" />
      <Compile Include="Assets\Scripts\Objects\DialogueTrigger.cs" />
