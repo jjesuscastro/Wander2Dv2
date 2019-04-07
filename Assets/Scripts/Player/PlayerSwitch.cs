@@ -1,16 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameManager;
 
 namespace Player
 {
     public class PlayerSwitch : MonoBehaviour
     {
-        [SerializeField]
         private PlayerMovement mc;
 
-        [SerializeField]
-        private PlayerMovement npc;
+        PlayerMovement npc;
 
         public bool obtainedNPC = false;
         public float maxDistance;
@@ -36,6 +35,7 @@ namespace Player
         // Start is called before the first frame update
         void Start()
         {
+            SetLevel();
             currentPlayer = mc.transform;
             mainCamera = Camera.main.GetComponent<CameraFollow>();
             playerMentalHealth = GetComponent<PlayerMentalHealth>();
@@ -83,27 +83,30 @@ namespace Player
 
         void CheckDistance()
         {
-            Transform mcTransform = mc.GetComponent<Transform>();
-            Transform npcTransform = npc.GetComponent<Transform>();
-
-            if(obtainedNPC)
+            if(mc != null && npc != null)
             {
-                if(Vector3.Distance(mcTransform.position, npcTransform.position) > maxDistance)
+                Transform mcTransform = mc.GetComponent<Transform>();
+                Transform npcTransform = npc.GetComponent<Transform>();
+
+                if(obtainedNPC)
                 {
-                    if(mc.isActiveAndEnabled)
+                    if(Vector3.Distance(mcTransform.position, npcTransform.position) > maxDistance)
                     {
-                        if(mc.GetComponent<CharacterController2D>().IsGrounded())
+                        if(mc.isActiveAndEnabled)
                         {
-                            npcTransform.position = mcTransform.position;
-                            npc.GetComponent<PlayerController>().FadeIn();
+                            if(mc.GetComponent<CharacterController2D>().IsGrounded())
+                            {
+                                npcTransform.position = mcTransform.position;
+                                npc.GetComponent<PlayerController>().FadeIn();
+                            }
                         }
-                    }
-                    else
-                    {
-                        if(npc.GetComponent<CharacterController2D>().IsGrounded())
+                        else
                         {
-                            mcTransform.position = npcTransform.position;
-                            mc.GetComponent<PlayerController>().FadeIn();
+                            if(npc.GetComponent<CharacterController2D>().IsGrounded())
+                            {
+                                mcTransform.position = npcTransform.position;
+                                mc.GetComponent<PlayerController>().FadeIn();
+                            }
                         }
                     }
                 }
@@ -115,6 +118,9 @@ namespace Player
             PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
             for(int i = 0; i < players.Length; i++)
             {
+                if(players[i].name.CompareTo("mc") == 0)
+                    mc = players[i];
+
                 if(players[i].name.CompareTo("NPC") == 0)
                     npc = players[i];
             }

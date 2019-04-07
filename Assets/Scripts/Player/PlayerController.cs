@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Object;
+using GameManager;
 
 namespace Player
 {
@@ -69,6 +70,11 @@ namespace Player
             {
                 PlayerMentalHealth.instance.changeHealth(-0.05f);
                 respawn();
+            }
+
+            if(other.gameObject.CompareTag("EndScene"))
+            {
+                SceneController.instance.LoadNewScene();
             }
         }
 

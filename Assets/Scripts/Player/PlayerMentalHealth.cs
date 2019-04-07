@@ -35,7 +35,8 @@ namespace Player
         #endregion
 
         void Update() {
-            mentalHealth.SetSize(health);
+            if(mentalHealth != null)
+                mentalHealth.SetSize(health);
 
             // if(criticalLevel) {
             //     timer += Time.deltaTime;
@@ -53,21 +54,26 @@ namespace Player
 
         public void SetLevel(string sceneName)
         {
+            player = GameObject.Find("mc");
+
             if(sceneName.CompareTo("Mood") == 0)
             {
                 //Asign mood MH effect;
+                Debug.Log("Set Mood MH");
                 mentalHealthEffect = moodMentalHealth;
                 gameObject.GetComponent<MoodMentalHealth>().enabled = true;
                 gameObject.GetComponent<AnxietyMentalHealth>().enabled = false;
                 gameObject.GetComponent<ShizoMentalHealth>().enabled = false;
             } else if(sceneName.CompareTo("Anxiety") == 0) {
                 //Asign anxiety MH effect;
+                Debug.Log("Set Anxiety MH");
                 mentalHealthEffect = anxietyMentalHealth;
                 gameObject.GetComponent<AnxietyMentalHealth>().enabled = true;
                 gameObject.GetComponent<MoodMentalHealth>().enabled = false;
                 gameObject.GetComponent<ShizoMentalHealth>().enabled = false;
             } else if(sceneName.CompareTo("Schizo") == 0) {
                 //Asign schizo MH effect;
+                Debug.Log("Set Schizo MH");
                 mentalHealthEffect = schizoMentalHealth;
                 gameObject.GetComponent<ShizoMentalHealth>().enabled = true;
                 gameObject.GetComponent<MoodMentalHealth>().enabled = false;

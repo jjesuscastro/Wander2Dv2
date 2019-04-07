@@ -23,6 +23,9 @@ namespace Object
         
         // Use this for initialization
         void Start () {
+            mainCharacter = GameObject.Find("mc");
+            nonPlayableCharacter = GameObject.Find("NPC");
+            cover = GameObject.Find("coverBlack");
             coverRenderer = cover.gameObject.GetComponent<SpriteRenderer>();
         }
         
