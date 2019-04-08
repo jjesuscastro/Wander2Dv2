@@ -8,6 +8,7 @@ namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
+        public GameObject excNotif;
         public float fadeRate = 0.25f;
         public Interactable focus;
         bool isRespawning = false;
@@ -53,6 +54,7 @@ namespace Player
             Interactable interactable = other.gameObject.GetComponent<Interactable>();
             if(interactable != null)
             {
+                excNotif.SetActive(true);
                 SetFocus(interactable);
             }
 
@@ -84,6 +86,7 @@ namespace Player
             {
                 if(focus.gameObject == other.gameObject)
                 {
+                    excNotif.SetActive(false);
                     RemoveFocus();
                 }
             }

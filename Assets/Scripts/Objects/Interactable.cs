@@ -22,7 +22,7 @@ namespace Object
         // Update is called once per frame
         protected void Update()
         {
-            radius = GetComponent<CircleCollider2D>().radius;
+            radius = GetComponent<CircleCollider2D>().radius * gameObject.transform.localScale.x;
 
             if(isFocused && player != null && hasInteracted != true)
             {
@@ -48,7 +48,7 @@ namespace Object
         }
 
 
-        void OnDrawGizmosSelected()
+        void OnDrawGizmos()
         {
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(transform.position, radius);

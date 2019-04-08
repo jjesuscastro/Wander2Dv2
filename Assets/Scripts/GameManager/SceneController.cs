@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Player;
 using UI;
@@ -10,6 +11,8 @@ namespace GameManager
     public class SceneController : MonoBehaviour
     {
         Scene scene;
+        public GameObject loadScreen;
+        public Slider slider;
 
         #region Singleton
         public static SceneController instance;
@@ -42,11 +45,26 @@ namespace GameManager
         {
             if(scene.name.CompareTo("Mood") == 0)
             {
-                SceneManager.LoadScene("Anxiety");
+                StartCoroutine(LoadAsync("Anxiety"));
             } else if(scene.name.CompareTo("Anxiety") == 0) {
-                SceneManager.LoadScene("Schizo");
+                StartCoroutine(LoadAsync("Schizo"));
             } else if(scene.name.CompareTo("Schizo") == 0) {
                 Debug.Log("EndGame");
+            }
+        }
+
+        IEnumerator LoadAsync(string sceneName)
+        {
+            Debug.Log("Loading New Scene");
+            AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+            loadScreen.gameObject.SetActive(true);
+
+            while(!operation.isDone)
+            {
+                float progress = Mathf.Clamp01(operation.progress / .9f);
+                slider.value = progress;
+
+                yield return null;
             }
         }
 

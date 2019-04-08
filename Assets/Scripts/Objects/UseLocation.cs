@@ -5,9 +5,8 @@ using UnityEngine;
 namespace Object
 {
     [RequireComponent (typeof(CircleCollider2D))]
-    public class UseLocation : MonoBehaviour
+    public class UseLocation : Interactable
     {
-        public float radius = 3;
         [SerializeField] Item item;
         [SerializeField] GameObject gameObjectToEnable;
 
@@ -15,14 +14,11 @@ namespace Object
         void Update()
         {
             if(item.isUsed)
+            {
                 EnableGameObject();
+                Destroy(this.gameObject);
+            }
             radius = GetComponent<CircleCollider2D>().radius;
-        }
-
-        void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, radius);
         }
 
         void EnableGameObject()

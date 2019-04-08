@@ -45,14 +45,21 @@ namespace UI
                 else
                     Invoke("Hide", 1.5f);
             } else {
-                tempColorPopup = popup.color;
-                tempColorPopup.a -= fadeRate;
 
-                popup.color = tempColorPopup;
+                if(popup.color.a > 0)
+                {
+                    tempColorPopup = popup.color;
+                    tempColorPopup.a -= fadeRate;
 
-                tempColorText = popupText.color;
-                tempColorText.a -= fadeRate * 3;
-                popupText.color = tempColorText;
+                    popup.color = tempColorPopup;
+                }
+
+                if(popupText.color.a > 0)
+                {
+                    tempColorText = popupText.color;
+                    tempColorText.a -= fadeRate * 3;
+                    popupText.color = tempColorText;
+                }
             }
         }
 

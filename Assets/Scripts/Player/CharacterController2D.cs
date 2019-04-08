@@ -23,6 +23,7 @@ namespace Player
         [SerializeField] private BoxCollider2D m_SlopeCheck;                        // A collider that will check the slope to climb
         [SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
         [SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
+        [SerializeField] private Transform m_ExcNotif;                              // Exclamation popup
         [SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
         [SerializeField] private Collider2D m_GroundCollider;                       // A collider that collides with the ground
 
@@ -293,6 +294,13 @@ namespace Player
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
+
+            Vector3 thePosition = m_ExcNotif.transform.localPosition;
+            theScale = m_ExcNotif.transform.localScale;
+            thePosition.x *= -1;
+            theScale.x *= -1;
+            m_ExcNotif.transform.localPosition = thePosition;
+            m_ExcNotif.transform.localScale = theScale;
         }
 
         struct RaycastOrigins
