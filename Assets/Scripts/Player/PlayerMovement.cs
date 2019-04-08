@@ -48,7 +48,6 @@ namespace Player
                         audioSource.Play();
                 }
                 
-                Debug.Log(audioSource.name);
             } else
             {
                 animator.SetBool("Walk", false);
