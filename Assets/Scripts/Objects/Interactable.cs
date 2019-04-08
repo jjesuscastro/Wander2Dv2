@@ -22,7 +22,7 @@ namespace Object
         // Update is called once per frame
         protected void Update()
         {
-            radius = GetComponent<CircleCollider2D>().radius * gameObject.transform.localScale.x;
+            radius = GetComponent<CircleCollider2D>().radius;
 
             if(isFocused && player != null && hasInteracted != true)
             {
