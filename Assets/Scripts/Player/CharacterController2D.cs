@@ -295,12 +295,15 @@ namespace Player
             theScale.x *= -1;
             transform.localScale = theScale;
 
-            Vector3 thePosition = m_ExcNotif.transform.localPosition;
-            theScale = m_ExcNotif.transform.localScale;
-            thePosition.x *= -1;
-            theScale.x *= -1;
-            m_ExcNotif.transform.localPosition = thePosition;
-            m_ExcNotif.transform.localScale = theScale;
+            if(m_ExcNotif != null)
+            {
+                Vector3 thePosition = m_ExcNotif.transform.localPosition;
+                theScale = m_ExcNotif.transform.localScale;
+                thePosition.x *= -1;
+                theScale.x *= -1;
+                m_ExcNotif.transform.localPosition = thePosition;
+                m_ExcNotif.transform.localScale = theScale;
+            }
         }
 
         struct RaycastOrigins
