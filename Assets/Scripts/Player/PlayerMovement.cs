@@ -11,11 +11,15 @@ namespace Player
         [SerializeField]
         CharacterController2D controller;
 
+        [SerializeField]
+        AudioSource audioSource;
+
         [HideInInspector]
         public Vector2 playerInput;
 
         float move = 0;
         float moveV = 0;
+        bool isWalking = false;
         bool jump = false;
         bool crouch = false;
         Animator animator;
@@ -32,18 +36,33 @@ namespace Player
             move = Input.GetAxisRaw("Horizontal") * moveSpeed;
             moveV = Input.GetAxisRaw("Vertical");
             playerInput = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
-
+            
             if (move != 0)
             {
                 animator.SetBool("Walk", true);
+
+                if(!isWalking)
+                {
+                    isWalking = true;
+                    if(audioSource != null)
+                        audioSource.Play();
+                }
+                
+                Debug.Log(audioSource.name);
             } else
             {
                 animator.SetBool("Walk", false);
+                isWalking = false;
+                if(audioSource != null)
+                    audioSource.Stop();
             }
 
             if (Input.GetButtonDown("Jump"))
             {
                 jump = true;
+                isWalking = false;
+                if(audioSource != null)
+                    audioSource.Stop();
                 animator.SetBool("Walk", false);
                 animator.SetBool("isJumping", true);
             }
