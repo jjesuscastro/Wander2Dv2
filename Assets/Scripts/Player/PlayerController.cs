@@ -14,11 +14,13 @@ namespace Player
         bool isRespawning = false;
         Vector3 respawnPoint;
         Color color;
+        Rigidbody2D rigidBody2D;
 
         void Start()
         {
             respawnPoint = transform.position;
             color = gameObject.GetComponent<SpriteRenderer>().color;
+            rigidBody2D = gameObject.GetComponent<Rigidbody2D>();
         }
 
         void Update()
@@ -91,7 +93,7 @@ namespace Player
                 }
             }
 
-            if(other.gameObject.CompareTag("MovingPlatform"))
+            if(other.gameObject.CompareTag("MovingPlatform") && rigidBody2D.simulated)
             {
                 transform.parent = null;
             }
