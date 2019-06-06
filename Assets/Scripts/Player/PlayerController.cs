@@ -54,6 +54,7 @@ namespace Player
         void OnTriggerEnter2D(Collider2D other)
         {
             Interactable interactable = other.gameObject.GetComponent<Interactable>();
+
             if(interactable != null)
             {
                 excNotif.SetActive(true);
