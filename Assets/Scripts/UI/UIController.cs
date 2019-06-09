@@ -28,7 +28,9 @@ namespace UI
 
         public void SetLevel()
         {
-            canvas.worldCamera = GameObject.Find("mainCamera").GetComponent<Camera>();
+            Camera mainCamera = GameObject.Find("mainCamera").GetComponent<Camera>();
+            if(canvas != null && mainCamera != null)
+                canvas.worldCamera = mainCamera;
         }
     }
 }
