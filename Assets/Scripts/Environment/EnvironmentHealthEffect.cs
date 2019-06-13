@@ -8,7 +8,7 @@ public class EnvironmentHealthEffect : MonoBehaviour
     [Header("Delay of the effect in milliseconds")]
     public int delay;
     public float effect;
-    float timer = 0;
+    float timer = float.MaxValue;
     
     void OnTriggerStay2D(Collider2D other)
     {

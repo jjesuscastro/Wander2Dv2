@@ -99,7 +99,6 @@ namespace Player
             health += damageValue;
 
             if(damageValue < 0) {
-                Debug.Log(damageValue);
                 SpriteRenderer vignette = vignetteDamage.GetComponent<SpriteRenderer>();
                 Color vig = vignette.color;
                 if(vig.a < 0.3)
