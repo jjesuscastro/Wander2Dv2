@@ -16,6 +16,8 @@ namespace Player
         public MoodMentalHealth moodMentalHealth;
         public AnxietyMentalHealth anxietyMentalHealth;
         public ShizoMentalHealth schizoMentalHealth;
+        public GameObject vignetteDamage;
+        public float fadeRate = 0.05f;
         
         Vector3 checkPoint;
         bool criticalLevel = false;
@@ -37,6 +39,18 @@ namespace Player
         void Update() {
             if(mentalHealth != null)
                 mentalHealth.SetSize(health);
+
+            if(vignetteDamage != null)
+            {
+                SpriteRenderer vignette = vignetteDamage.GetComponent<SpriteRenderer>();
+                Color vig = vignette.color;
+                if(vig.a > 0)
+                    vig.a -= fadeRate;
+                else if(vig.a < 0)
+                    vig.a = 0;
+
+                vignette.color = vig;
+            }
 
             // if(criticalLevel) {
             //     timer += Time.deltaTime;
@@ -83,6 +97,16 @@ namespace Player
 
         public void changeHealth(float damageValue) {
             health += damageValue;
+
+            if(damageValue < 0) {
+                Debug.Log(damageValue);
+                SpriteRenderer vignette = vignetteDamage.GetComponent<SpriteRenderer>();
+                Color vig = vignette.color;
+                if(vig.a < 0.3)
+                    vig.a += 0.4f;
+
+                vignette.color = vig;
+            }
 
             if(health >= 1) {
                 health = 1;
