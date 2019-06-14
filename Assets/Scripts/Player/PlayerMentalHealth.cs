@@ -101,8 +101,8 @@ namespace Player
             if(damageValue < 0) {
                 SpriteRenderer vignette = vignetteDamage.GetComponent<SpriteRenderer>();
                 Color vig = vignette.color;
-                if(vig.a < 0.3)
-                    vig.a += 0.4f;
+                if(vig.a < 1)
+                    vig.a += 0.5f;
 
                 vignette.color = vig;
             }
