@@ -33,7 +33,11 @@ namespace GameManager
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
             scene = SceneManager.GetActiveScene();
-            AssignSceneValues();
+            
+            if(scene.name.CompareTo("MainMenu") != 0)
+            {
+                AssignSceneValues();
+            }
         }
 
         public string GetSceneName()
@@ -43,8 +47,10 @@ namespace GameManager
 
         public void LoadNewScene()
         {
-            if(scene.name.CompareTo("Mood") == 0)
+            if(scene.name.CompareTo("MainMenu") == 0)
             {
+                StartCoroutine(LoadAsync("Mood"));
+            } else if(scene.name.CompareTo("Mood") == 0) {
                 StartCoroutine(LoadAsync("Anxiety"));
             } else if(scene.name.CompareTo("Anxiety") == 0) {
                 StartCoroutine(LoadAsync("Schizo"));

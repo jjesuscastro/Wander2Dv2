@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\DebugSize.cs" />
      <Compile Include="Assets\Scripts\DoNotDestroy.cs" />
      <Compile Include="Assets\Scripts\Environment\BackgroundScroll.cs" />
+     <Compile Include="Assets\Scripts\Environment\DrawGizmo.cs" />
      <Compile Include="Assets\Scripts\Environment\EnvironmentFade.cs" />
      <Compile Include="Assets\Scripts\Environment\EnvironmentHealthEffect.cs" />
      <Compile Include="Assets\Scripts\Environment\FadeOutIn.cs" />
