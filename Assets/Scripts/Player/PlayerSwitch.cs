@@ -12,7 +12,7 @@ namespace Player
         PlayerMovement npc;
 
         public bool obtainedNPC = false;
-        public float maxDistance;
+        public float minDistance;
 
         CameraFollow mainCamera;
         PlayerMentalHealth playerMentalHealth;
@@ -90,12 +90,21 @@ namespace Player
 
                 if(obtainedNPC)
                 {
-                    if(Vector3.Distance(mcTransform.position, npcTransform.position) > maxDistance)
+                    if(Vector3.Distance(mcTransform.position, npcTransform.position) > minDistance)
                     {
+                        /*
+                        What we want to happen:
+                            minDistance: adjust this so it's far enough to be "off-screen"
+                            1. When active character walks, inactive character just stands in place.
+                            2. When active character stops, inactive character "walks" in screen.
+                            3. IF inactive character will NOT walk if active character stops while
+                               inactive character is still in-frame.
+                         */
                         if(mc.isActiveAndEnabled)
                         {
                             if(mc.GetComponent<CharacterController2D>().IsGrounded())
                             {
+                                //This is where NPC "follows" MC
                                 npcTransform.position = mcTransform.position;
                                 npc.GetComponent<PlayerController>().FadeIn();
                             }
@@ -104,6 +113,7 @@ namespace Player
                         {
                             if(npc.GetComponent<CharacterController2D>().IsGrounded())
                             {
+                                //This is where MC "follows" NPC
                                 mcTransform.position = npcTransform.position;
                                 mc.GetComponent<PlayerController>().FadeIn();
                             }
