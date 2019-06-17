@@ -13,6 +13,9 @@ namespace Player
 
         public bool obtainedNPC = false;
         public float minDistance;
+        public float distanceToStop = 1;
+        bool npcIsFollowing = false;
+        bool mcIsFollowing = true;
 
         CameraFollow mainCamera;
         PlayerMentalHealth playerMentalHealth;
@@ -79,6 +82,47 @@ namespace Player
             }
 
             CheckDistance();
+            Follow();
+        }
+
+        void Follow()
+        {
+            Transform mcTransform = mc.GetComponent<Transform>();
+            Transform npcTransform = npc.GetComponent<Transform>();
+
+            if(npcIsFollowing)
+            {
+                Debug.Log("NPC is following");
+                if(Vector3.Distance(mcTransform.position, npcTransform.position) > distanceToStop)
+                {
+                    if(npc.GetComponent<CharacterController2D>().IsGrounded())
+                    {
+                        npc.getAnimator().SetBool("Walk", true);
+                        npc.GetComponent<CharacterController2D>().Move(npc.GetComponent<PlayerMovement>().getMoveSpeed() * Time.fixedDeltaTime, 0, false, false);
+                    }
+                        
+                } else {
+                    npc.getAnimator().SetBool("Walk", false);
+                    npcIsFollowing = false;
+                }
+            }
+
+            if(mcIsFollowing)
+            {
+                Debug.Log("MC is following");
+                if(Vector3.Distance(npcTransform.position, mcTransform.position) > distanceToStop)
+                {
+                    if(mc.GetComponent<CharacterController2D>().IsGrounded())
+                    {
+                        mc.getAnimator().SetBool("Walk", true);
+                        mc.GetComponent<CharacterController2D>().Move(mc.GetComponent<PlayerMovement>().getMoveSpeed() * Time.fixedDeltaTime, 0, false, false);
+                    }
+                        
+                } else {
+                    mc.getAnimator().SetBool("Walk", false);
+                    mcIsFollowing = false;
+                }
+            }
         }
 
         void CheckDistance()
@@ -100,22 +144,35 @@ namespace Player
                             3. IF inactive character will NOT walk if active character stops while
                                inactive character is still in-frame.
                          */
-                        if(mc.isActiveAndEnabled)
+                        if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
                         {
-                            if(mc.GetComponent<CharacterController2D>().IsGrounded())
+                            if(mc.isActiveAndEnabled)
                             {
-                                //This is where NPC "follows" MC
-                                npcTransform.position = mcTransform.position;
-                                npc.GetComponent<PlayerController>().FadeIn();
+                                if(mc.GetComponent<CharacterController2D>().IsGrounded() && npc.transform.position.x < mc.transform.position.x)
+                                {
+                                    //This is where NPC "follows" MC
+                                    Vector3 newPosition = mcTransform.position;
+                                    newPosition.x -= 10;
+                                    newPosition.y += 5;
+                                    npc.GetComponent<PlayerController>().RemoveColor();
+                                    npc.GetComponent<PlayerController>().WalkIn();
+                                    npcTransform.position = newPosition;
+                                    npcIsFollowing = true;
+                                }
                             }
-                        }
-                        else
-                        {
-                            if(npc.GetComponent<CharacterController2D>().IsGrounded())
+                            else
                             {
-                                //This is where MC "follows" NPC
-                                mcTransform.position = npcTransform.position;
-                                mc.GetComponent<PlayerController>().FadeIn();
+                                if(npc.GetComponent<CharacterController2D>().IsGrounded() && mc.transform.position.x < npc.transform.position.x)
+                                {
+                                    //This is where MC "follows" NPC
+                                    Vector3 newPosition = npcTransform.position;
+                                    newPosition.x -= 8;
+                                    newPosition.y += 5;
+                                    mc.GetComponent<PlayerController>().RemoveColor();
+                                    mc.GetComponent<PlayerController>().WalkIn();
+                                    mcTransform.position = newPosition;
+                                    mcIsFollowing = true;
+                                }
                             }
                         }
                     }
