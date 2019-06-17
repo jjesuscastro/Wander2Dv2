@@ -30,6 +30,16 @@ namespace Player
             animator = GetComponent<Animator>();
         }
 
+        public float getMoveSpeed()
+        {
+            return moveSpeed;
+        }
+
+        public Animator getAnimator()
+        {
+            return animator;
+        }
+
         // Update is called once per frame
         void Update()
         {

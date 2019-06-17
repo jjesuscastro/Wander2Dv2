@@ -37,8 +37,15 @@ namespace Player
             }
         }
 
-        public void FadeIn()
+        public void RemoveColor()
         {
+            color.a = 0;
+        }
+
+        public void WalkIn()
+        {
+            GetComponent<CharacterController2D>().EnableColliders();
+            
             color.a = 0;
             gameObject.GetComponent<SpriteRenderer>().color = color;
             isRespawning = true;
