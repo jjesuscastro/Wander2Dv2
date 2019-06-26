@@ -86,6 +86,7 @@ namespace Player
                 timer += Time.deltaTime * 100;
                 if(timer >= jumpDelay)
                 {
+                    // animator.SetBool("isJumping", false);
                     jumpDisabled = false;
                     timer = 0;
                 }
