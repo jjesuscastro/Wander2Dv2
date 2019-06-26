@@ -24,6 +24,10 @@ namespace Player
         bool crouch = false;
         Animator animator;
 
+        public float jumpDelay = 75;
+        bool jumpDisabled = false;
+        float timer = 0;
+
         // Use this for initialization
         void Awake()
         {
@@ -66,14 +70,25 @@ namespace Player
                     audioSource.Stop();
             }
 
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Jump") && !jumpDisabled)
             {
                 jump = true;
+                jumpDisabled = true;
                 isWalking = false;
                 if(audioSource != null)
                     audioSource.Stop();
                 animator.SetBool("Walk", false);
                 animator.SetBool("isJumping", true);
+            }
+
+            if(jumpDisabled)
+            {
+                timer += Time.deltaTime * 100;
+                if(timer >= jumpDelay)
+                {
+                    jumpDisabled = false;
+                    timer = 0;
+                }
             }
 
             if (Input.GetButtonDown("Crouch"))
