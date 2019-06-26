@@ -82,14 +82,17 @@ namespace Player
             Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
             for (int i = 0; i < colliders.Length; i++)
             {
-                if (colliders[i].gameObject != gameObject && timer >= delayCheck)
+                if (colliders[i].gameObject != gameObject)
                 {
                     m_Grounded = true;
-                    if (m_Grounded && wasGrounded) // && m_Rigidbody2D.velocity.y <= 0
-                        OnLandEvent.Invoke();
 
-                    timer = 0;
-                    Debug.Log("reset check timer");
+                    if(timer >= delayCheck)
+                    {
+                        if (m_Grounded && wasGrounded) // && m_Rigidbody2D.velocity.y <= 0
+                            OnLandEvent.Invoke();
+
+                        timer = 0;
+                    }
                 }
             }
         }
