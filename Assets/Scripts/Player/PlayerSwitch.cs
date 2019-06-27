@@ -15,7 +15,7 @@ namespace Player
         public float minDistance;
         public float distanceToStop = 1;
         bool npcIsFollowing = false;
-        bool mcIsFollowing = true;
+        bool mcIsFollowing = false;
 
         CameraFollow mainCamera;
         PlayerMentalHealth playerMentalHealth;
@@ -79,7 +79,7 @@ namespace Player
                 {
                     Debug.Log("You have not obtained the NPC yet!");
                 }
-            }
+            } 
 
             CheckDistance();
             Follow();
@@ -90,40 +90,38 @@ namespace Player
             Transform mcTransform = mc.GetComponent<Transform>();
             Transform npcTransform = npc.GetComponent<Transform>();
             
-            if(obtainedNPC)
+
+            if(npcIsFollowing)
             {
-                if(npcIsFollowing)
+                Debug.Log("NPC is following");
+                if(Vector3.Distance(mcTransform.position, npcTransform.position) > distanceToStop)
                 {
-                    Debug.Log("NPC is following");
-                    if(Vector3.Distance(mcTransform.position, npcTransform.position) > distanceToStop)
+                    if(npc.GetComponent<CharacterController2D>().IsGrounded())
                     {
-                        if(npc.GetComponent<CharacterController2D>().IsGrounded())
-                        {
-                            npc.getAnimator().SetBool("Walk", true);
-                            npc.GetComponent<CharacterController2D>().Move(npc.GetComponent<PlayerMovement>().getMoveSpeed() * Time.fixedDeltaTime, 0, false, false);
-                        }
-
-                    } else {
-                        npc.getAnimator().SetBool("Walk", false);
-                        npcIsFollowing = false;
+                        npc.getAnimator().SetBool("Walk", true);
+                        npc.GetComponent<CharacterController2D>().Move(npc.GetComponent<PlayerMovement>().getMoveSpeed() * Time.fixedDeltaTime, 0, false, false);
                     }
+
+                } else {
+                    npc.getAnimator().SetBool("Walk", false);
+                    npcIsFollowing = false;
                 }
+            }
 
-                if(mcIsFollowing)
+            if(mcIsFollowing)
+            {
+                Debug.Log("MC is following");
+                if(Vector3.Distance(npcTransform.position, mcTransform.position) > distanceToStop)
                 {
-                    Debug.Log("MC is following");
-                    if(Vector3.Distance(npcTransform.position, mcTransform.position) > distanceToStop)
+                    if(mc.GetComponent<CharacterController2D>().IsGrounded())
                     {
-                        if(mc.GetComponent<CharacterController2D>().IsGrounded())
-                        {
-                            mc.getAnimator().SetBool("Walk", true);
-                            mc.GetComponent<CharacterController2D>().Move(mc.GetComponent<PlayerMovement>().getMoveSpeed() * Time.fixedDeltaTime, 0, false, false);
-                        }
-
-                    } else {
-                        mc.getAnimator().SetBool("Walk", false);
-                        mcIsFollowing = false;
+                        mc.getAnimator().SetBool("Walk", true);
+                        mc.GetComponent<CharacterController2D>().Move(mc.GetComponent<PlayerMovement>().getMoveSpeed() * Time.fixedDeltaTime, 0, false, false);
                     }
+
+                } else {
+                    mc.getAnimator().SetBool("Walk", false);
+                    mcIsFollowing = false;
                 }
             }
         }

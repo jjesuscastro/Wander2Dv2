@@ -13,6 +13,8 @@ namespace Player
         public int verticalRayCount = 4;
         float horizontalRaySpacing;
         float verticalRaySpacing;
+        float timer = 0;
+        float delayCheck = 50;
 
         [SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;          // Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -55,6 +57,8 @@ namespace Player
         {
             if(!isSimulated)
                 DisableColliders();
+
+            timer += Time.deltaTime * 100;
         }
 
         private void Awake()
@@ -78,11 +82,14 @@ namespace Player
             Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
             for (int i = 0; i < colliders.Length; i++)
             {
-                if (colliders[i].gameObject != gameObject)
+                if (colliders[i].gameObject != gameObject && timer >= delayCheck)
                 {
                     m_Grounded = true;
-                    if (m_Grounded && !wasGrounded) // && m_Rigidbody2D.velocity.y <= 0
+                    if (m_Grounded && wasGrounded) // && m_Rigidbody2D.velocity.y <= 0
                         OnLandEvent.Invoke();
+
+                    timer = 0;
+                    Debug.Log("reset check timer");
                 }
             }
         }
@@ -139,8 +146,11 @@ namespace Player
 
                     m_Grounded = true;
 
-                    if (OnLandEvent != null)
+                    if (OnLandEvent != null && timer >= delayCheck)
+                    {
                         OnLandEvent.Invoke();
+                        timer = 0;
+                    }
                 }
             }
         }
