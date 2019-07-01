@@ -2330,7 +2330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129595283}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 105.96, y: -116.89, z: 0}
+  m_LocalPosition: {x: 105.96, y: -116.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 131858333}
@@ -5234,7 +5234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343027100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 94.3, y: -32.2, z: 0}
+  m_LocalPosition: {x: 94.4, y: -32.2, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 940485610}
@@ -6306,9 +6306,10 @@ GameObject:
   - component: {fileID: 419300705}
   - component: {fileID: 419300706}
   - component: {fileID: 419300707}
+  - component: {fileID: 419300708}
   m_Layer: 0
   m_Name: 18_thorn
-  m_TagString: Untagged
+  m_TagString: FallDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6637,6 +6638,20 @@ PolygonCollider2D:
       - {x: -14.44336, y: -5.581055}
       - {x: -14.414063, y: -5.5664067}
       - {x: -14.414063, y: -5.3613286}
+--- !u!114 &419300708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419300704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4dd5860427822e44b1379c5d5d44fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1
+  effect: -0.1
 --- !u!1 &421056399
 GameObject:
   m_ObjectHideFlags: 0
@@ -11266,7 +11281,7 @@ GameObject:
   - component: {fileID: 769687504}
   m_Layer: 0
   m_Name: 4_thorns
-  m_TagString: Untagged
+  m_TagString: FallDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15312,7 +15327,7 @@ GameObject:
   - component: {fileID: 1036148108}
   m_Layer: 0
   m_Name: 26_thorns
-  m_TagString: Untagged
+  m_TagString: FallDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18890,7 +18905,7 @@ GameObject:
   - component: {fileID: 1298728827}
   m_Layer: 0
   m_Name: 14_thorns
-  m_TagString: Untagged
+  m_TagString: FallDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18968,9 +18983,10 @@ GameObject:
   - component: {fileID: 1310440020}
   - component: {fileID: 1310440021}
   - component: {fileID: 1310440022}
+  - component: {fileID: 1310440023}
   m_Layer: 0
   m_Name: 23_thorns
-  m_TagString: Untagged
+  m_TagString: FallDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19444,6 +19460,20 @@ PolygonCollider2D:
       - {x: 9.858399, y: -4.042969}
       - {x: 15.000001, y: -4.042969}
       - {x: 15.000001, y: -3.6621096}
+--- !u!114 &1310440023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310440019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4dd5860427822e44b1379c5d5d44fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1
+  effect: -0.1
 --- !u!1 &1323885570
 GameObject:
   m_ObjectHideFlags: 0
@@ -20290,7 +20320,7 @@ GameObject:
   - component: {fileID: 1364334988}
   m_Layer: 0
   m_Name: 20_thorns
-  m_TagString: Untagged
+  m_TagString: FallDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20370,7 +20400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 1
-  effect: 0.1
+  effect: -0.1
 --- !u!60 &1364334989
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -22583,9 +22613,10 @@ GameObject:
   - component: {fileID: 1439564384}
   - component: {fileID: 1439564385}
   - component: {fileID: 1439564386}
+  - component: {fileID: 1439564387}
   m_Layer: 0
   m_Name: 24_thorns
-  m_TagString: Untagged
+  m_TagString: FallDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22895,6 +22926,20 @@ PolygonCollider2D:
       - {x: 10.781251, y: -6.7675786}
       - {x: 10.781251, y: 1.5820314}
       - {x: 10.7666025, y: 1.6113282}
+--- !u!114 &1439564387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439564383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4dd5860427822e44b1379c5d5d44fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1
+  effect: -0.1
 --- !u!1 &1456528926
 GameObject:
   m_ObjectHideFlags: 0
@@ -24027,7 +24072,7 @@ GameObject:
   - component: {fileID: 1504836254}
   m_Layer: 0
   m_Name: 19_thorns
-  m_TagString: Untagged
+  m_TagString: FallDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26005,7 +26050,7 @@ GameObject:
   - component: {fileID: 1611315662}
   m_Layer: 0
   m_Name: 25_thorns
-  m_TagString: Untagged
+  m_TagString: FallDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34804,12 +34849,12 @@ PrefabInstance:
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 133.6
+      value: 164.9
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -147.42
+      value: -100.8
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
