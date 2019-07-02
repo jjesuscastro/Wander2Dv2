@@ -19,7 +19,7 @@ namespace GameManager
 
         void Awake()
         {
-            if(instance != null)
+            if (instance != null)
             {
                 Debug.LogWarning("Multiple scene controllers switches found");
             }
@@ -33,8 +33,8 @@ namespace GameManager
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
             scene = SceneManager.GetActiveScene();
-            
-            if(scene.name.CompareTo("MainMenu") != 0)
+
+            if (scene.name.CompareTo("MainMenu") != 0)
             {
                 AssignSceneValues();
             }
@@ -47,14 +47,20 @@ namespace GameManager
 
         public void LoadNewScene()
         {
-            if(scene.name.CompareTo("MainMenu") == 0)
+            if (scene.name.CompareTo("MainMenu") == 0)
             {
                 StartCoroutine(LoadAsync("Mood"));
-            } else if(scene.name.CompareTo("Mood") == 0) {
+            }
+            else if (scene.name.CompareTo("Mood") == 0)
+            {
                 StartCoroutine(LoadAsync("Anxiety"));
-            } else if(scene.name.CompareTo("Anxiety") == 0) {
+            }
+            else if (scene.name.CompareTo("Anxiety") == 0)
+            {
                 StartCoroutine(LoadAsync("Schizo"));
-            } else if(scene.name.CompareTo("Schizo") == 0) {
+            }
+            else if (scene.name.CompareTo("Schizo") == 0)
+            {
                 Debug.Log("EndGame");
             }
         }
@@ -65,7 +71,7 @@ namespace GameManager
             AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
             loadScreen.gameObject.SetActive(true);
 
-            while(!operation.isDone)
+            while (!operation.isDone)
             {
                 float progress = Mathf.Clamp01(operation.progress / .9f);
                 slider.value = progress;

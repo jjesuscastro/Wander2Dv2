@@ -22,7 +22,7 @@ public class FollowCamera : MonoBehaviour
     void Start()
     {
         cameraToFollow = Camera.main.transform;
-        
+
     }
 
     // Update is called once per frame
@@ -30,15 +30,16 @@ public class FollowCamera : MonoBehaviour
     {
         Vector3 newPos = transform.position;
 
-        if(followX && rightEdge < stopX)
+        if (followX && rightEdge < stopX)
         {
             newPos.x = cameraToFollow.position.x;
-        } else if(rightEdge >= stopX)
+        }
+        else if (rightEdge >= stopX)
         {
             followX = false;
         }
 
-        if(followY)
+        if (followY)
         {
             newPos.y = cameraToFollow.position.y + yOffset;
         }

@@ -8,22 +8,24 @@ public class FadeOutIn : MonoBehaviour
     public float fadeRate;
     public int length;
 
-	[SerializeField]
-	GameObject cover;
-	SpriteRenderer coverRenderer;
+    [SerializeField]
+    GameObject cover;
+    SpriteRenderer coverRenderer;
     bool fadecover;
     bool fadeIn;
     float timer = 0f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         coverRenderer = cover.gameObject.GetComponent<SpriteRenderer>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         Color tmpColor;
-		if(fadeIn)
+        if (fadeIn)
         {
             tmpColor = coverRenderer.color;
             tmpColor.a += fadeRate;
@@ -31,19 +33,19 @@ public class FadeOutIn : MonoBehaviour
             timer += Time.deltaTime;
         }
 
-        if(timer % 60 >= length)
+        if (timer % 60 >= length)
         {
             fadecover = true;
         }
 
-        if(fadecover)
+        if (fadecover)
         {
             tmpColor = coverRenderer.color;
             tmpColor.a -= fadeRate;
             coverRenderer.color = tmpColor;
             fadeIn = false;
         }
-	}
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {

@@ -55,7 +55,7 @@ namespace Player
 
         void Update()
         {
-            if(!isSimulated)
+            if (!isSimulated)
                 DisableColliders();
 
             timer += Time.deltaTime * 100;
@@ -86,7 +86,7 @@ namespace Player
                 {
                     m_Grounded = true;
 
-                    if(timer >= delayCheck)
+                    if (timer >= delayCheck)
                     {
                         if (m_Grounded && wasGrounded) // && m_Rigidbody2D.velocity.y <= 0
                             OnLandEvent.Invoke();
@@ -102,7 +102,7 @@ namespace Player
             float directionX = Mathf.Sign(velocity.x);
             float rayLength = Mathf.Abs(velocity.x);
 
-            for(int i = 0; i < horizontalRayCount; i++)
+            for (int i = 0; i < horizontalRayCount; i++)
             {
                 Vector2 rayOrigin = (directionX == -1) ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
                 rayOrigin += Vector2.up * (horizontalRaySpacing * i);
@@ -110,12 +110,12 @@ namespace Player
 
                 Debug.DrawRay(rayOrigin, Vector2.right * directionX * 0.5f, Color.red);
 
-                if(hit)
+                if (hit)
                 {
                     //We only want to use this for the slopeChecking not the movement so use this only for slope checking
                     float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
                     // Debug.Log(hit.collider.name + " " + slopeAngle);
-                    if(i == 0 && slopeAngle <= maxClimbSlope)
+                    if (i == 0 && slopeAngle <= maxClimbSlope)
                     {
                         ClimbSlope(ref velocity, slopeAngle);
                     }
@@ -129,7 +129,7 @@ namespace Player
             float directionY = Mathf.Sign(velocity.y);
             float rayLength = Mathf.Abs(velocity.y);
 
-            for(int i = 0; i < verticalRayCount; i++)
+            for (int i = 0; i < verticalRayCount; i++)
             {
                 Vector2 rayOrigin = (directionY == -1) ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
                 rayOrigin += -Vector2.up * (verticalRaySpacing * i);
@@ -137,10 +137,10 @@ namespace Player
 
                 Debug.DrawRay(rayOrigin, Vector2.up * directionY * 1f, Color.red);
 
-                if(hit)
+                if (hit)
                 {
                     //We only want to use this for the slopeChecking not the movement so use this only for slope checking
-                    if(moveV == -1 && hit.collider.gameObject.layer == LayerMask.NameToLayer("PlatformAbove"))
+                    if (moveV == -1 && hit.collider.gameObject.layer == LayerMask.NameToLayer("PlatformAbove"))
                     {
                         m_GroundCollider.enabled = false;
                         m_CrouchDisableCollider.enabled = false;
@@ -169,7 +169,7 @@ namespace Player
             float moveDistance = Mathf.Abs(velocity.x);
             float climbVelocityY = Mathf.Sin(slopeAngle * Mathf.Deg2Rad) * moveDistance;
 
-            if(velocity.y <= climbVelocityY)
+            if (velocity.y <= climbVelocityY)
             {
                 velocity.y = climbVelocityY;
                 velocity.x = Mathf.Cos(slopeAngle * Mathf.Deg2Rad) * moveDistance * Mathf.Sign(velocity.x);
@@ -246,7 +246,7 @@ namespace Player
 
                 // Move the character by finding the target velocity
                 Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
-                if(targetVelocity.x != 0)
+                if (targetVelocity.x != 0)
                     HorizontallCollisions(ref targetVelocity);
 
                 //Changed vertical collisions to work even without pressing down
@@ -278,7 +278,8 @@ namespace Player
             }
         }
 
-        public bool IsGrounded(){
+        public bool IsGrounded()
+        {
             return m_Grounded;
         }
 
@@ -289,7 +290,7 @@ namespace Player
 
         public void DisableColliders()
         {
-            if(m_Grounded)
+            if (m_Grounded)
                 m_Rigidbody2D.simulated = false;
         }
 
@@ -309,7 +310,7 @@ namespace Player
             theScale.x *= -1;
             transform.localScale = theScale;
 
-            if(m_ExcNotif != null)
+            if (m_ExcNotif != null)
             {
                 Vector3 thePosition = m_ExcNotif.transform.localPosition;
                 theScale = m_ExcNotif.transform.localScale;

@@ -27,7 +27,7 @@ namespace Player
 
         void Awake()
         {
-            if(instance != null)
+            if (instance != null)
             {
                 Debug.LogWarning("Multiple player switches found");
             }
@@ -50,9 +50,9 @@ namespace Player
         {
             if (Input.GetButtonDown("Switch"))
             {
-                if(obtainedNPC)
+                if (obtainedNPC)
                 {
-                    if(mc.isActiveAndEnabled)
+                    if (mc.isActiveAndEnabled)
                     {
                         mc.enabled = false;
                         npc.enabled = true;
@@ -79,7 +79,7 @@ namespace Player
                 {
                     Debug.Log("You have not obtained the NPC yet!");
                 }
-            } 
+            }
 
             CheckDistance();
             Follow();
@@ -89,37 +89,41 @@ namespace Player
         {
             Transform mcTransform = mc.GetComponent<Transform>();
             Transform npcTransform = npc.GetComponent<Transform>();
-            
 
-            if(npcIsFollowing)
+
+            if (npcIsFollowing)
             {
                 Debug.Log("NPC is following");
-                if(Vector3.Distance(mcTransform.position, npcTransform.position) > distanceToStop)
+                if (Vector3.Distance(mcTransform.position, npcTransform.position) > distanceToStop)
                 {
-                    if(npc.GetComponent<CharacterController2D>().IsGrounded())
+                    if (npc.GetComponent<CharacterController2D>().IsGrounded())
                     {
                         npc.getAnimator().SetBool("Walk", true);
                         npc.GetComponent<CharacterController2D>().Move(npc.GetComponent<PlayerMovement>().getMoveSpeed() * Time.fixedDeltaTime, 0, false, false);
                     }
 
-                } else {
+                }
+                else
+                {
                     npc.getAnimator().SetBool("Walk", false);
                     npcIsFollowing = false;
                 }
             }
 
-            if(mcIsFollowing)
+            if (mcIsFollowing)
             {
                 Debug.Log("MC is following");
-                if(Vector3.Distance(npcTransform.position, mcTransform.position) > distanceToStop)
+                if (Vector3.Distance(npcTransform.position, mcTransform.position) > distanceToStop)
                 {
-                    if(mc.GetComponent<CharacterController2D>().IsGrounded())
+                    if (mc.GetComponent<CharacterController2D>().IsGrounded())
                     {
                         mc.getAnimator().SetBool("Walk", true);
                         mc.GetComponent<CharacterController2D>().Move(mc.GetComponent<PlayerMovement>().getMoveSpeed() * Time.fixedDeltaTime, 0, false, false);
                     }
 
-                } else {
+                }
+                else
+                {
                     mc.getAnimator().SetBool("Walk", false);
                     mcIsFollowing = false;
                 }
@@ -128,14 +132,14 @@ namespace Player
 
         void CheckDistance()
         {
-            if(mc != null && npc != null)
+            if (mc != null && npc != null)
             {
                 Transform mcTransform = mc.GetComponent<Transform>();
                 Transform npcTransform = npc.GetComponent<Transform>();
 
-                if(obtainedNPC)
+                if (obtainedNPC)
                 {
-                    if(Vector3.Distance(mcTransform.position, npcTransform.position) > minDistance)
+                    if (Vector3.Distance(mcTransform.position, npcTransform.position) > minDistance)
                     {
                         /*
                         What we want to happen:
@@ -145,11 +149,11 @@ namespace Player
                             3. IF inactive character will NOT walk if active character stops while
                                inactive character is still in-frame.
                          */
-                        if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+                        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
                         {
-                            if(mc.isActiveAndEnabled)
+                            if (mc.isActiveAndEnabled)
                             {
-                                if(mc.GetComponent<CharacterController2D>().IsGrounded() && npc.transform.position.x < mc.transform.position.x)
+                                if (mc.GetComponent<CharacterController2D>().IsGrounded() && npc.transform.position.x < mc.transform.position.x)
                                 {
                                     //This is where NPC "follows" MC
                                     Vector3 newPosition = mcTransform.position;
@@ -163,7 +167,7 @@ namespace Player
                             }
                             else
                             {
-                                if(npc.GetComponent<CharacterController2D>().IsGrounded() && mc.transform.position.x < npc.transform.position.x)
+                                if (npc.GetComponent<CharacterController2D>().IsGrounded() && mc.transform.position.x < npc.transform.position.x)
                                 {
                                     //This is where MC "follows" NPC
                                     Vector3 newPosition = npcTransform.position;
@@ -184,12 +188,12 @@ namespace Player
         public void SetLevel()
         {
             PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
-            for(int i = 0; i < players.Length; i++)
+            for (int i = 0; i < players.Length; i++)
             {
-                if(players[i].name.CompareTo("mc") == 0)
+                if (players[i].name.CompareTo("mc") == 0)
                     mc = players[i];
 
-                if(players[i].name.CompareTo("NPC") == 0)
+                if (players[i].name.CompareTo("NPC") == 0)
                     npc = players[i];
             }
             obtainedNPC = false;

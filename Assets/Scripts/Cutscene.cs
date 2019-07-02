@@ -13,22 +13,24 @@ public class Cutscene : MonoBehaviour
 
     void Update()
     {
-        if(sceneStarting)
+        if (sceneStarting)
         {
             Color color = blackCover.color;
-            color.a += 0.025
+            color.a += 0.025f;
         }
     }
 
-    public void StartScene() {
+    public void StartScene()
+    {
         Color color = blackCover.color;
         color.a = 0;
         blackCover.color = color;
         sceneStarting = true;
     }
 
-    public void NextScene() {
-        if(currScene != cutscenes.Length)
+    public void NextScene()
+    {
+        if (currScene != cutscenes.Length)
         {
             sceneRenderer.sprite = cutscenes[currScene];
             currScene++;

@@ -23,7 +23,7 @@ namespace GameManager
 
         void Awake()
         {
-            if(instance != null)
+            if (instance != null)
             {
                 Debug.LogWarning("Multiple dialogue managers found");
             }
@@ -39,10 +39,10 @@ namespace GameManager
 
         void Update()
         {
-            if(dialogueOpen && Input.GetButtonDown("NextDialogue"))
+            if (dialogueOpen && Input.GetButtonDown("NextDialogue"))
                 DisplayNextSentence();
         }
-    
+
         public void StartDialogue(Dialogue dialogue)
         {
             dialogueOpen = true;
@@ -51,12 +51,12 @@ namespace GameManager
             names.Clear();
             sentences.Clear();
 
-            foreach(string name in dialogue.names)
+            foreach (string name in dialogue.names)
             {
                 names.Enqueue(name);
             }
 
-            foreach(string sentence in dialogue.sentences)
+            foreach (string sentence in dialogue.sentences)
             {
                 sentences.Enqueue(sentence);
             }
@@ -68,7 +68,7 @@ namespace GameManager
 
         public void DisplayNextSentence()
         {
-            if(names.Count == 0 || sentences.Count == 0)
+            if (names.Count == 0 || sentences.Count == 0)
             {
                 EndDialogue();
                 return;

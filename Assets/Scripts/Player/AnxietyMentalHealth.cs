@@ -6,7 +6,7 @@ namespace Player
 {
     public class AnxietyMentalHealth : MentalHealthEffect
     {
-        
+
         public float fadeRate;
         public float minEnabledTime;
         public float maxEnabledTime;
@@ -46,30 +46,32 @@ namespace Player
         void Update()
         {
             Color tempColor;
-            if(isEnabled)
+            if (isEnabled)
             {
-                if(fadeIn)
+                if (fadeIn)
                 {
                     tempColor = whiteBackground.color;
                     tempColor.a += fadeRate;
                     whiteBackground.color = tempColor;
                     intenseVignette.color = tempColor;
 
-                    if(tempColor.a >= 1)
+                    if (tempColor.a >= 1)
                     {
                         fadeIn = false;
                         fadeOut = true;
                     }
                 }
-            } else {
-                if(fadeOut)
+            }
+            else
+            {
+                if (fadeOut)
                 {
                     tempColor = whiteBackground.color;
                     tempColor.a -= fadeRate;
                     whiteBackground.color = tempColor;
                     intenseVignette.color = tempColor;
 
-                    if(tempColor.a <= 0)
+                    if (tempColor.a <= 0)
                     {
                         fadeOut = false;
                         fadeIn = true;
@@ -77,10 +79,10 @@ namespace Player
                 }
             }
 
-            if(firstCall)
+            if (firstCall)
             {
                 float delay = 10;
-                if(isEnabled)
+                if (isEnabled)
                     delay = Random.Range(minEnabledTime, maxEnabledTime);
                 else
                     delay = Random.Range(minDisabledTime, maxDisabledTime);
@@ -91,19 +93,19 @@ namespace Player
 
         void Toggle()
         {
-            if(blackCover.active)
+            if (blackCover.active)
                 blackCover.SetActive(false);
             else
                 blackCover.SetActive(true);
 
             float delay = 10;
-            if(isEnabled)
+            if (isEnabled)
                 delay = Random.Range(minEnabledTime, maxEnabledTime);
             else
             {
                 delay = Random.Range(minDisabledTime, maxDisabledTime);
 
-                if(blackCover.active)
+                if (blackCover.active)
                     delay = 0.5f;
             }
             Invoke("Toggle", delay);

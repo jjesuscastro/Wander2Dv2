@@ -17,7 +17,7 @@ namespace GameManager
 
         void Awake()
         {
-            if(instance != null)
+            if (instance != null)
             {
                 Debug.LogWarning("Multiple inventories found");
             }
@@ -27,7 +27,7 @@ namespace GameManager
 
         public bool Add(Item item)
         {
-            if(items.Count >= size)
+            if (items.Count >= size)
             {
                 Debug.Log("Not enough room.");
                 return false;
@@ -35,7 +35,7 @@ namespace GameManager
 
             items.Add(item);
 
-            if(onItemChanged != null)
+            if (onItemChanged != null)
                 onItemChanged.Invoke();
 
             return true;
@@ -44,8 +44,8 @@ namespace GameManager
         public void Remove(Item item)
         {
             items.Remove(item);
-            
-            if(onItemChanged != null)
+
+            if (onItemChanged != null)
                 onItemChanged.Invoke();
         }
     }

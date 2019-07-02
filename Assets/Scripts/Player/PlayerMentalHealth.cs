@@ -5,7 +5,8 @@ using UI;
 
 namespace Player
 {
-    public class PlayerMentalHealth : MonoBehaviour {
+    public class PlayerMentalHealth : MonoBehaviour
+    {
 
         public float health = 1f;
         public GameObject player;
@@ -18,7 +19,7 @@ namespace Player
         public ShizoMentalHealth schizoMentalHealth;
         public GameObject vignetteDamage;
         public float fadeRate = 0.05f;
-        
+
         Vector3 checkPoint;
         bool criticalLevel = false;
         float timer = 0;
@@ -28,7 +29,7 @@ namespace Player
 
         void Awake()
         {
-            if(instance != null)
+            if (instance != null)
             {
                 Debug.LogWarning("Multiple player health managers found");
             }
@@ -36,17 +37,18 @@ namespace Player
         }
         #endregion
 
-        void Update() {
-            if(mentalHealth != null)
+        void Update()
+        {
+            if (mentalHealth != null)
                 mentalHealth.SetSize(health);
 
-            if(vignetteDamage != null)
+            if (vignetteDamage != null)
             {
                 SpriteRenderer vignette = vignetteDamage.GetComponent<SpriteRenderer>();
                 Color vig = vignette.color;
-                if(vig.a > 0)
+                if (vig.a > 0)
                     vig.a -= fadeRate;
-                else if(vig.a < 0)
+                else if (vig.a < 0)
                     vig.a = 0;
 
                 vignette.color = vig;
@@ -60,7 +62,8 @@ namespace Player
             // }
         }
 
-        void resetLevel() {
+        void resetLevel()
+        {
             changeHealth(1f);
             player.GetComponent<PlayerController>().respawn();
             player.transform.position = checkPoint;
@@ -70,7 +73,7 @@ namespace Player
         {
             player = GameObject.Find("mc");
 
-            if(sceneName.CompareTo("Mood") == 0)
+            if (sceneName.CompareTo("Mood") == 0)
             {
                 //Asign mood MH effect;
                 Debug.Log("Set Mood MH");
@@ -78,14 +81,18 @@ namespace Player
                 gameObject.GetComponent<MoodMentalHealth>().enabled = true;
                 gameObject.GetComponent<AnxietyMentalHealth>().enabled = false;
                 gameObject.GetComponent<ShizoMentalHealth>().enabled = false;
-            } else if(sceneName.CompareTo("Anxiety") == 0) {
+            }
+            else if (sceneName.CompareTo("Anxiety") == 0)
+            {
                 //Asign anxiety MH effect;
                 Debug.Log("Set Anxiety MH");
                 mentalHealthEffect = anxietyMentalHealth;
                 gameObject.GetComponent<AnxietyMentalHealth>().enabled = true;
                 gameObject.GetComponent<MoodMentalHealth>().enabled = false;
                 gameObject.GetComponent<ShizoMentalHealth>().enabled = false;
-            } else if(sceneName.CompareTo("Schizo") == 0) {
+            }
+            else if (sceneName.CompareTo("Schizo") == 0)
+            {
                 //Asign schizo MH effect;
                 Debug.Log("Set Schizo MH");
                 mentalHealthEffect = schizoMentalHealth;
@@ -95,37 +102,43 @@ namespace Player
             }
         }
 
-        public void changeHealth(float damageValue) {
+        public void changeHealth(float damageValue)
+        {
             health += damageValue;
 
-            if(damageValue < 0) {
+            if (damageValue < 0)
+            {
                 SpriteRenderer vignette = vignetteDamage.GetComponent<SpriteRenderer>();
                 Color vig = vignette.color;
-                if(vig.a < 1)
+                if (vig.a < 1)
                     vig.a += 0.5f;
 
                 vignette.color = vig;
             }
 
-            if(health >= 1) {
+            if (health >= 1)
+            {
                 health = 1;
                 timer = 0;
             }
-            
-            if(health < 0f)
+
+            if (health < 0f)
                 health = 0f;
 
-            if(health < 0.25f) {
+            if (health < 0.25f)
+            {
                 timer = 0;
                 mentalHealthEffect.Trigger();
                 // criticalLevel = true;
             }
-            else {
+            else
+            {
                 mentalHealthEffect.Stop();
                 // criticalLevel = false;
             }
 
-            if(health <= 0) {
+            if (health <= 0)
+            {
                 resetLevel();
             }
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Object
 {
-    [RequireComponent (typeof(CircleCollider2D))]
+    [RequireComponent(typeof(CircleCollider2D))]
     public class Interactable : MonoBehaviour
     {
 
@@ -24,10 +24,10 @@ namespace Object
         {
             radius = GetComponent<CircleCollider2D>().radius;
 
-            if(isFocused && player != null && hasInteracted != true)
+            if (isFocused && player != null && hasInteracted != true)
             {
                 float distance = Vector3.Distance(player.position, transform.position);
-                if(distance <= radius)
+                if (distance <= radius)
                 {
                     hasInteracted = Interact();
                 }

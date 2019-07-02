@@ -18,15 +18,15 @@ namespace Object
         /// <summary>
         /// Update is called every frame, if the MonoBehaviour is enabled.
         /// </summary>
-        
+
         public override bool Interact()
         {
             // Debug.Log("NPC Available");
-            if(Input.GetButtonDown("Interact"))
+            if (Input.GetButtonDown("Interact"))
             {
                 Talk();
 
-                if(onInteract != null)
+                if (onInteract != null)
                     onInteract.Invoke();
 
                 return true;

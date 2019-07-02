@@ -13,7 +13,7 @@ namespace UI
 
         void Awake()
         {
-            if(instance != null)
+            if (instance != null)
             {
                 Debug.LogWarning("Multiple ui controllers found");
             }
@@ -29,7 +29,7 @@ namespace UI
         public void SetLevel()
         {
             Camera mainCamera = GameObject.Find("mainCamera").GetComponent<Camera>();
-            if(canvas != null && mainCamera != null)
+            if (canvas != null && mainCamera != null)
                 canvas.worldCamera = mainCamera;
         }
     }

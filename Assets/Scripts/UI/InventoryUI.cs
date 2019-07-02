@@ -18,17 +18,18 @@ namespace UI
 
         public void UpdateUI()
         {
-            if(slots == null)
+            if (slots == null)
             {
                 slots = itemsParent.GetComponentsInChildren<InventorySlot>();
             }
 
-            for(int i = 0; i < slots.Length; i++)
+            for (int i = 0; i < slots.Length; i++)
             {
-                if(i < inventory.items.Count)
+                if (i < inventory.items.Count)
                 {
                     slots[i].AddItem(inventory.items[i]);
-                } else
+                }
+                else
                 {
                     slots[i].ClearSlot();
                 }

@@ -20,7 +20,7 @@ namespace GameManager
 
         void Awake()
         {
-            if(instance != null)
+            if (instance != null)
             {
                 Debug.LogWarning("Multiple journals found");
             }
@@ -31,7 +31,7 @@ namespace GameManager
         public bool Add(Entry entry)
         {
             entries.Insert(entries.Count - 2, entry);
-            if(entries.Count % 2 != 0)
+            if (entries.Count % 2 != 0)
                 entries.Insert(entries.Count - 2, placeholder);
             else
                 entries.Remove(placeholder);
@@ -45,7 +45,7 @@ namespace GameManager
         public void Remove(Entry entry)
         {
             entries.Remove(entry);
-            
+
             // if(onEntryChanged != null)
             //     onEntryChanged.Invoke();
         }

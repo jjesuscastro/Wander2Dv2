@@ -12,12 +12,12 @@ public class VerticalPlatforms : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.localPosition.y >= maxY)
+        if (transform.localPosition.y >= maxY)
             moveUp = false;
-        if(transform.localPosition.y <= minY)
+        if (transform.localPosition.y <= minY)
             moveUp = true;
 
-        if(moveUp)
+        if (moveUp)
             transform.position = new Vector2(transform.position.x, transform.position.y + speed * Time.deltaTime);
         else
             transform.position = new Vector2(transform.position.x, transform.position.y - speed * Time.deltaTime);

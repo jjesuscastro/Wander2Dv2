@@ -9,13 +9,13 @@ public class EnvironmentHealthEffect : MonoBehaviour
     public int delay;
     public float effect;
     float timer = float.MaxValue;
-    
+
     void OnTriggerStay2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             timer += Time.deltaTime * 100;
-            if(timer >= delay)
+            if (timer >= delay)
             {
                 PlayerMentalHealth.instance.changeHealth(effect);
                 timer = 0;

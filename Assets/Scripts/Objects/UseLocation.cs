@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Object
 {
-    [RequireComponent (typeof(CircleCollider2D))]
+    [RequireComponent(typeof(CircleCollider2D))]
     public class UseLocation : Interactable
     {
         [SerializeField] Item item;
@@ -13,7 +13,7 @@ namespace Object
         // Update is called once per frame
         void Update()
         {
-            if(item.isUsed)
+            if (item.isUsed)
             {
                 EnableGameObject();
                 Destroy(this.gameObject);

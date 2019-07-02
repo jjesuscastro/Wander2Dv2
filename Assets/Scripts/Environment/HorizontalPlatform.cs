@@ -14,18 +14,18 @@ public class HorizontalPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!stop)
+        if (!stop)
         {
-            if(transform.localPosition.x >= maxX)
+            if (transform.localPosition.x >= maxX)
             {
                 moveRight = false;
-                if(oneDirection)
+                if (oneDirection)
                     stop = true;
             }
-            if(transform.localPosition.x <= minX)
+            if (transform.localPosition.x <= minX)
                 moveRight = true;
 
-            if(moveRight)
+            if (moveRight)
                 transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
             else
                 transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
