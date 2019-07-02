@@ -13,7 +13,11 @@ public class Cutscene : MonoBehaviour
 
     void Update()
     {
-        
+        if(sceneStarting)
+        {
+            Color color = blackCover.color;
+            color.a += 0.025
+        }
     }
 
     public void StartScene() {
