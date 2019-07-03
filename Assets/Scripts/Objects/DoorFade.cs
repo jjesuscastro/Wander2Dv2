@@ -20,21 +20,23 @@ namespace Object
         bool fadecover;
         bool fadeIn;
         float timer = 0f;
-        
+
         // Use this for initialization
-        void Start () {
+        void Start()
+        {
             mainCharacter = GameObject.Find("mc");
             nonPlayableCharacter = GameObject.Find("NPC");
             cover = GameObject.Find("coverBlack");
             coverRenderer = cover.gameObject.GetComponent<SpriteRenderer>();
         }
-        
+
         // Update is called once per frame
-        void Update () {
+        void Update()
+        {
             base.Update();
 
             Color tmpColor;
-            if(fadeIn)
+            if (fadeIn)
             {
                 tmpColor = coverRenderer.color;
                 tmpColor.a += fadeRate;
@@ -42,19 +44,19 @@ namespace Object
                 timer += Time.deltaTime;
             }
 
-            if(timer % 60 >= length)
+            if (timer % 60 >= length)
             {
                 fadecover = true;
                 MovePlayers();
                 timer = 0;
             }
 
-            if(fadecover)
+            if (fadecover)
             {
                 tmpColor = coverRenderer.color;
                 tmpColor.a -= fadeRate;
                 coverRenderer.color = tmpColor;
-                if(tmpColor.a <= 0)
+                if (tmpColor.a <= 0)
                     fadecover = false;
                 fadeIn = false;
             }
@@ -62,19 +64,19 @@ namespace Object
 
         void MovePlayers()
         {
-            if(mainCharacter != null)
+            if (mainCharacter != null)
                 mainCharacter.transform.position = newPosition.position;
 
-            if(nonPlayableCharacter != null)
+            if (nonPlayableCharacter != null)
                 nonPlayableCharacter.transform.position = newPosition.position;
         }
 
         public override bool Interact()
         {
-            if(Input.GetButtonDown("Interact"))
+            if (Input.GetButtonDown("Interact"))
             {
                 fadeIn = true;
-            
+
                 return true;
             }
 

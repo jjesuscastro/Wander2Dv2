@@ -18,7 +18,7 @@ namespace UI
 
         void Awake()
         {
-            if(instance != null)
+            if (instance != null)
             {
                 Debug.LogWarning("Multiple popup notifications found");
             }
@@ -29,24 +29,26 @@ namespace UI
         void Update()
         {
             Color tempColorPopup, tempColorText;
-            if(showUp)
+            if (showUp)
             {
                 tempColorPopup = popup.color;
                 tempColorPopup.a += fadeRate;
 
-                if(tempColorPopup.a <= 0.33f)
+                if (tempColorPopup.a <= 0.33f)
                     popup.color = tempColorPopup;
 
                 tempColorText = popupText.color;
                 tempColorText.a += fadeRate * 3;
 
-                if(tempColorText.a <= 1f)
+                if (tempColorText.a <= 1f)
                     popupText.color = tempColorText;
                 else
                     Invoke("Hide", 1.5f);
-            } else {
+            }
+            else
+            {
 
-                if(popup.color.a > 0)
+                if (popup.color.a > 0)
                 {
                     tempColorPopup = popup.color;
                     tempColorPopup.a -= fadeRate;
@@ -54,7 +56,7 @@ namespace UI
                     popup.color = tempColorPopup;
                 }
 
-                if(popupText.color.a > 0)
+                if (popupText.color.a > 0)
                 {
                     tempColorText = popupText.color;
                     tempColorText.a -= fadeRate * 3;

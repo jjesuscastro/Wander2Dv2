@@ -25,13 +25,15 @@ namespace Player
 
         void Update()
         {
-            if(isRespawning)
+            if (isRespawning)
             {
-                if(color.a < 1)
+                if (color.a < 1)
                 {
                     color.a += fadeRate;
                     gameObject.GetComponent<SpriteRenderer>().color = color;
-                } else {
+                }
+                else
+                {
                     isRespawning = false;
                 }
             }
@@ -45,13 +47,14 @@ namespace Player
         public void WalkIn()
         {
             GetComponent<CharacterController2D>().EnableColliders();
-            
+
             color.a = 0;
             gameObject.GetComponent<SpriteRenderer>().color = color;
             isRespawning = true;
         }
 
-        public void respawn() {
+        public void respawn()
+        {
             color.a = 0;
             gameObject.GetComponent<SpriteRenderer>().color = color;
             isRespawning = true;
@@ -62,29 +65,29 @@ namespace Player
         {
             Interactable interactable = other.gameObject.GetComponent<Interactable>();
 
-            if(interactable != null)
+            if (interactable != null)
             {
                 excNotif.SetActive(true);
                 SetFocus(interactable);
             }
 
-            if(other.gameObject.CompareTag("MovingPlatform"))
+            if (other.gameObject.CompareTag("MovingPlatform"))
             {
                 transform.SetParent(other.transform);
             }
 
-            if(other.gameObject.CompareTag("Checkpoint"))
+            if (other.gameObject.CompareTag("Checkpoint"))
             {
                 respawnPoint = other.transform.position;
             }
 
-            if(other.gameObject.CompareTag("FallDetector"))
+            if (other.gameObject.CompareTag("FallDetector"))
             {
                 PlayerMentalHealth.instance.changeHealth(-0.05f);
                 respawn();
             }
 
-            if(other.gameObject.CompareTag("EndScene"))
+            if (other.gameObject.CompareTag("EndScene"))
             {
                 SceneController.instance.LoadNewScene();
             }
@@ -92,22 +95,22 @@ namespace Player
 
         void OnTriggerExit2D(Collider2D other)
         {
-            if(focus != null && other != null)
+            if (focus != null && other != null)
             {
-                if(focus.gameObject == other.gameObject)
+                if (focus.gameObject == other.gameObject)
                 {
                     excNotif.SetActive(false);
                     RemoveFocus();
                 }
             }
 
-            if(other.gameObject.CompareTag("MovingPlatform") && rigidBody2D.simulated)
+            if (other.gameObject.CompareTag("MovingPlatform") && rigidBody2D.simulated)
             {
                 transform.parent = null;
             }
         }
 
-        public void SetFocus(Interactable newFocus) 
+        public void SetFocus(Interactable newFocus)
         {
             focus = newFocus;
             newFocus.OnFocus(transform);

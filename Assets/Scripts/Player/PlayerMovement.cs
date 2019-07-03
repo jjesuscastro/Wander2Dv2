@@ -49,24 +49,25 @@ namespace Player
         {
             move = Input.GetAxisRaw("Horizontal") * moveSpeed;
             moveV = Input.GetAxisRaw("Vertical");
-            playerInput = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
-            
+            playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
             if (move != 0)
             {
                 animator.SetBool("Walk", true);
 
-                if(!isWalking)
+                if (!isWalking)
                 {
                     isWalking = true;
-                    if(audioSource != null)
+                    if (audioSource != null)
                         audioSource.Play();
                 }
-                
-            } else
+
+            }
+            else
             {
                 animator.SetBool("Walk", false);
                 isWalking = false;
-                if(audioSource != null)
+                if (audioSource != null)
                     audioSource.Stop();
             }
 
@@ -75,16 +76,16 @@ namespace Player
                 jump = true;
                 jumpDisabled = true;
                 isWalking = false;
-                if(audioSource != null)
+                if (audioSource != null)
                     audioSource.Stop();
                 animator.SetBool("Walk", false);
                 animator.SetBool("isJumping", true);
             }
 
-            if(jumpDisabled)
+            if (jumpDisabled)
             {
                 timer += Time.deltaTime * 100;
-                if(timer >= jumpDelay)
+                if (timer >= jumpDelay)
                 {
                     // animator.SetBool("isJumping", false);
                     jumpDisabled = false;
@@ -95,7 +96,8 @@ namespace Player
             if (Input.GetButtonDown("Crouch"))
             {
                 crouch = true;
-            } else if (Input.GetButtonUp("Crouch"))
+            }
+            else if (Input.GetButtonUp("Crouch"))
             {
                 crouch = false;
             }

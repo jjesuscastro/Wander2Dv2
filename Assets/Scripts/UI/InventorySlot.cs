@@ -22,19 +22,20 @@ namespace UI
             icon.sprite = item.icon;
             icon.enabled = true;
             removeButton.interactable = true;
-            if(item.useLocationName != null || item.useLocationName != "")
+            if (item.useLocationName != null || item.useLocationName != "")
             {
                 useLocation = FindTransform(item.useLocationName);
                 hasUseLocation = true;
             }
         }
 
-        UseLocation FindTransform(string useLocationName){
+        UseLocation FindTransform(string useLocationName)
+        {
             UseLocation[] useLocations = GameObject.FindObjectsOfType<UseLocation>();
 
-            for(int i = 0; i < useLocations.Length; i++)
+            for (int i = 0; i < useLocations.Length; i++)
             {
-                if(useLocations[i].name.CompareTo(useLocationName) == 0)
+                if (useLocations[i].name.CompareTo(useLocationName) == 0)
                     return useLocations[i];
             }
 
@@ -57,11 +58,13 @@ namespace UI
 
         public void UseItem()
         {
-            if(item != null && !hasUseLocation)
+            if (item != null && !hasUseLocation)
             {
                 item.Use();
-            } else {
-                if(useLocation != null && Vector3.Distance(PlayerSwitch.instance.GetCurrentPlayer().position, useLocation.transform.position) < useLocation.radius)
+            }
+            else
+            {
+                if (useLocation != null && Vector3.Distance(PlayerSwitch.instance.GetCurrentPlayer().position, useLocation.transform.position) < useLocation.radius)
                 {
                     item.Use();
                     Inventory.instance.Remove(item);
@@ -71,7 +74,7 @@ namespace UI
 
         public void OnMouseOver()
         {
-            if(item != null)
+            if (item != null)
             {
                 itemPreview.sprite = item.icon;
                 itemPreview.enabled = true;

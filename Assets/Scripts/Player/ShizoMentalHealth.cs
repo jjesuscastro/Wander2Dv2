@@ -30,30 +30,32 @@ namespace Player
         void Update()
         {
             Color tempColor;
-            if(isEnabled)
+            if (isEnabled)
             {
-                if(fadeIn)
+                if (fadeIn)
                 {
                     whispers.volume += fadeRate;
                     tempColor = face.color;
                     tempColor.a += fadeRate;
                     face.color = tempColor;
 
-                    if(tempColor.a >= 0.15)
+                    if (tempColor.a >= 0.15)
                     {
                         fadeIn = false;
                         fadeOut = true;
                     }
                 }
-            } else {
-                if(fadeOut)
+            }
+            else
+            {
+                if (fadeOut)
                 {
                     whispers.volume -= fadeRate;
                     tempColor = face.color;
                     tempColor.a -= fadeRate;
                     face.color = tempColor;
 
-                    if(tempColor.a <= 0)
+                    if (tempColor.a <= 0)
                     {
                         fadeOut = false;
                         fadeIn = true;

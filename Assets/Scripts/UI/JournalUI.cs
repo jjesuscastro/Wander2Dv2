@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using GameManager;
 
-namespace UI{
+namespace UI
+{
     public class JournalUI : MonoBehaviour
     {
         public Transform journalsParent;
@@ -28,16 +29,16 @@ namespace UI{
 
         public void NextPage()
         {
-            currentPage+=2;
+            currentPage += 2;
 
-            if(currentPage > 0)
+            if (currentPage > 0)
             {
                 center.gameObject.SetActive(false);
                 left.gameObject.SetActive(true);
                 right.gameObject.SetActive(true);
-            } 
-            
-            if(currentPage > journal.entries.Count - 1)
+            }
+
+            if (currentPage > journal.entries.Count - 1)
             {
                 currentPage = journal.entries.Count - 1;
                 center.gameObject.SetActive(true);
@@ -52,9 +53,9 @@ namespace UI{
 
         public void PreviousPage()
         {
-            currentPage-=2;
+            currentPage -= 2;
 
-            if(currentPage <= 0)
+            if (currentPage <= 0)
             {
                 currentPage = 0;
                 center.gameObject.SetActive(true);
@@ -69,19 +70,19 @@ namespace UI{
 
         void SetImages()
         {
-            if(currentPage <= 0)
+            if (currentPage <= 0)
                 currentPage = 0;
 
-            if(currentPage > journal.entries.Count - 1)
-                currentPage = journal.entries.Count -1;
+            if (currentPage > journal.entries.Count - 1)
+                currentPage = journal.entries.Count - 1;
 
-            if(currentPage == journal.entries.Count - 1)
+            if (currentPage == journal.entries.Count - 1)
                 center.SetImage(journal.entries[currentPage].icon);
 
             right.SetImage(journal.entries[currentPage].icon);
-            
-            if(currentPage > 0)
-                left.SetImage(journal.entries[currentPage-1].icon);
+
+            if (currentPage > 0)
+                left.SetImage(journal.entries[currentPage - 1].icon);
         }
 
         // public void UpdateUI()

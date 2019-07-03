@@ -21,8 +21,8 @@ namespace Object
         {
             Debug.Log("Picking up item " + item.name);
             bool wasPickedUp = Inventory.instance.Add(item);
-            
-            if(wasPickedUp)
+
+            if (wasPickedUp)
             {
                 Destroy(gameObject);
                 PopupNotification.instance.ShowPopup("Picked up " + item.name + "!");

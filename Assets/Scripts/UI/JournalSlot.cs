@@ -14,7 +14,7 @@ namespace UI
             icon.sprite = newEntry;
             icon.enabled = true;
         }
-        
+
         public void RemoveImage()
         {
             icon.sprite = null;
