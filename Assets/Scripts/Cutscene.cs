@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Cutscene : MonoBehaviour
 {
-    public UnityEvent onBlackCover;
+    public UnityEvent endScene;
     public SpriteRenderer blackCover;
     public SpriteRenderer sceneRenderer;
     public SpriteRenderer blankSceneRenderer;
@@ -21,6 +21,7 @@ public class Cutscene : MonoBehaviour
 
     void Update()
     {
+        
         if (sceneStarting && !scenePlaying)
         {
             Color color = blackCover.color;
@@ -34,10 +35,8 @@ public class Cutscene : MonoBehaviour
         {
             if (timer % 60 > 1)
             {
-                if (onBlackCover != null)
-                {
-                    onBlackCover.Invoke();
-                }
+                gameObject.transform.Find("cutsceneRenderer").gameObject.SetActive(true);
+                NextScene();
                 sceneStarting = false;
                 timer = 0;
                 startTimer = false;
@@ -105,6 +104,8 @@ public class Cutscene : MonoBehaviour
         else
         {
             scenePlaying = false;
+            if(endScene != null)
+                endScene.Invoke();
         }
     }
 }

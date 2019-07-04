@@ -716,8 +716,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1766,6 +1766,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815811469365073488, guid: 6d67178d0b2af2b4a90ec2fd93ec4682,
+        type: 3}
+      propertyPath: endScene.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815811469365073488, guid: 6d67178d0b2af2b4a90ec2fd93ec4682,
+        type: 3}
+      propertyPath: endScene.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815811469365073488, guid: 6d67178d0b2af2b4a90ec2fd93ec4682,
+        type: 3}
+      propertyPath: endScene.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815811469365073488, guid: 6d67178d0b2af2b4a90ec2fd93ec4682,
+        type: 3}
+      propertyPath: endScene.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1842854092}
+    - target: {fileID: 5815811469365073488, guid: 6d67178d0b2af2b4a90ec2fd93ec4682,
+        type: 3}
+      propertyPath: endScene.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNewScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815811469365073488, guid: 6d67178d0b2af2b4a90ec2fd93ec4682,
+        type: 3}
+      propertyPath: endScene.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d67178d0b2af2b4a90ec2fd93ec4682, type: 3}
