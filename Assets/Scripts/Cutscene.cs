@@ -14,10 +14,10 @@ public class Cutscene : MonoBehaviour
     public int currScene = 0;
     float timer = 0;
     float sceneTimer = 0;
-    bool sceneStarting = false;
-    bool startTimer = false;
+    public bool sceneStarting = false;
+    public bool startTimer = false;
     public bool scenePlaying = false;
-    bool sceneChanging = false;
+    public bool sceneChanging = false;
 
     void Update()
     {
