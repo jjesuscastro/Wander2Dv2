@@ -13,7 +13,7 @@ namespace UI
         {
             inventory = Inventory.instance;
             slots = itemsParent.GetComponentsInChildren<InventorySlot>();
-            gameObject.SetActive(false);
+            // gameObject.SetActive(false);
         }
 
         public void UpdateUI()

@@ -8,8 +8,6 @@ namespace UI
 {
     public class InventorySlot : MonoBehaviour
     {
-        public Image itemPreview;
-        public Text itemDesc;
         public Image icon;
         public Button removeButton;
         public UseLocation useLocation;
@@ -70,24 +68,6 @@ namespace UI
                     Inventory.instance.Remove(item);
                 }
             }
-        }
-
-        public void OnMouseOver()
-        {
-            if (item != null)
-            {
-                itemPreview.sprite = item.icon;
-                itemPreview.enabled = true;
-                itemDesc.text = item.description;
-                // Debug.Log("Viewing " + item.name);
-            }
-        }
-
-        public void OnMouseExit()
-        {
-            itemPreview.enabled = false;
-            itemPreview.sprite = null;
-            itemDesc.text = null;
         }
     }
 }
