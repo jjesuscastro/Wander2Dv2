@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Player;
 
 public class Cutscene : MonoBehaviour
 {
@@ -87,6 +88,12 @@ public class Cutscene : MonoBehaviour
 
     public void StartScene()
     {
+        PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
+        for (int i = 0; i < players.Length; i++)
+        {
+            players[i].enabled = false;
+        }
+
         Color color = blackCover.color;
         color.a = 0;
         blackCover.color = color;
