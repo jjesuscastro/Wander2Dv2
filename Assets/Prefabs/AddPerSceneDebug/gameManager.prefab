@@ -67,7 +67,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  size: 20
+  size: 3
   items: []
 --- !u!114 &7367229155095531966
 MonoBehaviour:
@@ -102,10 +102,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3580478a8858a2047a5eaa76729bec7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mc: {fileID: 0}
-  npc: {fileID: 0}
   obtainedNPC: 0
-  maxDistance: 35
+  minDistance: 0
+  distanceToStop: 1
 --- !u!114 &7367229155095531952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +139,8 @@ MonoBehaviour:
   moodMentalHealth: {fileID: 7367229155095531954}
   anxietyMentalHealth: {fileID: 7367229155095531959}
   schizoMentalHealth: {fileID: 7367229155095531956}
+  vignetteDamage: {fileID: 0}
+  fadeRate: 0.05
 --- !u!114 &7367229155095531954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,3 +210,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a6cd50612fb6948ad4283bc1552663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadScreen: {fileID: 0}
+  slider: {fileID: 0}
