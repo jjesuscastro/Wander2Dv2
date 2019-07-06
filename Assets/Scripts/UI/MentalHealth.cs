@@ -18,7 +18,7 @@ namespace UI
             brainColored = transform.Find("brainIconLow").Find("brainIcon").GetComponent<SpriteRenderer>();
         }
 
-        void Update()
+        void Update() 
         {
             SetSize(lclSize);
         }

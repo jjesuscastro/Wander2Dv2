@@ -317,6 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 48945087}
+  doNotDestroy: 1
 --- !u!58 &48945086
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -553,6 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 76585334}
+  doNotDestroy: 0
 --- !u!58 &76585333
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -990,6 +992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 111325998}
+  doNotDestroy: 0
 --- !u!58 &111325997
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4081,6 +4084,7 @@ Transform:
   - {fileID: 118105331}
   - {fileID: 120361603}
   - {fileID: 944093279}
+  - {fileID: 1378326424}
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5283,6 +5287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 416073692}
+  doNotDestroy: 0
 --- !u!58 &416073691
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6295,6 +6300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 493296403}
+  doNotDestroy: 0
 --- !u!58 &493296402
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7056,6 +7062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 539339301}
+  doNotDestroy: 0
 --- !u!58 &539339300
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8157,6 +8164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 574990256}
+  doNotDestroy: 0
 --- !u!58 &574990255
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14620,6 +14628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 1018035242}
+  doNotDestroy: 0
 --- !u!58 &1018035241
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -15916,6 +15925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 1062492101}
+  doNotDestroy: 0
 --- !u!58 &1062492100
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -21486,6 +21496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 1349509122}
+  doNotDestroy: 0
 --- !u!58 &1349509121
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -22567,6 +22578,63 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!1 &1378326423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378326424}
+  - component: {fileID: 1378326425}
+  m_Layer: 0
+  m_Name: 22_wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378326424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378326423}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -133.18, y: -52.43, z: 0}
+  m_LocalScale: {x: 1, y: 27.234, z: 1}
+  m_Children: []
+  m_Father: {fileID: 312229601}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1378326425
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378326423}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -25193,6 +25261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 1506334335}
+  doNotDestroy: 0
 --- !u!58 &1506334334
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25272,6 +25341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 1512068735}
+  doNotDestroy: 0
 --- !u!58 &1512068734
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25891,6 +25961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 1553441620}
+  doNotDestroy: 0
 --- !u!58 &1553441619
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -27167,6 +27238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 1630485902}
+  doNotDestroy: 0
 --- !u!58 &1630485901
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -29496,6 +29568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 1750146887}
+  doNotDestroy: 0
 --- !u!58 &1750146886
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -32090,6 +32163,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 48945085}
+        m_MethodName: ManualDestroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1378326423}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   NPC: {fileID: 1478588041}
@@ -32190,8 +32285,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879477711}
   m_LocalRotation: {x: -0, y: -0, z: 0.026256494, w: 0.9996553}
-  m_LocalPosition: {x: -12.100026, y: 5.5999994, z: 0}
-  m_LocalScale: {x: 3.49, y: 35.5, z: 1.8}
+  m_LocalPosition: {x: -6.6, y: 17.4, z: 0}
+  m_LocalScale: {x: 3.49, y: 79.0727, z: 1.8}
   m_Children: []
   m_Father: {fileID: 282046967}
   m_RootOrder: 0
@@ -34480,7 +34575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998597649}
   m_LocalRotation: {x: -0, y: -0, z: 0.038587205, w: 0.99925524}
-  m_LocalPosition: {x: -23.499979, y: -20.7, z: 0}
+  m_LocalPosition: {x: -15.5, y: -20.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 282046967}
@@ -35374,6 +35469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 1.5
   dialogue: {fileID: 2071283200}
+  doNotDestroy: 0
 --- !u!58 &2071283199
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -36607,12 +36703,12 @@ PrefabInstance:
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.93
+      value: 600.5
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.94
+      value: 62.9
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}

@@ -9,6 +9,7 @@ namespace Object
     {
         [SerializeField]
         private Dialogue dialogue;
+        public bool doNotDestroy = false;
 
         public override bool Interact()
         {
@@ -20,7 +21,9 @@ namespace Object
         void TriggerDialogue()
         {
             dialogue.TriggerDialogue();
-            Destroy(gameObject);
+
+            if(!doNotDestroy)
+                Destroy(gameObject);
         }
     }
 }
