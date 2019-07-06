@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 namespace Player
 {
@@ -10,25 +11,26 @@ namespace Player
 
         public float maxAlpha = 0.75f;
         public float fadeRate;
-        public int color;
         public int length = 5;
+        public PostProcessVolume ppVolume;
         bool firstCall = true;
         bool fadecover;
         bool callOnce = false;
         bool fadeIn = true;
         bool fadeInBlack = true;
         bool fadeInYellow;
-        Color tempColor;
         float timer = 0f;
         bool isStop = false;
+        ColorGrading colorGrading;
 
         public override void Trigger()
         {
-            base.Trigger();
+            base.Trigger();            
         }
 
         void Update()
         {
+            ppVolume.profile.TryGetSettings(out colorGrading);
             if (isEnabled)
             {
                 isStop = false;
@@ -42,10 +44,10 @@ namespace Player
                             Time.timeScale = 0.5f;
                             callOnce = false;
                         }
-                        tempColor = covers[0].GetComponent<SpriteRenderer>().color;
-                        tempColor.a += fadeRate;
-                        if (tempColor.a <= maxAlpha)
-                            covers[0].GetComponent<SpriteRenderer>().color = tempColor;
+
+                        colorGrading.saturation.value -= fadeRate;
+                        if(colorGrading.saturation.value < -100)
+                            colorGrading.saturation.value = -100;
                     }
 
                     //Fade in yellow
@@ -56,10 +58,10 @@ namespace Player
                             Time.timeScale = 1.5f;
                             callOnce = false;
                         }
-                        tempColor = covers[1].GetComponent<SpriteRenderer>().color;
-                        tempColor.a += fadeRate;
-                        if (tempColor.a <= maxAlpha)
-                            covers[1].GetComponent<SpriteRenderer>().color = tempColor;
+
+                        colorGrading.saturation.value += fadeRate;
+                        if(colorGrading.saturation.value > 100)
+                            colorGrading.saturation.value = 100;
                     }
 
                     timer += Time.deltaTime;
@@ -76,32 +78,19 @@ namespace Player
                 {
                     if (fadeInBlack) //Which means black is visible so supposedly yellow is not
                     {
-                        //if you are here it means fadeblack is true and fadeyellow should be false
-                        tempColor = covers[0].GetComponent<SpriteRenderer>().color;
-                        tempColor.a -= fadeRate;
-                        covers[0].GetComponent<SpriteRenderer>().color = tempColor;
-                        if (tempColor.a <= 0)
-                        {
-                            fadeInBlack = false;
-                            fadeInYellow = true;
-                            fadeIn = true;
-                            fadecover = false;
-                            callOnce = true;
-                        }
+                        fadeInBlack = false;
+                        fadeInYellow = true;
+                        fadeIn = true;
+                        fadecover = false;
+                        callOnce = true;
                     }
                     else if (fadeInYellow)
                     {
-                        tempColor = covers[1].GetComponent<SpriteRenderer>().color;
-                        tempColor.a -= fadeRate;
-                        covers[1].GetComponent<SpriteRenderer>().color = tempColor;
-                        if (tempColor.a <= 0)
-                        {
-                            fadeInBlack = true;
-                            fadeInYellow = false;
-                            fadeIn = true;
-                            fadecover = false;
-                            callOnce = true;
-                        }
+                        fadeInBlack = true;
+                        fadeInYellow = false;
+                        fadeIn = true;
+                        fadecover = false;
+                        callOnce = true;
                     }
                 }
             }
@@ -109,13 +98,19 @@ namespace Player
             if (!isEnabled && !isStop)
             {
                 Time.timeScale = 1f;
-                tempColor = covers[0].GetComponent<SpriteRenderer>().color;
-                tempColor.a -= fadeRate;
-                covers[0].GetComponent<SpriteRenderer>().color = tempColor;
 
-                tempColor = covers[1].GetComponent<SpriteRenderer>().color;
-                tempColor.a -= fadeRate;
-                covers[1].GetComponent<SpriteRenderer>().color = tempColor;
+                if(colorGrading.saturation.value < 0)
+                {
+                    colorGrading.saturation.value += fadeRate;
+                        if(colorGrading.saturation.value > 0)
+                            colorGrading.saturation.value = 0;
+                }
+                else if (colorGrading.saturation.value > 0)
+                {
+                    colorGrading.saturation.value -= fadeRate;
+                        if(colorGrading.saturation.value < 0)
+                            colorGrading.saturation.value = 0;
+                }
 
                 fadeInBlack = true;
                 fadeInYellow = false;
@@ -123,7 +118,7 @@ namespace Player
                 fadecover = false;
                 callOnce = true;
 
-                if (covers[0].GetComponent<SpriteRenderer>().color.a <= 0 && covers[1].GetComponent<SpriteRenderer>().color.a <= 0)
+                if (colorGrading.saturation.value == 0)
                     isStop = true;
             }
         }
