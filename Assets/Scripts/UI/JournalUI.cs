@@ -89,7 +89,10 @@ namespace UI
         void SetImages()
         {
             if (currentPage <= 0)
+            {
                 currentPage = 0;
+                center.SetImage(journal.entries[currentPage].icon);
+            }
 
             if (currentPage > journal.entries.Count - 1)
                 currentPage = journal.entries.Count - 1;
