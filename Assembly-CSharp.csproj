@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\Objects\Interactable.cs" />
      <Compile Include="Assets\Scripts\Objects\Item.cs" />
      <Compile Include="Assets\Scripts\Objects\ItemPickup.cs" />
+     <Compile Include="Assets\Scripts\Objects\PositionLimits.cs" />
      <Compile Include="Assets\Scripts\Objects\UseLocation.cs" />
      <Compile Include="Assets\Scripts\Player\AnxietyMentalHealth.cs" />
      <Compile Include="Assets\Scripts\Player\CharacterController2D.cs" />
