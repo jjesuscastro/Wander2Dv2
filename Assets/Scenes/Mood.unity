@@ -37724,6 +37724,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -139.0843
       objectReference: {fileID: 0}
+    - target: {fileID: 5384040787912646556, guid: 7b9d6b4625b738745bd810696d67a5b4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CenterPage
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5602894574572740985, guid: 7b9d6b4625b738745bd810696d67a5b4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b9d6b4625b738745bd810696d67a5b4, type: 3}
