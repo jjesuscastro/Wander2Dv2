@@ -111,16 +111,16 @@ namespace Player
                 SpriteRenderer vignette = vignetteDamage.GetComponent<SpriteRenderer>();
                 Color vig = new Color(0.1490196f, 0.05882353f, 0.227451f);
                 vig.a = vignette.color.a;
-                if (vig.a < 1)
-                    vig.a += 0.5f;
+                if (vig.a < 0.7)
+                    vig.a += 0.35f;
 
                 vignette.color = vig;
             } else if (damageValue > 0) {
                 SpriteRenderer vignette = vignetteDamage.GetComponent<SpriteRenderer>();
                 Color vig = new Color(1f, 1f, 1f);
                 vig.a = vignette.color.a;
-                if (vig.a < 1)
-                    vig.a += 0.5f;
+                if (vig.a < 0.7)
+                    vig.a += 0.35f;
 
                 vignette.color = vig;
             }

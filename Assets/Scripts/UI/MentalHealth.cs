@@ -9,6 +9,7 @@ namespace UI
         private Transform bar;
         private static SpriteRenderer brainColored;
         private static SpriteRenderer barSprite;
+        float lclSize = 0;
         // Use this for initialization
         void Start()
         {
@@ -17,8 +18,14 @@ namespace UI
             brainColored = transform.Find("brainIconLow").Find("brainIcon").GetComponent<SpriteRenderer>();
         }
 
+        void Update()
+        {
+            SetSize(lclSize);
+        }
+
         public void SetSize(float size)
         {
+            lclSize = size;
             Color tmpColor = brainColored.color;
             tmpColor.a = size;
             bar.localScale = new Vector3(size, 1f);
