@@ -21,10 +21,11 @@ namespace UI
 
         public void ToggleUI()
         {
-            currentPage = 0;
-            center.gameObject.SetActive(true);
-            left.gameObject.SetActive(false);
-            right.gameObject.SetActive(false);
+            // currentPage = 0;
+            // center.gameObject.SetActive(true);
+            // left.gameObject.SetActive(false);
+            // right.gameObject.SetActive(false);
+            SetImages();
         }
 
         public void CenterPage()
