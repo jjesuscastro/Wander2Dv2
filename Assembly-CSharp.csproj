@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\GameManager\SceneController.cs" />
      <Compile Include="Assets\Scripts\NPC\NPCFollow.cs" />
      <Compile Include="Assets\Scripts\NPC\NPCInteract.cs" />
+     <Compile Include="Assets\Scripts\Objects\BlankPickup.cs" />
      <Compile Include="Assets\Scripts\Objects\DialogueTrigger.cs" />
      <Compile Include="Assets\Scripts\Objects\DoorFade.cs" />
      <Compile Include="Assets\Scripts\Objects\Entry.cs" />

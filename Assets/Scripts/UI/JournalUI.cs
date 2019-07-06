@@ -21,7 +21,7 @@ namespace UI
 
         public void ToggleUI()
         {
-            // currentPage = 0; uncomment to always start at cover page
+            currentPage = 0; uncomment to always start at cover page
             center.gameObject.SetActive(true);
             left.gameObject.SetActive(false);
             right.gameObject.SetActive(false);
