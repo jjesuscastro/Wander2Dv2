@@ -5964,6 +5964,7 @@ GameObject:
   m_Component:
   - component: {fileID: 448285686}
   - component: {fileID: 448285687}
+  - component: {fileID: 448285688}
   m_Layer: 0
   m_Name: 36_fallDetector
   m_TagString: FallDetector
@@ -6011,6 +6012,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.947886, y: 0.99998856}
   m_EdgeRadius: 0
+--- !u!114 &448285688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448285685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae61d370e13b4a4793864c3e29e07c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1501645070}
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &455458746
 GameObject:
   m_ObjectHideFlags: 0
@@ -25798,7 +25827,7 @@ GameObject:
   - component: {fileID: 1501645070}
   m_Layer: 8
   m_Name: boat
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25948,7 +25977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxX: -115.1
-  minX: 0
+  minX: -199.1
   speed: 6
   moveRight: 1
   oneDirection: 1
