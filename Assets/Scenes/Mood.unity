@@ -25793,7 +25793,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1501645067}
   - component: {fileID: 1501645068}
+  - component: {fileID: 1501645071}
   - component: {fileID: 1501645069}
+  - component: {fileID: 1501645070}
   m_Layer: 8
   m_Name: boat
   m_TagString: Untagged
@@ -25933,6 +25935,37 @@ PolygonCollider2D:
       - {x: -0.96, y: -1.48}
       - {x: -0.85999995, y: -1.25}
       - {x: -0.87, y: -1.17}
+--- !u!114 &1501645070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501645066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e2fb07951a7a946945252f684f4852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxX: -115.1
+  minX: 0
+  speed: 6
+  moveRight: 1
+  oneDirection: 1
+  stop: 1
+--- !u!114 &1501645071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501645066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0d71c726df8474daaa9b5bdbb81a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  train: {fileID: 1501645070}
 --- !u!1 &1506334331
 GameObject:
   m_ObjectHideFlags: 0
@@ -38120,7 +38153,7 @@ PrefabInstance:
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 946.9
+      value: 1243.3
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}

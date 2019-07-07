@@ -6,6 +6,11 @@ public class TRIGGERTRAIN : MonoBehaviour
 {
     public HorizontalPlatform train;
 
+    void Update()
+    {
+        // Debug.Log(gameObject.transform.position.x);
+    }
+
     /// <summary>
     /// Sent when another object enters a trigger collider attached to this
     /// object (2D physics only).
