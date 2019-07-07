@@ -19,6 +19,11 @@ namespace Object
             return false;
         }
 
+        public void ManualDestroy()
+        {
+            Destroy(gameObject);
+        }
+
         // Update is called once per frame
         protected void Update()
         {

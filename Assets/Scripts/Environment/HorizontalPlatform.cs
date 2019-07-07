@@ -22,13 +22,31 @@ public class HorizontalPlatform : MonoBehaviour
                 if (oneDirection)
                     stop = true;
             }
+            
             if (transform.localPosition.x <= minX)
+            {
                 moveRight = true;
+                if (oneDirection)
+                    stop = true;
+            }
 
             if (moveRight)
                 transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
             else
                 transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
+        }
+    }
+
+    public void Reset()
+    {
+        if(transform.localPosition.x > minX)
+        {
+            moveRight = false;
+            oneDirection = true;
+        } else
+        {
+            moveRight = true;
+            oneDirection = true;
         }
     }
 }

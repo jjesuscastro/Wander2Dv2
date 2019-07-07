@@ -158,9 +158,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   maxAlpha: 0.5
-  fadeRate: 0.025
-  color: 0
+  fadeRate: 10
   length: 5
+  ppVolume: {fileID: 0}
 --- !u!114 &7367229155095531959
 MonoBehaviour:
   m_ObjectHideFlags: 0

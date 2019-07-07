@@ -10,7 +10,7 @@ namespace UI
         public JournalSlot left;
         public JournalSlot right;
         Journal journal;
-        int currentPage = 0;
+        public int currentPage = 0;
         // JournalSlot[] slots;
 
         void Start()
@@ -21,10 +21,19 @@ namespace UI
 
         public void ToggleUI()
         {
-            currentPage = 0;
-            center.gameObject.SetActive(true);
-            left.gameObject.SetActive(false);
-            right.gameObject.SetActive(false);
+            // currentPage = 0;
+            // center.gameObject.SetActive(true);
+            // left.gameObject.SetActive(false);
+            // right.gameObject.SetActive(false);
+            SetImages();
+        }
+
+        public void CenterPage()
+        {
+            if(currentPage <= 0)
+                NextPage();
+            else
+                PreviousPage();
         }
 
         public void NextPage()
@@ -53,7 +62,10 @@ namespace UI
 
         public void PreviousPage()
         {
-            currentPage -= 2;
+            if(currentPage %2 == 0)
+                currentPage -= 2;
+            else
+                currentPage -= 1;
 
             if (currentPage <= 0)
             {
@@ -61,6 +73,13 @@ namespace UI
                 center.gameObject.SetActive(true);
                 left.gameObject.SetActive(false);
                 right.gameObject.SetActive(false);
+            }
+
+            if (currentPage < journal.entries.Count - 1 && currentPage > 0)
+            {
+                center.gameObject.SetActive(false);
+                left.gameObject.SetActive(true);
+                right.gameObject.SetActive(true);
             }
 
             SetImages();
@@ -71,7 +90,10 @@ namespace UI
         void SetImages()
         {
             if (currentPage <= 0)
+            {
                 currentPage = 0;
+                center.SetImage(journal.entries[currentPage].icon);
+            }
 
             if (currentPage > journal.entries.Count - 1)
                 currentPage = journal.entries.Count - 1;
