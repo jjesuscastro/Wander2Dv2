@@ -51,7 +51,7 @@ public class TreeHouse : MonoBehaviour
             rightSide.localPosition = tempVector;
         }
 
-        if(rightPlatform.hasObject)
+        if(rightPlatform.hasObject && leftPlatform.hasPlayer)
         {
             tempVector = leftSide.localPosition;
             if(tempVector.y < 22.09)

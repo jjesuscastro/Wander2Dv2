@@ -5,6 +5,7 @@ using UnityEngine;
 public class TreeHousePlatform : MonoBehaviour
 {
     public bool hasObject = false;
+    public bool hasPlayer = false;
 
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -12,6 +13,11 @@ public class TreeHousePlatform : MonoBehaviour
         {
             hasObject = true;
             other.transform.SetParent(this.transform);
+        }
+
+        if(other.gameObject.tag == "Player")
+        {
+            hasPlayer = true;
         }
     }
 }
