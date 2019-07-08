@@ -15864,7 +15864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1057218629}
   - component: {fileID: 1057218628}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: notif
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22749,9 +22749,9 @@ GameObject:
   - component: {fileID: 1478588042}
   - component: {fileID: 1478588050}
   - component: {fileID: 1478588051}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NPC
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22771,6 +22771,7 @@ MonoBehaviour:
   excNotif: {fileID: 1057218627}
   fadeRate: 0.25
   focus: {fileID: 0}
+  doorFocus: {fileID: 0}
 --- !u!114 &1478588043
 MonoBehaviour:
   m_ObjectHideFlags: 0
