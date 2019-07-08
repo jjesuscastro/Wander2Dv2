@@ -5,23 +5,15 @@ using UnityEngine;
 public class TRIGGERTRAIN : MonoBehaviour
 {
     public HorizontalPlatform train;
-    float timer;
-    bool startTimer;
+    bool playerOnPlatform;
 
     void Update()
     {
         // Debug.Log(gameObject.transform.position.x);
 
-        if(timer % 60 > 1)
+        if(playerOnPlatform && Input.GetButtonDown("Interact"))
         {
             train.stop = false;
-            timer = 0;
-            startTimer = false;
-        }
-
-        if(startTimer)
-        {
-            timer += Time.deltaTime;
         }
     }
 
@@ -33,12 +25,24 @@ public class TRIGGERTRAIN : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
-            startTimer = true;
+            playerOnPlatform = true;
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
-            startTimer = true;
+            playerOnPlatform = true;
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+            playerOnPlatform = false;
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+            playerOnPlatform = false;
     }
 }

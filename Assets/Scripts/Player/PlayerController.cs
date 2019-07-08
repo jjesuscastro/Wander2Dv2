@@ -66,6 +66,7 @@ namespace Player
         {
             Interactable interactable = other.gameObject.GetComponent<Interactable>();
             DoorFade doorFade = other.gameObject.GetComponent<DoorFade>();
+            FallEvent fallEvent = other.gameObject.GetComponent<FallEvent>();
 
             if(doorFade != null)
             {
@@ -92,6 +93,9 @@ namespace Player
 
             if (other.gameObject.CompareTag("FallDetector"))
             {
+                if(fallEvent != null)
+                    fallEvent.fallTrigger.Invoke();
+                    
                 PlayerMentalHealth.instance.changeHealth(-0.05f);
                 respawn();
             }

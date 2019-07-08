@@ -65,7 +65,6 @@
      <Compile Include="Assets\Scripts\Environment\EnvironmentHealthEffect.cs" />
      <Compile Include="Assets\Scripts\Environment\FadeOutIn.cs" />
      <Compile Include="Assets\Scripts\Environment\FlickerRandom.cs" />
-     <Compile Include="Assets\Scripts\Environment\HorizontalPlatform.cs" />
      <Compile Include="Assets\Scripts\Environment\ThunderRandom.cs" />
      <Compile Include="Assets\Scripts\Environment\TreeHouse.cs" />
      <Compile Include="Assets\Scripts\Environment\TreeHousePlatform.cs" />
