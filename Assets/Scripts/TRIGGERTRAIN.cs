@@ -12,7 +12,7 @@ public class TRIGGERTRAIN : MonoBehaviour
     {
         // Debug.Log(gameObject.transform.position.x);
 
-        if(timer % 60 > 2)
+        if(timer % 60 > 1)
         {
             train.stop = false;
             timer = 0;
@@ -31,6 +31,12 @@ public class TRIGGERTRAIN : MonoBehaviour
     /// </summary>
     /// <param name="other">The other Collider2D involved in this collision.</param>
     void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+            startTimer = true;
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
             startTimer = true;

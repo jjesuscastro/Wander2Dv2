@@ -67,6 +67,8 @@
      <Compile Include="Assets\Scripts\Environment\FlickerRandom.cs" />
      <Compile Include="Assets\Scripts\Environment\HorizontalPlatform.cs" />
      <Compile Include="Assets\Scripts\Environment\ThunderRandom.cs" />
+     <Compile Include="Assets\Scripts\Environment\TreeHouse.cs" />
+     <Compile Include="Assets\Scripts\Environment\TreeHousePlatform.cs" />
      <Compile Include="Assets\Scripts\Environment\VerticalPlatforms.cs" />
      <Compile Include="Assets\Scripts\FallEvent.cs" />
      <Compile Include="Assets\Scripts\GameManager\Dialogue.cs" />

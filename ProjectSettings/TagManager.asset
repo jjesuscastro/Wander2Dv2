@@ -9,6 +9,7 @@ TagManager:
   - UseLocations
   - MovingPlatform
   - EndScene
+  - Weight
   layers:
   - Default
   - TransparentFX
