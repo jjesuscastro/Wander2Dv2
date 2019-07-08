@@ -15,6 +15,8 @@ public class TreeHouse : MonoBehaviour
     TreeHousePlatform rightPlatform;
 
     [SerializeField]
+    PositionLimits leftRock;
+    [SerializeField]
     PositionLimits rightRock;
 
     public float leftY;
@@ -40,7 +42,10 @@ public class TreeHouse : MonoBehaviour
             if(tempVector.y > 8)
                 tempVector.y -= 0.1f;
             else
+            {
+                leftRock.limitX = false;
                 leftPlatform.hasObject = false;
+            }
             leftSide.localPosition = tempVector;
 
             tempVector = rightSide.localPosition;

@@ -4827,6 +4827,7 @@ MonoBehaviour:
   rightSide: {fileID: 846139877}
   leftPlatform: {fileID: 0}
   rightPlatform: {fileID: 0}
+  leftRock: {fileID: 695022455}
   rightRock: {fileID: 340113046}
   leftY: 0
   rightY: 0
