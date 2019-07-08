@@ -16094,13 +16094,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019683943}
-  m_LocalRotation: {x: -0, y: -0, z: 0.050599013, w: 0.9987191}
-  m_LocalPosition: {x: -327.3, y: 11.6, z: 0}
-  m_LocalScale: {x: 1, y: 135.75652, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.08562273, w: 0.99632764}
+  m_LocalPosition: {x: -325.10004, y: 18.30001, z: 0}
+  m_LocalScale: {x: 1, y: 115.646904, z: 1}
   m_Children: []
   m_Father: {fileID: 1240795633}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.801}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.824}
 --- !u!252 &1019683945
 SurfaceEffector2D:
   m_ObjectHideFlags: 0
@@ -16113,12 +16113,12 @@ SurfaceEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Speed: 25
+  m_Speed: 30
   m_SpeedVariation: 0
-  m_ForceScale: 0.1
+  m_ForceScale: 1
   m_UseContactForce: 0
   m_UseFriction: 1
-  m_UseBounce: 0
+  m_UseBounce: 1
 --- !u!61 &1019683946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39548,12 +39548,12 @@ PrefabInstance:
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 780.24
+      value: 1236
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -105.73
+      value: -62
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
