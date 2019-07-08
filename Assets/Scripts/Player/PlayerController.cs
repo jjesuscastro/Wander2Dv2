@@ -75,7 +75,8 @@ namespace Player
 
             if (interactable != null)
             {
-                excNotif.SetActive(true);
+                if(!(interactable is DialogueTrigger))
+                    excNotif.SetActive(true);
                 SetFocus(interactable);
             }
 
