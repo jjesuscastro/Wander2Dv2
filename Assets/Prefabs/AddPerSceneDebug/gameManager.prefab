@@ -67,7 +67,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  size: 3
+  size: 4
   items: []
 --- !u!114 &7367229155095531966
 MonoBehaviour:
