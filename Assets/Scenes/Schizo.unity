@@ -6054,7 +6054,7 @@ GameObject:
   - component: {fileID: 312401194}
   - component: {fileID: 312401193}
   - component: {fileID: 312401192}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Broken Train
   m_TagString: Untagged
   m_Icon: {fileID: 0}
