@@ -1741,7 +1741,7 @@ MonoBehaviour:
   limitX: 1
   limitY: 0
   instantiateValues: 0
-  minX: 775.8
+  minX: 775.49
   maxX: 777.1085
   minY: -116
   maxY: -108.2417
@@ -13279,6 +13279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasObject: 0
+  hasPlayer: 0
 --- !u!1 &848651787
 GameObject:
   m_ObjectHideFlags: 0
@@ -23481,6 +23482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasObject: 0
+  hasPlayer: 0
 --- !u!1 &1358550633
 GameObject:
   m_ObjectHideFlags: 0
@@ -39545,12 +39547,12 @@ PrefabInstance:
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 881.6
+      value: 780.24
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -56.8
+      value: -105.73
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
