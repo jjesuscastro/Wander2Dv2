@@ -37,6 +37,11 @@ namespace Object
         // Update is called once per frame
         void Update()
         {
+            if(nonPlayableCharacter == null)
+            {
+                nonPlayableCharacter = GameObject.Find("NPC");
+            }
+
             if (isFocused && player != null && hasInteracted != true)
             {
                 if (isFocused)

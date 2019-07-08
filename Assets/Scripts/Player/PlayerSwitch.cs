@@ -55,10 +55,11 @@ namespace Player
                     if (mc.isActiveAndEnabled)
                     {
                         mc.enabled = false;
+                        npcIsFollowing = false;
                         npc.enabled = true;
                         currentPlayer = npc.transform;
                         mc.GetComponent<PlayerMovement>().StopAnimation();
-                        mc.GetComponent<CharacterController2D>().QueueDisableColliders();
+                        // mc.GetComponent<CharacterController2D>().QueueDisableColliders();
                         npc.GetComponent<CharacterController2D>().EnableColliders();
                         playerMentalHealth.SwitchTarget(npc.gameObject);
                         mainCamera.switchTarget(npc);
@@ -66,10 +67,11 @@ namespace Player
                     else
                     {
                         mc.enabled = true;
+                        mcIsFollowing = false;
                         npc.enabled = false;
                         currentPlayer = mc.transform;
                         npc.GetComponent<PlayerMovement>().StopAnimation();
-                        npc.GetComponent<CharacterController2D>().QueueDisableColliders();
+                        // npc.GetComponent<CharacterController2D>().QueueDisableColliders();
                         mc.GetComponent<CharacterController2D>().EnableColliders();
                         playerMentalHealth.SwitchTarget(mc.gameObject);
                         mainCamera.switchTarget(mc);
