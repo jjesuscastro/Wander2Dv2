@@ -279,8 +279,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 16149468}
-  - component: {fileID: 16149470}
   - component: {fileID: 16149469}
+  - component: {fileID: 16149470}
   m_Layer: 0
   m_Name: door - scary mid
   m_TagString: Untagged
@@ -314,15 +314,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 100479962}
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
---- !u!58 &16149470
-CircleCollider2D:
+--- !u!61 &16149470
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -334,9 +333,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0000011920929, y: 1.0594712}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 2
+  m_Size: {x: 5.4039006, y: 3.4803126}
+  m_EdgeRadius: 0
 --- !u!1001 &27582055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2063,7 +2072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &81238446
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2124,6 +2133,7 @@ MonoBehaviour:
   excNotif: {fileID: 95470195}
   fadeRate: 0.25
   focus: {fileID: 0}
+  doorFocus: {fileID: 0}
 --- !u!114 &81238449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2330,8 +2340,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 88143046}
-  - component: {fileID: 88143048}
   - component: {fileID: 88143047}
+  - component: {fileID: 88143048}
   m_Layer: 0
   m_Name: door - clown end
   m_TagString: Untagged
@@ -2365,15 +2375,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 100479962}
   mainCharacter: {fileID: 0}
-  nonPlayableCharacter: {fileID: 81238445}
+  nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
---- !u!58 &88143048
-CircleCollider2D:
+--- !u!61 &88143048
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2385,9 +2394,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.06266886, y: 0.33269113}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1.6475633, y: 1.0000035}
+  m_EdgeRadius: 0
 --- !u!1 &89088062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,8 +2612,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 100479962}
-  - component: {fileID: 100479964}
   - component: {fileID: 100479963}
+  - component: {fileID: 100479964}
   m_Layer: 0
   m_Name: door - train
   m_TagString: Untagged
@@ -2628,15 +2647,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 16149468}
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
---- !u!58 &100479964
-CircleCollider2D:
+--- !u!61 &100479964
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2648,9 +2666,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.13650393, y: 0.016287833}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1.2730078, y: 1.3445325}
+  m_EdgeRadius: 0
 --- !u!1 &100954131
 GameObject:
   m_ObjectHideFlags: 0
@@ -7197,8 +7225,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 387111155}
-  - component: {fileID: 387111157}
   - component: {fileID: 387111156}
+  - component: {fileID: 387111157}
   m_Layer: 0
   m_Name: door - scary tent left
   m_TagString: Untagged
@@ -7232,15 +7260,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 2002582267}
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
---- !u!58 &387111157
-CircleCollider2D:
+--- !u!61 &387111157
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -7252,9 +7279,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.03099668, y: 0.048543394}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1.8986473, y: 1.4854326}
+  m_EdgeRadius: 0
 --- !u!1 &408153128
 GameObject:
   m_ObjectHideFlags: 0
@@ -11886,6 +11923,107 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &730769676
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CHERY RUSH Demo SDF Material (Instance)
+  m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
+  m_ShaderKeywords: MASK_SOFT
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cube:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FaceTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 28718946221925242, guid: 0963de876c163c44bbb09dbe1f0e5651,
+          type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OutlineTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Ambient: 0.5
+    - _Bevel: 0.5
+    - _BevelClamp: 0
+    - _BevelOffset: 0
+    - _BevelRoundness: 0
+    - _BevelWidth: 0
+    - _BumpFace: 0
+    - _BumpOutline: 0
+    - _ColorMask: 15
+    - _Diffuse: 0.5
+    - _FaceDilate: 0
+    - _FaceUVSpeedX: 0
+    - _FaceUVSpeedY: 0
+    - _GlowInner: 0.05
+    - _GlowOffset: 0
+    - _GlowOuter: 0.05
+    - _GlowPower: 0.75
+    - _GradientScale: 6
+    - _LightAngle: 3.1416
+    - _MaskSoftnessX: 0
+    - _MaskSoftnessY: 0
+    - _OutlineSoftness: 0
+    - _OutlineUVSpeedX: 0
+    - _OutlineUVSpeedY: 0
+    - _OutlineWidth: 0
+    - _PerspectiveFilter: 0.875
+    - _Reflectivity: 10
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
+    - _ScaleX: 1
+    - _ScaleY: 1
+    - _ShaderFlags: 0
+    - _SpecularPower: 2
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _TextureHeight: 512
+    - _TextureWidth: 512
+    - _UnderlayDilate: 0
+    - _UnderlayOffsetX: 0
+    - _UnderlayOffsetY: 0
+    - _UnderlaySoftness: 0
+    - _VertexOffsetX: 0
+    - _VertexOffsetY: 0
+    - _WeightBold: 0.75
+    - _WeightNormal: 0
+    m_Colors:
+    - _ClipRect: {r: 77.2, g: 2.7, b: 80, a: 15}
+    - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
+    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
+    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
 --- !u!1 &732975911
 GameObject:
   m_ObjectHideFlags: 0
@@ -12150,8 +12288,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 765325117}
-  - component: {fileID: 765325119}
   - component: {fileID: 765325118}
+  - component: {fileID: 765325119}
   m_Layer: 0
   m_Name: door - swirl up left
   m_TagString: Untagged
@@ -12185,15 +12323,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 956644801}
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
---- !u!58 &765325119
-CircleCollider2D:
+--- !u!61 &765325119
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12205,9 +12342,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.17778754, y: 0.14390326}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1.7111778, y: 1.2878065}
+  m_EdgeRadius: 0
 --- !u!1 &769201580
 GameObject:
   m_ObjectHideFlags: 0
@@ -12831,8 +12978,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 804095733}
-  - component: {fileID: 804095735}
   - component: {fileID: 804095734}
+  - component: {fileID: 804095735}
   m_Layer: 0
   m_Name: door - outside tent
   m_TagString: Untagged
@@ -12866,15 +13013,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 5
   fadeRate: 1
   length: 1
   newPosition: {fileID: 962614732}
   mainCharacter: {fileID: 0}
-  nonPlayableCharacter: {fileID: 81238445}
+  nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
---- !u!58 &804095735
-CircleCollider2D:
+--- !u!61 &804095735
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12886,9 +13032,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.059501946, y: 0.26714438}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Size: {x: 2.7453547, y: 1.5342888}
+  m_EdgeRadius: 0
 --- !u!1 &814383326
 GameObject:
   m_ObjectHideFlags: 0
@@ -14849,8 +15005,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 956644801}
-  - component: {fileID: 956644803}
   - component: {fileID: 956644802}
+  - component: {fileID: 956644803}
   m_Layer: 0
   m_Name: door - scary tent right
   m_TagString: Untagged
@@ -14884,15 +15040,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 765325117}
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
---- !u!58 &956644803
-CircleCollider2D:
+--- !u!61 &956644803
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -14904,9 +15059,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.018717647, y: -0.0000009536743}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1.9352326, y: 1.5860327}
+  m_EdgeRadius: 0
 --- !u!1 &957297317
 GameObject:
   m_ObjectHideFlags: 0
@@ -15850,8 +16015,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1059982781}
-  - component: {fileID: 1059982783}
   - component: {fileID: 1059982782}
+  - component: {fileID: 1059982783}
   m_Layer: 0
   m_Name: door - swirl up mid
   m_TagString: Untagged
@@ -15885,15 +16050,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 1594003675}
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
---- !u!58 &1059982783
-CircleCollider2D:
+--- !u!61 &1059982783
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15905,9 +16069,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.09709996, y: 0.09014118}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1.6257659, y: 1.1802821}
+  m_EdgeRadius: 0
 --- !u!1 &1060694689
 GameObject:
   m_ObjectHideFlags: 0
@@ -16678,8 +16852,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1081614355}
-  - component: {fileID: 1081614357}
   - component: {fileID: 1081614356}
+  - component: {fileID: 1081614357}
   m_Layer: 0
   m_Name: door - mirror mid
   m_TagString: Untagged
@@ -16713,15 +16887,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 1788241696}
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
---- !u!58 &1081614357
-CircleCollider2D:
+--- !u!61 &1081614357
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -16733,9 +16906,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.3042392, y: -0.108098924}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1.6084603, y: 1.6054322}
+  m_EdgeRadius: 0
 --- !u!1 &1082689504
 GameObject:
   m_ObjectHideFlags: 0
@@ -17277,8 +17460,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1103032807}
-  - component: {fileID: 1103032809}
   - component: {fileID: 1103032808}
+  - component: {fileID: 1103032809}
   m_Layer: 0
   m_Name: door - inside tent left
   m_TagString: Untagged
@@ -17312,15 +17495,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 2002582267}
   mainCharacter: {fileID: 0}
-  nonPlayableCharacter: {fileID: 81238445}
+  nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
---- !u!58 &1103032809
-CircleCollider2D:
+--- !u!61 &1103032809
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -17332,9 +17514,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.024750352}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1, y: 0.9504993}
+  m_EdgeRadius: 0
 --- !u!1 &1128640507
 GameObject:
   m_ObjectHideFlags: 0
@@ -22040,8 +22232,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1424620425}
-  - component: {fileID: 1424620427}
   - component: {fileID: 1424620426}
+  - component: {fileID: 1424620427}
   m_Layer: 0
   m_Name: door - clown start
   m_TagString: Untagged
@@ -22075,15 +22267,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 1975117447}
   mainCharacter: {fileID: 0}
-  nonPlayableCharacter: {fileID: 81238445}
+  nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
---- !u!58 &1424620427
-CircleCollider2D:
+--- !u!61 &1424620427
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -22095,9 +22286,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.4718941, y: -0.0025934577}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1.3079709, y: 1.2023197}
+  m_EdgeRadius: 0
 --- !u!1 &1430569344
 GameObject:
   m_ObjectHideFlags: 0
@@ -23475,12 +23676,12 @@ PrefabInstance:
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 159.3
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -122.2
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
@@ -24015,8 +24216,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1594003675}
-  - component: {fileID: 1594003677}
   - component: {fileID: 1594003676}
+  - component: {fileID: 1594003677}
   m_Layer: 0
   m_Name: door - mirror left
   m_TagString: Untagged
@@ -24050,15 +24251,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 1059982781}
   mainCharacter: {fileID: 0}
-  nonPlayableCharacter: {fileID: 81238445}
+  nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
---- !u!58 &1594003677
-CircleCollider2D:
+--- !u!61 &1594003677
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -24067,12 +24267,22 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.030188143, y: -0.045045853}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1.1811603, y: 1.0900916}
+  m_EdgeRadius: 0
 --- !u!1 &1598337796
 GameObject:
   m_ObjectHideFlags: 0
@@ -26337,107 +26547,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!21 &1747608226
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: CHERY RUSH Demo SDF Material (Instance)
-  m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_ShaderKeywords: MASK_SOFT
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Cube:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _FaceTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 28718946221925242, guid: 0963de876c163c44bbb09dbe1f0e5651,
-          type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OutlineTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Ambient: 0.5
-    - _Bevel: 0.5
-    - _BevelClamp: 0
-    - _BevelOffset: 0
-    - _BevelRoundness: 0
-    - _BevelWidth: 0
-    - _BumpFace: 0
-    - _BumpOutline: 0
-    - _ColorMask: 15
-    - _Diffuse: 0.5
-    - _FaceDilate: 0
-    - _FaceUVSpeedX: 0
-    - _FaceUVSpeedY: 0
-    - _GlowInner: 0.05
-    - _GlowOffset: 0
-    - _GlowOuter: 0.05
-    - _GlowPower: 0.75
-    - _GradientScale: 6
-    - _LightAngle: 3.1416
-    - _MaskSoftnessX: 0
-    - _MaskSoftnessY: 0
-    - _OutlineSoftness: 0
-    - _OutlineUVSpeedX: 0
-    - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0
-    - _PerspectiveFilter: 0.875
-    - _Reflectivity: 10
-    - _ScaleRatioA: 0.8333333
-    - _ScaleRatioB: 0.6770833
-    - _ScaleRatioC: 0.6770833
-    - _ScaleX: 1
-    - _ScaleY: 1
-    - _ShaderFlags: 0
-    - _SpecularPower: 2
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _TextureHeight: 512
-    - _TextureWidth: 512
-    - _UnderlayDilate: 0
-    - _UnderlayOffsetX: 0
-    - _UnderlayOffsetY: 0
-    - _UnderlaySoftness: 0
-    - _VertexOffsetX: 0
-    - _VertexOffsetY: 0
-    - _WeightBold: 0.75
-    - _WeightNormal: 0
-    m_Colors:
-    - _ClipRect: {r: 77.2, g: 2.7, b: 80, a: 15}
-    - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
-    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
-    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
 --- !u!1 &1759339625
 GameObject:
   m_ObjectHideFlags: 0
@@ -26928,8 +27037,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1788241696}
-  - component: {fileID: 1788241698}
   - component: {fileID: 1788241697}
+  - component: {fileID: 1788241698}
   m_Layer: 0
   m_Name: door - swirl up right
   m_TagString: Untagged
@@ -26963,15 +27072,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 1081614355}
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
---- !u!58 &1788241698
-CircleCollider2D:
+--- !u!61 &1788241698
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -26983,9 +27091,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.37554657, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1.7001665, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1806311054
 GameObject:
   m_ObjectHideFlags: 0
@@ -27973,8 +28091,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1878366560}
-  - component: {fileID: 1878366562}
   - component: {fileID: 1878366561}
+  - component: {fileID: 1878366562}
   m_Layer: 0
   m_Name: door - mirror mid
   m_TagString: Untagged
@@ -28008,15 +28126,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 16149468}
   mainCharacter: {fileID: 0}
-  nonPlayableCharacter: {fileID: 81238445}
+  nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
---- !u!58 &1878366562
-CircleCollider2D:
+--- !u!61 &1878366562
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -28028,9 +28145,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0045398474, y: -0.06394181}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1.8798556, y: 1.2131386}
+  m_EdgeRadius: 0
 --- !u!1 &1879481954
 GameObject:
   m_ObjectHideFlags: 0
@@ -29337,8 +29464,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1975117447}
-  - component: {fileID: 1975117449}
   - component: {fileID: 1975117448}
+  - component: {fileID: 1975117449}
   m_Layer: 0
   m_Name: door - mirror down
   m_TagString: Untagged
@@ -29372,15 +29499,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 1424620425}
   mainCharacter: {fileID: 0}
-  nonPlayableCharacter: {fileID: 81238445}
+  nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
---- !u!58 &1975117449
-CircleCollider2D:
+--- !u!61 &1975117449
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -29392,9 +29518,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.056434512, y: -0.21803862}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1.9705236, y: 1.7660829}
+  m_EdgeRadius: 0
 --- !u!1 &1978871397
 GameObject:
   m_ObjectHideFlags: 0
@@ -29519,8 +29655,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2002582267}
-  - component: {fileID: 2002582269}
   - component: {fileID: 2002582268}
+  - component: {fileID: 2002582269}
   m_Layer: 0
   m_Name: door - npc room
   m_TagString: Untagged
@@ -29554,15 +29690,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
   fadeRate: 1
   length: 1
   newPosition: {fileID: 387111155}
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
---- !u!58 &2002582269
-CircleCollider2D:
+--- !u!61 &2002582269
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -29574,9 +29709,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.17621493, y: 1.0581918}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 2
+  m_Size: {x: 4.5948625, y: 3.9997406}
+  m_EdgeRadius: 0
 --- !u!1 &2002701482
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ namespace Player
         public GameObject excNotif;
         public float fadeRate = 0.25f;
         public Interactable focus;
+        public DoorFade doorFocus;
         bool isRespawning = false;
         Vector3 respawnPoint;
         Color color;
@@ -64,6 +65,13 @@ namespace Player
         void OnTriggerEnter2D(Collider2D other)
         {
             Interactable interactable = other.gameObject.GetComponent<Interactable>();
+            DoorFade doorFade = other.gameObject.GetComponent<DoorFade>();
+
+            if(doorFade != null)
+            {
+                excNotif.SetActive(true);
+                SetDoorFocus(doorFade);
+            }
 
             if (interactable != null)
             {
@@ -104,6 +112,15 @@ namespace Player
                 }
             }
 
+            if(doorFocus != null && other != null)
+            {
+                if (doorFocus.gameObject == other.gameObject)
+                {
+                    excNotif.SetActive(false);
+                    RemoveDoorFocus();
+                }
+            }
+
             if (other.gameObject.CompareTag("MovingPlatform") && rigidBody2D.simulated)
             {
                 transform.parent = null;
@@ -116,10 +133,22 @@ namespace Player
             newFocus.OnFocus(transform);
         }
 
+        public void SetDoorFocus(DoorFade newFocus)
+        {
+            doorFocus = newFocus;
+            newFocus.OnFocus(transform);
+        }
+
         public void RemoveFocus()
         {
             focus.OnDefocus();
             focus = null;
+        }
+
+        public void RemoveDoorFocus()
+        {
+            doorFocus.OnDefocus();
+            doorFocus = null;
         }
     }
 }

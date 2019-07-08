@@ -4,10 +4,14 @@ using UnityEngine;
 
 namespace Object
 {
-    public class DoorFade : Interactable
+    [RequireComponent(typeof(BoxCollider2D))]
+    public class DoorFade : MonoBehaviour
     {
+        bool isFocused = false;
+        bool hasInteracted = false;
         public float fadeRate;
         public int length;
+        Transform player;
         public Transform newPosition;
         [SerializeField]
         private GameObject mainCharacter;
@@ -33,7 +37,13 @@ namespace Object
         // Update is called once per frame
         void Update()
         {
-            base.Update();
+            if (isFocused && player != null && hasInteracted != true)
+            {
+                if (isFocused)
+                {
+                    hasInteracted = Interact();
+                }
+            }
 
             Color tmpColor;
             if (fadeIn)
@@ -71,7 +81,20 @@ namespace Object
                 nonPlayableCharacter.transform.position = newPosition.position;
         }
 
-        public override bool Interact()
+        public void OnFocus(Transform playerTransform)
+        {
+            isFocused = true;
+            player = playerTransform;
+        }
+
+        public void OnDefocus()
+        {
+            isFocused = false;
+            player = null;
+            hasInteracted = false;
+        }
+
+        public bool Interact()
         {
             if (Input.GetButtonDown("Interact"))
             {
