@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TreeHouse : MonoBehaviour
 {
+    public UnityEvent onFinish;
     [SerializeField]
     Transform leftSide;
     [SerializeField]
@@ -18,6 +20,8 @@ public class TreeHouse : MonoBehaviour
     PositionLimits leftRock;
     [SerializeField]
     PositionLimits rightRock;
+
+    public GameObject walls;
 
     public float leftY;
     public float rightY;
@@ -60,7 +64,13 @@ public class TreeHouse : MonoBehaviour
         {
             tempVector = leftSide.localPosition;
             if(tempVector.y < 22.09)
+            {
                 tempVector.y += 0.1f;
+                walls.SetActive(true);
+            } else {
+                if(onFinish != null)
+                    onFinish.Invoke();
+            }
             leftSide.localPosition = tempVector;
 
             tempVector = rightSide.localPosition;
