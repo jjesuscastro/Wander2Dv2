@@ -2094,8 +2094,8 @@ GameObject:
   - component: {fileID: 111659449}
   - component: {fileID: 111659452}
   - component: {fileID: 111659451}
-  - component: {fileID: 111659450}
   - component: {fileID: 111659453}
+  - component: {fileID: 111659450}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (2)
   m_TagString: MovingPlatform
@@ -2117,8 +2117,8 @@ Transform:
   m_Father: {fileID: 1440099379}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &111659450
-PolygonCollider2D:
+--- !u!61 &111659450
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2130,7 +2130,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 2.09115, y: 0.010992229}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2140,18 +2140,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.25, y: 0.39}
-      - {x: -2.27, y: 0.39}
-      - {x: -2.4199998, y: 0.29999998}
-      - {x: -2.4299998, y: 0.26999998}
-      - {x: -2.4299998, y: -0.26}
-      - {x: -2.3, y: -0.37}
-      - {x: 2.27, y: -0.37}
-      - {x: 2.3999999, y: -0.26}
-      - {x: 2.4299998, y: -0.22}
-      - {x: 2.4299998, y: 0.31}
+  serializedVersion: 2
+  m_Size: {x: 9.042301, y: 0.7621623}
+  m_EdgeRadius: 0
 --- !u!95 &111659451
 Animator:
   serializedVersion: 3
@@ -4329,8 +4320,8 @@ GameObject:
   - component: {fileID: 248450478}
   - component: {fileID: 248450481}
   - component: {fileID: 248450480}
-  - component: {fileID: 248450479}
   - component: {fileID: 248450482}
+  - component: {fileID: 248450479}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (6)
   m_TagString: MovingPlatform
@@ -4352,8 +4343,8 @@ Transform:
   m_Father: {fileID: 1697666887}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &248450479
-PolygonCollider2D:
+--- !u!61 &248450479
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4365,7 +4356,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 2.1231437, y: 0.005177021}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4375,18 +4366,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.25, y: 0.39}
-      - {x: -2.27, y: 0.39}
-      - {x: -2.4199998, y: 0.29999998}
-      - {x: -2.4299998, y: 0.26999998}
-      - {x: -2.4299998, y: -0.26}
-      - {x: -2.3, y: -0.37}
-      - {x: 2.27, y: -0.37}
-      - {x: 2.3999999, y: -0.26}
-      - {x: 2.4299998, y: -0.22}
-      - {x: 2.4299998, y: 0.31}
+  serializedVersion: 2
+  m_Size: {x: 9.106292, y: 0.78400576}
+  m_EdgeRadius: 0
 --- !u!95 &248450480
 Animator:
   serializedVersion: 3
@@ -7485,8 +7467,6 @@ GameObject:
   - component: {fileID: 465121030}
   - component: {fileID: 465121033}
   - component: {fileID: 465121032}
-  - component: {fileID: 465121031}
-  - component: {fileID: 465121034}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (7)
   m_TagString: MovingPlatform
@@ -7508,41 +7488,6 @@ Transform:
   m_Father: {fileID: 1697666887}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &465121031
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465121029}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.86, y: 0.96}
-    newSize: {x: 4.86, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.25, y: 0.39}
-      - {x: -2.27, y: 0.39}
-      - {x: -2.4199998, y: 0.29999998}
-      - {x: -2.4299998, y: 0.26999998}
-      - {x: -2.4299998, y: -0.26}
-      - {x: -2.3, y: -0.37}
-      - {x: 2.27, y: -0.37}
-      - {x: 2.3999999, y: -0.26}
-      - {x: 2.4299998, y: -0.22}
-      - {x: 2.4299998, y: 0.31}
 --- !u!95 &465121032
 Animator:
   serializedVersion: 3
@@ -7610,19 +7555,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &465121034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465121029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &478100292
 GameObject:
   m_ObjectHideFlags: 0
@@ -7842,8 +7774,8 @@ GameObject:
   - component: {fileID: 486831046}
   - component: {fileID: 486831049}
   - component: {fileID: 486831048}
-  - component: {fileID: 486831047}
   - component: {fileID: 486831050}
+  - component: {fileID: 486831051}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (12)
   m_TagString: MovingPlatform
@@ -7865,41 +7797,6 @@ Transform:
   m_Father: {fileID: 1387394081}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &486831047
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486831045}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.86, y: 0.96}
-    newSize: {x: 4.86, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.25, y: 0.39}
-      - {x: -2.27, y: 0.39}
-      - {x: -2.4199998, y: 0.29999998}
-      - {x: -2.4299998, y: 0.26999998}
-      - {x: -2.4299998, y: -0.26}
-      - {x: -2.3, y: -0.37}
-      - {x: 2.27, y: -0.37}
-      - {x: 2.3999999, y: -0.26}
-      - {x: 2.4299998, y: -0.22}
-      - {x: 2.4299998, y: 0.31}
 --- !u!95 &486831048
 Animator:
   serializedVersion: 3
@@ -7980,6 +7877,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!61 &486831051
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486831045}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.70985043, y: 0.007588029}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.86, y: 0.96}
+    newSize: {x: 4.86, y: 0.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.279701, y: 0.7626835}
+  m_EdgeRadius: 0
 --- !u!1 &492506583
 GameObject:
   m_ObjectHideFlags: 0
@@ -9667,8 +9590,8 @@ GameObject:
   - component: {fileID: 658108613}
   - component: {fileID: 658108615}
   - component: {fileID: 658108614}
-  - component: {fileID: 658108616}
   - component: {fileID: 658108617}
+  - component: {fileID: 658108618}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (5)
   m_TagString: MovingPlatform
@@ -9757,41 +9680,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &658108616
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 658108612}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.86, y: 0.96}
-    newSize: {x: 4.86, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.25, y: 0.39}
-      - {x: -2.27, y: 0.39}
-      - {x: -2.4199998, y: 0.29999998}
-      - {x: -2.4299998, y: 0.26999998}
-      - {x: -2.4299998, y: -0.26}
-      - {x: -2.3, y: -0.37}
-      - {x: 2.27, y: -0.37}
-      - {x: 2.3999999, y: -0.26}
-      - {x: 2.4299998, y: -0.22}
-      - {x: 2.4299998, y: 0.31}
 --- !u!114 &658108617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9805,6 +9693,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!61 &658108618
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658108612}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 6.2914305, y: 0.0000027418137}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.86, y: 0.96}
+    newSize: {x: 4.86, y: 0.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 17.442863, y: 0.7571305}
+  m_EdgeRadius: 0
 --- !u!1 &664090490
 GameObject:
   m_ObjectHideFlags: 0
@@ -12531,8 +12445,6 @@ GameObject:
   - component: {fileID: 820013109}
   - component: {fileID: 820013112}
   - component: {fileID: 820013111}
-  - component: {fileID: 820013110}
-  - component: {fileID: 820013113}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (11)
   m_TagString: MovingPlatform
@@ -12554,41 +12466,6 @@ Transform:
   m_Father: {fileID: 1387394081}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &820013110
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820013108}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.86, y: 0.96}
-    newSize: {x: 4.86, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.25, y: 0.39}
-      - {x: -2.27, y: 0.39}
-      - {x: -2.4199998, y: 0.29999998}
-      - {x: -2.4299998, y: 0.26999998}
-      - {x: -2.4299998, y: -0.26}
-      - {x: -2.3, y: -0.37}
-      - {x: 2.27, y: -0.37}
-      - {x: 2.3999999, y: -0.26}
-      - {x: 2.4299998, y: -0.22}
-      - {x: 2.4299998, y: 0.31}
 --- !u!95 &820013111
 Animator:
   serializedVersion: 3
@@ -12656,19 +12533,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &820013113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820013108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &825132474
 GameObject:
   m_ObjectHideFlags: 0
@@ -17249,8 +17113,6 @@ GameObject:
   - component: {fileID: 1127361719}
   - component: {fileID: 1127361722}
   - component: {fileID: 1127361721}
-  - component: {fileID: 1127361720}
-  - component: {fileID: 1127361723}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (3)
   m_TagString: MovingPlatform
@@ -17272,41 +17134,6 @@ Transform:
   m_Father: {fileID: 1440099379}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1127361720
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127361718}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.86, y: 0.96}
-    newSize: {x: 4.86, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.25, y: 0.39}
-      - {x: -2.27, y: 0.39}
-      - {x: -2.4199998, y: 0.29999998}
-      - {x: -2.4299998, y: 0.26999998}
-      - {x: -2.4299998, y: -0.26}
-      - {x: -2.3, y: -0.37}
-      - {x: 2.27, y: -0.37}
-      - {x: 2.3999999, y: -0.26}
-      - {x: 2.4299998, y: -0.22}
-      - {x: 2.4299998, y: 0.31}
 --- !u!95 &1127361721
 Animator:
   serializedVersion: 3
@@ -17374,19 +17201,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1127361723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127361718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &1131426553
 GameObject:
   m_ObjectHideFlags: 0
@@ -17547,8 +17361,6 @@ GameObject:
   - component: {fileID: 1138652808}
   - component: {fileID: 1138652810}
   - component: {fileID: 1138652809}
-  - component: {fileID: 1138652811}
-  - component: {fileID: 1138652812}
   m_Layer: 8
   m_Name: conveyer belt ss_0
   m_TagString: MovingPlatform
@@ -17637,54 +17449,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &1138652811
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138652807}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.86, y: 0.96}
-    newSize: {x: 4.86, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.25, y: 0.39}
-      - {x: -2.27, y: 0.39}
-      - {x: -2.4199998, y: 0.29999998}
-      - {x: -2.4299998, y: 0.26999998}
-      - {x: -2.4299998, y: -0.26}
-      - {x: -2.3, y: -0.37}
-      - {x: 2.27, y: -0.37}
-      - {x: 2.3999999, y: -0.26}
-      - {x: 2.4299998, y: -0.22}
-      - {x: 2.4299998, y: 0.31}
---- !u!114 &1138652812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138652807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &1143534440
 GameObject:
   m_ObjectHideFlags: 0
@@ -19088,8 +18852,6 @@ GameObject:
   - component: {fileID: 1266866096}
   - component: {fileID: 1266866099}
   - component: {fileID: 1266866098}
-  - component: {fileID: 1266866097}
-  - component: {fileID: 1266866100}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (9)
   m_TagString: MovingPlatform
@@ -19111,41 +18873,6 @@ Transform:
   m_Father: {fileID: 1387394081}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1266866097
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266866095}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.86, y: 0.96}
-    newSize: {x: 4.86, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.25, y: 0.39}
-      - {x: -2.27, y: 0.39}
-      - {x: -2.4199998, y: 0.29999998}
-      - {x: -2.4299998, y: 0.26999998}
-      - {x: -2.4299998, y: -0.26}
-      - {x: -2.3, y: -0.37}
-      - {x: 2.27, y: -0.37}
-      - {x: 2.3999999, y: -0.26}
-      - {x: 2.4299998, y: -0.22}
-      - {x: 2.4299998, y: 0.31}
 --- !u!95 &1266866098
 Animator:
   serializedVersion: 3
@@ -19213,19 +18940,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1266866100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266866095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &1268398025
 GameObject:
   m_ObjectHideFlags: 0
@@ -21769,8 +21483,8 @@ GameObject:
   - component: {fileID: 1395886744}
   - component: {fileID: 1395886747}
   - component: {fileID: 1395886746}
-  - component: {fileID: 1395886745}
   - component: {fileID: 1395886748}
+  - component: {fileID: 1395886749}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (10)
   m_TagString: MovingPlatform
@@ -21792,41 +21506,6 @@ Transform:
   m_Father: {fileID: 1387394081}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1395886745
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395886743}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.86, y: 0.96}
-    newSize: {x: 4.86, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.25, y: 0.39}
-      - {x: -2.27, y: 0.39}
-      - {x: -2.4199998, y: 0.29999998}
-      - {x: -2.4299998, y: 0.26999998}
-      - {x: -2.4299998, y: -0.26}
-      - {x: -2.3, y: -0.37}
-      - {x: 2.27, y: -0.37}
-      - {x: 2.3999999, y: -0.26}
-      - {x: 2.4299998, y: -0.22}
-      - {x: 2.4299998, y: 0.31}
 --- !u!95 &1395886746
 Animator:
   serializedVersion: 3
@@ -21907,6 +21586,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!61 &1395886749
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395886743}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.4201767, y: 0.010250092}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.86, y: 0.96}
+    newSize: {x: 4.86, y: 0.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.700354, y: 0.7754991}
+  m_EdgeRadius: 0
 --- !u!1 &1400101265
 GameObject:
   m_ObjectHideFlags: 0
@@ -22106,8 +21811,8 @@ GameObject:
   - component: {fileID: 1411728716}
   - component: {fileID: 1411728718}
   - component: {fileID: 1411728717}
-  - component: {fileID: 1411728719}
   - component: {fileID: 1411728720}
+  - component: {fileID: 1411728721}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (1)
   m_TagString: MovingPlatform
@@ -22196,41 +21901,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &1411728719
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411728715}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.86, y: 0.96}
-    newSize: {x: 4.86, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.25, y: 0.39}
-      - {x: -2.27, y: 0.39}
-      - {x: -2.4199998, y: 0.29999998}
-      - {x: -2.4299998, y: 0.26999998}
-      - {x: -2.4299998, y: -0.26}
-      - {x: -2.3, y: -0.37}
-      - {x: 2.27, y: -0.37}
-      - {x: 2.3999999, y: -0.26}
-      - {x: 2.4299998, y: -0.22}
-      - {x: 2.4299998, y: 0.31}
 --- !u!114 &1411728720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22244,6 +21914,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!61 &1411728721
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411728715}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.401485, y: 0.009102166}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.86, y: 0.96}
+    newSize: {x: 4.86, y: 0.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.6629705, y: 0.77806914}
+  m_EdgeRadius: 0
 --- !u!1 &1418978745
 GameObject:
   m_ObjectHideFlags: 0
@@ -25965,8 +25661,6 @@ GameObject:
   - component: {fileID: 1624704217}
   - component: {fileID: 1624704219}
   - component: {fileID: 1624704218}
-  - component: {fileID: 1624704220}
-  - component: {fileID: 1624704221}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (3)
   m_TagString: MovingPlatform
@@ -26055,54 +25749,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &1624704220
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624704216}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.86, y: 0.96}
-    newSize: {x: 4.86, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.25, y: 0.39}
-      - {x: -2.27, y: 0.39}
-      - {x: -2.4199998, y: 0.29999998}
-      - {x: -2.4299998, y: 0.26999998}
-      - {x: -2.4299998, y: -0.26}
-      - {x: -2.3, y: -0.37}
-      - {x: 2.27, y: -0.37}
-      - {x: 2.3999999, y: -0.26}
-      - {x: 2.4299998, y: -0.22}
-      - {x: 2.4299998, y: 0.31}
---- !u!114 &1624704221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624704216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &1630850387
 GameObject:
   m_ObjectHideFlags: 0
@@ -26954,8 +26600,6 @@ GameObject:
   - component: {fileID: 1716740122}
   - component: {fileID: 1716740124}
   - component: {fileID: 1716740123}
-  - component: {fileID: 1716740125}
-  - component: {fileID: 1716740126}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (2)
   m_TagString: MovingPlatform
@@ -27044,54 +26688,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &1716740125
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716740121}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.86, y: 0.96}
-    newSize: {x: 4.86, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.25, y: 0.39}
-      - {x: -2.27, y: 0.39}
-      - {x: -2.4199998, y: 0.29999998}
-      - {x: -2.4299998, y: 0.26999998}
-      - {x: -2.4299998, y: -0.26}
-      - {x: -2.3, y: -0.37}
-      - {x: 2.27, y: -0.37}
-      - {x: 2.3999999, y: -0.26}
-      - {x: 2.4299998, y: -0.22}
-      - {x: 2.4299998, y: 0.31}
---- !u!114 &1716740126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716740121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &1718620076
 GameObject:
   m_ObjectHideFlags: 0
@@ -30686,8 +30282,6 @@ GameObject:
   - component: {fileID: 1902380876}
   - component: {fileID: 1902380878}
   - component: {fileID: 1902380877}
-  - component: {fileID: 1902380879}
-  - component: {fileID: 1902380880}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (4)
   m_TagString: MovingPlatform
@@ -30776,54 +30370,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &1902380879
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902380875}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.86, y: 0.96}
-    newSize: {x: 4.86, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.25, y: 0.39}
-      - {x: -2.27, y: 0.39}
-      - {x: -2.4199998, y: 0.29999998}
-      - {x: -2.4299998, y: 0.26999998}
-      - {x: -2.4299998, y: -0.26}
-      - {x: -2.3, y: -0.37}
-      - {x: 2.27, y: -0.37}
-      - {x: 2.3999999, y: -0.26}
-      - {x: 2.4299998, y: -0.22}
-      - {x: 2.4299998, y: 0.31}
---- !u!114 &1902380880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902380875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &1930307302
 GameObject:
   m_ObjectHideFlags: 0
