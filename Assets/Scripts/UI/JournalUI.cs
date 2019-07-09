@@ -30,6 +30,7 @@ namespace UI
 
         public void CenterPage()
         {
+            Debug.Log("Center page clicked");
             if(currentPage <= 0)
                 NextPage();
             else

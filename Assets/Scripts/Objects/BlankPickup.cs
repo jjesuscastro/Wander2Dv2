@@ -9,9 +9,11 @@ namespace Object
     public class BlankPickup : Interactable
     {
         public string popupMessage;
+        public bool doNotDestroy = false;
 
         public override bool Interact()
         {
+            base.Interact();
             Pickup();
             return true;
         }
@@ -20,7 +22,8 @@ namespace Object
         {
             Debug.Log("Picking up blank pickup " + gameObject.name);
 
-            Destroy(gameObject);
+            if(!doNotDestroy)
+                Destroy(gameObject);
             PopupNotification.instance.ShowPopup(popupMessage);
         }
     }

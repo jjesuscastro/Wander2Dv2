@@ -16,7 +16,7 @@ namespace Player
         public float distanceToStop = 1;
         bool npcIsFollowing = false;
         bool mcIsFollowing = false;
-        bool followActive = true;
+        public bool followActive = true;
 
         CameraFollow mainCamera;
         PlayerMentalHealth playerMentalHealth;
@@ -192,8 +192,6 @@ namespace Player
                                     mcIsFollowing = true;
                                 }
                             }
-                        } else {
-                            Debug.Log("Follow script is disabled");
                         }
                     }
                 }
