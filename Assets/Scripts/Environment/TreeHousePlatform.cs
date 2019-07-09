@@ -9,13 +9,13 @@ public class TreeHousePlatform : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.tag == "Weight")
+        if(other.gameObject.CompareTag("Weight"))
         {
             hasObject = true;
             other.transform.SetParent(this.transform);
         }
 
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("NPC"))
         {
             hasPlayer = true;
         }

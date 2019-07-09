@@ -10,7 +10,7 @@ TagManager:
   - MovingPlatform
   - EndScene
   - Weight
-  - Ziv
+  - NPC
   layers:
   - Default
   - TransparentFX

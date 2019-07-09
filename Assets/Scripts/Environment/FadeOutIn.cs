@@ -49,7 +49,7 @@ public class FadeOutIn : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player") || other.CompareTag("NPC"))
         {
             fadeIn = true;
         }
