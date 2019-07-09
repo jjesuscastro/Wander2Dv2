@@ -11,9 +11,10 @@ public class HorizontalPlatform : MonoBehaviour
     public bool moveRight = true;
     public bool oneDirection = false;
     public bool stop = true;
-    bool playerOnPlatform = false;
-    bool NPCOnPlatform = false;
+    public bool playerOnPlatform = false;
+    public bool NPCOnPlatform = false;
     bool rightEnd = false;
+    float acceleration = 0;
     public string NPCName;
 
     // Update is called once per frame
@@ -23,6 +24,7 @@ public class HorizontalPlatform : MonoBehaviour
         {
             if (transform.localPosition.x >= maxX)
             {
+                acceleration = 0;
                 moveRight = false;
                 rightEnd = true;
                 if (oneDirection)
@@ -31,20 +33,24 @@ public class HorizontalPlatform : MonoBehaviour
             
             if (transform.localPosition.x <= minX)
             {
+                acceleration = 0;
                 moveRight = true;
                 if (oneDirection)
                     stop = true;
             }
 
+            if(acceleration < 1)
+                acceleration += 0.01f;
+
             if (moveRight)
-                transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
+                transform.position = new Vector2(transform.position.x + speed * Time.deltaTime * acceleration, transform.position.y);
             else
-                transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
+                transform.position = new Vector2(transform.position.x - speed * Time.deltaTime * acceleration, transform.position.y);
         }
 
         if(Input.GetButtonDown("Interact") && !rightEnd)
         {
-            if(playerOnPlatform && NPCOnPlatform)
+            if(playerOnPlatform == true && NPCOnPlatform == true)
                 stop = false;
 
             if(playerOnPlatform && !NPCOnPlatform)
@@ -63,11 +69,13 @@ public class HorizontalPlatform : MonoBehaviour
             oneDirection = true;
             stop = false;
             rightEnd = false;
+            acceleration = 0;
         } else
         {
             moveRight = true;
             oneDirection = true;
             stop = false;
+            acceleration = 0;
         }
     }
 

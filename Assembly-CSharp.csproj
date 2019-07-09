@@ -101,7 +101,6 @@
      <Compile Include="Assets\Scripts\Player\PlayerSwitch.cs" />
      <Compile Include="Assets\Scripts\Player\ShizoMentalHealth.cs" />
      <Compile Include="Assets\Scripts\SelfDestroy.cs" />
-     <Compile Include="Assets\Scripts\TRIGGERTRAIN.cs" />
      <Compile Include="Assets\Scripts\UI\InventorySlot.cs" />
      <Compile Include="Assets\Scripts\UI\InventoryUI.cs" />
      <Compile Include="Assets\Scripts\UI\JournalSlot.cs" />
