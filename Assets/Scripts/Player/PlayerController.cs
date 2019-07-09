@@ -13,19 +13,28 @@ namespace Player
         public Interactable focus;
         public DoorFade doorFocus;
         bool isRespawning = false;
+        bool isResetting = false;
+        bool hasReset = true;
         Vector3 respawnPoint;
+        Vector3 resetPoint;
         Color color;
         Rigidbody2D rigidBody2D;
 
         void Start()
         {
-            respawnPoint = transform.position;
+            resetPoint = transform.position;
+            respawnPoint = resetPoint;
             color = gameObject.GetComponent<SpriteRenderer>().color;
             rigidBody2D = gameObject.GetComponent<Rigidbody2D>();
         }
 
         void Update()
         {
+            if (isResetting)
+            {
+                isResetting = false;
+                hasReset = true;
+            }
             if (isRespawning)
             {
                 if (color.a < 1)
@@ -52,6 +61,16 @@ namespace Player
             color.a = 0;
             gameObject.GetComponent<SpriteRenderer>().color = color;
             isRespawning = true;
+        }
+
+        public void reset()
+        {
+            hasReset = false;
+            isResetting = true;
+            color.a = 0;
+            gameObject.GetComponent<SpriteRenderer>().color = color;
+            isRespawning = true;
+            transform.position = resetPoint;
         }
 
         public void respawn()
@@ -97,7 +116,8 @@ namespace Player
                     fallEvent.fallTrigger.Invoke();
                     
                 PlayerMentalHealth.instance.changeHealth(-0.05f);
-                respawn();
+                if(!isResetting && hasReset)
+                    respawn();
             }
 
             if (other.gameObject.CompareTag("EndScene"))

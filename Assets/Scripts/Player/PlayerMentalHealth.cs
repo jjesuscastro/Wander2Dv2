@@ -20,7 +20,6 @@ namespace Player
         public GameObject vignetteDamage;
         public float fadeRate = 0.05f;
 
-        Vector3 checkPoint;
         bool criticalLevel = false;
         float timer = 0;
 
@@ -65,10 +64,8 @@ namespace Player
         void resetLevel()
         {
             changeHealth(1f);
-            player.GetComponent<PlayerController>().respawn();
+            player.GetComponent<PlayerController>().reset();
             mentalHealthEffect.Stop();
-            player.transform.position = checkPoint;
-            //test
         }
 
         public void SetLevel(string sceneName)
