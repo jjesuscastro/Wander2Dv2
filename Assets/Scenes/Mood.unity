@@ -27356,6 +27356,7 @@ MonoBehaviour:
   moveRight: 1
   oneDirection: 1
   stop: 1
+  NPCName: Leo
 --- !u!60 &1501645072
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -38795,6 +38796,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438035023259924882, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b002bae57a96d244dbff283f49e6e70b, type: 3}

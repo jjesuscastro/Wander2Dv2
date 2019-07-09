@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UI;
 
 public class HorizontalPlatform : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class HorizontalPlatform : MonoBehaviour
     public bool oneDirection = false;
     public bool stop = true;
     bool playerOnPlatform = false;
+    bool NPCOnPlatform = false;
     bool rightEnd = false;
+    public string NPCName;
 
     // Update is called once per frame
     void Update()
@@ -39,9 +42,16 @@ public class HorizontalPlatform : MonoBehaviour
                 transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
         }
 
-        if(playerOnPlatform && Input.GetButtonDown("Interact") && !rightEnd)
+        if(Input.GetButtonDown("Interact") && !rightEnd)
         {
-            stop = false;
+            if(playerOnPlatform && NPCOnPlatform)
+                stop = false;
+
+            if(playerOnPlatform && !NPCOnPlatform)
+                PopupNotification.instance.ShowPopup(NPCName + " is not on yet.");
+
+            if(!playerOnPlatform && NPCOnPlatform)
+                PopupNotification.instance.ShowPopup("Ziv is not on yet.");
         }
     }
 
@@ -63,25 +73,37 @@ public class HorizontalPlatform : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("NPC"))
+        if (other.CompareTag("Player"))
             playerOnPlatform = true;
+
+        if (other.CompareTag("NPC"))
+            NPCOnPlatform = true;
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("NPC"))
+        if (other.gameObject.CompareTag("Player"))
             playerOnPlatform = true;
+
+        if (other.gameObject.CompareTag("NPC"))
+            NPCOnPlatform = true;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("NPC"))
+        if (other.CompareTag("Player"))
             playerOnPlatform = false;
+
+        if (other.CompareTag("NPC"))
+            NPCOnPlatform = false;
     }
 
     void OnCollisionExit2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("NPC"))
+        if (other.gameObject.CompareTag("Player"))
             playerOnPlatform = false;
+
+        if (other.gameObject.CompareTag("NPC"))
+            NPCOnPlatform = false;
     }
 }
