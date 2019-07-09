@@ -16,6 +16,7 @@ namespace Player
         public float distanceToStop = 1;
         bool npcIsFollowing = false;
         bool mcIsFollowing = false;
+        bool followActive = true;
 
         CameraFollow mainCamera;
         PlayerMentalHealth playerMentalHealth;
@@ -132,6 +133,16 @@ namespace Player
             }
         }
 
+        public void DisableFollow()
+        {
+            followActive = false;
+        }
+
+        public void EnableFollow()
+        {
+            followActive = true;
+        }
+
         void CheckDistance()
         {
             if (mc != null && npc != null)
@@ -151,7 +162,7 @@ namespace Player
                             3. IF inactive character will NOT walk if active character stops while
                                inactive character is still in-frame.
                          */
-                        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+                        if (followActive && (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)))
                         {
                             if (mc.isActiveAndEnabled)
                             {
@@ -181,6 +192,8 @@ namespace Player
                                     mcIsFollowing = true;
                                 }
                             }
+                        } else {
+                            Debug.Log("Follow script is disabled");
                         }
                     }
                 }
