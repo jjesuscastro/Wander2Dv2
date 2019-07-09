@@ -81,6 +81,22 @@ namespace Player
             transform.position = respawnPoint;
         }
 
+        void OnCollisionEnter2D(Collision2D other)
+        {
+            if (other.gameObject.CompareTag("MovingPlatform"))
+            {
+                transform.SetParent(other.transform);
+            }
+        }
+
+        void OnCollisionExit2D(Collision2D other)
+        {
+            if (other.gameObject.CompareTag("MovingPlatform") && rigidBody2D.simulated)
+            {
+                transform.parent = null;
+            }
+        }
+
         void OnTriggerEnter2D(Collider2D other)
         {
             Interactable interactable = other.gameObject.GetComponent<Interactable>();

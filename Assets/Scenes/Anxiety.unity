@@ -2098,7 +2098,7 @@ GameObject:
   - component: {fileID: 111659453}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (2)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2231,7 +2231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &122353613
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,7 +2851,7 @@ GameObject:
   - component: {fileID: 146495210}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (8)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2984,7 +2984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &149268075
 GameObject:
   m_ObjectHideFlags: 0
@@ -4333,7 +4333,7 @@ GameObject:
   - component: {fileID: 248450482}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (6)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4466,7 +4466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &249959745
 GameObject:
   m_ObjectHideFlags: 0
@@ -7489,7 +7489,7 @@ GameObject:
   - component: {fileID: 465121034}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (7)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7622,7 +7622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &478100292
 GameObject:
   m_ObjectHideFlags: 0
@@ -7846,7 +7846,7 @@ GameObject:
   - component: {fileID: 486831050}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (12)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7979,7 +7979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &492506583
 GameObject:
   m_ObjectHideFlags: 0
@@ -9317,7 +9317,7 @@ GameObject:
   - component: {fileID: 634805499}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (5)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9450,7 +9450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &639596355
 GameObject:
   m_ObjectHideFlags: 0
@@ -9671,7 +9671,7 @@ GameObject:
   - component: {fileID: 658108617}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (5)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9804,7 +9804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &664090490
 GameObject:
   m_ObjectHideFlags: 0
@@ -12535,7 +12535,7 @@ GameObject:
   - component: {fileID: 820013113}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (11)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12668,7 +12668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &825132474
 GameObject:
   m_ObjectHideFlags: 0
@@ -13809,7 +13809,7 @@ GameObject:
   - component: {fileID: 916993623}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (15)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13942,7 +13942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &921076328
 GameObject:
   m_ObjectHideFlags: 0
@@ -17253,7 +17253,7 @@ GameObject:
   - component: {fileID: 1127361723}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (3)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17386,7 +17386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &1131426553
 GameObject:
   m_ObjectHideFlags: 0
@@ -17402,7 +17402,7 @@ GameObject:
   - component: {fileID: 1131426558}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (1)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17535,7 +17535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -8
+  speed: -5
 --- !u!1 &1138652807
 GameObject:
   m_ObjectHideFlags: 0
@@ -17551,7 +17551,7 @@ GameObject:
   - component: {fileID: 1138652812}
   m_Layer: 8
   m_Name: conveyer belt ss_0
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17684,7 +17684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &1143534440
 GameObject:
   m_ObjectHideFlags: 0
@@ -19092,7 +19092,7 @@ GameObject:
   - component: {fileID: 1266866100}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (9)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19225,7 +19225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &1268398025
 GameObject:
   m_ObjectHideFlags: 0
@@ -19582,7 +19582,7 @@ GameObject:
   - component: {fileID: 1301799394}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (4)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19715,7 +19715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &1310440019
 GameObject:
   m_ObjectHideFlags: 0
@@ -20712,7 +20712,7 @@ GameObject:
   - component: {fileID: 1376722347}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (13)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20845,7 +20845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &1387377018
 GameObject:
   m_ObjectHideFlags: 0
@@ -21773,7 +21773,7 @@ GameObject:
   - component: {fileID: 1395886748}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (10)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21906,7 +21906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &1400101265
 GameObject:
   m_ObjectHideFlags: 0
@@ -22110,7 +22110,7 @@ GameObject:
   - component: {fileID: 1411728720}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (1)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22243,7 +22243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &1418978745
 GameObject:
   m_ObjectHideFlags: 0
@@ -25969,7 +25969,7 @@ GameObject:
   - component: {fileID: 1624704221}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (3)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26102,7 +26102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &1630850387
 GameObject:
   m_ObjectHideFlags: 0
@@ -26958,7 +26958,7 @@ GameObject:
   - component: {fileID: 1716740126}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (2)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27091,7 +27091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &1718620076
 GameObject:
   m_ObjectHideFlags: 0
@@ -30690,7 +30690,7 @@ GameObject:
   - component: {fileID: 1902380880}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (4)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30823,7 +30823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &1930307302
 GameObject:
   m_ObjectHideFlags: 0
@@ -31608,7 +31608,7 @@ GameObject:
   - component: {fileID: 1973252912}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (14)
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31741,7 +31741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &1976043147
 GameObject:
   m_ObjectHideFlags: 0
@@ -33072,7 +33072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!1 &2063329101
 GameObject:
   m_ObjectHideFlags: 0

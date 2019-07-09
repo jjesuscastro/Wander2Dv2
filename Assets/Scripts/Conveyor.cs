@@ -16,4 +16,20 @@ public class Conveyor : MonoBehaviour
             child.transform.position = tempVector;            
         }
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("NPC"))
+        {
+            other.transform.SetParent(transform);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("NPC"))
+        {
+            other.transform.parent = null;
+        }
+    }
 }
