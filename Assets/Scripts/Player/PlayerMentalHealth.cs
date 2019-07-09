@@ -68,6 +68,7 @@ namespace Player
             player.GetComponent<PlayerController>().respawn();
             mentalHealthEffect.Stop();
             player.transform.position = checkPoint;
+            //test
         }
 
         public void SetLevel(string sceneName)
