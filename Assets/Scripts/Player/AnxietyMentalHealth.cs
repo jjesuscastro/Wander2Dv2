@@ -35,7 +35,7 @@ namespace Player
             Debug.Log("Anxiety MH");
         }
 
-        void Stop()
+        public override void Stop()
         {
             base.Stop();
             fadeIn = false;

@@ -9,18 +9,18 @@ namespace Player
         public float fadeRate;
         public SpriteRenderer face;
         public AudioSource whispers;
-        bool fadeIn = true;
-        bool fadeOut;
+        public bool fadeIn = true;
+        public bool fadeOut = false;
 
         public override void Trigger()
         {
             base.Trigger();
             fadeIn = true;
             fadeOut = false;
-            Debug.Log("Anxiety MH");
+            Debug.Log("Schizo MH");
         }
 
-        void Stop()
+        public override void Stop()
         {
             base.Stop();
             fadeIn = false;
@@ -42,8 +42,8 @@ namespace Player
                     if (tempColor.a >= 0.15)
                     {
                         fadeIn = false;
-                        fadeOut = true;
                     }
+
                 }
             }
             else
@@ -54,12 +54,14 @@ namespace Player
                     tempColor = face.color;
                     tempColor.a -= fadeRate;
                     face.color = tempColor;
+                    Debug.Log("Schizo disabled and fading out");
 
                     if (tempColor.a <= 0)
                     {
                         fadeOut = false;
-                        fadeIn = true;
                     }
+
+                    fadeIn = true;
                 }
             }
         }

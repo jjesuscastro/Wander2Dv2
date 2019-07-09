@@ -66,6 +66,7 @@ namespace Player
         {
             changeHealth(1f);
             player.GetComponent<PlayerController>().respawn();
+            mentalHealthEffect.Stop();
             player.transform.position = checkPoint;
         }
 

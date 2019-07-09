@@ -24,6 +24,8 @@ namespace Object
         bool fadecover;
         bool fadeIn;
         float timer = 0f;
+        public bool mcAllowed = true;
+        public bool npcAllowed = true;
 
         // Use this for initialization
         void Start()
@@ -79,10 +81,10 @@ namespace Object
 
         void MovePlayers()
         {
-            if (mainCharacter != null)
+            if (mainCharacter != null && mcAllowed)
                 mainCharacter.transform.position = newPosition.position;
 
-            if (nonPlayableCharacter != null)
+            if (nonPlayableCharacter != null && npcAllowed)
                 nonPlayableCharacter.transform.position = newPosition.position;
         }
 

@@ -28,6 +28,11 @@ namespace Player
             base.Trigger();            
         }
 
+        public override void Stop()
+        {
+            base.Stop();
+        }
+
         void Update()
         {
             ppVolume.profile.TryGetSettings(out colorGrading);

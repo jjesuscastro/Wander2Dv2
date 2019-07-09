@@ -12,7 +12,7 @@ public class MentalHealthEffect : MonoBehaviour
         Debug.Log("Trigger " + name);
     }
 
-    public void Stop()
+    public virtual void Stop()
     {
         isEnabled = false;
     }

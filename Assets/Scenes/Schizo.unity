@@ -320,6 +320,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &16149470
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -512,7 +514,7 @@ PrefabInstance:
     - target: {fileID: 5384040788554032722, guid: 7b9d6b4625b738745bd810696d67a5b4,
         type: 3}
       propertyPath: m_isInputParsingRequired
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5384040788554032722, guid: 7b9d6b4625b738745bd810696d67a5b4,
         type: 3}
@@ -2416,6 +2418,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &88143048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2688,6 +2692,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &100479964
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6794,7 +6800,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.6678162, y: -12.121033, z: -0.015625}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 439986767}
+  - {fileID: 913374850}
   m_Father: {fileID: 1978871398}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7301,6 +7309,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &387111157
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7861,6 +7871,84 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &439986766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 439986767}
+  - component: {fileID: 439986769}
+  - component: {fileID: 439986768}
+  m_Layer: 0
+  m_Name: portal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &439986767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439986766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.15, y: -0.49, z: 0}
+  m_LocalScale: {x: 1.3306, y: 1.3306, z: 1.3306}
+  m_Children: []
+  m_Father: {fileID: 330262416}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &439986768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439986766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeRate: 1
+  length: 1
+  newPosition: {fileID: 913374850}
+  mainCharacter: {fileID: 0}
+  nonPlayableCharacter: {fileID: 0}
+  cover: {fileID: 0}
+  mcAllowed: 0
+  npcAllowed: 1
+--- !u!61 &439986769
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439986766}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &462436432
 GameObject:
   m_ObjectHideFlags: 0
@@ -11417,107 +11505,6 @@ MonoBehaviour:
   sentences:
   - We're finally outside!
   - Oh? What is that in the distance?
---- !u!21 &678214104
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: CHERY RUSH Demo SDF Material (Instance)
-  m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_ShaderKeywords: MASK_SOFT
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Cube:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _FaceTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 28718946221925242, guid: 0963de876c163c44bbb09dbe1f0e5651,
-          type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OutlineTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Ambient: 0.5
-    - _Bevel: 0.5
-    - _BevelClamp: 0
-    - _BevelOffset: 0
-    - _BevelRoundness: 0
-    - _BevelWidth: 0
-    - _BumpFace: 0
-    - _BumpOutline: 0
-    - _ColorMask: 15
-    - _Diffuse: 0.5
-    - _FaceDilate: 0
-    - _FaceUVSpeedX: 0
-    - _FaceUVSpeedY: 0
-    - _GlowInner: 0.05
-    - _GlowOffset: 0
-    - _GlowOuter: 0.05
-    - _GlowPower: 0.75
-    - _GradientScale: 6
-    - _LightAngle: 3.1416
-    - _MaskSoftnessX: 0
-    - _MaskSoftnessY: 0
-    - _OutlineSoftness: 0
-    - _OutlineUVSpeedX: 0
-    - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0
-    - _PerspectiveFilter: 0.875
-    - _Reflectivity: 10
-    - _ScaleRatioA: 0.8333333
-    - _ScaleRatioB: 0.6770833
-    - _ScaleRatioC: 0.6770833
-    - _ScaleX: 1
-    - _ScaleY: 1
-    - _ShaderFlags: 0
-    - _SpecularPower: 2
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _TextureHeight: 512
-    - _TextureWidth: 512
-    - _UnderlayDilate: 0
-    - _UnderlayOffsetX: 0
-    - _UnderlayOffsetY: 0
-    - _UnderlaySoftness: 0
-    - _VertexOffsetX: 0
-    - _VertexOffsetY: 0
-    - _WeightBold: 0.75
-    - _WeightNormal: 0
-    m_Colors:
-    - _ClipRect: {r: 77.2, g: 2.7, b: 80, a: 15}
-    - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
-    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
-    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
 --- !u!1 &689127606
 GameObject:
   m_ObjectHideFlags: 0
@@ -12333,6 +12320,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &765325119
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13023,6 +13012,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &804095735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14504,6 +14495,84 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &913374849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 913374850}
+  - component: {fileID: 913374852}
+  - component: {fileID: 913374851}
+  m_Layer: 0
+  m_Name: portal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &913374850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913374849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.06, y: -7.33, z: 0}
+  m_LocalScale: {x: 1.4506, y: 1.4506, z: 1.4506}
+  m_Children: []
+  m_Father: {fileID: 330262416}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &913374851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913374849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d338decece365a74d8e1b799d30b711b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeRate: 1
+  length: 1
+  newPosition: {fileID: 439986767}
+  mainCharacter: {fileID: 0}
+  nonPlayableCharacter: {fileID: 0}
+  cover: {fileID: 0}
+  mcAllowed: 0
+  npcAllowed: 1
+--- !u!61 &913374852
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913374849}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &918812325
 GameObject:
   m_ObjectHideFlags: 0
@@ -15050,6 +15119,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &956644803
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16060,6 +16131,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &1059982783
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16897,6 +16970,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &1081614357
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17505,6 +17580,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &1103032809
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22277,6 +22354,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &1424620427
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22414,6 +22493,107 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &1431561672
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CHERY RUSH Demo SDF Material (Instance)
+  m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
+  m_ShaderKeywords: MASK_SOFT
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cube:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FaceTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 28718946221925242, guid: 0963de876c163c44bbb09dbe1f0e5651,
+          type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OutlineTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Ambient: 0.5
+    - _Bevel: 0.5
+    - _BevelClamp: 0
+    - _BevelOffset: 0
+    - _BevelRoundness: 0
+    - _BevelWidth: 0
+    - _BumpFace: 0
+    - _BumpOutline: 0
+    - _ColorMask: 15
+    - _Diffuse: 0.5
+    - _FaceDilate: 0
+    - _FaceUVSpeedX: 0
+    - _FaceUVSpeedY: 0
+    - _GlowInner: 0.05
+    - _GlowOffset: 0
+    - _GlowOuter: 0.05
+    - _GlowPower: 0.75
+    - _GradientScale: 6
+    - _LightAngle: 3.1416
+    - _MaskSoftnessX: 0
+    - _MaskSoftnessY: 0
+    - _OutlineSoftness: 0
+    - _OutlineUVSpeedX: 0
+    - _OutlineUVSpeedY: 0
+    - _OutlineWidth: 0
+    - _PerspectiveFilter: 0.875
+    - _Reflectivity: 10
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
+    - _ScaleX: 1
+    - _ScaleY: 1
+    - _ShaderFlags: 0
+    - _SpecularPower: 2
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _TextureHeight: 512
+    - _TextureWidth: 512
+    - _UnderlayDilate: 0
+    - _UnderlayOffsetX: 0
+    - _UnderlayOffsetY: 0
+    - _UnderlaySoftness: 0
+    - _VertexOffsetX: 0
+    - _VertexOffsetY: 0
+    - _WeightBold: 0.75
+    - _WeightNormal: 0
+    m_Colors:
+    - _ClipRect: {r: 77.2, g: 2.7, b: 80, a: 15}
+    - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
+    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
+    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
 --- !u!1 &1431788562
 GameObject:
   m_ObjectHideFlags: 0
@@ -23680,12 +23860,12 @@ PrefabInstance:
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: 163.8
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6
+      value: -81.2
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
@@ -24261,6 +24441,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &1594003677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27082,6 +27264,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &1788241698
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28136,6 +28320,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &1878366562
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29509,6 +29695,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 0}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &1975117449
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29700,6 +29888,8 @@ MonoBehaviour:
   mainCharacter: {fileID: 0}
   nonPlayableCharacter: {fileID: 81238445}
   cover: {fileID: 711397788}
+  mcAllowed: 1
+  npcAllowed: 1
 --- !u!61 &2002582269
 BoxCollider2D:
   m_ObjectHideFlags: 0
