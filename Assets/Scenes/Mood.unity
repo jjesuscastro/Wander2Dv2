@@ -1029,7 +1029,7 @@ MonoBehaviour:
   sentences:
   - Oh?
   - Do you heart that?
-  - Leo?? Leo?
+  - Leo?? Leo??
   - It's my mom!!! She's looking for me!!!
 --- !u!1 &118105330
 GameObject:
@@ -4367,9 +4367,9 @@ MonoBehaviour:
   - Leo
   sentences:
   - Oh..
-  - This is my treehouse
-  - I used to go here a lot whenever I want to play
-  - or sometimes when I just want to br alone...
+  - This is my treehouse.
+  - I used to go here a lot whenever I want to play...
+  - or sometimes when I just want to be alone...
 --- !u!1 &337789923
 GameObject:
   m_ObjectHideFlags: 0
@@ -6037,7 +6037,7 @@ MonoBehaviour:
   sentences:
   - Leo?? Where are you?
   - Mom...
-  - She doesn't understand that I'm sick
+  - She doesn't understand that I'm sick.
   - What if she just brushes me off again?
 --- !u!1 &420182189
 GameObject:
@@ -7172,13 +7172,13 @@ MonoBehaviour:
   sentences:
   - Thanks for helping me climb back up!
   - '...'
-  - '... it''s no problem'
+  - '... It''s no problem'
   - '...'
-  - Hey Ziv
+  - Hey Ziv,
   - Will you listen to what I want to say?
   - '...'
   - Sometimes, I feel like I'm on the top of the world... like i can see everything
-  - But other times, I feel like there's a big storm and I can't escape
+  - But other times, I feel like there's a big storm and I can't escape.
   - '...'
   - It's hard to explain... But I hope you understand.
 --- !u!1 &494559351
@@ -16165,12 +16165,12 @@ MonoBehaviour:
   - Leo
   - Leo
   sentences:
-  - "I think I understand how you feel\t"
+  - "I think I understand how you feel.\t"
   - You do?
   - Mom and the others... they don't understand at all
   - Did something happen?
   - Well...
-  - I'm sick, you see
+  - I'm sick, you see...
   - But they just think that I'm making a fuss.
   - I'm not.
 --- !u!1 &1018829354
@@ -27682,7 +27682,7 @@ MonoBehaviour:
   names:
   - Ziv
   sentences:
-  - I feel a lot more relaxed now
+  - I feel a lot more relaxed now.
 --- !u!1 &1512068731
 GameObject:
   m_ObjectHideFlags: 0
@@ -27770,9 +27770,9 @@ MonoBehaviour:
   - That was a hard fall...
   - '...'
   - Where am I?
-  - Everything seems so gloomy all of a sudden
+  - Everything seems so gloomy all of a sudden.
   - '...'
-  - '... is someone crying?'
+  - '... Is someone crying?'
 --- !u!1 &1527437744
 GameObject:
   m_ObjectHideFlags: 0
@@ -29954,12 +29954,12 @@ MonoBehaviour:
   - Hey Ziv
   - I'm sorry about the storm...
   - Why would you be sorry?
-  - You see, this world is a bit special
-  - Sometimes when I get too happy or too sad the world changes too
-  - It would get really sunny and bright
-  - But sometimes dark and gloomy
+  - You see, this world is a bit special.
+  - Sometimes, when I get too happy or too sad the world changes too.
+  - It would get really sunny and bright.
+  - But sometimes dark and gloomy.
   - It's been stormy lately so I've been trying to find my way home but I just can't
-    seem to find it
+    seem to find it.
   - Would you help me?
 --- !u!1 &1637496968
 GameObject:
@@ -32198,11 +32198,11 @@ MonoBehaviour:
   sentences:
   - Oh! Hello there!
   - Hello!
-  - I didn't see you there!!  I was too busy admiring the view!! Isn't it beautiful?
+  - I didn't see you there!! I was too busy admiring the view!! Isn't it beautiful?
   - '...'
   - By the way, my name is Leo!!! It's really nice to be here today!!
   - What brings you here today, friend?
-  - 'I''m Ziv. '
+  - I'm Ziv.
   - I'm here in search of something. Would you like to join me?
   - '...'
   - No, thank you!!!!
