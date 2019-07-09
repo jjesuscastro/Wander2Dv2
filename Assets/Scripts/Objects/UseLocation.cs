@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Object
 {
@@ -8,22 +9,18 @@ namespace Object
     public class UseLocation : Interactable
     {
         [SerializeField] Item item;
-        [SerializeField] GameObject gameObjectToEnable;
+        public UnityEvent onUse;
 
         // Update is called once per frame
         void Update()
         {
             if (item.isUsed)
             {
-                EnableGameObject();
+                if(onUse != null)
+                    onUse.Invoke();
                 Destroy(this.gameObject);
             }
             radius = GetComponent<CircleCollider2D>().radius;
-        }
-
-        void EnableGameObject()
-        {
-            gameObjectToEnable.SetActive(true);
         }
     }
 }

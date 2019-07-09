@@ -25,6 +25,9 @@ namespace Object
             {
                 Destroy(gameObject);
                 PopupNotification.instance.ShowPopup("Journal entry picked up!");
+
+                if(onPickup != null)
+                    onPickup.Invoke();
             }
         }
     }

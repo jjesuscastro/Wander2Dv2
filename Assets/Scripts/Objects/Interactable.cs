@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Object
 {
     [RequireComponent(typeof(CircleCollider2D))]
     public class Interactable : MonoBehaviour
     {
-
+        public UnityEvent onPickup;
         public float radius = 3;
         bool isFocused = false;
         bool hasInteracted = false;
