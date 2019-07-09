@@ -2359,8 +2359,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81238445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 175.725, y: -39.2, z: 0}
-  m_LocalScale: {x: -0.35631305, y: 0.35631305, z: 0.35631305}
+  m_LocalPosition: {x: 175.62, y: -38.3, z: 0}
+  m_LocalScale: {x: -0.84418875, y: 0.95291275, z: 0.84418875}
   m_Children:
   - {fileID: 2065174473}
   - {fileID: 1082689505}
@@ -14121,6 +14121,107 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!21 &877851813
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CHERY RUSH Demo SDF Material (Instance)
+  m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
+  m_ShaderKeywords: MASK_SOFT
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cube:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FaceTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 28718946221925242, guid: 0963de876c163c44bbb09dbe1f0e5651,
+          type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OutlineTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Ambient: 0.5
+    - _Bevel: 0.5
+    - _BevelClamp: 0
+    - _BevelOffset: 0
+    - _BevelRoundness: 0
+    - _BevelWidth: 0
+    - _BumpFace: 0
+    - _BumpOutline: 0
+    - _ColorMask: 15
+    - _Diffuse: 0.5
+    - _FaceDilate: 0
+    - _FaceUVSpeedX: 0
+    - _FaceUVSpeedY: 0
+    - _GlowInner: 0.05
+    - _GlowOffset: 0
+    - _GlowOuter: 0.05
+    - _GlowPower: 0.75
+    - _GradientScale: 6
+    - _LightAngle: 3.1416
+    - _MaskSoftnessX: 0
+    - _MaskSoftnessY: 0
+    - _OutlineSoftness: 0
+    - _OutlineUVSpeedX: 0
+    - _OutlineUVSpeedY: 0
+    - _OutlineWidth: 0
+    - _PerspectiveFilter: 0.875
+    - _Reflectivity: 10
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
+    - _ScaleX: 1
+    - _ScaleY: 1
+    - _ShaderFlags: 0
+    - _SpecularPower: 2
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _TextureHeight: 512
+    - _TextureWidth: 512
+    - _UnderlayDilate: 0
+    - _UnderlayOffsetX: 0
+    - _UnderlayOffsetY: 0
+    - _UnderlaySoftness: 0
+    - _VertexOffsetX: 0
+    - _VertexOffsetY: 0
+    - _WeightBold: 0.75
+    - _WeightNormal: 0
+    m_Colors:
+    - _ClipRect: {r: 77.2, g: 2.7, b: 80, a: 15}
+    - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
+    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
+    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
 --- !u!1 &878064431
 GameObject:
   m_ObjectHideFlags: 0
@@ -23839,12 +23940,12 @@ PrefabInstance:
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 148.6
+      value: 177.87
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -127.4
+      value: -38.84
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
@@ -28579,63 +28680,54 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.055, y: -0.935}
-      - {x: 0.055, y: -1.095}
-      - {x: 0.074999996, y: -1.395}
-      - {x: 0.074999996, y: -1.535}
-      - {x: 0.095, y: -1.555}
-      - {x: 0.155, y: -1.555}
-      - {x: 0.195, y: -1.505}
-      - {x: 0.285, y: -0.865}
-      - {x: 0.285, y: -0.73499995}
-      - {x: 0.275, y: -0.635}
-      - {x: 0.415, y: -0.865}
-      - {x: 0.48499998, y: -0.835}
-      - {x: 0.445, y: -0.685}
-      - {x: 0.405, y: -0.59499997}
-      - {x: 0.235, y: -0.205}
-      - {x: 0.205, y: -0.145}
-      - {x: 0.114999995, y: -0.114999995}
-      - {x: 0.145, y: -0.074999996}
-      - {x: 0.42499998, y: -0.074999996}
-      - {x: 0.565, y: -0.015}
-      - {x: 0.575, y: 0.055}
-      - {x: 0.635, y: 0.45499998}
-      - {x: 0.655, y: 0.59499997}
-      - {x: 0.685, y: 0.875}
-      - {x: 0.695, y: 0.935}
-      - {x: 0.695, y: 1.0749999}
-      - {x: 0.66499996, y: 1.115}
-      - {x: 0.565, y: 1.165}
-      - {x: 0.235, y: 1.1949999}
-      - {x: -0.105, y: 1.2149999}
-      - {x: -0.185, y: 1.2149999}
-      - {x: -0.445, y: 1.1949999}
-      - {x: -0.49499997, y: 1.115}
-      - {x: -0.525, y: 0.835}
-      - {x: -0.565, y: 0.295}
-      - {x: -0.565, y: 0.13499999}
-      - {x: -0.555, y: 0.065}
-      - {x: -0.475, y: 0.005}
-      - {x: -0.355, y: -0.035}
-      - {x: -0.235, y: -0.055}
-      - {x: -0.145, y: -0.055}
-      - {x: -0.074999996, y: -0.105}
-      - {x: -0.145, y: -0.114999995}
-      - {x: -0.175, y: -0.145}
-      - {x: -0.275, y: -0.415}
-      - {x: -0.435, y: -0.755}
-      - {x: -0.39499998, y: -0.85499996}
-      - {x: -0.325, y: -0.825}
-      - {x: -0.305, y: -0.84499997}
-      - {x: -0.295, y: -1.125}
-      - {x: -0.275, y: -1.4549999}
-      - {x: -0.285, y: -1.535}
-      - {x: -0.265, y: -1.555}
-      - {x: -0.185, y: -1.555}
-      - {x: -0.155, y: -1.495}
-      - {x: -0.085, y: -0.945}
-      - {x: -0.035, y: -0.91499996}
+    - - {x: 0.035, y: -0.95}
+      - {x: 0.035, y: -1.1}
+      - {x: 0.044999998, y: -1.26}
+      - {x: 0.044999998, y: -1.5699999}
+      - {x: 0.085, y: -1.5899999}
+      - {x: 0.145, y: -1.5899999}
+      - {x: 0.195, y: -1.56}
+      - {x: 0.285, y: -0.90999997}
+      - {x: 0.285, y: -0.74}
+      - {x: 0.415, y: -0.88}
+      - {x: 0.445, y: -0.9}
+      - {x: 0.475, y: -0.84999996}
+      - {x: 0.475, y: -0.75}
+      - {x: 0.345, y: -0.45999998}
+      - {x: 0.235, y: -0.19}
+      - {x: 0.125, y: -0.12}
+      - {x: 0.24499999, y: -0.089999996}
+      - {x: 0.42499998, y: 0.06}
+      - {x: 0.475, y: 0.19999999}
+      - {x: 0.475, y: 0.65}
+      - {x: 0.435, y: 0.79999995}
+      - {x: 0.385, y: 0.98999995}
+      - {x: 0.325, y: 1.0799999}
+      - {x: 0.225, y: 1.18}
+      - {x: 0.145, y: 1.22}
+      - {x: -0.035, y: 1.22}
+      - {x: -0.145, y: 1.17}
+      - {x: -0.285, y: 1.02}
+      - {x: -0.39499998, y: 0.83}
+      - {x: -0.465, y: 0.62}
+      - {x: -0.465, y: 0.29}
+      - {x: -0.415, y: 0.14999999}
+      - {x: -0.33499998, y: 0.04}
+      - {x: -0.255, y: -0.04}
+      - {x: -0.065, y: -0.12}
+      - {x: -0.13499999, y: -0.12}
+      - {x: -0.185, y: -0.17}
+      - {x: -0.42499998, y: -0.71999997}
+      - {x: -0.445, y: -0.84}
+      - {x: -0.385, y: -0.88}
+      - {x: -0.325, y: -1.1999999}
+      - {x: -0.305, y: -1.35}
+      - {x: -0.305, y: -1.56}
+      - {x: -0.275, y: -1.5899999}
+      - {x: -0.185, y: -1.5899999}
+      - {x: -0.145, y: -1.52}
+      - {x: -0.114999995, y: -1.18}
+      - {x: -0.074999996, y: -0.95}
 --- !u!114 &1892647281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28802,8 +28894,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892647279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 176.242, y: -39.2, z: 0}
-  m_LocalScale: {x: -0.35631305, y: 0.35631305, z: 0.35631305}
+  m_LocalPosition: {x: 176.85, y: -38.3, z: 0}
+  m_LocalScale: {x: -0.84418875, y: 0.95291275, z: 0.84418875}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -30021,107 +30113,6 @@ MonoBehaviour:
   sentences:
   - I think I've lost something.
   - Will you help me find it?
---- !u!21 &2018957432
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: CHERY RUSH Demo SDF Material (Instance)
-  m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_ShaderKeywords: MASK_SOFT
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Cube:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _FaceTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 28718946221925242, guid: 0963de876c163c44bbb09dbe1f0e5651,
-          type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OutlineTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Ambient: 0.5
-    - _Bevel: 0.5
-    - _BevelClamp: 0
-    - _BevelOffset: 0
-    - _BevelRoundness: 0
-    - _BevelWidth: 0
-    - _BumpFace: 0
-    - _BumpOutline: 0
-    - _ColorMask: 15
-    - _Diffuse: 0.5
-    - _FaceDilate: 0
-    - _FaceUVSpeedX: 0
-    - _FaceUVSpeedY: 0
-    - _GlowInner: 0.05
-    - _GlowOffset: 0
-    - _GlowOuter: 0.05
-    - _GlowPower: 0.75
-    - _GradientScale: 6
-    - _LightAngle: 3.1416
-    - _MaskSoftnessX: 0
-    - _MaskSoftnessY: 0
-    - _OutlineSoftness: 0
-    - _OutlineUVSpeedX: 0
-    - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0
-    - _PerspectiveFilter: 0.875
-    - _Reflectivity: 10
-    - _ScaleRatioA: 0.8333333
-    - _ScaleRatioB: 0.6770833
-    - _ScaleRatioC: 0.6770833
-    - _ScaleX: 1
-    - _ScaleY: 1
-    - _ShaderFlags: 0
-    - _SpecularPower: 2
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _TextureHeight: 512
-    - _TextureWidth: 512
-    - _UnderlayDilate: 0
-    - _UnderlayOffsetX: 0
-    - _UnderlayOffsetY: 0
-    - _UnderlaySoftness: 0
-    - _VertexOffsetX: 0
-    - _VertexOffsetY: 0
-    - _WeightBold: 0.75
-    - _WeightNormal: 0
-    m_Colors:
-    - _ClipRect: {r: 77.2, g: 2.7, b: 80, a: 15}
-    - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
-    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
-    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
 --- !u!1 &2020326983
 GameObject:
   m_ObjectHideFlags: 0
