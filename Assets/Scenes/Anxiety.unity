@@ -1078,6 +1078,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5f75748f94644458fadbd3571608ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   entry: {fileID: 11400000, guid: 912db10e3de3ab646842a1d6ce874e0a, type: 2}
 --- !u!58 &66440277
@@ -5175,6 +5180,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15b0b093a492242ad1bbe8e8bf8ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   dialogue: {fileID: 308168698}
   doNotDestroy: 0
@@ -7145,6 +7155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15b0b093a492242ad1bbe8e8bf8ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   dialogue: {fileID: 435266602}
   doNotDestroy: 0
@@ -7712,6 +7727,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15b0b093a492242ad1bbe8e8bf8ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   dialogue: {fileID: 486106164}
   doNotDestroy: 0
@@ -8515,6 +8535,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15b0b093a492242ad1bbe8e8bf8ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   dialogue: {fileID: 555244012}
   doNotDestroy: 0
@@ -9136,6 +9161,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5f75748f94644458fadbd3571608ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   entry: {fileID: 11400000, guid: 49df1f64c07e9aa4aa5828e81473d83d, type: 2}
 --- !u!58 &623809818
@@ -11977,6 +12007,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15b0b093a492242ad1bbe8e8bf8ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   dialogue: {fileID: 802380036}
   doNotDestroy: 0
@@ -12819,6 +12854,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5f75748f94644458fadbd3571608ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   entry: {fileID: 11400000, guid: 44994bbc433e9d644b99e9ca2c7c4699, type: 2}
 --- !u!58 &866336572
@@ -12930,6 +12970,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5f75748f94644458fadbd3571608ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   entry: {fileID: 11400000, guid: b863727ea92945941a67717dfa599b7d, type: 2}
 --- !u!58 &869451187
@@ -13492,6 +13537,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5f75748f94644458fadbd3571608ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   entry: {fileID: 11400000, guid: 1b3b9a04a8e8ee9418ed0d18cd809b65, type: 2}
 --- !u!58 &904004209
@@ -13812,6 +13862,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15b0b093a492242ad1bbe8e8bf8ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   dialogue: {fileID: 921076332}
   doNotDestroy: 0
@@ -14026,6 +14081,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5f75748f94644458fadbd3571608ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   entry: {fileID: 11400000, guid: 597834165adeeb948bd5bf59bda79a1b, type: 2}
 --- !u!58 &938160328
@@ -15467,6 +15527,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a999802c86b124ab59ddc8ebce4467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   onInteract:
     m_PersistentCalls:
@@ -19985,6 +20050,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5f75748f94644458fadbd3571608ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   entry: {fileID: 11400000, guid: d92a9218e7c17f243baf5a4f4516576e, type: 2}
 --- !u!58 &1354395212
@@ -23706,6 +23776,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5f75748f94644458fadbd3571608ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   entry: {fileID: 11400000, guid: 05ebc66979bfa5741b71ab039bd1afbd, type: 2}
 --- !u!58 &1502603253
@@ -24486,6 +24561,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5f75748f94644458fadbd3571608ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   entry: {fileID: 11400000, guid: 808d272be12e0064ab39bc5ec0b3451f, type: 2}
 --- !u!58 &1553805483
@@ -28100,6 +28180,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5f75748f94644458fadbd3571608ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   entry: {fileID: 11400000, guid: 9ecdb388ec494a945933fbaeabc35c88, type: 2}
 --- !u!58 &1768457674
@@ -28478,6 +28563,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15b0b093a492242ad1bbe8e8bf8ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   dialogue: {fileID: 1784330661}
   doNotDestroy: 0
@@ -28668,6 +28758,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15b0b093a492242ad1bbe8e8bf8ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   dialogue: {fileID: 1793831785}
   doNotDestroy: 0
@@ -30667,6 +30762,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5f75748f94644458fadbd3571608ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   entry: {fileID: 11400000, guid: 79d7e00f83e91b645b2bc007fe650cda, type: 2}
 --- !u!58 &1945202026
@@ -30778,6 +30878,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15b0b093a492242ad1bbe8e8bf8ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   dialogue: {fileID: 1953896417}
   doNotDestroy: 0
@@ -31015,6 +31120,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15b0b093a492242ad1bbe8e8bf8ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   dialogue: {fileID: 1963181703}
   doNotDestroy: 0
@@ -31694,6 +31804,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5f75748f94644458fadbd3571608ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   entry: {fileID: 11400000, guid: 1b1e21531b1aa49408955fba46ccdc24, type: 2}
 --- !u!58 &1999841726
@@ -32527,6 +32642,7 @@ GameObject:
   - component: {fileID: 2062382581}
   - component: {fileID: 2062382580}
   - component: {fileID: 2062382579}
+  - component: {fileID: 2062382583}
   m_Layer: 8
   m_Name: conveyer belt ss_0
   m_TagString: Untagged
@@ -32545,7 +32661,7 @@ PolygonCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -32650,6 +32766,24 @@ Transform:
   m_Father: {fileID: 1440099379}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!252 &2062382583
+SurfaceEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062382578}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 512
+  m_Speed: -10
+  m_SpeedVariation: 0
+  m_ForceScale: 1
+  m_UseContactForce: 0
+  m_UseFriction: 0
+  m_UseBounce: 0
 --- !u!1 &2063329101
 GameObject:
   m_ObjectHideFlags: 0
@@ -33386,6 +33520,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15b0b093a492242ad1bbe8e8bf8ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   radius: 3
   dialogue: {fileID: 2119100782}
   doNotDestroy: 0
@@ -33805,12 +33944,12 @@ PrefabInstance:
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 213
+      value: 139.3
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -166.6
+      value: -34.11
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
