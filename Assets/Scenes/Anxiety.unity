@@ -2095,6 +2095,7 @@ GameObject:
   - component: {fileID: 111659452}
   - component: {fileID: 111659451}
   - component: {fileID: 111659450}
+  - component: {fileID: 111659453}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (2)
   m_TagString: Untagged
@@ -2125,7 +2126,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 111659448}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2218,6 +2219,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &111659453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111659448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &122353613
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,6 +2848,7 @@ GameObject:
   - component: {fileID: 146495209}
   - component: {fileID: 146495208}
   - component: {fileID: 146495207}
+  - component: {fileID: 146495210}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (8)
   m_TagString: Untagged
@@ -2864,7 +2879,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 146495205}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2957,6 +2972,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &146495210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146495205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &149268075
 GameObject:
   m_ObjectHideFlags: 0
@@ -4302,6 +4330,7 @@ GameObject:
   - component: {fileID: 248450481}
   - component: {fileID: 248450480}
   - component: {fileID: 248450479}
+  - component: {fileID: 248450482}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (6)
   m_TagString: Untagged
@@ -4332,7 +4361,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 248450477}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4425,6 +4454,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &248450482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248450477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &249959745
 GameObject:
   m_ObjectHideFlags: 0
@@ -7444,6 +7486,7 @@ GameObject:
   - component: {fileID: 465121033}
   - component: {fileID: 465121032}
   - component: {fileID: 465121031}
+  - component: {fileID: 465121034}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (7)
   m_TagString: Untagged
@@ -7474,7 +7517,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 465121029}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -7567,6 +7610,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &465121034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465121029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &478100292
 GameObject:
   m_ObjectHideFlags: 0
@@ -7787,6 +7843,7 @@ GameObject:
   - component: {fileID: 486831049}
   - component: {fileID: 486831048}
   - component: {fileID: 486831047}
+  - component: {fileID: 486831050}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (12)
   m_TagString: Untagged
@@ -7817,7 +7874,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 486831045}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -7910,6 +7967,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &486831050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486831045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &492506583
 GameObject:
   m_ObjectHideFlags: 0
@@ -9244,6 +9314,7 @@ GameObject:
   - component: {fileID: 634805498}
   - component: {fileID: 634805497}
   - component: {fileID: 634805496}
+  - component: {fileID: 634805499}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (5)
   m_TagString: Untagged
@@ -9274,7 +9345,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 634805494}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -9367,6 +9438,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &634805499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634805494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &639596355
 GameObject:
   m_ObjectHideFlags: 0
@@ -9584,6 +9668,7 @@ GameObject:
   - component: {fileID: 658108615}
   - component: {fileID: 658108614}
   - component: {fileID: 658108616}
+  - component: {fileID: 658108617}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (5)
   m_TagString: Untagged
@@ -9681,7 +9766,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 658108612}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -9707,6 +9792,19 @@ PolygonCollider2D:
       - {x: 2.3999999, y: -0.26}
       - {x: 2.4299998, y: -0.22}
       - {x: 2.4299998, y: 0.31}
+--- !u!114 &658108617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658108612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &664090490
 GameObject:
   m_ObjectHideFlags: 0
@@ -12434,6 +12532,7 @@ GameObject:
   - component: {fileID: 820013112}
   - component: {fileID: 820013111}
   - component: {fileID: 820013110}
+  - component: {fileID: 820013113}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (11)
   m_TagString: Untagged
@@ -12464,7 +12563,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 820013108}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -12557,6 +12656,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &820013113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820013108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &825132474
 GameObject:
   m_ObjectHideFlags: 0
@@ -13694,6 +13806,7 @@ GameObject:
   - component: {fileID: 916993622}
   - component: {fileID: 916993621}
   - component: {fileID: 916993620}
+  - component: {fileID: 916993623}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (15)
   m_TagString: Untagged
@@ -13724,7 +13837,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 916993618}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -13817,6 +13930,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &916993623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916993618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &921076328
 GameObject:
   m_ObjectHideFlags: 0
@@ -17124,6 +17250,7 @@ GameObject:
   - component: {fileID: 1127361722}
   - component: {fileID: 1127361721}
   - component: {fileID: 1127361720}
+  - component: {fileID: 1127361723}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (3)
   m_TagString: Untagged
@@ -17154,7 +17281,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1127361718}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -17247,6 +17374,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1127361723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127361718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &1131426553
 GameObject:
   m_ObjectHideFlags: 0
@@ -17259,6 +17399,7 @@ GameObject:
   - component: {fileID: 1131426557}
   - component: {fileID: 1131426556}
   - component: {fileID: 1131426555}
+  - component: {fileID: 1131426558}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (1)
   m_TagString: Untagged
@@ -17289,7 +17430,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1131426553}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -17382,6 +17523,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1131426558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131426553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -8
 --- !u!1 &1138652807
 GameObject:
   m_ObjectHideFlags: 0
@@ -17394,6 +17548,7 @@ GameObject:
   - component: {fileID: 1138652810}
   - component: {fileID: 1138652809}
   - component: {fileID: 1138652811}
+  - component: {fileID: 1138652812}
   m_Layer: 8
   m_Name: conveyer belt ss_0
   m_TagString: Untagged
@@ -17491,7 +17646,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1138652807}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -17517,6 +17672,19 @@ PolygonCollider2D:
       - {x: 2.3999999, y: -0.26}
       - {x: 2.4299998, y: -0.22}
       - {x: 2.4299998, y: 0.31}
+--- !u!114 &1138652812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138652807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &1143534440
 GameObject:
   m_ObjectHideFlags: 0
@@ -18921,6 +19089,7 @@ GameObject:
   - component: {fileID: 1266866099}
   - component: {fileID: 1266866098}
   - component: {fileID: 1266866097}
+  - component: {fileID: 1266866100}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (9)
   m_TagString: Untagged
@@ -18951,7 +19120,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1266866095}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -19044,6 +19213,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1266866100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266866095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &1268398025
 GameObject:
   m_ObjectHideFlags: 0
@@ -19397,6 +19579,7 @@ GameObject:
   - component: {fileID: 1301799393}
   - component: {fileID: 1301799392}
   - component: {fileID: 1301799391}
+  - component: {fileID: 1301799394}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (4)
   m_TagString: Untagged
@@ -19427,7 +19610,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1301799389}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -19520,6 +19703,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1301799394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301799389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &1310440019
 GameObject:
   m_ObjectHideFlags: 0
@@ -20513,6 +20709,7 @@ GameObject:
   - component: {fileID: 1376722346}
   - component: {fileID: 1376722345}
   - component: {fileID: 1376722344}
+  - component: {fileID: 1376722347}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (13)
   m_TagString: Untagged
@@ -20543,7 +20740,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1376722342}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -20636,6 +20833,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1376722347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376722342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &1387377018
 GameObject:
   m_ObjectHideFlags: 0
@@ -21560,6 +21770,7 @@ GameObject:
   - component: {fileID: 1395886747}
   - component: {fileID: 1395886746}
   - component: {fileID: 1395886745}
+  - component: {fileID: 1395886748}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (10)
   m_TagString: Untagged
@@ -21590,7 +21801,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1395886743}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -21683,6 +21894,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1395886748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395886743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &1400101265
 GameObject:
   m_ObjectHideFlags: 0
@@ -21883,6 +22107,7 @@ GameObject:
   - component: {fileID: 1411728718}
   - component: {fileID: 1411728717}
   - component: {fileID: 1411728719}
+  - component: {fileID: 1411728720}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (1)
   m_TagString: Untagged
@@ -21980,7 +22205,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1411728715}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -22006,6 +22231,19 @@ PolygonCollider2D:
       - {x: 2.3999999, y: -0.26}
       - {x: 2.4299998, y: -0.22}
       - {x: 2.4299998, y: 0.31}
+--- !u!114 &1411728720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411728715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &1418978745
 GameObject:
   m_ObjectHideFlags: 0
@@ -25728,6 +25966,7 @@ GameObject:
   - component: {fileID: 1624704219}
   - component: {fileID: 1624704218}
   - component: {fileID: 1624704220}
+  - component: {fileID: 1624704221}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (3)
   m_TagString: Untagged
@@ -25825,7 +26064,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1624704216}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -25851,6 +26090,19 @@ PolygonCollider2D:
       - {x: 2.3999999, y: -0.26}
       - {x: 2.4299998, y: -0.22}
       - {x: 2.4299998, y: 0.31}
+--- !u!114 &1624704221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624704216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &1630850387
 GameObject:
   m_ObjectHideFlags: 0
@@ -26703,6 +26955,7 @@ GameObject:
   - component: {fileID: 1716740124}
   - component: {fileID: 1716740123}
   - component: {fileID: 1716740125}
+  - component: {fileID: 1716740126}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (2)
   m_TagString: Untagged
@@ -26800,7 +27053,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1716740121}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -26826,6 +27079,19 @@ PolygonCollider2D:
       - {x: 2.3999999, y: -0.26}
       - {x: 2.4299998, y: -0.22}
       - {x: 2.4299998, y: 0.31}
+--- !u!114 &1716740126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716740121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &1718620076
 GameObject:
   m_ObjectHideFlags: 0
@@ -30421,6 +30687,7 @@ GameObject:
   - component: {fileID: 1902380878}
   - component: {fileID: 1902380877}
   - component: {fileID: 1902380879}
+  - component: {fileID: 1902380880}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (4)
   m_TagString: Untagged
@@ -30518,7 +30785,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1902380875}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -30544,6 +30811,19 @@ PolygonCollider2D:
       - {x: 2.3999999, y: -0.26}
       - {x: 2.4299998, y: -0.22}
       - {x: 2.4299998, y: 0.31}
+--- !u!114 &1902380880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902380875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &1930307302
 GameObject:
   m_ObjectHideFlags: 0
@@ -31325,6 +31605,7 @@ GameObject:
   - component: {fileID: 1973252911}
   - component: {fileID: 1973252910}
   - component: {fileID: 1973252909}
+  - component: {fileID: 1973252912}
   m_Layer: 8
   m_Name: conveyer belt ss_0 (14)
   m_TagString: Untagged
@@ -31355,7 +31636,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1973252907}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -31448,6 +31729,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1973252912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973252907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &1976043147
 GameObject:
   m_ObjectHideFlags: 0
@@ -32645,7 +32939,7 @@ GameObject:
   - component: {fileID: 2062382583}
   m_Layer: 8
   m_Name: conveyer belt ss_0
-  m_TagString: Untagged
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32659,9 +32953,9 @@ PolygonCollider2D:
   m_GameObject: {fileID: 2062382578}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3556d2971fe56ce42912732edd657c9b, type: 2}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -32766,24 +33060,19 @@ Transform:
   m_Father: {fileID: 1440099379}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!252 &2062382583
-SurfaceEffector2D:
+--- !u!114 &2062382583
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062382578}
   m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 512
-  m_Speed: -10
-  m_SpeedVariation: 0
-  m_ForceScale: 1
-  m_UseContactForce: 0
-  m_UseFriction: 0
-  m_UseBounce: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e242262025e9d71429d1dbd9b8f85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &2063329101
 GameObject:
   m_ObjectHideFlags: 0
