@@ -37,7 +37,7 @@ namespace Object
 
         void Talk()
         {
-            PopupNotification.instance.ShowPopup("Press 'Q' to use NPC!");
+            PopupNotification.instance.ShowPopup("Press 'Q' to switch characters!");
             playerSwitch.ObtainedNPC();
             NPC.SetActive(true);
             Destroy(gameObject);

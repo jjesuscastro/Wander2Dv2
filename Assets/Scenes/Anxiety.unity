@@ -15759,6 +15759,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   NPC: {fileID: 1478588041}
+  npcName: Nick
   playerSwitch: {fileID: 1388030744}
 --- !u!58 &998338719
 CircleCollider2D:

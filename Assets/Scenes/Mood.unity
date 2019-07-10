@@ -35715,6 +35715,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   NPC: {fileID: 1478588041}
+  npcName: Leo
   playerSwitch: {fileID: 1842854088}
 --- !u!58 &1875862740
 CircleCollider2D:
