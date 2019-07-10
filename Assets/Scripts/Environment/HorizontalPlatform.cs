@@ -54,10 +54,10 @@ public class HorizontalPlatform : MonoBehaviour
                 stop = false;
 
             if(playerOnPlatform && !NPCOnPlatform)
-                PopupNotification.instance.ShowPopup(NPCName + " is not on yet.");
+                PopupNotification.instance.ShowPopup(NPCName + "I need to wait for my friend!");
 
             if(!playerOnPlatform && NPCOnPlatform)
-                PopupNotification.instance.ShowPopup("Ziv is not on yet.");
+                PopupNotification.instance.ShowPopup("I need to wait for my friend!");
         }
     }
 
