@@ -28,6 +28,7 @@ public class TreeHouse : MonoBehaviour
 
     void Start()
     {
+        //test
         leftY = leftSide.localPosition.y;
         rightY = rightSide.localPosition.y;
 
