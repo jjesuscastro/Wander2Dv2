@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Player;
+using GameManager;
 
 public class Cutscene : MonoBehaviour
 {
@@ -22,7 +23,6 @@ public class Cutscene : MonoBehaviour
 
     void Update()
     {
-        
         if (sceneStarting && !scenePlaying)
         {
             Color color = blackCover.color;
@@ -111,8 +111,7 @@ public class Cutscene : MonoBehaviour
         else
         {
             scenePlaying = false;
-            if(endScene != null)
-                endScene.Invoke();
+            SceneController.instance.LoadNewScene();
         }
     }
 }
