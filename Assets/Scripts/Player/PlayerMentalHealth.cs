@@ -96,6 +96,7 @@ namespace Player
                 //Asign schizo MH effect;
                 Debug.Log("Set Schizo MH");
                 mentalHealthEffect = schizoMentalHealth;
+                mentalHealthEffect.SetValues();
                 gameObject.GetComponent<ShizoMentalHealth>().enabled = true;
                 gameObject.GetComponent<MoodMentalHealth>().enabled = false;
                 gameObject.GetComponent<AnxietyMentalHealth>().enabled = false;

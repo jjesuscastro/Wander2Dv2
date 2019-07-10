@@ -20,6 +20,11 @@ namespace Player
             Debug.Log("Schizo MH");
         }
 
+        public override void SetValues()
+        {
+            whispers = GameObject.Find("audioSource").GetComponent<AudioSource>();
+        }
+
         public override void Stop()
         {
             base.Stop();
