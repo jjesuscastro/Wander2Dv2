@@ -29682,6 +29682,7 @@ GameObject:
   - component: {fileID: 1830285448}
   - component: {fileID: 1830285450}
   - component: {fileID: 1830285449}
+  - component: {fileID: 1830285451}
   m_Layer: 0
   m_Name: topHatUse
   m_TagString: Untagged
@@ -29758,6 +29759,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1830285451}
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!58 &1830285450
@@ -29776,6 +29788,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &1830285451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830285447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49cf749a50a40640808ab740b4ce1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  names:
+  - Queen of Hearts
+  sentences:
+  - Thank you for finding my hat! In return I will let you pass.
 --- !u!1 &1831190055
 GameObject:
   m_ObjectHideFlags: 0
@@ -30719,7 +30747,6 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   NPC: {fileID: 81238445}
-  npcName: Freddo
   playerSwitch: {fileID: 493656142}
 --- !u!58 &1892647283
 CircleCollider2D:
