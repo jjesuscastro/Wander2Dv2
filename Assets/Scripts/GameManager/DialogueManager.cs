@@ -14,6 +14,9 @@ namespace GameManager
         [SerializeField]
         private Animator animator;
 
+        [SerializeField]
+        private Button journalButton;
+
         public TextMeshProUGUI nameText;
         public TextMeshProUGUI sentenceText;
 
@@ -45,6 +48,7 @@ namespace GameManager
 
         public void StartDialogue(Dialogue dialogue)
         {
+            journalButton.interactable = false;
             dialogueOpen = true;
             Time.timeScale = 0.0001f;
             animator.speed = 10000f;
@@ -84,6 +88,7 @@ namespace GameManager
         void EndDialogue()
         {
             // Debug.Log("end " + animator.GetInteger("IsOpen"));
+            journalButton.interactable = true;
             Time.timeScale = 1f;
             animator.speed = 1;
             animator.SetBool("IsOpen", false);
