@@ -27,6 +27,14 @@ namespace Player
             blackCover.SetActive(false);
         }
 
+        public override void SetValues()
+        {
+            whiteBackground = GameObject.Find("whiteBG").GetComponent<SpriteRenderer>();
+            intenseVignette = GameObject.Find("vignette2").GetComponent<SpriteRenderer>();
+            blackCover = GameObject.Find("coverBlack (1)");
+            blackCover.SetActive(false);
+        }
+
         public override void Trigger()
         {
             base.Trigger();

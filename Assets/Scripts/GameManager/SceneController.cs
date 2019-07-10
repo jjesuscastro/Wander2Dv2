@@ -78,6 +78,9 @@ namespace GameManager
 
                 yield return null;
             }
+
+            if(operation.isDone)
+                loadScreen.gameObject.SetActive(false);
         }
 
         private void OnSceneLoaded(Scene aScene, LoadSceneMode aMode)

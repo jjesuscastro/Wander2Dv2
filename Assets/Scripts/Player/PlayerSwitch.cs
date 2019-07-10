@@ -40,10 +40,6 @@ namespace Player
         void Start()
         {
             SetLevel();
-            currentPlayer = mc.transform;
-            mainCamera = Camera.main.GetComponent<CameraFollow>();
-            playerMentalHealth = GetComponent<PlayerMentalHealth>();
-            npc.gameObject.SetActive(false);
         }
 
         // Update is called once per frame
@@ -90,8 +86,14 @@ namespace Player
 
         void Follow()
         {
-            Transform mcTransform = mc.GetComponent<Transform>();
-            Transform npcTransform = npc.GetComponent<Transform>();
+            Transform mcTransform = null;
+            Transform npcTransform = null;
+            
+            if(mc!= null && npc != null)
+            {
+                mcTransform = mc.GetComponent<Transform>();
+                npcTransform = npc.GetComponent<Transform>();
+            }
 
 
             if (npcIsFollowing)
@@ -203,13 +205,18 @@ namespace Player
             PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
             for (int i = 0; i < players.Length; i++)
             {
-                if (players[i].name.CompareTo("mc") == 0)
+                if (players[i].gameObject.CompareTag("Player"))
                     mc = players[i];
 
-                if (players[i].name.CompareTo("NPC") == 0)
+                if (players[i].gameObject.CompareTag("NPC"))
                     npc = players[i];
             }
             obtainedNPC = false;
+
+            currentPlayer = mc.transform;
+            mainCamera = Camera.main.GetComponent<CameraFollow>();
+            playerMentalHealth = GetComponent<PlayerMentalHealth>();
+            npc.gameObject.SetActive(false);
         }
 
         public void ObtainedNPC()

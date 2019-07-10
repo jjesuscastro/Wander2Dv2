@@ -86,6 +86,7 @@ namespace Player
                 //Asign anxiety MH effect;
                 Debug.Log("Set Anxiety MH");
                 mentalHealthEffect = anxietyMentalHealth;
+                mentalHealthEffect.SetValues();
                 gameObject.GetComponent<AnxietyMentalHealth>().enabled = true;
                 gameObject.GetComponent<MoodMentalHealth>().enabled = false;
                 gameObject.GetComponent<ShizoMentalHealth>().enabled = false;

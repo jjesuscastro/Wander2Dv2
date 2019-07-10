@@ -16,4 +16,9 @@ public class MentalHealthEffect : MonoBehaviour
     {
         isEnabled = false;
     }
+
+    public virtual void SetValues()
+    {
+        Debug.Log("Set MH values");
+    }
 }
