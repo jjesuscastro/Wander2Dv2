@@ -48,14 +48,14 @@ public class TreeHouse : MonoBehaviour
             else
             {
                 leftRock.limitX = false;
-                leftPlatform.hasObject = false;
             }
             leftSide.localPosition = tempVector;
 
             tempVector = rightSide.localPosition;
             if(tempVector.y < 18.14)
                 tempVector.y += 0.1f;
-            else
+            
+            if(leftPlatform.hasPlayer)
                 rightRock.minX = 930.9585f;
             rightSide.localPosition = tempVector;
         }
