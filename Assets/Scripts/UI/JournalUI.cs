@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using GameManager;
+using Player;
 
 namespace UI
 {
@@ -11,6 +12,11 @@ namespace UI
         public JournalSlot right;
         Journal journal;
         public int currentPage = 0;
+        public PlayerMovement mc;
+        public PlayerMovement npc;
+        bool mcEnabled  = false;
+        bool npcEnabled = false;
+        public bool open = false;
         // JournalSlot[] slots;
 
         void Start()
@@ -21,6 +27,42 @@ namespace UI
 
         public void ToggleUI()
         {
+            if(mc == null || npc == null)
+            {
+                PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
+                for (int i = 0; i < players.Length; i++)
+                {
+                    if (players[i].gameObject.CompareTag("Player"))
+                        mc = players[i];
+
+                    if (players[i].gameObject.CompareTag("NPC"))
+                        npc = players[i];
+                }
+            }
+
+            if(mc.isActiveAndEnabled && !open)
+            {
+                mcEnabled = true;
+                mc.enabled = false;
+                open = true;
+            } else if (npc.isActiveAndEnabled && !open){
+                npcEnabled = true;
+                npc.enabled = false;
+                open = true;
+            }
+
+            if(mcEnabled && open)
+            {
+                mcEnabled = false;
+                mc.enabled = true;
+                open = false;
+            } else if (npcEnabled && open) {
+                npcEnabled = false;
+                npc.enabled = true;
+                open = false;
+            }
+
+
             // currentPage = 0;
             // center.gameObject.SetActive(true);
             // left.gameObject.SetActive(false);
