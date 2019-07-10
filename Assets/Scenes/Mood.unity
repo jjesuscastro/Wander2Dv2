@@ -1598,7 +1598,7 @@ GameObject:
   - component: {fileID: 137551030}
   - component: {fileID: 137551029}
   - component: {fileID: 137551033}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: rocks_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18069,7 +18069,7 @@ GameObject:
   - component: {fileID: 1066266994}
   - component: {fileID: 1066266993}
   - component: {fileID: 1066266997}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: rocks_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26676,7 +26676,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 5376
+    m_Bits: 13568
   m_PassThrough:
     serializedVersion: 2
     m_Bits: 1024
@@ -40960,7 +40960,7 @@ PrefabInstance:
     - target: {fileID: 1942920235223777123, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_WhatIsGround.m_Bits
-      value: 5376
+      value: 13568
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24bcf18534e26c943986b166f237b92f, type: 3}
