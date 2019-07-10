@@ -1313,6 +1313,8 @@ MonoBehaviour:
   left: {fileID: 6434799418039965374}
   right: {fileID: 6434799417474202580}
   currentPage: 0
+  mc: {fileID: 0}
+  npc: {fileID: 0}
 --- !u!1 &5371142360602920078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,7 +1488,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4573138162329539526}
-        m_MethodName: NextPage
+        m_MethodName: CenterPage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -16,7 +16,6 @@ namespace UI
         public PlayerMovement npc;
         bool mcEnabled  = false;
         bool npcEnabled = false;
-        public bool open = false;
         // JournalSlot[] slots;
 
         void Start()
@@ -40,34 +39,31 @@ namespace UI
                 }
             }
 
-            if(mc.isActiveAndEnabled && !open)
+            if(mc.isActiveAndEnabled)
             {
                 mcEnabled = true;
                 mc.enabled = false;
-                open = true;
-            } else if (npc.isActiveAndEnabled && !open){
+            } else if (npc.isActiveAndEnabled){
                 npcEnabled = true;
                 npc.enabled = false;
-                open = true;
             }
-
-            if(mcEnabled && open)
-            {
-                mcEnabled = false;
-                mc.enabled = true;
-                open = false;
-            } else if (npcEnabled && open) {
-                npcEnabled = false;
-                npc.enabled = true;
-                open = false;
-            }
-
-
             // currentPage = 0;
             // center.gameObject.SetActive(true);
             // left.gameObject.SetActive(false);
             // right.gameObject.SetActive(false);
             SetImages();
+        }
+
+        public void CloseUI()
+        {
+            if(mcEnabled)
+            {
+                mcEnabled = false;
+                mc.enabled = true;
+            } else if (npcEnabled) {
+                npcEnabled = false;
+                npc.enabled = true;
+            }
         }
 
         public void CenterPage()
