@@ -20,4 +20,18 @@ public class TreeHousePlatform : MonoBehaviour
             hasPlayer = true;
         }
     }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Weight"))
+        {
+            hasObject = false;
+            other.transform.parent = null;
+        }
+
+        if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("NPC"))
+        {
+            hasPlayer = false;
+        }
+    }
 }
