@@ -8,6 +8,9 @@ public class HorizontalPlatform : MonoBehaviour
 {
     public UnityEvent onTakeOff;
     public UnityEvent onStop;
+    public PlayerMovement mc;
+    public PlayerMovement npc;
+    public bool disableMovements = false;
     public float maxX;
     public float minX;
     public float speed;
@@ -19,6 +22,8 @@ public class HorizontalPlatform : MonoBehaviour
     bool rightEnd = false;
     float acceleration = 0;
     public string NPCName;
+    bool mcEnabled  = false;
+    bool npcEnabled = false;
 
     // Update is called once per frame
     void Update()
@@ -40,6 +45,9 @@ public class HorizontalPlatform : MonoBehaviour
 
                 if(onStop != null)
                     onStop.Invoke();
+
+                if(disableMovements)
+                    EnableMovements();
             }
             
             if (transform.localPosition.x <= minX)
@@ -48,6 +56,9 @@ public class HorizontalPlatform : MonoBehaviour
                 moveRight = true;
                 if (oneDirection)
                     stop = true;
+                    
+                if(disableMovements)
+                    EnableMovements();
             }
 
             if(acceleration < 1)
@@ -64,6 +75,8 @@ public class HorizontalPlatform : MonoBehaviour
             if(playerOnPlatform == true && NPCOnPlatform == true)
             {
                 stop = false;
+                if(disableMovements)
+                    StopMovements();
                 if(onTakeOff != null)
                     onTakeOff.Invoke();
             }
@@ -73,6 +86,43 @@ public class HorizontalPlatform : MonoBehaviour
 
             if(!playerOnPlatform && NPCOnPlatform)
                 PopupNotification.instance.ShowPopup("I need to wait for my friend!");
+        }
+    }
+
+    void EnableMovements()
+    {
+        if(mcEnabled)
+        {
+            mcEnabled = false;
+            mc.enabled = true;
+        } else if (npcEnabled) {
+            npcEnabled = false;
+            npc.enabled = true;
+        }
+    }
+    
+    void StopMovements()
+    {
+        if(mc == null || npc == null)
+        {
+            PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
+            for (int i = 0; i < players.Length; i++)
+            {
+                if (players[i].gameObject.CompareTag("Player"))
+                    mc = players[i];
+
+                if (players[i].gameObject.CompareTag("NPC"))
+                    npc = players[i];
+            }
+        }
+
+        if(mc.isActiveAndEnabled)
+        {
+            mcEnabled = true;
+            mc.enabled = false;
+        } else if (npc.isActiveAndEnabled){
+            npcEnabled = true;
+            npc.enabled = false;
         }
     }
 
