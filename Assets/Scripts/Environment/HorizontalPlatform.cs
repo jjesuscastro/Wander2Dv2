@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UI;
+using Player;
 
 public class HorizontalPlatform : MonoBehaviour
 {

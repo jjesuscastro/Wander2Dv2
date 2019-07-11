@@ -55,7 +55,7 @@ namespace Player
             {
                 if (fadeOut)
                 {
-                    whispers.volume -= fadeRate;
+                    whispers.volume -= fadeRate * 2;
                     tempColor = face.color;
                     tempColor.a -= fadeRate;
                     face.color = tempColor;
