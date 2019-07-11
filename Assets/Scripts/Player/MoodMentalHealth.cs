@@ -35,7 +35,8 @@ namespace Player
 
         void Update()
         {
-            ppVolume.profile.TryGetSettings(out colorGrading);
+            if(ppVolume != null)
+                ppVolume.profile.TryGetSettings(out colorGrading);
             if (isEnabled)
             {
                 isStop = false;

@@ -46,6 +46,11 @@ public class EnvironmentFade : MonoBehaviour
         }
     }
 
+    public void ManualFade()
+    {
+        fadeobjectToFade = true;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") || other.CompareTag("NPC"))
@@ -57,6 +62,7 @@ public class EnvironmentFade : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = new Color(0, 3, 3, .5f);
-        Gizmos.DrawCube(GetComponent<BoxCollider2D>().bounds.center, new Vector2(GetComponent<BoxCollider2D>().transform.localScale.x, GetComponent<BoxCollider2D>().transform.localScale.y));
+        if(GetComponent<BoxCollider2D>() != null)
+            Gizmos.DrawCube(GetComponent<BoxCollider2D>().bounds.center, new Vector2(GetComponent<BoxCollider2D>().transform.localScale.x, GetComponent<BoxCollider2D>().transform.localScale.y));
     }
 }

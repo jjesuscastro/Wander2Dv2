@@ -123,7 +123,8 @@ namespace Player
                 timerStart = false;
                 timer = 0;
                 SpriteRenderer vignette = vignetteDamage.GetComponent<SpriteRenderer>();
-                Color vig = new Color(0.1490196f, 0.05882353f, 0.227451f);
+                //Color vig = new Color(0.1490196f, 0.05882353f, 0.227451f);
+                Color vig = new Color(0.2220273f, 0f, 0.4150943f);
                 vig.a = vignette.color.a;
                 if (vig.a < 0.7)
                     vig.a += 0.35f;

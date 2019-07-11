@@ -19,13 +19,7 @@ namespace Player
         bool fadeOut;
         bool firstCall = true;
 
-        void Start()
-        {
-            whiteBackground = GameObject.Find("whiteBG").GetComponent<SpriteRenderer>();
-            intenseVignette = GameObject.Find("vignette2").GetComponent<SpriteRenderer>();
-            blackCover = GameObject.Find("coverBlack (1)");
-            blackCover.SetActive(false);
-        }
+
 
         public override void SetValues()
         {

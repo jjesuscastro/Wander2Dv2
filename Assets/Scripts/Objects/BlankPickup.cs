@@ -10,6 +10,7 @@ namespace Object
     {
         public string popupMessage;
         public bool doNotDestroy = false;
+        public bool hasPopup = true;
 
         public override bool Interact()
         {
@@ -22,9 +23,13 @@ namespace Object
         {
             Debug.Log("Picking up blank pickup " + gameObject.name);
 
+            onPickup.Invoke();
+
             if(!doNotDestroy)
                 Destroy(gameObject);
-            PopupNotification.instance.ShowPopup(popupMessage);
+
+            if(hasPopup)
+                PopupNotification.instance.ShowPopup(popupMessage);
         }
     }
 }
