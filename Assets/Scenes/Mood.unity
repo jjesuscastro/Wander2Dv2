@@ -28291,6 +28291,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e2fb07951a7a946945252f684f4852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTakeOff:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onStop:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   maxX: -116
   minX: -199.1
   speed: 10
