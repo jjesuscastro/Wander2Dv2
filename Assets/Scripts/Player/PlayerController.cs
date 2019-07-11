@@ -113,8 +113,11 @@ namespace Player
 
             if(doorFade != null)
             {
-                excNotif.SetActive(true);
-                SetDoorFocus(doorFade);
+                if(gameObject.CompareTag("Player") && doorFade.mcAllowed || gameObject.CompareTag("NPC") && doorFade.npcAllowed)
+                {
+                    excNotif.SetActive(true);
+                    SetDoorFocus(doorFade);
+                }
             }
 
             if (interactable != null)
