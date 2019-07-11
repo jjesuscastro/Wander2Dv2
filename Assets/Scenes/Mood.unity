@@ -4447,10 +4447,14 @@ MonoBehaviour:
   - Leo
   - Leo
   - Leo
+  - Leo
+  - Leo
   sentences:
   - This is my treehouse...!
   - I used to go here a lot whenever I want to play...
   - or sometimes when I just want to be alone...
+  - The ladder is broken though.
+  - Let me see what I can do to help you across.
 --- !u!1 &337789923
 GameObject:
   m_ObjectHideFlags: 0
