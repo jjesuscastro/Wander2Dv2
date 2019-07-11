@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Object;
 
 public class TreeHouse : MonoBehaviour
 {
+    BlankPickup dialogue;
     public UnityEvent onFinish;
     [SerializeField]
     Transform leftSide;
@@ -28,6 +30,7 @@ public class TreeHouse : MonoBehaviour
 
     void Start()
     {
+        dialogue = gameObject.GetComponentInChildren<BlankPickup>();
         //test
         leftY = leftSide.localPosition.y;
         rightY = rightSide.localPosition.y;
@@ -57,7 +60,10 @@ public class TreeHouse : MonoBehaviour
                 tempVector.y += 0.1f;
             
             if(leftPlatform.hasPlayer)
+            {
                 rightRock.minX = 930.9585f;
+                dialogue.ManualDestroy();
+            }
             rightSide.localPosition = tempVector;
         }
 
