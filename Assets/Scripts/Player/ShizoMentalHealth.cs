@@ -55,13 +55,15 @@ namespace Player
             {
                 if (fadeOut)
                 {
-                    whispers.volume -= fadeRate * 2;
+                    whispers.volume -= fadeRate;
                     tempColor = face.color;
                     tempColor.a -= fadeRate;
+                    if(tempColor.a < 0)
+                        tempColor.a = 0;
                     face.color = tempColor;
                     Debug.Log("Schizo disabled and fading out");
 
-                    if (tempColor.a <= 0)
+                    if (tempColor.a <= 0 && whispers.volume <= 0)
                     {
                         fadeOut = false;
                     }
