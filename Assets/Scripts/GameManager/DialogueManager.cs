@@ -22,7 +22,7 @@ namespace GameManager
 
         #region Singleton
         public static DialogueManager instance;
-        bool dialogueOpen = false;
+        public bool dialogueOpen = false;
 
         void Awake()
         {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameManager;
 
 namespace Player
 {
@@ -58,7 +59,7 @@ namespace Player
                 if (!isWalking)
                 {
                     isWalking = true;
-                    if (audioSource != null)
+                    if (audioSource != null && !DialogueManager.instance.dialogueOpen)
                         audioSource.Play();
                 }
 
@@ -80,6 +81,11 @@ namespace Player
                     audioSource.Stop();
                 animator.SetBool("Walk", false);
                 animator.SetBool("isJumping", true);
+            }
+
+            if(DialogueManager.instance.dialogueOpen)
+            {
+                audioSource.Stop();
             }
 
             if (jumpDisabled)
