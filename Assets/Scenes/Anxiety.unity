@@ -635,8 +635,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47652046}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -60.6, y: -6.86, z: -0.18146163}
-  m_LocalScale: {x: 0.6831497, y: 0.6831497, z: 0.6831497}
+  m_LocalPosition: {x: -60.63, y: -7.26, z: -0.18146163}
+  m_LocalScale: {x: 0.788423, y: 0.788423, z: 0.788423}
   m_Children: []
   m_Father: {fileID: 334576790}
   m_RootOrder: 4
@@ -1141,7 +1141,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  entry: {fileID: 11400000, guid: 912db10e3de3ab646842a1d6ce874e0a, type: 2}
+  entry: {fileID: 11400000, guid: 79d7e00f83e91b645b2bc007fe650cda, type: 2}
 --- !u!58 &66440277
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9300,7 +9300,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  entry: {fileID: 11400000, guid: 49df1f64c07e9aa4aa5828e81473d83d, type: 2}
+  entry: {fileID: 11400000, guid: d92a9218e7c17f243baf5a4f4516576e, type: 2}
 --- !u!58 &623809818
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12853,122 +12853,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &866336569
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 866336570}
-  - component: {fileID: 866336573}
-  - component: {fileID: 866336572}
-  - component: {fileID: 866336571}
-  m_Layer: 0
-  m_Name: 1_paper1 (12)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &866336570
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866336569}
-  m_LocalRotation: {x: -0, y: -0, z: -0.24648528, w: 0.9691466}
-  m_LocalPosition: {x: 226.97, y: -600.34, z: -2.2033763}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1232324975}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -28.539001}
---- !u!114 &866336571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866336569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe5f75748f94644458fadbd3571608ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  radius: 3
-  entry: {fileID: 11400000, guid: 44994bbc433e9d644b99e9ca2c7c4699, type: 2}
---- !u!58 &866336572
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866336569}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0000038146973, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.4999998
---- !u!212 &866336573
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866336569}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: bdf1755209c32c64d83264031d338864, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 5, y: 5}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &869451184
 GameObject:
   m_ObjectHideFlags: 0
@@ -13020,7 +12904,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  entry: {fileID: 11400000, guid: b863727ea92945941a67717dfa599b7d, type: 2}
+  entry: {fileID: 11400000, guid: 44994bbc433e9d644b99e9ca2c7c4699, type: 2}
 --- !u!58 &869451187
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13659,7 +13543,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  entry: {fileID: 11400000, guid: 1b3b9a04a8e8ee9418ed0d18cd809b65, type: 2}
+  entry: {fileID: 11400000, guid: 49df1f64c07e9aa4aa5828e81473d83d, type: 2}
 --- !u!58 &904004209
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14296,7 +14180,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  entry: {fileID: 11400000, guid: 597834165adeeb948bd5bf59bda79a1b, type: 2}
+  entry: {fileID: 11400000, guid: 9ecdb388ec494a945933fbaeabc35c88, type: 2}
 --- !u!58 &938160328
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -15759,7 +15643,6 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   NPC: {fileID: 1478588041}
-  npcName: Nick
   playerSwitch: {fileID: 1388030744}
 --- !u!58 &998338719
 CircleCollider2D:
@@ -18982,7 +18865,6 @@ Transform:
   - {fileID: 1553805481}
   - {fileID: 1999841724}
   - {fileID: 869451185}
-  - {fileID: 866336570}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20228,7 +20110,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  entry: {fileID: 11400000, guid: d92a9218e7c17f243baf5a4f4516576e, type: 2}
+  entry: {fileID: 11400000, guid: 05ebc66979bfa5741b71ab039bd1afbd, type: 2}
 --- !u!58 &1354395212
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -21745,6 +21627,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 6.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5602894574572740990, guid: 7b9d6b4625b738745bd810696d67a5b4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 43.800003
+      objectReference: {fileID: 0}
     - target: {fileID: 5384040788666835384, guid: 7b9d6b4625b738745bd810696d67a5b4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -21764,11 +21651,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 9.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602894574572740990, guid: 7b9d6b4625b738745bd810696d67a5b4,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 43.800003
       objectReference: {fileID: 0}
     - target: {fileID: 5384040789175795943, guid: 7b9d6b4625b738745bd810696d67a5b4,
         type: 3}
@@ -23838,7 +23720,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  entry: {fileID: 11400000, guid: 05ebc66979bfa5741b71ab039bd1afbd, type: 2}
+  entry: {fileID: 11400000, guid: 597834165adeeb948bd5bf59bda79a1b, type: 2}
 --- !u!58 &1502603253
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -24623,7 +24505,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  entry: {fileID: 11400000, guid: 808d272be12e0064ab39bc5ec0b3451f, type: 2}
+  entry: {fileID: 11400000, guid: 1b1e21531b1aa49408955fba46ccdc24, type: 2}
 --- !u!58 &1553805483
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -28703,7 +28585,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  entry: {fileID: 11400000, guid: 9ecdb388ec494a945933fbaeabc35c88, type: 2}
+  entry: {fileID: 11400000, guid: 912db10e3de3ab646842a1d6ce874e0a, type: 2}
 --- !u!58 &1768457674
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -31306,7 +31188,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  entry: {fileID: 11400000, guid: 79d7e00f83e91b645b2bc007fe650cda, type: 2}
+  entry: {fileID: 11400000, guid: 808d272be12e0064ab39bc5ec0b3451f, type: 2}
 --- !u!58 &1945202026
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -32362,7 +32244,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  entry: {fileID: 11400000, guid: 1b1e21531b1aa49408955fba46ccdc24, type: 2}
+  entry: {fileID: 11400000, guid: b863727ea92945941a67717dfa599b7d, type: 2}
 --- !u!58 &1999841726
 CircleCollider2D:
   m_ObjectHideFlags: 0
