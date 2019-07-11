@@ -13,6 +13,11 @@ public class PositionLimits : MonoBehaviour
     public float minY;
     public float maxY;
 
+    public void SetMinX(float minX)
+    {
+        this.minX = minX;
+    }
+
     void Start()
     {
         if(instantiateValues)

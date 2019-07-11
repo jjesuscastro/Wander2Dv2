@@ -44,6 +44,14 @@ public class TreeHouse : MonoBehaviour
     {
         Vector3 tempVector;
 
+        if(leftPlatform.hasPlayer)
+        {
+            rightRock.SetMinX(930.9585f);
+
+            if(dialogue != null)
+                dialogue.ManualDestroy();
+        }
+
         if(leftPlatform.hasObject)
         { 
             tempVector = leftSide.localPosition;
@@ -59,11 +67,6 @@ public class TreeHouse : MonoBehaviour
             if(tempVector.y < 18.14)
                 tempVector.y += 0.1f;
             
-            if(leftPlatform.hasPlayer)
-            {
-                rightRock.minX = 930.9585f;
-                dialogue.ManualDestroy();
-            }
             rightSide.localPosition = tempVector;
         }
 
@@ -72,9 +75,10 @@ public class TreeHouse : MonoBehaviour
             tempVector = leftSide.localPosition;
             if(tempVector.y < 22.09)
             {
-                tempVector.y += 0.1f;
                 walls.SetActive(true);
+                tempVector.y += 0.1f;
             } else {
+                walls.SetActive(false);
                 if(onFinish != null)
                     onFinish.Invoke();
             }
