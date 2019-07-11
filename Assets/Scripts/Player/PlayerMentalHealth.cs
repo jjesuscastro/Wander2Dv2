@@ -22,6 +22,7 @@ namespace Player
 
         bool criticalLevel = false;
         float timer = 0;
+        bool timerStart = false;
 
         #region Singleton
         public static PlayerMentalHealth instance;
@@ -41,7 +42,7 @@ namespace Player
             if (mentalHealth != null)
                 mentalHealth.SetSize(health);
 
-            if (vignetteDamage != null)
+            if (vignetteDamage != null && !timerStart)
             {
                 SpriteRenderer vignette = vignetteDamage.GetComponent<SpriteRenderer>();
                 Color vig = vignette.color;
@@ -51,6 +52,16 @@ namespace Player
                     vig.a = 0;
 
                 vignette.color = vig;
+            }
+
+            if (timerStart)
+            {
+                timer += Time.deltaTime;
+                if(timer % 60 >= 2)
+                {
+                    timerStart = false;
+                    timer = 0;
+                }
             }
 
             // if(criticalLevel) {
@@ -109,6 +120,8 @@ namespace Player
 
             if (damageValue < 0)
             {
+                timerStart = false;
+                timer = 0;
                 SpriteRenderer vignette = vignetteDamage.GetComponent<SpriteRenderer>();
                 Color vig = new Color(0.1490196f, 0.05882353f, 0.227451f);
                 vig.a = vignette.color.a;
@@ -117,6 +130,8 @@ namespace Player
 
                 vignette.color = vig;
             } else if (damageValue > 0) {
+                timerStart = true;
+                timer = 0;
                 SpriteRenderer vignette = vignetteDamage.GetComponent<SpriteRenderer>();
                 Color vig = new Color(1f, 1f, 1f);
                 vig.a = vignette.color.a;
@@ -129,7 +144,6 @@ namespace Player
             if (health >= 1)
             {
                 health = 1;
-                timer = 0;
                 mentalHealthEffect.Stop();
             }
 
@@ -138,7 +152,6 @@ namespace Player
 
             if (health < 0.25f)
             {
-                timer = 0;
                 mentalHealthEffect.Trigger();
                 // criticalLevel = true;
             }
