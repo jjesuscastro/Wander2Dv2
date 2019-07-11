@@ -27,6 +27,7 @@ public class TreeHouse : MonoBehaviour
 
     public float leftY;
     public float rightY;
+    bool hasGoneDown = false;
 
     void Start()
     {
@@ -52,7 +53,7 @@ public class TreeHouse : MonoBehaviour
                 dialogue.ManualDestroy();
         }
 
-        if(leftPlatform.hasObject)
+        if(leftPlatform.hasObject && !leftPlatform.hasPlayer && !hasGoneDown)
         { 
             tempVector = leftSide.localPosition;
             if(tempVector.y > 8)
@@ -60,6 +61,7 @@ public class TreeHouse : MonoBehaviour
             else
             {
                 leftRock.limitX = false;
+                hasGoneDown = true;
             }
             leftSide.localPosition = tempVector;
 

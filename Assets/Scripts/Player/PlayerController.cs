@@ -96,6 +96,14 @@ namespace Player
                 transform.parent = null;
             }
         }
+        
+        void OnTriggerStay2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("Checkpoint"))
+            {
+                respawnPoint = other.transform.position;
+            }
+        }
 
         void OnTriggerEnter2D(Collider2D other)
         {
