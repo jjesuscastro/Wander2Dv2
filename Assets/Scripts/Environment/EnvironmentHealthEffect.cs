@@ -17,7 +17,12 @@ public class EnvironmentHealthEffect : MonoBehaviour
             timer += Time.deltaTime * 100;
             if (timer >= delay)
             {
-                PlayerMentalHealth.instance.changeHealth(effect);
+                if(PlayerMentalHealth.instance.health >= 1 && effect > 0)
+                {
+                    // do nothing;
+                } else {
+                    PlayerMentalHealth.instance.changeHealth(effect);
+                }
                 timer = 0;
             }
         }
