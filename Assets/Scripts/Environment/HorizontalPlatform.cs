@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UI;
 
 public class HorizontalPlatform : MonoBehaviour
 {
+    public UnityEvent onTakeOff;
+    public UnityEvent onStop;
     public float maxX;
     public float minX;
     public float speed;
@@ -29,6 +32,9 @@ public class HorizontalPlatform : MonoBehaviour
                 rightEnd = true;
                 if (oneDirection)
                     stop = true;
+
+                if(onStop != null)
+                    onStop.Invoke();
             }
             
             if (transform.localPosition.x <= minX)
@@ -51,7 +57,11 @@ public class HorizontalPlatform : MonoBehaviour
         if(Input.GetButtonDown("Interact") && !rightEnd)
         {
             if(playerOnPlatform == true && NPCOnPlatform == true)
+            {
                 stop = false;
+                if(onTakeOff != null)
+                    onTakeOff.Invoke();
+            }
 
             if(playerOnPlatform && !NPCOnPlatform)
                 PopupNotification.instance.ShowPopup(NPCName + "I need to wait for my friend!");
