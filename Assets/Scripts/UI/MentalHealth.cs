@@ -42,7 +42,7 @@ namespace UI
             else if (size >= 0.25f && size < 0.5f)
                 barSprite.color = new Color(340.4449f, 0.552f, 0f, 1);
             else
-                barSprite.color = Color.red;
+                barSprite.color = new Color(0.7647059f, 0f, 0f, 1);
         }
     }
 }
