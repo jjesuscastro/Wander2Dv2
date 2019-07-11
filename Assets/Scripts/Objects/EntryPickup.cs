@@ -23,9 +23,9 @@ namespace Object
 
             if (wasPickedUp)
             {
-                Destroy(gameObject);
                 PopupNotification.instance.ShowPopup("Journal entry picked up!");
-
+                Destroy(gameObject);
+                
                 if(onPickup != null)
                     onPickup.Invoke();
             }
