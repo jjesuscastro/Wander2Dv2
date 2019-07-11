@@ -120,8 +120,8 @@ namespace Player
                 SpriteRenderer vignette = vignetteDamage.GetComponent<SpriteRenderer>();
                 Color vig = new Color(1f, 1f, 1f);
                 vig.a = vignette.color.a;
-                if (vig.a < 0.7)
-                    vig.a += 0.35f;
+                if (vig.a < 0.3)
+                    vig.a += 0.15f;
 
                 vignette.color = vig;
             }
@@ -130,6 +130,7 @@ namespace Player
             {
                 health = 1;
                 timer = 0;
+                mentalHealthEffect.Stop();
             }
 
             if (health < 0f)
