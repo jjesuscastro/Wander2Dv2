@@ -7,9 +7,9 @@ namespace Player
 {
     public class PlayerSwitch : MonoBehaviour
     {
-        private PlayerMovement mc;
+        public PlayerMovement mc;
 
-        PlayerMovement npc;
+        public PlayerMovement npc;
 
         public bool obtainedNPC = false;
         public float minDistance;
@@ -18,12 +18,12 @@ namespace Player
         bool mcIsFollowing = false;
         public bool followActive = true;
 
-        CameraFollow mainCamera;
-        PlayerMentalHealth playerMentalHealth;
+        public CameraFollow mainCamera;
+        public PlayerMentalHealth playerMentalHealth;
 
-        private Transform currentPlayer;
-        Transform mcTransform = null;
-        Transform npcTransform = null;
+        public Transform currentPlayer;
+        public Transform mcTransform = null;
+        public Transform npcTransform = null;
 
         #region Singleton
         public static PlayerSwitch instance;
@@ -174,8 +174,11 @@ namespace Player
         {
             if (mc != null && npc != null)
             {
-                Transform mcTransform = mc.GetComponent<Transform>();
-                Transform npcTransform = npc.GetComponent<Transform>();
+                if(mcTransform == null || npcTransform == null)
+                {
+                    mcTransform = mc.GetComponent<Transform>();
+                    npcTransform = npc.GetComponent<Transform>();
+                }
 
                 if (obtainedNPC)
                 {
@@ -197,8 +200,8 @@ namespace Player
                                 {
                                     //This is where NPC "follows" MC
                                     Vector3 newPosition = mcTransform.position;
-                                    newPosition.x -= 10;
-                                    newPosition.y += 5;
+                                    newPosition.x -= 25;
+                                    newPosition.y += 20;
                                     npc.GetComponent<PlayerController>().RemoveColor();
                                     npc.GetComponent<PlayerController>().WalkIn();
                                     npcTransform.position = newPosition;
