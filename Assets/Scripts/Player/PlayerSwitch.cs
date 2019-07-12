@@ -16,6 +16,8 @@ namespace Player
         public float distanceToStop = 1;
         bool npcIsFollowing = false;
         bool mcIsFollowing = false;
+        bool locatingPositionForMC = false;
+        bool locatingPositionForNPC = false;
         public bool followActive = true;
 
         public CameraFollow mainCamera;
@@ -73,6 +75,44 @@ namespace Player
         // Update is called once per frame
         void Update()
         {
+            if (locatingPositionForNPC)
+            {
+                Vector3 newPosition = npcTransform.position;
+                if(npc.GetComponent<CharacterController2D>().IsGrounded())
+                {
+                    npc.GetComponent<CharacterController2D>().QueueDisableColliders();
+                    newPosition.x += 1;
+                    if(newPosition.x == mcTransform.position.x)
+                    {
+                        newPosition.x -= 1;
+                        newPosition.y += 1;
+                    }
+                    npcTransform.position = newPosition;
+                } else {
+                    npc.GetComponent<CharacterController2D>().EnableColliders();
+                    locatingPositionForNPC = false;
+                }
+            }
+
+            if (locatingPositionForMC)
+            {
+                Vector3 newPosition = mcTransform.position;
+                if(mc.GetComponent<CharacterController2D>().IsGrounded())
+                {
+                    mc.GetComponent<CharacterController2D>().QueueDisableColliders();
+                    newPosition.x += 1;
+                    if(newPosition.x == npcTransform.position.x)
+                    {
+                        newPosition.x -= 1;
+                        newPosition.y += 1;
+                    }
+                    mcTransform.position = newPosition;
+                } else {
+                    mc.GetComponent<CharacterController2D>().EnableColliders();
+                    locatingPositionForMC = false;
+                }
+            }
+
             if (Input.GetButtonDown("Switch"))
             {
                 if (obtainedNPC)
@@ -206,13 +246,7 @@ namespace Player
                                     npc.GetComponent<PlayerController>().RemoveColor();
                                     npc.GetComponent<PlayerController>().WalkIn();
                                     npcTransform.position = newPosition;
-                                    while(npc.GetComponent<CharacterController2D>().IsGrounded())
-                                    {
-                                        newPosition.x += 1;
-                                        if(newPosition.x == mc.transform.position.x)
-                                            newPosition.y += 1;
-                                        npcTransform.position = newPosition;
-                                    }
+                                    locatingPositionForNPC = true;
 
                                     npcIsFollowing = true;
                                 }
@@ -228,6 +262,8 @@ namespace Player
                                     mc.GetComponent<PlayerController>().RemoveColor();
                                     mc.GetComponent<PlayerController>().WalkIn();
                                     mcTransform.position = newPosition;
+                                    locatingPositionForMC = true;
+
                                     mcIsFollowing = true;
                                 }
                             }

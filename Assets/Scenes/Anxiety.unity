@@ -23749,6 +23749,7 @@ MonoBehaviour:
   m_ExcNotif: {fileID: 0}
   m_CrouchDisableCollider: {fileID: 1478588046}
   m_GroundCollider: {fileID: 1478588045}
+  m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -35819,6 +35820,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WhatIsGround.m_Bits
       value: 13568
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942920235223777122, guid: 24bcf18534e26c943986b166f237b92f,
+        type: 3}
+      propertyPath: audioSource
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1942920234389815827, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
