@@ -25,7 +25,7 @@ namespace Player
         {
             whiteBackground = GameObject.Find("whiteBG").GetComponent<SpriteRenderer>();
             intenseVignette = GameObject.Find("vignette2").GetComponent<SpriteRenderer>();
-            blackCover = GameObject.Find("coverBlack (1)");
+            blackCover = GameObject.Find("/mainCamera/coverBlack_1");
             blackCover.SetActive(false);
         }
 
@@ -95,22 +95,27 @@ namespace Player
 
         void Toggle()
         {
-            if (blackCover.active)
-                blackCover.SetActive(false);
-            else
-                blackCover.SetActive(true);
-
-            float delay = 10;
-            if (isEnabled)
-                delay = Random.Range(minEnabledTime, maxEnabledTime);
-            else
+            if(blackCover == null)
             {
-                delay = Random.Range(minDisabledTime, maxDisabledTime);
-
+                SetValues();
+            } else {
                 if (blackCover.active)
-                    delay = 0.5f;
+                    blackCover.SetActive(false);
+                else
+                    blackCover.SetActive(true);
+
+                float delay = 10;
+                if (isEnabled)
+                    delay = Random.Range(minEnabledTime, maxEnabledTime);
+                else
+                {
+                    delay = Random.Range(minDisabledTime, maxDisabledTime);
+
+                    if (blackCover.active)
+                        delay = 0.5f;
+                }
+                Invoke("Toggle", delay);
             }
-            Invoke("Toggle", delay);
         }
     }
 }
