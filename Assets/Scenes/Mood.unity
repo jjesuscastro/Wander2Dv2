@@ -28464,7 +28464,6 @@ MonoBehaviour:
   minX: -199.1
   speed: 10
   moveRight: 1
-  oneDirection: 1
   stop: 1
   playerOnPlatform: 0
   NPCOnPlatform: 0
