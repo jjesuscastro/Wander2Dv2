@@ -22,6 +22,8 @@ namespace Player
         PlayerMentalHealth playerMentalHealth;
 
         private Transform currentPlayer;
+        Transform mcTransform = null;
+        Transform npcTransform = null;
 
         #region Singleton
         public static PlayerSwitch instance;
@@ -111,11 +113,8 @@ namespace Player
         }
 
         void Follow()
-        {
-            Transform mcTransform = null;
-            Transform npcTransform = null;
-            
-            if(mc!= null && npc != null)
+        {            
+            if(mc == null || npc == null)
             {
                 mcTransform = mc.GetComponent<Transform>();
                 npcTransform = npc.GetComponent<Transform>();
