@@ -3403,7 +3403,6 @@ MonoBehaviour:
   minX: 182.53
   speed: 50
   moveRight: 1
-  oneDirection: 1
   stop: 1
   playerOnPlatform: 0
   NPCOnPlatform: 0
@@ -24817,7 +24816,7 @@ PrefabInstance:
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1
+      value: -2.12
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
@@ -24869,25 +24868,25 @@ PrefabInstance:
       propertyPath: m_WhatIsGround.m_Bits
       value: 13568
       objectReference: {fileID: 0}
-    - target: {fileID: 1942920234389815827, guid: 24bcf18534e26c943986b166f237b92f,
+    - target: {fileID: 1942920234859549332, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 6
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1942920233469483017, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1942920234859549332, guid: 24bcf18534e26c943986b166f237b92f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1942920234389815826, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942920234389815827, guid: 24bcf18534e26c943986b166f237b92f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24bcf18534e26c943986b166f237b92f, type: 3}
