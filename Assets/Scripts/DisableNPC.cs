@@ -9,12 +9,12 @@ public class DisableNPC : MonoBehaviour
     public PlayerMovement npc;
     public bool disableNPC = true;
 
-    void DisNPC()
+    public void DisNPC()
     {
         PlayerSwitch.instance.ForceSwitchToMC();
     }
 
-    void EnableNPC()
+    public void EnableNPC()
     {
         PlayerSwitch.instance.ReEnableSwitch();
     }

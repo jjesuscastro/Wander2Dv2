@@ -12,8 +12,6 @@ namespace Object
     {
         public UnityEvent onInteract;
         public GameObject NPC;
-        [SerializeField]
-        private PlayerSwitch playerSwitch;
 
         /// <summary>
         /// Update is called every frame, if the MonoBehaviour is enabled.
@@ -38,7 +36,7 @@ namespace Object
         void Talk()
         {
             PopupNotification.instance.ShowPopup("Press 'Q' to switch characters!");
-            playerSwitch.ObtainedNPC();
+            PlayerSwitch.instance.ObtainedNPC();
             NPC.SetActive(true);
             Destroy(gameObject);
         }
