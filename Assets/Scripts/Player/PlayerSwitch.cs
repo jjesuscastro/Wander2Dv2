@@ -194,6 +194,7 @@ namespace Player
                          */
                         if (followActive && (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D)))
                         {
+                            //test
                             if (mc.isActiveAndEnabled)
                             {
                                 if (mc.GetComponent<CharacterController2D>().IsGrounded() && npc.transform.position.x < mc.transform.position.x)
@@ -205,6 +206,14 @@ namespace Player
                                     npc.GetComponent<PlayerController>().RemoveColor();
                                     npc.GetComponent<PlayerController>().WalkIn();
                                     npcTransform.position = newPosition;
+                                    while(npc.GetComponent<CharacterController2D>().IsGrounded())
+                                    {
+                                        newPosition.x += 1;
+                                        if(newPosition.x == mc.transform.position.x)
+                                            newPosition.y += 1;
+                                        npcTransform.position = newPosition;
+                                    }
+
                                     npcIsFollowing = true;
                                 }
                             }

@@ -41739,6 +41739,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5384040787869406420, guid: 7b9d6b4625b738745bd810696d67a5b4,
+        type: 3}
+      propertyPath: minDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384040787869406420, guid: 7b9d6b4625b738745bd810696d67a5b4,
+        type: 3}
+      propertyPath: distanceToStop
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2292431480673444223, guid: 7b9d6b4625b738745bd810696d67a5b4,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -42653,11 +42663,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 3.100006
-      objectReference: {fileID: 0}
-    - target: {fileID: 5384040787869406420, guid: 7b9d6b4625b738745bd810696d67a5b4,
-        type: 3}
-      propertyPath: minDistance
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5384040787869406425, guid: 7b9d6b4625b738745bd810696d67a5b4,
         type: 3}
