@@ -16,10 +16,10 @@ public class HorizontalPlatform : MonoBehaviour
     public float minX;
     public float speed;
     public bool moveRight = true;
-    public bool oneDirection = false;
     public bool stop = true;
     public bool playerOnPlatform = false;
     public bool NPCOnPlatform = false;
+    bool oneDirection = true;
     bool rightEnd = false;
     float acceleration = 0;
     public string NPCName;
@@ -41,8 +41,6 @@ public class HorizontalPlatform : MonoBehaviour
                 acceleration = 0;
                 moveRight = false;
                 rightEnd = true;
-                if (oneDirection)
-                    stop = true;
 
                 if(onStop != null)
                     onStop.Invoke();
@@ -55,8 +53,6 @@ public class HorizontalPlatform : MonoBehaviour
             {
                 acceleration = 0;
                 moveRight = true;
-                if (oneDirection)
-                    stop = true;
                     
                 if(disableMovements)
                     EnableMovements();
@@ -67,7 +63,7 @@ public class HorizontalPlatform : MonoBehaviour
 
             if (moveRight)
                 transform.position = new Vector2(transform.position.x + speed * Time.deltaTime * acceleration, transform.position.y);
-            else
+            else if (!moveRight && !oneDirection)
                 transform.position = new Vector2(transform.position.x - speed * Time.deltaTime * acceleration, transform.position.y);
         }
 
@@ -132,14 +128,12 @@ public class HorizontalPlatform : MonoBehaviour
         if(transform.localPosition.x > minX)
         {
             moveRight = false;
-            oneDirection = true;
             stop = false;
             rightEnd = false;
             acceleration = 0;
         } else
         {
             moveRight = true;
-            oneDirection = true;
             stop = false;
             acceleration = 0;
         }
