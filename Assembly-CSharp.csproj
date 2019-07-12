@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\Conveyor.cs" />
      <Compile Include="Assets\Scripts\Cutscene.cs" />
      <Compile Include="Assets\Scripts\DebugSize.cs" />
+     <Compile Include="Assets\Scripts\DisableNPC.cs" />
      <Compile Include="Assets\Scripts\DoNotDestroy.cs" />
      <Compile Include="Assets\Scripts\Environment\BackgroundScroll.cs" />
      <Compile Include="Assets\Scripts\Environment\DrawGizmo.cs" />
@@ -342,9 +343,6 @@
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="Vuforia.UnityExtensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.GoogleAudioSpatializer">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
