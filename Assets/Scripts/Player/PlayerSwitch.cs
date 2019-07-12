@@ -42,6 +42,32 @@ namespace Player
             SetLevel();
         }
 
+        public void ReEnableSwitch()
+        {
+            obtainedNPC = true;
+        }
+
+        public void ForceSwitchToMC()
+        {
+            if (mc.isActiveAndEnabled)
+            {
+                obtainedNPC = false;
+            }
+            else
+            {
+                obtainedNPC = false;
+                mc.enabled = true;
+                mcIsFollowing = false;
+                npc.enabled = false;
+                currentPlayer = mc.transform;
+                npc.GetComponent<PlayerMovement>().StopAnimation();
+                // npc.GetComponent<CharacterController2D>().QueueDisableColliders();
+                mc.GetComponent<CharacterController2D>().EnableColliders();
+                playerMentalHealth.SwitchTarget(mc.gameObject);
+                mainCamera.switchTarget(mc);
+            }
+        }
+
         // Update is called once per frame
         void Update()
         {

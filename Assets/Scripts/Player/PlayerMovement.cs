@@ -83,7 +83,7 @@ namespace Player
                 animator.SetBool("isJumping", true);
             }
 
-            if(DialogueManager.instance.dialogueOpen)
+            if(DialogueManager.instance.dialogueOpen && audioSource != null)
             {
                 audioSource.Stop();
             }

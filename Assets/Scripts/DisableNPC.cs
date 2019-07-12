@@ -11,12 +11,12 @@ public class DisableNPC : MonoBehaviour
 
     void DisNPC()
     {
-        npc.enabled = false;
+        PlayerSwitch.instance.ForceSwitchToMC();
     }
 
     void EnableNPC()
     {
-        npc.enabled = true;
+        PlayerSwitch.instance.ReEnableSwitch();
     }
 
     void OnTriggerEnter2D(Collider2D other)
