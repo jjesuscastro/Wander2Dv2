@@ -982,7 +982,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111325994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1344.4233, y: -190.46953, z: -0.46875}
+  m_LocalPosition: {x: 1344.4233, y: -189.2, z: -0.46875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1710271786}
@@ -1005,7 +1005,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  radius: 1.5
+  radius: 3
   dialogue: {fileID: 111325998}
   doNotDestroy: 0
 --- !u!58 &111325997
@@ -1023,7 +1023,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 3
 --- !u!114 &111325998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1500,6 +1500,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &130807060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 130807061}
+  - component: {fileID: 130807062}
+  m_Layer: 8
+  m_Name: checkpoint\
+  m_TagString: Checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &130807061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130807060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.07, y: 0.48, z: 0}
+  m_LocalScale: {x: 4.0875, y: 1.4002, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1501645067}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &130807062
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130807060}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &131223741
 GameObject:
   m_ObjectHideFlags: 0
@@ -6117,7 +6174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416073688}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1382.2234, y: -188.76955, z: -0.46875}
+  m_LocalPosition: {x: 1382.2234, y: -187.68, z: -0.46875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1710271786}
@@ -6140,7 +6197,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  radius: 1.5
+  radius: 3
   dialogue: {fileID: 416073692}
   doNotDestroy: 0
 --- !u!58 &416073691
@@ -6158,7 +6215,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 3
 --- !u!114 &416073692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15966,7 +16023,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973103870}
   m_LocalRotation: {x: -0, y: -0, z: 0.1971369, w: 0.98037595}
-  m_LocalPosition: {x: 1100.6733, y: -54.539543, z: 0.2505714}
+  m_LocalPosition: {x: 1100.87, y: -54.15, z: 0.2505714}
   m_LocalScale: {x: 0.43693, y: 0.43693, z: 0.43693}
   m_Children: []
   m_Father: {fileID: 1018829355}
@@ -16006,7 +16063,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.000015258789, y: 0}
   serializedVersion: 2
-  m_Radius: 2.4999998
+  m_Radius: 3
 --- !u!212 &973103874
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16559,7 +16616,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  radius: 1.5
+  radius: 3
   dialogue: {fileID: 1018035242}
   doNotDestroy: 0
 --- !u!58 &1018035241
@@ -16577,7 +16634,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 3
 --- !u!114 &1018035242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19078,7 +19135,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.00000023841858}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 3
 --- !u!212 &1139665453
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28105,6 +28162,7 @@ Transform:
   m_Children:
   - {fileID: 714398477}
   - {fileID: 1469100736}
+  - {fileID: 130807061}
   m_Father: {fileID: 1589542277}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29224,7 +29282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553441616}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 978.2, y: -98.3, z: -0.46875}
+  m_LocalPosition: {x: 978.2, y: -97.61, z: -0.46875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1710271786}
@@ -29247,7 +29305,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  radius: 1.5
+  radius: 3
   dialogue: {fileID: 1553441620}
   doNotDestroy: 0
 --- !u!58 &1553441619
@@ -29265,7 +29323,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 3
 --- !u!114 &1553441620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30636,7 +30694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630485898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1173.7633, y: -117.06954, z: -0.46875}
+  m_LocalPosition: {x: 1173.7633, y: -115.85, z: -0.46875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1710271786}
@@ -30659,7 +30717,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  radius: 1.5
+  radius: 3
   dialogue: {fileID: 1630485902}
   doNotDestroy: 0
 --- !u!58 &1630485901
@@ -30677,7 +30735,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 3
 --- !u!114 &1630485902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33574,7 +33632,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.000015258789, y: 0}
   serializedVersion: 2
-  m_Radius: 2.4999998
+  m_Radius: 3
 --- !u!212 &1760407789
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34867,7 +34925,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.000030517578, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 3
 --- !u!212 &1811294526
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35466,7 +35524,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.000030517578, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 3
 --- !u!212 &1852917177
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41887,6 +41945,11 @@ PrefabInstance:
       propertyPath: whispers
       value: 
       objectReference: {fileID: 1763830541}
+    - target: {fileID: 5384040787869406417, guid: 7b9d6b4625b738745bd810696d67a5b4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5681932227316655337, guid: 7b9d6b4625b738745bd810696d67a5b4,
         type: 3}
       propertyPath: m_Camera
@@ -42778,6 +42841,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CenterPage
       objectReference: {fileID: 0}
+    - target: {fileID: 5384040787869406418, guid: 7b9d6b4625b738745bd810696d67a5b4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5602894574572740985, guid: 7b9d6b4625b738745bd810696d67a5b4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b9d6b4625b738745bd810696d67a5b4, type: 3}
@@ -43284,7 +43352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7878110258216119805
 Transform:
   m_ObjectHideFlags: 0

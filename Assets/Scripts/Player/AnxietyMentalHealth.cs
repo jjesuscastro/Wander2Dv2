@@ -23,6 +23,7 @@ namespace Player
 
         public override void SetValues()
         {
+            blackCover = null;
             whiteBackground = GameObject.Find("whiteBG").GetComponent<SpriteRenderer>();
             intenseVignette = GameObject.Find("vignette2").GetComponent<SpriteRenderer>();
             blackCover = GameObject.Find("/mainCamera/coverBlack_1");

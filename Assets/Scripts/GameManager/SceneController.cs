@@ -96,7 +96,7 @@ namespace GameManager
             //Assign NPC to PlayerSwitch
             CameraFollow.instance.SetLevel();
             UIController.instance.SetLevel();
-            PlayerSwitch.instance.SetLevel();
+            PlayerSwitch.instance.SetLevel(scene.name);
         }
     }
 }

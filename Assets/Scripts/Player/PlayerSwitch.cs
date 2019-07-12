@@ -292,6 +292,29 @@ namespace Player
             npc.gameObject.SetActive(false);
         }
 
+        public void SetLevel(string sceneName)
+        {
+            PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
+            for (int i = 0; i < players.Length; i++)
+            {
+                if (players[i].gameObject.CompareTag("Player"))
+                    mc = players[i];
+
+                if (players[i].gameObject.CompareTag("NPC"))
+                    npc = players[i];
+            }
+            obtainedNPC = false;
+
+            currentPlayer = mc.transform;
+            mainCamera = Camera.main.GetComponent<CameraFollow>();
+            playerMentalHealth = GetComponent<PlayerMentalHealth>();
+            npc.gameObject.SetActive(false);
+            if(sceneName == "Mood")
+                followActive = true;
+            else
+                followActive = false;
+        }
+
         public void ObtainedNPC()
         {
             obtainedNPC = true;
