@@ -19,14 +19,13 @@ namespace Player
         bool fadeOut;
         bool firstCall = true;
 
-
-
         public override void SetValues()
         {
             blackCover = null;
             whiteBackground = GameObject.Find("whiteBG").GetComponent<SpriteRenderer>();
             intenseVignette = GameObject.Find("vignette2").GetComponent<SpriteRenderer>();
             blackCover = GameObject.Find("/mainCamera/coverBlack_1");
+            blackCover.transform.SetParent(Camera.main.transform);
             blackCover.SetActive(false);
         }
 
@@ -104,6 +103,8 @@ namespace Player
                     blackCover.SetActive(false);
                 else
                     blackCover.SetActive(true);
+
+                Debug.Log(blackCover.name);
 
                 float delay = 10;
                 if (isEnabled)
