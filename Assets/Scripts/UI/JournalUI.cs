@@ -18,6 +18,19 @@ namespace UI
         bool npcEnabled = false;
         // JournalSlot[] slots;
 
+        #region Singleton
+        public static JournalUI instance;
+
+        void Awake()
+        {
+            if (instance != null)
+            {
+                Debug.LogWarning("Multiple Journal UIs found");
+            }
+            instance = this;
+        }
+        #endregion
+
         void Start()
         {
             journal = Journal.instance;

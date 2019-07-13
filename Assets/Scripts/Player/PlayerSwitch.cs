@@ -7,9 +7,9 @@ namespace Player
 {
     public class PlayerSwitch : MonoBehaviour
     {
-        public PlayerMovement mc;
+        PlayerMovement mc;
 
-        public PlayerMovement npc;
+        PlayerMovement npc;
 
         public bool obtainedNPC = false;
         public float minDistance;
@@ -20,12 +20,12 @@ namespace Player
         bool locatingPositionForNPC = false;
         public bool followActive = true;
 
-        public CameraFollow mainCamera;
-        public PlayerMentalHealth playerMentalHealth;
+        CameraFollow mainCamera;
+        PlayerMentalHealth playerMentalHealth;
 
-        public Transform currentPlayer;
-        public Transform mcTransform = null;
-        public Transform npcTransform = null;
+        Transform currentPlayer;
+        Transform mcTransform = null;
+        Transform npcTransform = null;
 
         #region Singleton
         public static PlayerSwitch instance;
@@ -257,8 +257,8 @@ namespace Player
                                 {
                                     //This is where MC "follows" NPC
                                     Vector3 newPosition = npcTransform.position;
-                                    newPosition.x -= 8;
-                                    newPosition.y += 5;
+                                    newPosition.x -= 25;
+                                    newPosition.y += 20;
                                     mc.GetComponent<PlayerController>().RemoveColor();
                                     mc.GetComponent<PlayerController>().WalkIn();
                                     mcTransform.position = newPosition;
@@ -288,7 +288,7 @@ namespace Player
 
             currentPlayer = mc.transform;
             mainCamera = Camera.main.GetComponent<CameraFollow>();
-            playerMentalHealth = GetComponent<PlayerMentalHealth>();
+            playerMentalHealth = PlayerMentalHealth.instance;
             npc.gameObject.SetActive(false);
         }
 

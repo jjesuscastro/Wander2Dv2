@@ -17,7 +17,7 @@ public class FlickerRandom : MonoBehaviour
 
     void Toggle()
     {
-        if (gameObject.active)
+        if (gameObject.activeInHierarchy)
             gameObject.SetActive(false);
         else
             gameObject.SetActive(true);

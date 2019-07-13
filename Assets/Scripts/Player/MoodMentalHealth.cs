@@ -7,13 +7,10 @@ namespace Player
 {
     public class MoodMentalHealth : MentalHealthEffect
     {
-        public GameObject[] covers; //Slow
-
-        public float maxAlpha = 0.75f;
         public float fadeRate;
         public int length = 5;
         public PostProcessVolume ppVolume;
-        bool firstCall = true;
+        // bool firstCall = true;
         bool fadecover;
         bool callOnce = false;
         bool fadeIn = true;

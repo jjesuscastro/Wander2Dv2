@@ -9,18 +9,14 @@ namespace Player
     {
 
         public float health = 1f;
-        public GameObject player;
+        public GameObject player; //asign MC to this
 
         [SerializeField] private MentalHealth mentalHealth;
-        [Header("Leave this blank.")]
-        public MentalHealthEffect mentalHealthEffect;
-        public MoodMentalHealth moodMentalHealth;
-        public AnxietyMentalHealth anxietyMentalHealth;
-        public ShizoMentalHealth schizoMentalHealth;
+        public MentalHealthEffect mentalHealthEffect; //this is the mhEffect per world
         public GameObject vignetteDamage;
         public float fadeRate = 0.05f;
 
-        bool criticalLevel = false;
+        // bool criticalLevel = false;
         float timer = 0;
         bool timerStart = false;
 
@@ -77,41 +73,6 @@ namespace Player
             changeHealth(1f);
             player.GetComponent<PlayerController>().reset();
             mentalHealthEffect.Stop();
-        }
-
-        public void SetLevel(string sceneName)
-        {
-            player = GameObject.Find("mc");
-
-            if (sceneName.CompareTo("Mood") == 0)
-            {
-                //Asign mood MH effect;
-                Debug.Log("Set Mood MH");
-                mentalHealthEffect = moodMentalHealth;
-                gameObject.GetComponent<MoodMentalHealth>().enabled = true;
-                gameObject.GetComponent<AnxietyMentalHealth>().enabled = false;
-                gameObject.GetComponent<ShizoMentalHealth>().enabled = false;
-            }
-            else if (sceneName.CompareTo("Anxiety") == 0)
-            {
-                //Asign anxiety MH effect;
-                Debug.Log("Set Anxiety MH");
-                mentalHealthEffect = anxietyMentalHealth;
-                mentalHealthEffect.SetValues();
-                gameObject.GetComponent<AnxietyMentalHealth>().enabled = true;
-                gameObject.GetComponent<MoodMentalHealth>().enabled = false;
-                gameObject.GetComponent<ShizoMentalHealth>().enabled = false;
-            }
-            else if (sceneName.CompareTo("Schizo") == 0)
-            {
-                //Asign schizo MH effect;
-                Debug.Log("Set Schizo MH");
-                mentalHealthEffect = schizoMentalHealth;
-                mentalHealthEffect.SetValues();
-                gameObject.GetComponent<ShizoMentalHealth>().enabled = true;
-                gameObject.GetComponent<MoodMentalHealth>().enabled = false;
-                gameObject.GetComponent<AnxietyMentalHealth>().enabled = false;
-            }
         }
 
         public void changeHealth(float damageValue)

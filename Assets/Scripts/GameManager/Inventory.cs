@@ -22,6 +22,8 @@ namespace GameManager
                 Debug.LogWarning("Multiple inventories found");
             }
             instance = this;
+
+            DontDestroyOnLoad(this.gameObject);
         }
         #endregion
 

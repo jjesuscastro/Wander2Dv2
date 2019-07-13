@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8808799835559618307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8808799835559618306}
+  - component: {fileID: 8808799835559618318}
+  - component: {fileID: 8808799835559618319}
+  - component: {fileID: 8808799835559618304}
+  - component: {fileID: 8808799835559618305}
+  m_Layer: 0
+  m_Name: mentalHealthManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8808799835559618306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8808799835559618307}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8808799835559618318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8808799835559618307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf24464f29cd234fad6952cf50e32fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  player: {fileID: 0}
+  mentalHealth: {fileID: 0}
+  mentalHealthEffect: {fileID: 0}
+  moodMentalHealth: {fileID: 0}
+  anxietyMentalHealth: {fileID: 0}
+  schizoMentalHealth: {fileID: 0}
+  vignetteDamage: {fileID: 0}
+  fadeRate: 0.01
+--- !u!114 &8808799835559618319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8808799835559618307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f92ad1e2031b634eb61c7f71883d1d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnabled: 0
+  covers:
+  - {fileID: 0}
+  - {fileID: 0}
+  maxAlpha: 0.5
+  fadeRate: 10
+  length: 5
+  ppVolume: {fileID: 0}
+--- !u!114 &8808799835559618304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8808799835559618307}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4b6fa230303664da61f14637ff51a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnabled: 0
+  fadeRate: 0.025
+  minEnabledTime: 0
+  maxEnabledTime: 2
+  minDisabledTime: 2
+  maxDisabledTime: 10
+  whiteBackground: {fileID: 0}
+  intenseVignette: {fileID: 0}
+  blackCover: {fileID: 0}
+--- !u!114 &8808799835559618305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8808799835559618307}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7630efbb24208c04f807647421f0089a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnabled: 0
+  fadeRate: 0.015
+  face: {fileID: 0}
+  whispers: {fileID: 0}
+  fadeIn: 1
+  fadeOut: 0
