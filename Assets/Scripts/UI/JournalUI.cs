@@ -41,15 +41,8 @@ namespace UI
         {
             if(mc == null || npc == null)
             {
-                PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
-                for (int i = 0; i < players.Length; i++)
-                {
-                    if (players[i].gameObject.CompareTag("Player"))
-                        mc = players[i];
-
-                    if (players[i].gameObject.CompareTag("NPC"))
-                        npc = players[i];
-                }
+                mc = MC.instance.gameObject.GetComponent<PlayerMovement>();
+                npc = NPC.instance.gameObject.GetComponent<PlayerMovement>();
             }
 
             if(mc.isActiveAndEnabled)
