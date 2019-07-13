@@ -59,13 +59,13 @@ namespace GameManager
             }
             else if (scene.name.CompareTo("Schizo") == 0)
             {
-                Debug.Log("EndGame");
+                Debug.Log("[SceneController.cs] - End of game.");
             }
         }
 
         IEnumerator LoadAsync(string sceneName)
         {
-            Debug.Log("Loading New Scene");
+            Debug.Log("[SceneManager.cs] - Loading new scene. Scene: " + sceneName);
             AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
             loadScreen.gameObject.SetActive(true);
 

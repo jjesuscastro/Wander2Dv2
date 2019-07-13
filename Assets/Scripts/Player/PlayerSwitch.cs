@@ -144,7 +144,7 @@ namespace Player
                 }
                 else
                 {
-                    Debug.Log("You have not obtained the NPC yet!");
+                    Debug.Log("[PlayerSwitch.cs] Cannot switch. NPC not active yet.");
                 }
             }
 
@@ -163,7 +163,6 @@ namespace Player
 
             if (npcIsFollowing)
             {
-                Debug.Log("NPC is following");
                 if (Vector3.Distance(mcTransform.position, npcTransform.position) > distanceToStop)
                 {
                     if (npc.GetComponent<CharacterController2D>().IsGrounded())
@@ -182,7 +181,6 @@ namespace Player
 
             if (mcIsFollowing)
             {
-                Debug.Log("MC is following");
                 if (Vector3.Distance(npcTransform.position, mcTransform.position) > distanceToStop)
                 {
                     if (mc.GetComponent<CharacterController2D>().IsGrounded())

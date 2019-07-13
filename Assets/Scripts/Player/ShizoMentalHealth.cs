@@ -17,7 +17,7 @@ namespace Player
             base.Trigger();
             fadeIn = true;
             fadeOut = false;
-            Debug.Log("Schizo MH");
+            Debug.Log("[ShizoMentalHealth.cs] - Enable MH Effect (Schizo).");
         }
 
         public override void SetValues()
@@ -30,6 +30,7 @@ namespace Player
             base.Stop();
             fadeIn = false;
             fadeOut = true;
+            Debug.Log("[ShizoMentalHealth.cs] - Disable MH Effect (Schizo).");
         }
 
         void Update()
@@ -61,7 +62,6 @@ namespace Player
                     if(tempColor.a < 0)
                         tempColor.a = 0;
                     face.color = tempColor;
-                    Debug.Log("Schizo disabled and fading out");
 
                     if (tempColor.a <= 0 && whispers.volume <= 0)
                     {

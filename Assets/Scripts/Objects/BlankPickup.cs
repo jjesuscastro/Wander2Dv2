@@ -21,7 +21,7 @@ namespace Object
 
         void Pickup()
         {
-            Debug.Log("Picking up blank pickup " + gameObject.name);
+            Debug.Log("[BlankPickup.cs] - Picking up blank pickup. BlankPickup: " + gameObject.name);
 
             onPickup.Invoke();
 

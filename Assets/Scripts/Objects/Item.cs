@@ -13,7 +13,7 @@ namespace Object
 
         public virtual void Use()
         {
-            Debug.Log("Using " + name);
+            Debug.Log("[Item.cs] - Using " + name);
             isUsed = true;
         }
     }

@@ -32,7 +32,7 @@ namespace Player
             base.Trigger();
             fadeIn = true;
             fadeOut = false;
-            Debug.Log("Anxiety MH");
+            Debug.Log("[AnxietyMentalHealth.cs] - Enable MH Effect (Anxiety).");
         }
 
         public override void Stop()
@@ -41,6 +41,7 @@ namespace Player
             fadeIn = false;
             fadeOut = true;
             firstCall = true;
+            Debug.Log("[AnxietyMentalHealth.cs] - Disable MH Effect (Anxiety).");
         }
 
         void Update()
@@ -101,8 +102,6 @@ namespace Player
                     blackCover.SetActive(false);
                 else
                     blackCover.SetActive(true);
-
-                Debug.Log(blackCover.name);
 
                 float delay = 10;
                 if (isEnabled)

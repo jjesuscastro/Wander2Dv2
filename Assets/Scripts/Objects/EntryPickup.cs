@@ -18,7 +18,7 @@ namespace Object
 
         void Pickup()
         {
-            Debug.Log("Picking up journal entry " + entry.name);
+            Debug.Log("[EntryPickup.cs] - Picking up journal entry. EntryPickup: " + entry.name);
             bool wasPickedUp = Journal.instance.Add(entry);
 
             if (wasPickedUp)

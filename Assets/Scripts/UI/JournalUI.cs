@@ -81,11 +81,16 @@ namespace UI
 
         public void CenterPage()
         {
-            Debug.Log("Center page clicked");
             if(currentPage <= 0)
+            {
                 NextPage();
+                Debug.Log("[JournalUI.cs] - CenterPage clicked. Next Page.");
+            }
             else
+            {
                 PreviousPage();
+                Debug.Log("[JournalUI.cs] - CenterPage clicked. Previous Page.");
+            }
         }
 
         public void NextPage()
@@ -109,7 +114,7 @@ namespace UI
 
             SetImages();
 
-            Debug.Log("Next page");
+            Debug.Log("[JournalUI.cs] - Next Page.");
         }
 
         public void PreviousPage()
@@ -136,7 +141,7 @@ namespace UI
 
             SetImages();
 
-            Debug.Log("Previous page");
+            Debug.Log("[JournalUI.cs] - Previous Page.");
         }
 
         void SetImages()

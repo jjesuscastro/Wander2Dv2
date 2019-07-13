@@ -37,7 +37,7 @@ public class ItemCheck : MonoBehaviour
             onCheckComplete.Invoke();
         else
         {
-            Debug.Log("Incomplete items");
+            Debug.Log("[ItemCheck.cs] - Cannot invoke onCheckComplete. Incomplete items.");
         }
     }
 

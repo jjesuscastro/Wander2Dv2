@@ -19,7 +19,6 @@ namespace Object
 
         public override bool Interact()
         {
-            // Debug.Log("NPC Available");
             if (Input.GetButtonDown("Interact"))
             {
                 Talk();

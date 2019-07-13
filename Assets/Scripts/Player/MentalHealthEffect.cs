@@ -9,7 +9,7 @@ public class MentalHealthEffect : MonoBehaviour
     public virtual void Trigger()
     {
         isEnabled = true;
-        Debug.Log("Trigger " + name);
+        Debug.Log("[MentalHealthEffect.cs] - Trigger MH Effect: " + name);
     }
 
     public virtual void Stop()
@@ -19,6 +19,6 @@ public class MentalHealthEffect : MonoBehaviour
 
     public virtual void SetValues()
     {
-        Debug.Log("Set MH values");
+        Debug.Log("[MentalHealthEffect.cs] - Set MH values.");
     }
 }
