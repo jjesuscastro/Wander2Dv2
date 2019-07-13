@@ -6,15 +6,29 @@ using GameManager;
 
 public class SingletonButtons : MonoBehaviour
 {
+    InventoryUI inventoryUI;
     JournalUI journalUI;
     IdleUI idleUI;
     DialogueManager dialogueManager;
 
     void Start()
     {
+        inventoryUI = InventoryUI.instance;
         journalUI = JournalUI.instance;
         idleUI = IdleUI.instance;
         dialogueManager = DialogueManager.instance;
+    }
+
+    public void UpdateInventoryUI()
+    {
+        if(inventoryUI != null)
+        {
+            inventoryUI.UpdateUI();
+        } else
+        {
+            inventoryUI = InventoryUI.instance;
+        }
+        
     }
 
     public void JournalUIToggle()

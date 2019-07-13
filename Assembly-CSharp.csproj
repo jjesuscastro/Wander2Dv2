@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\GameManager\SceneController.cs" />
      <Compile Include="Assets\Scripts\IdleUI.cs" />
      <Compile Include="Assets\Scripts\ItemCheck.cs" />
+     <Compile Include="Assets\Scripts\JournalsParent.cs" />
      <Compile Include="Assets\Scripts\NPC\NPCFollow.cs" />
      <Compile Include="Assets\Scripts\NPC\NPCInteract.cs" />
      <Compile Include="Assets\Scripts\Objects\BlankPickup.cs" />

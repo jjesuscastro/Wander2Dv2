@@ -8,9 +8,6 @@ namespace GameManager
 {
     public class Journal : MonoBehaviour
     {
-        [SerializeField]
-        private GameObject journalSlot;
-        public Transform journalsParent;
         // public UnityEvent onEntryChanged;
         public List<Entry> entries = new List<Entry>();
         public Entry placeholder;
@@ -25,6 +22,8 @@ namespace GameManager
                 Debug.LogWarning("Multiple journals found");
             }
             instance = this;
+
+            DontDestroyOnLoad(this.gameObject);
         }
         #endregion
 
