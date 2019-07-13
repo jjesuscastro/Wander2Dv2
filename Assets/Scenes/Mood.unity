@@ -27647,6 +27647,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1478588049}
+  - component: {fileID: 1478588053}
   - component: {fileID: 1478588048}
   - component: {fileID: 1478588047}
   - component: {fileID: 1478588046}
@@ -28019,6 +28020,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1478588053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478588041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dee9fd0f66f337458c0e2c9dd64cc52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1488704268 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3873702290056774787, guid: ead43cde5fa24c34f82c8734b0d83237,
@@ -42642,6 +42655,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1942920235223777124, guid: 24bcf18534e26c943986b166f237b92f,
+        type: 3}
+      propertyPath: m_Name
+      value: mc
+      objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -42696,11 +42714,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1942920235223777124, guid: 24bcf18534e26c943986b166f237b92f,
-        type: 3}
-      propertyPath: m_Name
-      value: mc
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24bcf18534e26c943986b166f237b92f, type: 3}

@@ -89,12 +89,7 @@ namespace GameManager
 
         public void SetLevel()
         {
-            PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
-            for (int i = 0; i < players.Length; i++)
-            {
-                if (players[i].name.CompareTo("mc") == 0)
-                    target = players[i];
-            }
+            target = MC.instance.gameObject.GetComponent<PlayerMovement>();
         }
 
         public void switchTarget(PlayerMovement newTarget)
