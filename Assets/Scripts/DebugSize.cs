@@ -6,16 +6,16 @@ using UnityEngine;
 public class DebugSize : MonoBehaviour
 {
 
-    private BoxCollider2D collider;
+    private BoxCollider2D col;
     // Start is called before the first frame update
     void Start()
     {
-        collider = gameObject.GetComponent<BoxCollider2D>();
+        col = gameObject.GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(collider.bounds.size.x);
+        Debug.Log(col.bounds.size.x);
     }
 }

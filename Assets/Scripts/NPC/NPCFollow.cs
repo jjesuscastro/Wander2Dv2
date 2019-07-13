@@ -6,19 +6,19 @@ public class NPCFollow : MonoBehaviour
 {
     [SerializeField]
     private Transform target;
-    Transform transform;
+    Transform tran;
 
     public float speed = 40f;
 
     void Start()
     {
-        transform = gameObject.GetComponent<Transform>();
+        tran = gameObject.GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, target.position) > 3)
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        if (Vector2.Distance(tran.position, target.position) > 3)
+            tran.position = Vector2.MoveTowards(tran.position, target.position, speed * Time.deltaTime);
     }
 }

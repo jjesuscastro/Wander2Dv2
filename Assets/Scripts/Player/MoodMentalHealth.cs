@@ -13,7 +13,7 @@ namespace Player
         public float fadeRate;
         public int length = 5;
         public PostProcessVolume ppVolume;
-        bool firstCall = true;
+        // bool firstCall = true;
         bool fadecover;
         bool callOnce = false;
         bool fadeIn = true;

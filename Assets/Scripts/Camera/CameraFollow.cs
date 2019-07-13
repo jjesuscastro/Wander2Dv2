@@ -23,7 +23,7 @@ namespace GameManager
         float smoothLookVelocityX;
         float smoothVelocityY;
 
-        Vector3 initialPosition;
+        // Vector3 initialPosition;
 
         bool lookAheadStopped;
 
@@ -43,7 +43,7 @@ namespace GameManager
         void Start()
         {
             SetLevel();
-            initialPosition = transform.position;
+            // initialPosition = transform.position;
             // minX = initialPosition.x;
             focusArea = new FocusArea(target.GetComponent<BoxCollider2D>().bounds, focusAreaSize);
         }

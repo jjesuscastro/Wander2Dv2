@@ -24,8 +24,6 @@ namespace GameManager
                 Debug.LogWarning("Multiple scene controllers switches found");
             }
             instance = this;
-
-            DontDestroyOnLoad(this.gameObject);
         }
         #endregion
 

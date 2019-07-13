@@ -6,14 +6,12 @@ using Player;
 public class BasicFollow : MonoBehaviour
 {
     PlayerMovement mc;
-    PlayerMovement npc;
     public Transform mcTransform;
     public Transform npcTransform;
 
     void Start()
     {
         mc = mcTransform.gameObject.GetComponent<PlayerMovement>();
-        npc = npcTransform.gameObject.GetComponent<PlayerMovement>();
     }
 
     public void Follow()

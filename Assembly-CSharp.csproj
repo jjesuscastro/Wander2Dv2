@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\GameManager\Inventory.cs" />
      <Compile Include="Assets\Scripts\GameManager\Journal.cs" />
      <Compile Include="Assets\Scripts\GameManager\SceneController.cs" />
+     <Compile Include="Assets\Scripts\IdleUI.cs" />
      <Compile Include="Assets\Scripts\ItemCheck.cs" />
      <Compile Include="Assets\Scripts\NPC\NPCFollow.cs" />
      <Compile Include="Assets\Scripts\NPC\NPCInteract.cs" />
@@ -105,6 +106,7 @@
      <Compile Include="Assets\Scripts\Player\PlayerSwitch.cs" />
      <Compile Include="Assets\Scripts\Player\ShizoMentalHealth.cs" />
      <Compile Include="Assets\Scripts\SelfDestroy.cs" />
+     <Compile Include="Assets\Scripts\SingletonButtons.cs" />
      <Compile Include="Assets\Scripts\UI\InventorySlot.cs" />
      <Compile Include="Assets\Scripts\UI\InventoryUI.cs" />
      <Compile Include="Assets\Scripts\UI\JournalSlot.cs" />

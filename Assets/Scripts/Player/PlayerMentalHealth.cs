@@ -20,7 +20,7 @@ namespace Player
         public GameObject vignetteDamage;
         public float fadeRate = 0.05f;
 
-        bool criticalLevel = false;
+        // bool criticalLevel = false;
         float timer = 0;
         bool timerStart = false;
 

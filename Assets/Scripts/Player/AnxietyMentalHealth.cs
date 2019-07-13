@@ -97,7 +97,7 @@ namespace Player
             {
                 SetValues();
             } else {
-                if (blackCover.active)
+                if (blackCover.activeInHierarchy)
                     blackCover.SetActive(false);
                 else
                     blackCover.SetActive(true);
@@ -111,7 +111,7 @@ namespace Player
                 {
                     delay = Random.Range(minDisabledTime, maxDisabledTime);
 
-                    if (blackCover.active)
+                    if (blackCover.activeInHierarchy)
                         delay = 0.5f;
                 }
                 Invoke("Toggle", delay);

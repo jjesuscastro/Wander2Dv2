@@ -257,8 +257,8 @@ namespace Player
                                 {
                                     //This is where MC "follows" NPC
                                     Vector3 newPosition = npcTransform.position;
-                                    newPosition.x -= 8;
-                                    newPosition.y += 5;
+                                    newPosition.x -= 25;
+                                    newPosition.y += 20;
                                     mc.GetComponent<PlayerController>().RemoveColor();
                                     mc.GetComponent<PlayerController>().WalkIn();
                                     mcTransform.position = newPosition;
