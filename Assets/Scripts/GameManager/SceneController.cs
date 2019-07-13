@@ -32,10 +32,10 @@ namespace GameManager
             SceneManager.sceneLoaded += OnSceneLoaded;
             scene = SceneManager.GetActiveScene();
 
-            if (scene.name.CompareTo("MainMenu") != 0)
-            {
-                AssignSceneValues();
-            }
+            // if (scene.name.CompareTo("MainMenu") != 0)
+            // {
+            //     AssignSceneValues();
+            // }
         }
 
         public string GetSceneName()
