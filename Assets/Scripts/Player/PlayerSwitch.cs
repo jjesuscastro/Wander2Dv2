@@ -117,7 +117,7 @@ namespace Player
             {
                 if (obtainedNPC)
                 {
-                    if (mc.isActiveAndEnabled)
+                    if (mc.isActiveAndEnabled && !locatingPositionForNPC)
                     {
                         mc.enabled = false;
                         npcIsFollowing = false;
@@ -129,7 +129,7 @@ namespace Player
                         playerMentalHealth.SwitchTarget(npc.gameObject);
                         mainCamera.switchTarget(npc);
                     }
-                    else
+                    else if (npc.isActiveAndEnabled && !locatingPositionForMC)
                     {
                         mc.enabled = true;
                         mcIsFollowing = false;
