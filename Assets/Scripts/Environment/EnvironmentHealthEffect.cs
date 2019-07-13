@@ -22,6 +22,12 @@ public class EnvironmentHealthEffect : MonoBehaviour
                     // do nothing;
                 } else {
                     PlayerMentalHealth.instance.changeHealth(effect);
+                    if(effect < 0)
+                        Debug.Log("[EnvironmentalHealthEffect.cs] - Taking damage from: " + this.name);
+                    else if (effect > 0)
+                        Debug.Log("[EnvironmentalHealthEffect.cs] - Healing from: " + this.name);
+                    else   
+                        Debug.Log("[EnvironmentalHealthEffect.cs] - Object has no effect. Object: " + this.name);
                 }
                 timer = 0;
             }
