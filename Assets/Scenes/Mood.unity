@@ -13530,7 +13530,7 @@ Transform:
   m_LocalScale: {x: 5172.2686, y: 1896.4987, z: 1.7240899}
   m_Children: []
   m_Father: {fileID: 1317368194}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &781129372
 SpriteRenderer:
@@ -15549,7 +15549,7 @@ RectTransform:
   - {fileID: 5384040789409803297}
   - {fileID: 1322197694}
   m_Father: {fileID: 1317368194}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -19709,10 +19709,6 @@ GameObject:
   - component: {fileID: 1132866728}
   - component: {fileID: 1842854088}
   - component: {fileID: 1132866727}
-  - component: {fileID: 1132866726}
-  - component: {fileID: 1132866725}
-  - component: {fileID: 1132866724}
-  - component: {fileID: 1132866723}
   - component: {fileID: 5384040789409803295}
   m_Layer: 0
   m_Name: gameManager
@@ -19721,86 +19717,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1132866723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1132866722}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7630efbb24208c04f807647421f0089a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEnabled: 0
-  fadeRate: 0.015
-  face: {fileID: 359660411}
-  whispers: {fileID: 1763830541}
-  fadeIn: 1
-  fadeOut: 0
---- !u!114 &1132866724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1132866722}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c4b6fa230303664da61f14637ff51a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEnabled: 0
-  fadeRate: 0.025
-  minEnabledTime: 0
-  maxEnabledTime: 2
-  minDisabledTime: 2
-  maxDisabledTime: 10
-  whiteBackground: {fileID: 4153453376072528310}
-  intenseVignette: {fileID: 744452538}
-  blackCover: {fileID: 781129370}
---- !u!114 &1132866725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1132866722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f92ad1e2031b634eb61c7f71883d1d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEnabled: 0
-  covers:
-  - {fileID: 7878110258216119804}
-  - {fileID: 7878110258422577197}
-  maxAlpha: 0.5
-  fadeRate: 10
-  length: 5
-  ppVolume: {fileID: 795273849}
---- !u!114 &1132866726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1132866722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cf24464f29cd234fad6952cf50e32fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  player: {fileID: 139463728}
-  mentalHealth: {fileID: 2068048445}
-  mentalHealthEffect: {fileID: 0}
-  moodMentalHealth: {fileID: 1132866725}
-  anxietyMentalHealth: {fileID: 1132866724}
-  schizoMentalHealth: {fileID: 1132866723}
-  vignetteDamage: {fileID: 1322197693}
-  fadeRate: 0.01
 --- !u!114 &1132866727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19881,7 +19797,7 @@ Transform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1317368194}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1139665449
 GameObject:
@@ -23778,6 +23694,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1645904869}
   - {fileID: 1132866730}
   - {fileID: 933965753}
   - {fileID: 781129371}
@@ -31724,6 +31641,120 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1645904868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1645904869}
+  - component: {fileID: 1645904873}
+  - component: {fileID: 1645904872}
+  - component: {fileID: 1645904871}
+  - component: {fileID: 1645904870}
+  m_Layer: 0
+  m_Name: mentalHealthManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1645904869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645904868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1317368194}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1645904870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645904868}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7630efbb24208c04f807647421f0089a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnabled: 0
+  fadeRate: 0.015
+  face: {fileID: 359660411}
+  whispers: {fileID: 1763830541}
+  fadeIn: 1
+  fadeOut: 0
+--- !u!114 &1645904871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645904868}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4b6fa230303664da61f14637ff51a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnabled: 0
+  fadeRate: 0.025
+  minEnabledTime: 0
+  maxEnabledTime: 2
+  minDisabledTime: 2
+  maxDisabledTime: 10
+  whiteBackground: {fileID: 4153453376072528310}
+  intenseVignette: {fileID: 744452538}
+  blackCover: {fileID: 781129370}
+--- !u!114 &1645904872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645904868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f92ad1e2031b634eb61c7f71883d1d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnabled: 0
+  covers:
+  - {fileID: 7878110258216119804}
+  - {fileID: 7878110258422577197}
+  maxAlpha: 0.5
+  fadeRate: 10
+  length: 5
+  ppVolume: {fileID: 795273849}
+--- !u!114 &1645904873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645904868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf24464f29cd234fad6952cf50e32fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  player: {fileID: 139463728}
+  mentalHealth: {fileID: 2068048445}
+  mentalHealthEffect: {fileID: 0}
+  moodMentalHealth: {fileID: 0}
+  anxietyMentalHealth: {fileID: 0}
+  schizoMentalHealth: {fileID: 0}
+  vignetteDamage: {fileID: 1322197693}
+  fadeRate: 0.01
 --- !u!1 &1651609373
 GameObject:
   m_ObjectHideFlags: 0
@@ -42850,7 +42881,7 @@ Transform:
   m_LocalScale: {x: 5172.2686, y: 1896.4987, z: 1.7240899}
   m_Children: []
   m_Father: {fileID: 1317368194}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5384040789409803293
 MonoBehaviour:

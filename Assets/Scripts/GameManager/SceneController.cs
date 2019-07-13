@@ -84,17 +84,17 @@ namespace GameManager
         private void OnSceneLoaded(Scene aScene, LoadSceneMode aMode)
         {
             scene = SceneManager.GetActiveScene();
-            AssignSceneValues();
+            // AssignSceneValues();
         }
 
-        void AssignSceneValues()
-        {
-            PlayerMentalHealth.instance.SetLevel(scene.name);
-            Debug.Log("Active scene = " + scene.name);
-            //Assign NPC to PlayerSwitch
-            CameraFollow.instance.SetLevel();
-            UIController.instance.SetLevel();
-            PlayerSwitch.instance.SetLevel(scene.name);
-        }
+        // void AssignSceneValues()
+        // {
+        //     PlayerMentalHealth.instance.SetLevel(scene.name);
+        //     Debug.Log("Active scene = " + scene.name);
+        //     //Assign NPC to PlayerSwitch
+        //     CameraFollow.instance.SetLevel();
+        //     UIController.instance.SetLevel();
+        //     PlayerSwitch.instance.SetLevel(scene.name);
+        // }
     }
 }
