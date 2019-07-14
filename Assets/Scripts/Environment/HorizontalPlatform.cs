@@ -9,8 +9,8 @@ public class HorizontalPlatform : MonoBehaviour
 {
     public UnityEvent onTakeOff;
     public UnityEvent onStop;
-    public PlayerMovement mc;
-    public PlayerMovement npc;
+    PlayerMovement mc;
+    PlayerMovement npc;
     public bool disableMovements = false;
     public float maxX;
     public float minX;
@@ -22,9 +22,14 @@ public class HorizontalPlatform : MonoBehaviour
     bool oneDirection = true;
     bool rightEnd = false;
     float acceleration = 0;
-    public string NPCName;
     bool mcEnabled  = false;
     bool npcEnabled = false;
+
+    void Start()
+    {
+        mc = MC.instance.gameObject.GetComponent<PlayerMovement>();
+        npc = NPC.instance.gameObject.GetComponent<PlayerMovement>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -81,7 +86,7 @@ public class HorizontalPlatform : MonoBehaviour
             }
 
             if(playerOnPlatform && !NPCOnPlatform)
-                PopupNotification.instance.ShowPopup(NPCName + "I need to wait for my friend!");
+                PopupNotification.instance.ShowPopup("I need to wait for my friend!");
 
             if(!playerOnPlatform && NPCOnPlatform)
                 PopupNotification.instance.ShowPopup("I need to wait for my friend!");
