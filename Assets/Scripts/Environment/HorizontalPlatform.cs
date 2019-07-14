@@ -76,6 +76,8 @@ public class HorizontalPlatform : MonoBehaviour
                     StopMovements();
                 if(onTakeOff != null)
                     onTakeOff.Invoke();
+
+                Debug.Log("[HorizontalPlatform.cs] - Platform moving. On platform (mc, npc): " + playerOnPlatform + ", " + NPCOnPlatform);
             }
 
             if(playerOnPlatform && !NPCOnPlatform)
