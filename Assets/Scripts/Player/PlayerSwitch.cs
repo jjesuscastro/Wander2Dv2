@@ -130,6 +130,7 @@ namespace Player
                         npc.GetComponent<CharacterController2D>().EnableColliders();
                         playerMentalHealth.SwitchTarget(npc.gameObject);
                         mainCamera.switchTarget(npc);
+                        Debug.Log("[PlayerSwitch.cs] - Switched from MC to NPC.");
                     }
                     else if (npc.isActiveAndEnabled && !locatingPositionForMC)
                     {
@@ -142,11 +143,12 @@ namespace Player
                         mc.GetComponent<CharacterController2D>().EnableColliders();
                         playerMentalHealth.SwitchTarget(mc.gameObject);
                         mainCamera.switchTarget(mc);
+                        Debug.Log("[PlayerSwitch.cs] - Switched from NPC to MC.");
                     }
                 }
                 else
                 {
-                    Debug.Log("[PlayerSwitch.cs] Cannot switch. NPC not active yet.");
+                    Debug.Log("[PlayerSwitch.cs] - Cannot switch. NPC not active yet.");
                 }
             }
 
