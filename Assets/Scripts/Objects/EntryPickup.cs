@@ -12,11 +12,10 @@ namespace Object
 
         public override bool Interact()
         {
-            Pickup();
-            return true;
+            return Pickup();
         }
 
-        void Pickup()
+        bool Pickup()
         {
             Debug.Log("[EntryPickup.cs] - Picking up journal entry. EntryPickup: " + entry.name);
             bool wasPickedUp = Journal.instance.Add(entry);
@@ -29,6 +28,8 @@ namespace Object
                 if(onPickup != null)
                     onPickup.Invoke();
             }
+
+            return wasPickedUp;
         }
     }
 }

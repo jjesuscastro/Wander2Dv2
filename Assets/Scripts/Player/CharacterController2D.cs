@@ -53,6 +53,10 @@ namespace Player
             CalculateRaySpacing();
         }
 
+        public void NotGrounded(){
+            m_Grounded = false;
+        }
+
         void Update()
         {
             if (!isSimulated)

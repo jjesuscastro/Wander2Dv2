@@ -13,11 +13,10 @@ namespace Object
 
         public override bool Interact()
         {
-            Pickup();
-            return true;
+            return Pickup();
         }
 
-        void Pickup()
+        bool Pickup()
         {
             Debug.Log("[ItemPickup.cs] - Picking up item . Item: " + item.name);
             bool wasPickedUp = Inventory.instance.Add(item);
@@ -27,6 +26,8 @@ namespace Object
                 Destroy(gameObject);
                 PopupNotification.instance.ShowPopup("Picked up " + item.name + "!");
             }
+
+            return wasPickedUp;
         }
     }
 }
