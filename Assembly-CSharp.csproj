@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\Camera\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Conveyor.cs" />
      <Compile Include="Assets\Scripts\Cutscene.cs" />
+     <Compile Include="Assets\Scripts\CutsceneRenderer.cs" />
      <Compile Include="Assets\Scripts\DebugSize.cs" />
      <Compile Include="Assets\Scripts\DisableNPC.cs" />
      <Compile Include="Assets\Scripts\DoNotDestroy.cs" />

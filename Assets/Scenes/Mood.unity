@@ -43466,14 +43466,236 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
+      propertyPath: cutscenes.Array.size
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
       propertyPath: endScene.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5384040789409803295}
     - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
-      propertyPath: endScene.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadNewScene
-      objectReference: {fileID: 0}
+      propertyPath: cutscenes.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 346de010c9f694e498a1d6eb60357dfd,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: bcf6f9e4925a98c4a89b8f47b46a4e9f,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6e43dad4d6224554daa1ab820c218536,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[11]
+      value: 
+      objectReference: {fileID: 21300000, guid: cbc9d4c341cef3d4ab0787921a98a9ad,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[12]
+      value: 
+      objectReference: {fileID: 21300000, guid: d5f66f83af1141b498effa279642b758,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[13]
+      value: 
+      objectReference: {fileID: 21300000, guid: 17294aeee4461434c85a32663cee3f34,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[14]
+      value: 
+      objectReference: {fileID: 21300000, guid: 39d55cafd06aacd4db9a6f3e1a1eb380,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[15]
+      value: 
+      objectReference: {fileID: 21300000, guid: 73a3054c6a12a394a9802383d0593dab,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[16]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d349e3e072d02b4399e4015c37776aa,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[17]
+      value: 
+      objectReference: {fileID: 21300000, guid: a345b0fbab06a5449b803870df41571d,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[18]
+      value: 
+      objectReference: {fileID: 21300000, guid: ffd63f41b67173d4fb2260598b041361,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[19]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8bf9ae1bd2a506a49abdf8c5e78b6164,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[20]
+      value: 
+      objectReference: {fileID: 21300000, guid: 026723ce2feae5245a257dd1b3c80f8a,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[21]
+      value: 
+      objectReference: {fileID: 21300000, guid: d5ed6ae5b2c523f42849507cfd4962d1,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[22]
+      value: 
+      objectReference: {fileID: 21300000, guid: f21b177c2c3dc7247a17d2c255e3df79,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[23]
+      value: 
+      objectReference: {fileID: 21300000, guid: 39555aec10e7a0b42b1d5dfa2a65ea23,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[24]
+      value: 
+      objectReference: {fileID: 21300000, guid: c7855000ac3187845990815c29ba5066,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[25]
+      value: 
+      objectReference: {fileID: 21300000, guid: 718930708abaf3f4b95e9ad8d3e746d2,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[26]
+      value: 
+      objectReference: {fileID: 21300000, guid: 25c3aca72004c8649b571bf01510ec6b,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[27]
+      value: 
+      objectReference: {fileID: 21300000, guid: c61205b4d8609ad47a947f53c47a29b3,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[28]
+      value: 
+      objectReference: {fileID: 21300000, guid: dca4725758a39e5428b1a82a7f54ab50,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[29]
+      value: 
+      objectReference: {fileID: 21300000, guid: 235adb5a502721a41a7c617b2cd250b4,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[30]
+      value: 
+      objectReference: {fileID: 21300000, guid: a4dbec1161298494dbbd74451a726a98,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[31]
+      value: 
+      objectReference: {fileID: 21300000, guid: e22308ba682df5d498e059e439e83d70,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[32]
+      value: 
+      objectReference: {fileID: 21300000, guid: c4ca7c8095c41b3438e8386eaf38ff73,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[33]
+      value: 
+      objectReference: {fileID: 21300000, guid: ea3736b00e99786499f1f692bad6b93e,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[34]
+      value: 
+      objectReference: {fileID: 21300000, guid: 33e55c8a6e18ab145af5f4fb79e8e1b6,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[35]
+      value: 
+      objectReference: {fileID: 21300000, guid: 452fe870c95d4e94f8f102417d3e6383,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[36]
+      value: 
+      objectReference: {fileID: 21300000, guid: aea8a5436119c2b45863eadaa4850728,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4df47b14534d04e44a77b94c5371fb26,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: f65e77bd7746fe340a7655ef78bdfe9e,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: bf4dbe3345c69a04eb6ef763624e0873,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: cdcb2ca474edd19479444c9c83046abe,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc0f849bb36b42c43975ad5b4cfb49eb,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2401ebf4a9cd86341b35856943e38ef6,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9670882c1515a9d4e9c6989569294ab1,
+        type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: cutscenes.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 09faaad98a544c34fa4419032350afd1,
+        type: 3}
     - target: {fileID: 8225728285365012456, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
       propertyPath: m_Camera
