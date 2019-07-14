@@ -14,7 +14,6 @@ namespace Object
 
         public override bool Interact()
         {
-            base.Interact();
             Pickup();
             return true;
         }
