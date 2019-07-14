@@ -49,6 +49,7 @@ namespace Player
         public void ReEnableSwitch()
         {
             obtainedNPC = true;
+            Debug.Log("[PlayerSwitch.cs] - Enabled switch.");
         }
 
         public void ForceSwitchToMC()
@@ -201,11 +202,13 @@ namespace Player
         public void DisableFollow()
         {
             followActive = false;
+            Debug.Log("[PlayerSwitch.cs] - Disabled follow.");
         }
 
         public void EnableFollow()
         {
             followActive = true;
+            Debug.Log("[PlayerSwitch.cs] - Enabled follow.");
         }
 
         void CheckDistance()
@@ -285,15 +288,8 @@ namespace Player
 
         public void SetLevel(string sceneName)
         {
-            PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
-            for (int i = 0; i < players.Length; i++)
-            {
-                if (players[i].gameObject.CompareTag("Player"))
-                    mc = players[i];
-
-                if (players[i].gameObject.CompareTag("NPC"))
-                    npc = players[i];
-            }
+            mc = MC.instance.gameObject.GetComponent<PlayerMovement>();
+            npc = NPC.instance.gameObject.GetComponent<PlayerMovement>();
             obtainedNPC = false;
 
             currentPlayer = mc.transform;
@@ -309,6 +305,7 @@ namespace Player
         public void ObtainedNPC()
         {
             obtainedNPC = true;
+            Debug.Log("[PlayerSwitch.cs] - Enabled switch.");
         }
 
         public Transform GetCurrentPlayer()
