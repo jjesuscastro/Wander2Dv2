@@ -103,6 +103,11 @@ namespace Player
             {
                 respawnPoint = other.transform.position;
             }
+
+            if (other.gameObject.CompareTag("Resetpoint"))
+            {
+                resetPoint = other.transform.position;
+            }
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -137,6 +142,12 @@ namespace Player
             {
                 respawnPoint = other.transform.position;
                 Debug.Log("[PlayerController.cs] - Checkpoint. New checkpoint: " + respawnPoint);
+            }
+
+            if (other.gameObject.CompareTag("Resetpoint"))
+            {
+                resetPoint = other.transform.position;
+                Debug.Log("[PlayerController.cs] - Resetpoint. New resetpoint: " + resetPoint);
             }
 
             if (other.gameObject.CompareTag("FallDetector"))
