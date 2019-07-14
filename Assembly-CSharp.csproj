@@ -92,6 +92,7 @@
      <Compile Include="Assets\Scripts\ItemCheck.cs" />
      <Compile Include="Assets\Scripts\JournalsParent.cs" />
      <Compile Include="Assets\Scripts\MC.cs" />
+     <Compile Include="Assets\Scripts\MoveCharacters.cs" />
      <Compile Include="Assets\Scripts\NPC.cs" />
      <Compile Include="Assets\Scripts\NPC\NPCFollow.cs" />
      <Compile Include="Assets\Scripts\NPC\NPCInteract.cs" />
