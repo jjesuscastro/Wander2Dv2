@@ -30,8 +30,8 @@ namespace Object
         // Use this for initialization
         void Start()
         {
-            mainCharacter = GameObject.Find("mc");
-            nonPlayableCharacter = GameObject.Find("NPC");
+            mainCharacter = MC.instance.gameObject;
+            nonPlayableCharacter = NPC.instance.gameObject;
             cover = GameObject.Find("coverBlack");
             coverRenderer = cover.gameObject.GetComponent<SpriteRenderer>();
         }
@@ -41,7 +41,7 @@ namespace Object
         {
             if(nonPlayableCharacter == null)
             {
-                nonPlayableCharacter = GameObject.Find("NPC");
+                nonPlayableCharacter = NPC.instance.gameObject;
             }
 
             if (isFocused && player != null && hasInteracted != true)

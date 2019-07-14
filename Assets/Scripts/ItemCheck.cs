@@ -23,11 +23,11 @@ public class ItemCheck : MonoBehaviour
     {
         foreach(Item item in itemsToCheck)
         {
-            if(Inventory.instance.items.Contains(item))
+            if(inventory.items.Contains(item))
             {
                 Inventory.instance.items.Remove(item);
-                if(Inventory.instance.onItemChanged != null)
-                    Inventory.instance.onItemChanged.Invoke();
+                if(inventory.onItemChanged != null)
+                    inventory.onItemChanged.Invoke();
 
                 countCheck++;
             }
@@ -37,7 +37,7 @@ public class ItemCheck : MonoBehaviour
             onCheckComplete.Invoke();
         else
         {
-            Debug.Log("Incomplete items");
+            Debug.Log("[ItemCheck.cs] - Cannot invoke onCheckComplete. Incomplete items.");
         }
     }
 

@@ -53,6 +53,10 @@ namespace Player
             CalculateRaySpacing();
         }
 
+        public void NotGrounded(){
+            m_Grounded = false;
+        }
+
         void Update()
         {
             if (!isSimulated)
@@ -100,7 +104,7 @@ namespace Player
         void HorizontallCollisions(ref Vector3 velocity)
         {
             float directionX = Mathf.Sign(velocity.x);
-            float rayLength = Mathf.Abs(velocity.x);
+            // float rayLength = Mathf.Abs(velocity.x);
 
             for (int i = 0; i < horizontalRayCount; i++)
             {
@@ -119,7 +123,7 @@ namespace Player
                     {
                         ClimbSlope(ref velocity, slopeAngle);
                     }
-                    rayLength = hit.distance;
+                    // rayLength = hit.distance;
                 }
             }
         }
@@ -127,7 +131,7 @@ namespace Player
         void VerticalCollisions(ref Vector3 velocity, float moveV)
         {
             float directionY = Mathf.Sign(velocity.y);
-            float rayLength = Mathf.Abs(velocity.y);
+            // float rayLength = Mathf.Abs(velocity.y);
 
             for (int i = 0; i < verticalRayCount; i++)
             {

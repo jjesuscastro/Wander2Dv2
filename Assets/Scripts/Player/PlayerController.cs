@@ -103,6 +103,11 @@ namespace Player
             {
                 respawnPoint = other.transform.position;
             }
+
+            if (other.gameObject.CompareTag("Resetpoint"))
+            {
+                resetPoint = other.transform.position;
+            }
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -130,11 +135,19 @@ namespace Player
             if (other.gameObject.CompareTag("MovingPlatform"))
             {
                 transform.SetParent(other.transform);
+                Debug.Log("[PlayerController.cs] - MovingPlatform. New parent: " + other.name);
             }
 
             if (other.gameObject.CompareTag("Checkpoint"))
             {
                 respawnPoint = other.transform.position;
+                Debug.Log("[PlayerController.cs] - Checkpoint. New checkpoint: " + respawnPoint);
+            }
+
+            if (other.gameObject.CompareTag("Resetpoint"))
+            {
+                resetPoint = other.transform.position;
+                Debug.Log("[PlayerController.cs] - Resetpoint. New resetpoint: " + resetPoint);
             }
 
             if (other.gameObject.CompareTag("FallDetector"))
@@ -145,6 +158,8 @@ namespace Player
                 PlayerMentalHealth.instance.changeHealth(-0.05f);
                 if(!isResetting && hasReset)
                     respawn();
+
+                Debug.Log("[PlayerController.cs] - FallDetector encountered.");
             }
 
             if (other.gameObject.CompareTag("EndScene"))

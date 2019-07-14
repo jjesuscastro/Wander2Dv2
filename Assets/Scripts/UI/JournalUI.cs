@@ -18,6 +18,19 @@ namespace UI
         bool npcEnabled = false;
         // JournalSlot[] slots;
 
+        #region Singleton
+        public static JournalUI instance;
+
+        void Awake()
+        {
+            if (instance != null)
+            {
+                Debug.LogWarning("Multiple Journal UIs found");
+            }
+            instance = this;
+        }
+        #endregion
+
         void Start()
         {
             journal = Journal.instance;
@@ -28,15 +41,8 @@ namespace UI
         {
             if(mc == null || npc == null)
             {
-                PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
-                for (int i = 0; i < players.Length; i++)
-                {
-                    if (players[i].gameObject.CompareTag("Player"))
-                        mc = players[i];
-
-                    if (players[i].gameObject.CompareTag("NPC"))
-                        npc = players[i];
-                }
+                mc = MC.instance.gameObject.GetComponent<PlayerMovement>();
+                npc = NPC.instance.gameObject.GetComponent<PlayerMovement>();
             }
 
             if(mc.isActiveAndEnabled)
@@ -68,11 +74,16 @@ namespace UI
 
         public void CenterPage()
         {
-            Debug.Log("Center page clicked");
             if(currentPage <= 0)
+            {
                 NextPage();
+                Debug.Log("[JournalUI.cs] - CenterPage clicked. Next Page.");
+            }
             else
+            {
                 PreviousPage();
+                Debug.Log("[JournalUI.cs] - CenterPage clicked. Previous Page.");
+            }
         }
 
         public void NextPage()
@@ -96,7 +107,7 @@ namespace UI
 
             SetImages();
 
-            Debug.Log("Next page");
+            Debug.Log("[JournalUI.cs] - Next Page.");
         }
 
         public void PreviousPage()
@@ -123,7 +134,7 @@ namespace UI
 
             SetImages();
 
-            Debug.Log("Previous page");
+            Debug.Log("[JournalUI.cs] - Previous Page.");
         }
 
         void SetImages()

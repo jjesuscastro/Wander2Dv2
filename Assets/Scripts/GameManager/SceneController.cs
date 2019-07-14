@@ -24,8 +24,6 @@ namespace GameManager
                 Debug.LogWarning("Multiple scene controllers switches found");
             }
             instance = this;
-
-            DontDestroyOnLoad(this.gameObject);
         }
         #endregion
 
@@ -34,10 +32,10 @@ namespace GameManager
             SceneManager.sceneLoaded += OnSceneLoaded;
             scene = SceneManager.GetActiveScene();
 
-            if (scene.name.CompareTo("MainMenu") != 0)
-            {
-                AssignSceneValues();
-            }
+            // if (scene.name.CompareTo("MainMenu") != 0)
+            // {
+            //     AssignSceneValues();
+            // }
         }
 
         public string GetSceneName()
@@ -61,13 +59,13 @@ namespace GameManager
             }
             else if (scene.name.CompareTo("Schizo") == 0)
             {
-                Debug.Log("EndGame");
+                Debug.Log("[SceneController.cs] - End of game.");
             }
         }
 
         IEnumerator LoadAsync(string sceneName)
         {
-            Debug.Log("Loading New Scene");
+            Debug.Log("[SceneManager.cs] - Loading new scene. Scene: " + sceneName);
             AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
             loadScreen.gameObject.SetActive(true);
 
@@ -86,17 +84,17 @@ namespace GameManager
         private void OnSceneLoaded(Scene aScene, LoadSceneMode aMode)
         {
             scene = SceneManager.GetActiveScene();
-            AssignSceneValues();
+            // AssignSceneValues();
         }
 
-        void AssignSceneValues()
-        {
-            PlayerMentalHealth.instance.SetLevel(scene.name);
-            Debug.Log("Active scene = " + scene.name);
-            //Assign NPC to PlayerSwitch
-            CameraFollow.instance.SetLevel();
-            UIController.instance.SetLevel();
-            PlayerSwitch.instance.SetLevel();
-        }
+        // void AssignSceneValues()
+        // {
+        //     PlayerMentalHealth.instance.SetLevel(scene.name);
+        //     Debug.Log("Active scene = " + scene.name);
+        //     //Assign NPC to PlayerSwitch
+        //     CameraFollow.instance.SetLevel();
+        //     UIController.instance.SetLevel();
+        //     PlayerSwitch.instance.SetLevel(scene.name);
+        // }
     }
 }

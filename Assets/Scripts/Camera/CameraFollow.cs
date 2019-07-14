@@ -23,7 +23,7 @@ namespace GameManager
         float smoothLookVelocityX;
         float smoothVelocityY;
 
-        Vector3 initialPosition;
+        // Vector3 initialPosition;
 
         bool lookAheadStopped;
 
@@ -43,7 +43,7 @@ namespace GameManager
         void Start()
         {
             SetLevel();
-            initialPosition = transform.position;
+            // initialPosition = transform.position;
             // minX = initialPosition.x;
             focusArea = new FocusArea(target.GetComponent<BoxCollider2D>().bounds, focusAreaSize);
         }
@@ -89,12 +89,7 @@ namespace GameManager
 
         public void SetLevel()
         {
-            PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
-            for (int i = 0; i < players.Length; i++)
-            {
-                if (players[i].name.CompareTo("mc") == 0)
-                    target = players[i];
-            }
+            target = MC.instance.gameObject.GetComponent<PlayerMovement>();
         }
 
         public void switchTarget(PlayerMovement newTarget)

@@ -77,7 +77,8 @@ public class TreeHouse : MonoBehaviour
             tempVector = leftSide.localPosition;
             if(tempVector.y < 22.09)
             {
-                walls.SetActive(true);
+                if(tempVector.y > 8.5)
+                    walls.SetActive(true);
                 tempVector.y += 0.1f;
             } else {
                 walls.SetActive(false);

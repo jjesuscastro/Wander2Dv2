@@ -22,6 +22,8 @@ namespace GameManager
                 Debug.LogWarning("Multiple inventories found");
             }
             instance = this;
+
+            DontDestroyOnLoad(this.gameObject);
         }
         #endregion
 
@@ -29,7 +31,7 @@ namespace GameManager
         {
             if (items.Count >= size)
             {
-                Debug.Log("Not enough room.");
+                Debug.Log("[Inventory.cs] - Cannot pick up item, max capacity. Item: " + item.name);
                 return false;
             }
 

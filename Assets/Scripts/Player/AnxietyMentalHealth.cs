@@ -19,13 +19,11 @@ namespace Player
         bool fadeOut;
         bool firstCall = true;
 
-
-
         public override void SetValues()
         {
-            whiteBackground = GameObject.Find("whiteBG").GetComponent<SpriteRenderer>();
-            intenseVignette = GameObject.Find("vignette2").GetComponent<SpriteRenderer>();
-            blackCover = GameObject.Find("/mainCamera/coverBlack_1");
+            whiteBackground.transform.SetParent(Camera.main.transform);
+            // blackCover = GameObject.Find("/mainCamera/coverBlack_1");
+            blackCover.transform.SetParent(Camera.main.transform);
             blackCover.SetActive(false);
         }
 
@@ -34,7 +32,7 @@ namespace Player
             base.Trigger();
             fadeIn = true;
             fadeOut = false;
-            Debug.Log("Anxiety MH");
+            Debug.Log("[AnxietyMentalHealth.cs] - Enable MH Effect (Anxiety).");
         }
 
         public override void Stop()
@@ -43,6 +41,7 @@ namespace Player
             fadeIn = false;
             fadeOut = true;
             firstCall = true;
+            Debug.Log("[AnxietyMentalHealth.cs] - Disable MH Effect (Anxiety).");
         }
 
         void Update()
@@ -99,7 +98,7 @@ namespace Player
             {
                 SetValues();
             } else {
-                if (blackCover.active)
+                if (blackCover.activeInHierarchy)
                     blackCover.SetActive(false);
                 else
                     blackCover.SetActive(true);
@@ -111,7 +110,7 @@ namespace Player
                 {
                     delay = Random.Range(minDisabledTime, maxDisabledTime);
 
-                    if (blackCover.active)
+                    if (blackCover.activeInHierarchy)
                         delay = 0.5f;
                 }
                 Invoke("Toggle", delay);

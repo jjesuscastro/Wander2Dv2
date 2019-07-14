@@ -11,6 +11,7 @@ TagManager:
   - EndScene
   - Weight
   - NPC
+  - Resetpoint
   layers:
   - Default
   - TransparentFX

@@ -66,7 +66,7 @@ namespace GameManager
             }
 
             animator.SetBool("IsOpen", true);
-            // Debug.Log("start " + animator.GetInteger("IsOpen"));
+            Debug.Log("[DialogueManager.cs] - Starting dialogue: " + dialogue.name);
             DisplayNextSentence();
         }
 
@@ -87,7 +87,7 @@ namespace GameManager
 
         void EndDialogue()
         {
-            // Debug.Log("end " + animator.GetInteger("IsOpen"));
+            Debug.Log("[DialogueManager.cs] - Ending dialogue.");
             journalButton.interactable = true;
             Time.timeScale = 1f;
             animator.speed = 1;

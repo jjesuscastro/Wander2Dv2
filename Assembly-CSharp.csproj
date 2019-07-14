@@ -53,12 +53,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Reporter\MultiKeyDictionary.cs" />
+     <Compile Include="Assets\Reporter\Reporter.cs" />
+     <Compile Include="Assets\Reporter\ReporterGUI.cs" />
+     <Compile Include="Assets\Reporter\ReporterMessageReceiver.cs" />
+     <Compile Include="Assets\Reporter\Test\Rotate.cs" />
+     <Compile Include="Assets\Reporter\Test\TestReporter.cs" />
      <Compile Include="Assets\Scripts\BasicFollow.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraToWorld.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\Camera\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Conveyor.cs" />
      <Compile Include="Assets\Scripts\Cutscene.cs" />
+     <Compile Include="Assets\Scripts\CutsceneRenderer.cs" />
      <Compile Include="Assets\Scripts\DebugSize.cs" />
      <Compile Include="Assets\Scripts\DisableNPC.cs" />
      <Compile Include="Assets\Scripts\DoNotDestroy.cs" />
@@ -80,7 +88,11 @@
      <Compile Include="Assets\Scripts\GameManager\Inventory.cs" />
      <Compile Include="Assets\Scripts\GameManager\Journal.cs" />
      <Compile Include="Assets\Scripts\GameManager\SceneController.cs" />
+     <Compile Include="Assets\Scripts\IdleUI.cs" />
      <Compile Include="Assets\Scripts\ItemCheck.cs" />
+     <Compile Include="Assets\Scripts\JournalsParent.cs" />
+     <Compile Include="Assets\Scripts\MC.cs" />
+     <Compile Include="Assets\Scripts\NPC.cs" />
      <Compile Include="Assets\Scripts\NPC\NPCFollow.cs" />
      <Compile Include="Assets\Scripts\NPC\NPCInteract.cs" />
      <Compile Include="Assets\Scripts\Objects\BlankPickup.cs" />
@@ -105,6 +117,7 @@
      <Compile Include="Assets\Scripts\Player\PlayerSwitch.cs" />
      <Compile Include="Assets\Scripts\Player\ShizoMentalHealth.cs" />
      <Compile Include="Assets\Scripts\SelfDestroy.cs" />
+     <Compile Include="Assets\Scripts\SingletonButtons.cs" />
      <Compile Include="Assets\Scripts\UI\InventorySlot.cs" />
      <Compile Include="Assets\Scripts\UI\InventoryUI.cs" />
      <Compile Include="Assets\Scripts\UI\JournalSlot.cs" />
@@ -117,6 +130,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\StreamingAssets\build_info.txt" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />

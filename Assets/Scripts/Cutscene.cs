@@ -16,10 +16,11 @@ public class Cutscene : MonoBehaviour
     public int currScene = 0;
     float timer = 0;
     float sceneTimer = 0;
-    public bool sceneStarting = false;
-    public bool startTimer = false;
-    public bool scenePlaying = false;
-    public bool sceneChanging = false;
+    bool sceneStarting = false;
+    bool startTimer = false;
+    bool scenePlaying = false;
+    bool sceneChanging = false;
+    public GameObject cutsceneRenderer;
 
     void Update()
     {
@@ -36,7 +37,7 @@ public class Cutscene : MonoBehaviour
         {
             if (timer % 60 > 1)
             {
-                gameObject.transform.Find("cutsceneRenderer").gameObject.SetActive(true);
+                cutsceneRenderer.SetActive(true);
                 NextScene();
                 sceneStarting = false;
                 timer = 0;
@@ -88,6 +89,7 @@ public class Cutscene : MonoBehaviour
 
     public void StartScene()
     {
+        Debug.Log("[Cutscene.cs] - Starting cutscene.");
         PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
         for (int i = 0; i < players.Length; i++)
         {
@@ -104,12 +106,14 @@ public class Cutscene : MonoBehaviour
     {
         if (currScene != cutscenes.Length)
         {
+            Debug.Log("[Cutscene.cs] - Playing scene " + currScene);
             sceneRenderer.sprite = cutscenes[currScene];
             currScene++;
             scenePlaying = true;
         }
         else
         {
+            Debug.Log("[Cutscene.cs] - Cutscene done. Loading next scene.");
             scenePlaying = false;
             SceneController.instance.LoadNewScene();
         }

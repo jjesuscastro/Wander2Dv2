@@ -14,14 +14,13 @@ namespace Object
 
         public override bool Interact()
         {
-            base.Interact();
             Pickup();
             return true;
         }
 
         void Pickup()
         {
-            Debug.Log("Picking up blank pickup " + gameObject.name);
+            Debug.Log("[BlankPickup.cs] - Picking up blank pickup. BlankPickup: " + gameObject.name);
 
             onPickup.Invoke();
 

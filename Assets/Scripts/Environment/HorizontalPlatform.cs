@@ -29,7 +29,7 @@ public class HorizontalPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerOnPlatform && NPCOnPlatform && transform.Find("wall").gameObject != null)
+        if(transform.position.x > minX + 0.5f && playerOnPlatform && NPCOnPlatform && transform.Find("wall").gameObject != null)
         {
             transform.Find("wall").gameObject.SetActive(true);
         }
@@ -102,15 +102,8 @@ public class HorizontalPlatform : MonoBehaviour
     {
         if(mc == null || npc == null)
         {
-            PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
-            for (int i = 0; i < players.Length; i++)
-            {
-                if (players[i].gameObject.CompareTag("Player"))
-                    mc = players[i];
-
-                if (players[i].gameObject.CompareTag("NPC"))
-                    npc = players[i];
-            }
+            mc = MC.instance.gameObject.GetComponent<PlayerMovement>();
+            npc = NPC.instance.gameObject.GetComponent<PlayerMovement>();
         }
 
         if(mc.isActiveAndEnabled)

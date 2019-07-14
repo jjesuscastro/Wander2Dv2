@@ -470,10 +470,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e7430f05734ac784995b33820fb890dc, type: 3}
   - {fileID: 21300000, guid: c79957bf21a3d074694e4298a2d9f041, type: 3}
   currScene: 0
-  sceneStarting: 0
-  startTimer: 0
-  scenePlaying: 0
-  sceneChanging: 0
+  cutsceneRenderer: {fileID: 8225728285969647540}
 --- !u!1 &8225728285969647540
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +483,7 @@ GameObject:
   - component: {fileID: 8225728285969647541}
   - component: {fileID: 8225728285969647543}
   - component: {fileID: 8225728285969647542}
+  - component: {fileID: 9071503862981616951}
   m_Layer: 5
   m_Name: cutsceneRenderer
   m_TagString: Untagged
@@ -571,6 +569,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9071503862981616951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8225728285969647540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80db45fbc9e68c64093ce883c7137426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8225728286157288441
 GameObject:
   m_ObjectHideFlags: 0

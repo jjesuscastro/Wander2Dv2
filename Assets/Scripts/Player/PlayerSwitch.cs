@@ -7,9 +7,9 @@ namespace Player
 {
     public class PlayerSwitch : MonoBehaviour
     {
-        public PlayerMovement mc;
+        PlayerMovement mc;
 
-        public PlayerMovement npc;
+        PlayerMovement npc;
 
         public bool obtainedNPC = false;
         public float minDistance;
@@ -18,14 +18,15 @@ namespace Player
         bool mcIsFollowing = false;
         bool locatingPositionForMC = false;
         bool locatingPositionForNPC = false;
+        bool callOnce = false;
         public bool followActive = true;
 
-        public CameraFollow mainCamera;
-        public PlayerMentalHealth playerMentalHealth;
+        CameraFollow mainCamera;
+        PlayerMentalHealth playerMentalHealth;
 
-        public Transform currentPlayer;
-        public Transform mcTransform = null;
-        public Transform npcTransform = null;
+        Transform currentPlayer;
+        Transform mcTransform = null;
+        Transform npcTransform = null;
 
         #region Singleton
         public static PlayerSwitch instance;
@@ -49,6 +50,7 @@ namespace Player
         public void ReEnableSwitch()
         {
             obtainedNPC = true;
+            Debug.Log("[PlayerSwitch.cs] - Enabled switch.");
         }
 
         public void ForceSwitchToMC()
@@ -117,7 +119,7 @@ namespace Player
             {
                 if (obtainedNPC)
                 {
-                    if (mc.isActiveAndEnabled)
+                    if (mc.isActiveAndEnabled && !locatingPositionForNPC)
                     {
                         mc.enabled = false;
                         npcIsFollowing = false;
@@ -128,8 +130,9 @@ namespace Player
                         npc.GetComponent<CharacterController2D>().EnableColliders();
                         playerMentalHealth.SwitchTarget(npc.gameObject);
                         mainCamera.switchTarget(npc);
+                        Debug.Log("[PlayerSwitch.cs] - Switched from MC to NPC.");
                     }
-                    else
+                    else if (npc.isActiveAndEnabled && !locatingPositionForMC)
                     {
                         mc.enabled = true;
                         mcIsFollowing = false;
@@ -140,11 +143,12 @@ namespace Player
                         mc.GetComponent<CharacterController2D>().EnableColliders();
                         playerMentalHealth.SwitchTarget(mc.gameObject);
                         mainCamera.switchTarget(mc);
+                        Debug.Log("[PlayerSwitch.cs] - Switched from NPC to MC.");
                     }
                 }
                 else
                 {
-                    Debug.Log("You have not obtained the NPC yet!");
+                    Debug.Log("[PlayerSwitch.cs] - Cannot switch. NPC not active yet.");
                 }
             }
 
@@ -163,7 +167,6 @@ namespace Player
 
             if (npcIsFollowing)
             {
-                Debug.Log("NPC is following");
                 if (Vector3.Distance(mcTransform.position, npcTransform.position) > distanceToStop)
                 {
                     if (npc.GetComponent<CharacterController2D>().IsGrounded())
@@ -177,12 +180,13 @@ namespace Player
                 {
                     npc.getAnimator().SetBool("Walk", false);
                     npcIsFollowing = false;
+                    callOnce = false;
+                    Debug.Log("[PlayerSwitch.cs] - NPC within DistanceToStop. Stopping follow.");
                 }
             }
 
             if (mcIsFollowing)
             {
-                Debug.Log("MC is following");
                 if (Vector3.Distance(npcTransform.position, mcTransform.position) > distanceToStop)
                 {
                     if (mc.GetComponent<CharacterController2D>().IsGrounded())
@@ -196,6 +200,8 @@ namespace Player
                 {
                     mc.getAnimator().SetBool("Walk", false);
                     mcIsFollowing = false;
+                    callOnce = false;
+                    Debug.Log("[PlayerSwitch.cs] - MC within DistanceToStop. Stopping follow.");
                 }
             }
         }
@@ -203,11 +209,13 @@ namespace Player
         public void DisableFollow()
         {
             followActive = false;
+            Debug.Log("[PlayerSwitch.cs] - Disabled follow.");
         }
 
         public void EnableFollow()
         {
             followActive = true;
+            Debug.Log("[PlayerSwitch.cs] - Enabled follow.");
         }
 
         void CheckDistance()
@@ -237,34 +245,46 @@ namespace Player
                             //test
                             if (mc.isActiveAndEnabled)
                             {
-                                if (mc.GetComponent<CharacterController2D>().IsGrounded() && npc.transform.position.x < mc.transform.position.x)
+                                if (npc.transform.position.x < mc.transform.position.x)
                                 {
                                     //This is where NPC "follows" MC
-                                    Vector3 newPosition = mcTransform.position;
-                                    newPosition.x -= 25;
-                                    newPosition.y += 20;
+                                    Vector3 newPosition = Camera.main.gameObject.GetComponent<CameraToWorld>().UpperLeft();
+                                    newPosition.x -= 2;
+                                    newPosition.z = 0;
                                     npc.GetComponent<PlayerController>().RemoveColor();
                                     npc.GetComponent<PlayerController>().WalkIn();
                                     npcTransform.position = newPosition;
+                                    npc.GetComponent<CharacterController2D>().NotGrounded();
                                     locatingPositionForNPC = true;
 
                                     npcIsFollowing = true;
+                                    if(!callOnce)
+                                    {
+                                        Debug.Log("[PlayerSwitch].cs - NPC is following.");
+                                        callOnce = true;
+                                    }
                                 }
                             }
                             else
                             {
-                                if (npc.GetComponent<CharacterController2D>().IsGrounded() && mc.transform.position.x < npc.transform.position.x)
+                                if (mc.transform.position.x < npc.transform.position.x)
                                 {
-                                    //This is where MC "follows" NPC
-                                    Vector3 newPosition = npcTransform.position;
-                                    newPosition.x -= 8;
-                                    newPosition.y += 5;
+                                    //This is where MC "follows" NPC.
+                                    Vector3 newPosition = Camera.main.gameObject.GetComponent<CameraToWorld>().UpperLeft();
+                                    newPosition.x -= 2;
+                                    newPosition.z = 0;
                                     mc.GetComponent<PlayerController>().RemoveColor();
                                     mc.GetComponent<PlayerController>().WalkIn();
                                     mcTransform.position = newPosition;
+                                    mc.GetComponent<CharacterController2D>().NotGrounded();
                                     locatingPositionForMC = true;
 
                                     mcIsFollowing = true;
+                                    if(!callOnce)
+                                    {
+                                        Debug.Log("[PlayerSwitch].cs - MC is following.");
+                                        callOnce = true;
+                                    }
                                 }
                             }
                         }
@@ -275,26 +295,36 @@ namespace Player
 
         public void SetLevel()
         {
-            PlayerMovement[] players = GameObject.FindObjectsOfType<PlayerMovement>();
-            for (int i = 0; i < players.Length; i++)
-            {
-                if (players[i].gameObject.CompareTag("Player"))
-                    mc = players[i];
+            mc = MC.instance.gameObject.GetComponent<PlayerMovement>();
+            npc = NPC.instance.gameObject.GetComponent<PlayerMovement>();
+            obtainedNPC = false;
 
-                if (players[i].gameObject.CompareTag("NPC"))
-                    npc = players[i];
-            }
+            currentPlayer = mc.transform;
+            mainCamera = Camera.main.GetComponent<CameraFollow>();
+            playerMentalHealth = PlayerMentalHealth.instance;
+            npc.gameObject.SetActive(false);
+        }
+
+        public void SetLevel(string sceneName)
+        {
+            mc = MC.instance.gameObject.GetComponent<PlayerMovement>();
+            npc = NPC.instance.gameObject.GetComponent<PlayerMovement>();
             obtainedNPC = false;
 
             currentPlayer = mc.transform;
             mainCamera = Camera.main.GetComponent<CameraFollow>();
             playerMentalHealth = GetComponent<PlayerMentalHealth>();
             npc.gameObject.SetActive(false);
+            if(sceneName == "Mood")
+                followActive = true;
+            else
+                followActive = false;
         }
 
         public void ObtainedNPC()
         {
             obtainedNPC = true;
+            Debug.Log("[PlayerSwitch.cs] - Enabled switch.");
         }
 
         public Transform GetCurrentPlayer()

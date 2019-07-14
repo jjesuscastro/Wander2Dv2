@@ -9,6 +9,19 @@ namespace UI
         Inventory inventory;
         InventorySlot[] slots;
 
+        #region Singleton
+        public static InventoryUI instance;
+
+        void Awake()
+        {
+            if (instance != null)
+            {
+                Debug.LogWarning("Multiple Inventory UIs found");
+            }
+            instance = this;
+        }
+        #endregion
+
         void Start()
         {
             inventory = Inventory.instance;
