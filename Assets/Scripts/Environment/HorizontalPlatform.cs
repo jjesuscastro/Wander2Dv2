@@ -41,7 +41,7 @@ public class HorizontalPlatform : MonoBehaviour
 
         if (!stop)
         {
-            if (transform.localPosition.x >= maxX)
+            if (transform.localPosition.x >= maxX - 0.5)
             {
                 acceleration = 0;
                 moveRight = false;
@@ -72,7 +72,7 @@ public class HorizontalPlatform : MonoBehaviour
                 transform.position = new Vector2(transform.position.x - speed * Time.deltaTime * acceleration, transform.position.y);
         }
 
-        if(Input.GetButtonDown("Interact") && !rightEnd)
+        if(Input.GetButtonDown("Interact"))
         {
             if(playerOnPlatform == true && NPCOnPlatform == true)
             {
@@ -97,11 +97,14 @@ public class HorizontalPlatform : MonoBehaviour
     {
         if(mcEnabled)
         {
-            mcEnabled = false;
             mc.enabled = true;
+            mcEnabled = false;
+            Debug.Log("[HorizontalPlatform.cs] - Enabling movements. MC active.");
         } else if (npcEnabled) {
-            npcEnabled = false;
+            
             npc.enabled = true;
+            npcEnabled = false;
+            Debug.Log("[HorizontalPlatform.cs] - Enabling movements. NPC active.");
         }
     }
     
@@ -115,11 +118,13 @@ public class HorizontalPlatform : MonoBehaviour
 
         if(mc.isActiveAndEnabled)
         {
-            mcEnabled = true;
             mc.enabled = false;
+            mcEnabled = true;
+            Debug.Log("[HorizontalPlatform.cs] - Disabling movements. MC active.");
         } else if (npc.isActiveAndEnabled){
-            npcEnabled = true;
             npc.enabled = false;
+            npcEnabled = true;
+            Debug.Log("[HorizontalPlatform.cs] - Disabling movements. NPC active.");
         }
     }
 
