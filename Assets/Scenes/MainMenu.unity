@@ -451,6 +451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 371117460}
+  - component: {fileID: 371117462}
   - component: {fileID: 371117459}
   - component: {fileID: 371117458}
   - component: {fileID: 371117461}
@@ -621,6 +622,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &371117462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371117457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd9735b8d371ca43820eb3d77314ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &477542635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,6 +1855,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8225728285365012461, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: m_Name
+      value: cutsceneCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
       propertyPath: endScene.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1857,11 +1875,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 371117459}
-    - target: {fileID: 8225728285365012461, guid: b002bae57a96d244dbff283f49e6e70b,
-        type: 3}
-      propertyPath: m_Name
-      value: cutsceneCanvas
-      objectReference: {fileID: 0}
     - target: {fileID: 8225728285365012457, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
       propertyPath: m_LocalPosition.x

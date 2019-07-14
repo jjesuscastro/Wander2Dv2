@@ -61,6 +61,7 @@
      <Compile Include="Assets\Reporter\Test\TestReporter.cs" />
      <Compile Include="Assets\Scripts\BasicFollow.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraToWorld.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\Camera\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Conveyor.cs" />

@@ -43459,11 +43459,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4549415686679000911, guid: b002bae57a96d244dbff283f49e6e70b,
-        type: 3}
-      propertyPath: m_Name
-      value: cutsceneCanvas
-      objectReference: {fileID: 0}
     - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
       propertyPath: cutscenes.Array.size
@@ -43701,6 +43696,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 7878110257485415455}
+    - target: {fileID: 4549415686679000911, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: m_Name
+      value: cutsceneCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 6865646677384433593, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
       propertyPath: endScene.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -43918,6 +43918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7878110257485415648}
+  - component: {fileID: 7878110257485415459}
   - component: {fileID: 7878110257485415455}
   - component: {fileID: 7878110257485415453}
   - component: {fileID: 7878110257485415454}
@@ -44253,6 +44254,18 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &7878110257485415459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7878110257485415452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd9735b8d371ca43820eb3d77314ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7878110257485415648
 Transform:
   m_ObjectHideFlags: 0
