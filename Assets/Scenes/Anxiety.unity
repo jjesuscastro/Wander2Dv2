@@ -19235,7 +19235,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 497539343984086125}
     - target: {fileID: 8808799835559618318, guid: 19a892e1baef8a249bc90e0f3ea7282b,
         type: 3}
       propertyPath: mentalHealth
@@ -38205,6 +38205,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24bcf18534e26c943986b166f237b92f, type: 3}
+--- !u!1 &497539343984086125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1942920235223777124, guid: 24bcf18534e26c943986b166f237b92f,
+    type: 3}
+  m_PrefabInstance: {fileID: 497539343984086124}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4153453374347462153
 Transform:
   m_ObjectHideFlags: 0

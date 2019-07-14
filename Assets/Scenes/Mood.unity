@@ -21116,6 +21116,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1172622843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1942920235223777124, guid: 24bcf18534e26c943986b166f237b92f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3807168054253165963}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1172851302
 GameObject:
   m_ObjectHideFlags: 0
@@ -44650,7 +44656,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1172622843}
     - target: {fileID: 8808799835559618318, guid: 19a892e1baef8a249bc90e0f3ea7282b,
         type: 3}
       propertyPath: mentalHealth
