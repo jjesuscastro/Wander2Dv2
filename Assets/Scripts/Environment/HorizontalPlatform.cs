@@ -50,6 +50,7 @@ public class HorizontalPlatform : MonoBehaviour
                 if(onStop != null)
                     onStop.Invoke();
 
+                Debug.Log(" " + transform.localPosition.x + " " + (maxX-0.5));
                 if(disableMovements)
                     EnableMovements();
             }
@@ -59,8 +60,8 @@ public class HorizontalPlatform : MonoBehaviour
                 acceleration = 0;
                 moveRight = true;
                     
-                if(disableMovements)
-                    EnableMovements();
+                // if(disableMovements)
+                //     EnableMovements();
             }
 
             if(acceleration < 1)
