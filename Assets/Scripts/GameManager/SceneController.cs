@@ -64,6 +64,11 @@ namespace GameManager
             }
         }
 
+        public void LoadSpecificScene(string sceneName)
+        {
+            StartCoroutine(LoadAsync(sceneName));
+        }
+
         IEnumerator LoadAsync(string sceneName)
         {
             Debug.Log("[SceneManager.cs] - Loading new scene. Scene: " + sceneName);
