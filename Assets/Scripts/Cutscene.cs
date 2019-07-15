@@ -61,7 +61,7 @@ public class Cutscene : MonoBehaviour
                 blankSceneRenderer.color = color;
 
             sceneTimer += Time.deltaTime;
-            if (sceneTimer % 60 > 3)
+            if (sceneTimer % 60 > 5)
             {
                 sceneTimer = 0;
                 sceneChanging = true;
