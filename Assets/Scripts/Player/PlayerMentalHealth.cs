@@ -10,6 +10,7 @@ namespace Player
 
         public float health = 1f;
         public GameObject player; //asign MC to this
+        GameObject partner;
 
         [SerializeField] private MentalHealth mentalHealth;
         public MentalHealthEffect mentalHealthEffect; //this is the mhEffect per world
@@ -35,6 +36,14 @@ namespace Player
 
         void Update()
         {
+            if(partner == null)
+            {
+                if(player.CompareTag("Player"))
+                    partner = NPC.instance.gameObject;
+                else
+                    partner = MC.instance.gameObject;
+            }
+
             if (mentalHealth != null)
                 mentalHealth.SetSize(health);
 
@@ -72,6 +81,8 @@ namespace Player
         {
             changeHealth(1f);
             player.GetComponent<PlayerController>().reset();
+            partner.GetComponent<PlayerController>().reset();
+
             mentalHealthEffect.Stop();
         }
 
@@ -131,6 +142,7 @@ namespace Player
 
         public void SwitchTarget(GameObject newPlayer)
         {
+            partner = player;
             player = newPlayer;
         }
     }

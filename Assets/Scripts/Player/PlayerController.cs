@@ -19,6 +19,7 @@ namespace Player
         Vector3 resetPoint;
         Color color;
         Rigidbody2D rigidBody2D;
+        PlayerController partner;
 
         void Start()
         {
@@ -26,6 +27,10 @@ namespace Player
             respawnPoint = resetPoint;
             color = gameObject.GetComponent<SpriteRenderer>().color;
             rigidBody2D = gameObject.GetComponent<Rigidbody2D>();
+            if(gameObject.CompareTag("Player"))
+                partner = NPC.instance.gameObject.GetComponent<PlayerController>();
+            else
+                partner = MC.instance.gameObject.GetComponent<PlayerController>();
         }
 
         void Update()
@@ -96,6 +101,11 @@ namespace Player
                 transform.parent = null;
             }
         }
+
+        public void SetResetPoint(Vector3 newResetPoint)
+        {
+            resetPoint = newResetPoint;
+        }
         
         void OnTriggerStay2D(Collider2D other)
         {
@@ -107,6 +117,7 @@ namespace Player
             if (other.gameObject.CompareTag("Resetpoint"))
             {
                 resetPoint = other.transform.position;
+                partner.SetResetPoint(resetPoint);
             }
         }
 
@@ -147,6 +158,7 @@ namespace Player
             if (other.gameObject.CompareTag("Resetpoint"))
             {
                 resetPoint = other.transform.position;
+                partner.SetResetPoint(resetPoint);
                 Debug.Log("[PlayerController.cs] - Resetpoint. New resetpoint: " + resetPoint);
             }
 

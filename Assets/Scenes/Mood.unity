@@ -29663,8 +29663,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  mc: {fileID: 0}
-  npc: {fileID: 1478588043}
   disableMovements: 1
   maxX: -116
   minX: -199.1
@@ -29673,7 +29671,6 @@ MonoBehaviour:
   stop: 1
   playerOnPlatform: 0
   NPCOnPlatform: 0
-  NPCName: 
 --- !u!60 &1501645072
 PolygonCollider2D:
   m_ObjectHideFlags: 0
