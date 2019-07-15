@@ -27,6 +27,7 @@ public class SingletonButtons : MonoBehaviour
         } else
         {
             inventoryUI = InventoryUI.instance;
+            inventoryUI.UpdateUI();
         }
         
     }
@@ -39,6 +40,7 @@ public class SingletonButtons : MonoBehaviour
         } else
         {
             journalUI = JournalUI.instance;
+            journalUI.ToggleUI();
         }
     }
 
@@ -50,6 +52,7 @@ public class SingletonButtons : MonoBehaviour
         } else
         {
             idleUI = IdleUI.instance;
+            idleUI.gameObject.SetActive(value);
         }
     }
 
@@ -61,6 +64,7 @@ public class SingletonButtons : MonoBehaviour
         } else
         {
             dialogueManager = DialogueManager.instance;
+            dialogueManager.DisplayNextSentence();
         }
     }
 }
