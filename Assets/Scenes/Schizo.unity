@@ -3410,8 +3410,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  mc: {fileID: 0}
-  npc: {fileID: 0}
   disableMovements: 0
   maxX: 866.8
   minX: 182.53
@@ -3420,7 +3418,6 @@ MonoBehaviour:
   stop: 1
   playerOnPlatform: 0
   NPCOnPlatform: 0
-  NPCName: Freddo
 --- !u!60 &181939271
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10286,6 +10283,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3460580476185540855, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8225728285365012457, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10390,11 +10392,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3460580476185540855, guid: b002bae57a96d244dbff283f49e6e70b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b002bae57a96d244dbff283f49e6e70b, type: 3}
@@ -16072,7 +16069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &940097808
 Transform:
   m_ObjectHideFlags: 0
@@ -17998,7 +17995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1068067553
 Transform:
   m_ObjectHideFlags: 0
@@ -25914,15 +25911,15 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1942920233469483017, guid: 24bcf18534e26c943986b166f237b92f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1942920234859549332, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942920233469483017, guid: 24bcf18534e26c943986b166f237b92f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1942920234389815826, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
@@ -26747,7 +26744,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1605309270}
+      - m_Target: {fileID: 940097807}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -26758,7 +26755,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 940097807}
+      - m_Target: {fileID: 1068067552}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1605309270}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
