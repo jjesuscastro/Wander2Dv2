@@ -34,7 +34,7 @@ public class HorizontalPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.x > minX + 0.5f && playerOnPlatform && NPCOnPlatform && transform.Find("wall").gameObject != null)
+        if(transform.localPosition.x > minX + 0.5f && playerOnPlatform && NPCOnPlatform && transform.Find("wall").gameObject != null)
         {
             transform.Find("wall").gameObject.SetActive(true);
         }
