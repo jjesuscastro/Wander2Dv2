@@ -12,7 +12,6 @@ public class MoveCharacters : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("EYYO FUCK: " + MC.instance);
         playerSwitch = PlayerSwitch.instance;
         mc = MC.instance.gameObject.GetComponent<PlayerController>();
         npc = NPC.instance.gameObject.GetComponent<PlayerController>();

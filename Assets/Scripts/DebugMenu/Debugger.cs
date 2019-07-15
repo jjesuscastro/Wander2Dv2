@@ -1,18 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using GameManager;
 
 public class Debugger : MonoBehaviour
 {
     Canvas canvas;
+
+    // void OnEnable()
+    // {
+    //     SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    // }
+
+    // void OnDisable()
+    // {
+    //     SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    // }
+
     void Start()
     {
         canvas = gameObject.GetComponent<Canvas>();
         canvas.worldCamera = Camera.main;
     }
 
-    //Add debug log warnings
+    // void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    // {
+    //     if(scene.name == "MainMenu")
+    //     {
+            
+    //     } else if (scene.name == "Mood") {
+
+    //     } else if (scene.name == "Anxiety") {
+
+    //     } else {
+
+    //     }
+    // }
 
     // Update is called once per frame
     void Update()
