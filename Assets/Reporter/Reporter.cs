@@ -1804,6 +1804,22 @@ public class Reporter : MonoBehaviour
 
 	void Update()
 	{
+		if(Input.GetKeyDown(KeyCode.F11) && !show)
+		{
+			doShow();
+		} else if (Input.GetKeyDown(KeyCode.F11) && show) {
+			show = false;
+			ReporterGUI gui = gameObject.GetComponent<ReporterGUI>();
+			DestroyImmediate(gui);
+
+			try {
+				gameObject.SendMessage("OnHideReporter");
+			}
+			catch (System.Exception e) {
+				Debug.LogException(e);
+			}
+		}
+
 		fpsText = fps.ToString("0.000");
 		gcTotalMemory = (((float)System.GC.GetTotalMemory(false)) / 1024 / 1024);
 		//addSample();
