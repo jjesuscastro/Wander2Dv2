@@ -13819,7 +13819,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   radius: 3
   dialogue: {fileID: 799930632}
-  doNotDestroy: 1
+  doNotDestroy: 0
 --- !u!58 &799930634
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14660,26 +14660,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: dialogueBox
       objectReference: {fileID: 0}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 1894929982}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_fontMaterial
-      value: 
-      objectReference: {fileID: 1894929982}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1987609392723748473, guid: de2f3801f99199246a472a09087bc242,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14791,6 +14771,26 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1987609392715125913, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1894929982}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_fontMaterial
+      value: 
+      objectReference: {fileID: 1894929982}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
@@ -28193,16 +28193,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 4153453374347462390}
-    - target: {fileID: 3460580476185540855, guid: b002bae57a96d244dbff283f49e6e70b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7161006584875689910, guid: b002bae57a96d244dbff283f49e6e70b,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 4153453374347462390}
     - target: {fileID: 8225728285365012457, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28308,6 +28298,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3460580476185540855, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7161006584875689910, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 4153453374347462390}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b002bae57a96d244dbff283f49e6e70b, type: 3}
 --- !u!114 &1562374754 stripped
