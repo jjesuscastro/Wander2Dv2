@@ -117,7 +117,7 @@ namespace Player
             if (other.gameObject.CompareTag("Resetpoint"))
             {
                 resetPoint = other.transform.position;
-                checkpoint = resetPoint;
+                respawnPoint = resetPoint;
                 partner.SetResetPoint(resetPoint);
             }
         }
@@ -159,7 +159,7 @@ namespace Player
             if (other.gameObject.CompareTag("Resetpoint"))
             {
                 resetPoint = other.transform.position;
-                checkpoint = resetpoint;
+                respawnPoint = resetPoint;
                 partner.SetResetPoint(resetPoint);
                 Debug.Log("[PlayerController.cs] - Resetpoint. New resetpoint: " + resetPoint);
             }
