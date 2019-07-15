@@ -60,7 +60,7 @@ namespace GameManager
             else if (scene.name.CompareTo("Schizo") == 0)
             {
                 Debug.Log("[SceneController.cs] - End of game.");
-                StartCoroutine(LoadAsync("Main Menu"));
+                StartCoroutine(LoadAsync("MainMenu"));
             }
         }
 
