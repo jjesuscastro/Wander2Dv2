@@ -111,7 +111,7 @@ namespace GameManager
                     blankSceneRenderer.color = color;
 
                 sceneTimer += Time.deltaTime;
-                if (sceneTimer % 60 > 5)
+                if (sceneTimer % 60 > 4)
                 {
                     sceneTimer = 0;
                     sceneChanging = true;
