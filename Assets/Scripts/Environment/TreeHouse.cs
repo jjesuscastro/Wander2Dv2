@@ -60,7 +60,7 @@ public class TreeHouse : MonoBehaviour
                 tempVector.y -= 0.1f;
             else
             {
-                leftRock.limitX = false;
+                // leftRock.limitX = false;
                 hasGoneDown = true;
             }
             leftSide.localPosition = tempVector;

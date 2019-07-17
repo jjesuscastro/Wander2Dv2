@@ -11741,7 +11741,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695022453}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.66, y: 68.34, z: 0}
+  m_LocalPosition: {x: 9.58, y: 68.34, z: 0}
   m_LocalScale: {x: 0.62757, y: 0.62757, z: 1}
   m_Children: []
   m_Father: {fileID: 1440224837}
@@ -11762,9 +11762,9 @@ MonoBehaviour:
   limitX: 1
   limitY: 0
   instantiateValues: 0
-  minX: 888.10846
+  minX: 887.0285
   maxX: 891.5
-  minY: -63.182022
+  minY: -86.34093
   maxY: -63.182022
 --- !u!50 &695022456
 Rigidbody2D:
@@ -16321,6 +16321,7 @@ Transform:
   - {fileID: 1961509022}
   - {fileID: 248216808}
   - {fileID: 965627987}
+  - {fileID: 1437481722}
   m_Father: {fileID: 0}
   m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17588,7 +17589,7 @@ GameObject:
   - component: {fileID: 1007631100}
   m_Layer: 0
   m_Name: checkpoint
-  m_TagString: Checkpoint
+  m_TagString: Resetpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27200,6 +27201,63 @@ PolygonCollider2D:
       - {x: -5.237488, y: -2.4576159}
       - {x: -5.1762543, y: -2.8424692}
       - {x: -4.116913, y: -2.0610828}
+--- !u!1 &1437481721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1437481722}
+  - component: {fileID: 1437481723}
+  m_Layer: 0
+  m_Name: wallUlit (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1437481722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437481721}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.38, y: 22.83, z: 0}
+  m_LocalScale: {x: 1, y: 21.82, z: 1}
+  m_Children: []
+  m_Father: {fileID: 947402589}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1437481723
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437481721}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1440224836
 GameObject:
   m_ObjectHideFlags: 0
@@ -43003,6 +43061,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: dialogueBox
       objectReference: {fileID: 0}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1894929982}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_fontMaterial
+      value: 
+      objectReference: {fileID: 1894929982}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1987609392723748473, guid: de2f3801f99199246a472a09087bc242,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43114,26 +43192,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1987609392715125913, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 1894929982}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_fontMaterial
-      value: 
-      objectReference: {fileID: 1894929982}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
@@ -44361,16 +44419,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 7878110257485415455}
-    - target: {fileID: 4549415686679000911, guid: b002bae57a96d244dbff283f49e6e70b,
-        type: 3}
-      propertyPath: m_Name
-      value: cutsceneCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6865646677384433593, guid: b002bae57a96d244dbff283f49e6e70b,
-        type: 3}
-      propertyPath: endScene.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5384040789409803295}
     - target: {fileID: 3460580476185540855, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44481,6 +44529,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 7878110257485415455}
+    - target: {fileID: 4549415686679000911, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: m_Name
+      value: cutsceneCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6865646677384433593, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: endScene.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5384040789409803295}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b002bae57a96d244dbff283f49e6e70b, type: 3}
 --- !u!114 &6865646675272042433 stripped

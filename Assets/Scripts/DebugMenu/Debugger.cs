@@ -6,7 +6,7 @@ using GameManager;
 
 public class Debugger : MonoBehaviour
 {
-    Canvas canvas;
+Canvas canvas;
 
     // void OnEnable()
     // {

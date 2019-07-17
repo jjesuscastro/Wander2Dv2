@@ -19663,6 +19663,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8808799835559618304, guid: 19a892e1baef8a249bc90e0f3ea7282b,
+        type: 3}
+      propertyPath: minDisabledTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8808799835559618304, guid: 19a892e1baef8a249bc90e0f3ea7282b,
+        type: 3}
+      propertyPath: maxEnabledTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8808799835559618305, guid: 19a892e1baef8a249bc90e0f3ea7282b,
         type: 3}
       propertyPath: face
@@ -24694,7 +24704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1387394081
 Transform:
   m_ObjectHideFlags: 0
@@ -38113,7 +38123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2120264264
 Transform:
   m_ObjectHideFlags: 0
