@@ -14,6 +14,8 @@ namespace GameManager
         public SpriteRenderer sceneRenderer;
         public SpriteRenderer blankSceneRenderer;
         public Sprite[] cutscenes;
+        public AudioClip newClip;
+        AudioSource bgm;
 
         public int currScene = 0;
         float timer = 0;
@@ -22,7 +24,10 @@ namespace GameManager
         bool startTimer = false;
         bool scenePlaying = false;
         bool sceneChanging = false;
+        bool fadeMusic = false;
+        bool changeMusic = false;
         public GameObject cutsceneRenderer;
+        public int stopMusicOnScene = 0;
 
         #region Singleton
             public static Cutscene instance;
@@ -39,6 +44,36 @@ namespace GameManager
 
         void Update()
         {
+            if(bgm == null)
+            {
+                bgm = Camera.main.gameObject.GetComponent<AudioSource>();
+            }
+
+            if(fadeMusic)
+            {
+                bgm.volume -= 0.01f;
+                if(bgm.volume <= 0)
+                {
+                    bgm.volume = 0;
+                    fadeMusic = false;
+                    if(newClip != null)
+                    {
+                        bgm.clip = newClip;
+                        changeMusic = true;
+                    }
+                }
+            }
+
+            if(changeMusic)
+            {
+                bgm.volume += 0.01f;
+                if(bgm.volume >= 1)
+                {
+                    bgm.volume = 1;
+                    changeMusic = false;
+                }
+            }
+
             if (sceneStarting && !scenePlaying)
             {
                 Color color = blackCover.color;
@@ -125,6 +160,12 @@ namespace GameManager
                 sceneRenderer.sprite = cutscenes[currScene];
                 currScene++;
                 scenePlaying = true;
+
+                if(currScene == stopMusicOnScene)
+                {
+                    fadeMusic = true;
+                    changeMusic = false;
+                }
             }
             else
             {

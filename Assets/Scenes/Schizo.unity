@@ -9912,7 +9912,7 @@ PrefabInstance:
     - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
       propertyPath: cutscenes.Array.size
-      value: 49
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
@@ -10212,7 +10212,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cutscenes.Array.data[49]
       value: 
-      objectReference: {fileID: 21300000, guid: 7fffe90533f171f439ad3034a1570787,
+      objectReference: {fileID: 21300000, guid: f30553b82b66a9041a784e9095fd7689,
         type: 3}
     - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
@@ -10278,16 +10278,21 @@ PrefabInstance:
       propertyPath: endScene.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadNewScene
       objectReference: {fileID: 0}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: newClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c1066c8bf579be4da4979713bf6e7ae, type: 3}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: stopMusicOnScene
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8225728285365012456, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 3460580476185540855, guid: b002bae57a96d244dbff283f49e6e70b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8225728285365012457, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10392,6 +10397,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3460580476185540855, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b002bae57a96d244dbff283f49e6e70b, type: 3}
