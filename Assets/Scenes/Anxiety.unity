@@ -5919,6 +5919,7 @@ Transform:
   - {fileID: 2083539699}
   - {fileID: 1738085270}
   - {fileID: 1232961759}
+  - {fileID: 771145542}
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12142,6 +12143,81 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &708101386
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1685984709}
+    m_Modifications:
+    - target: {fileID: 677622378334251645, guid: 937647094a3fea54784ad7b2e77b774d,
+        type: 3}
+      propertyPath: m_Name
+      value: hotKeysManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 677622378334251522, guid: 937647094a3fea54784ad7b2e77b774d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 677622378334251522, guid: 937647094a3fea54784ad7b2e77b774d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 677622378334251522, guid: 937647094a3fea54784ad7b2e77b774d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 677622378334251522, guid: 937647094a3fea54784ad7b2e77b774d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 677622378334251522, guid: 937647094a3fea54784ad7b2e77b774d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 677622378334251522, guid: 937647094a3fea54784ad7b2e77b774d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 677622378334251522, guid: 937647094a3fea54784ad7b2e77b774d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 677622378334251522, guid: 937647094a3fea54784ad7b2e77b774d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 677622378334251522, guid: 937647094a3fea54784ad7b2e77b774d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 677622378334251522, guid: 937647094a3fea54784ad7b2e77b774d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 677622378334251522, guid: 937647094a3fea54784ad7b2e77b774d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 937647094a3fea54784ad7b2e77b774d, type: 3}
+--- !u!4 &708101387 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 677622378334251522, guid: 937647094a3fea54784ad7b2e77b774d,
+    type: 3}
+  m_PrefabInstance: {fileID: 708101386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &708464517
 GameObject:
   m_ObjectHideFlags: 0
@@ -13509,6 +13585,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &771145541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 771145542}
+  - component: {fileID: 771145543}
+  m_Layer: 0
+  m_Name: fuckingwall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &771145542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771145541}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 130.03, y: -3.29, z: 0}
+  m_LocalScale: {x: 1, y: 20.06, z: 1}
+  m_Children: []
+  m_Father: {fileID: 316264454}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &771145543
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771145541}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &773136062
 GameObject:
   m_ObjectHideFlags: 0
@@ -15630,7 +15763,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  popupMessage: I have to wait for my friend!
+  popupMessage: I need to wait for my friend!
   doNotDestroy: 1
   hasPopup: 1
 --- !u!58 &872084659
@@ -18579,7 +18712,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onPickup:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 771145541}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
@@ -20426,7 +20570,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  popupMessage: I have to wait for my friend!
+  popupMessage: I need to wait for my friend!
   doNotDestroy: 1
   hasPopup: 1
 --- !u!58 &1082522121
@@ -22622,7 +22766,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235607811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -67.74, y: -12.7, z: 0}
+  m_LocalPosition: {x: -68.55, y: -12.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 334576790}
@@ -22717,7 +22861,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  popupMessage: I have to wait for my friend!
+  popupMessage: I need to wait for my friend!
   doNotDestroy: 1
   hasPopup: 1
 --- !u!58 &1238411251
@@ -28577,21 +28721,20 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 12.440445, y: -4.5258713}
-      - {x: 10.248947, y: -4.552559}
-      - {x: 10.254391, y: -3.2560883}
-      - {x: 8.262699, y: -3.250969}
-      - {x: 8.260647, y: 1.2152939}
-      - {x: 0.26480484, y: 1.2108307}
-      - {x: -0.3695717, y: 2.1283493}
-      - {x: -6.2841797, y: 2.137226}
-      - {x: -6.287121, y: 2.134285}
-      - {x: -6.288246, y: 0.2238121}
+    - - {x: 12.553712, y: -4.511719}
+      - {x: 10.268556, y: -3.1933596}
+      - {x: 6.987305, y: -3.237305}
+      - {x: 7.045899, y: 1.2597657}
+      - {x: 0.32226565, y: 1.3623048}
+      - {x: -0.35156253, y: 2.167969}
+      - {x: -6.28418, y: 2.167969}
+      - {x: -6.313477, y: 2.138672}
+      - {x: -6.313477, y: 0.24902345}
       - {x: -15.000001, y: 0.24902345}
       - {x: -15.000001, y: -11.250001}
       - {x: 15.000001, y: -11.250001}
       - {x: 15.000001, y: -5.214844}
-      - {x: 12.966316, y: -5.2148438}
+      - {x: 13.03711, y: -5.214844}
 --- !u!212 &1579622094
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29162,7 +29305,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   radius: 3
-  popupMessage: I have to wait for my friend!
+  popupMessage: I need to wait for my friend!
   doNotDestroy: 1
   hasPopup: 1
 --- !u!58 &1599005154
@@ -30371,6 +30514,7 @@ Transform:
   - {fileID: 103662626}
   - {fileID: 1059663855}
   - {fileID: 1300518805}
+  - {fileID: 708101387}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

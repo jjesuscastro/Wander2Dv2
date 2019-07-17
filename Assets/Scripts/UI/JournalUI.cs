@@ -53,10 +53,6 @@ namespace UI
                 npcEnabled = true;
                 npc.enabled = false;
             }
-            // currentPage = 0;
-            // center.gameObject.SetActive(true);
-            // left.gameObject.SetActive(false);
-            // right.gameObject.SetActive(false);
             SetImages();
         }
 

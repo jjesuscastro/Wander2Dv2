@@ -25,11 +25,13 @@ public class MoveCharacters : MonoBehaviour
             mc.transform.position = npc.transform.position;
             mc.WalkIn();
             Debug.Log("[MoveCharacters.cs] - Move MC to NPCs location.");
+            Destroy(gameObject);
         } else if(other.CompareTag("Player") && playerSwitch.obtainedNPC) {
             npc.RemoveColor();
             npc.transform.position = mc.transform.position;
             npc.WalkIn();
             Debug.Log("[MoveCharacters.cs] - Move NPC to MCs location.");
+            Destroy(gameObject);
         }
     }
 
