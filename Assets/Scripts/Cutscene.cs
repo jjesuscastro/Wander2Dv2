@@ -15,7 +15,7 @@ namespace GameManager
         public SpriteRenderer blankSceneRenderer;
         public Sprite[] cutscenes;
         public AudioClip newClip;
-        AudioSource bgm;
+        AudioSource[] bgm;
 
         public int currScene = 0;
         float timer = 0;
@@ -46,19 +46,23 @@ namespace GameManager
         {
             if(bgm == null)
             {
-                bgm = Camera.main.gameObject.GetComponent<AudioSource>();
+                bgm = Camera.main.gameObject.GetComponents<AudioSource>();
             }
 
             if(fadeMusic)
             {
-                bgm.volume -= 0.01f;
-                if(bgm.volume <= 0)
+                for(int i = 0; i < bgm.Length; i++)
+                    bgm[i].volume -= 0.01f;
+                if(bgm[0].volume <= 0)
                 {
-                    bgm.volume = 0;
+                    for(int i = 0; i < bgm.Length; i++)
+                        bgm[i].volume = 0;
                     fadeMusic = false;
                     if(newClip != null)
                     {
-                        bgm.clip = newClip;
+                        Debug.Log("[Cutscenes.cs] - Changed BGM to " + newClip);
+                        bgm[0].clip = newClip;
+                        bgm[0].Play();
                         changeMusic = true;
                     }
                 }
@@ -66,10 +70,10 @@ namespace GameManager
 
             if(changeMusic)
             {
-                bgm.volume += 0.01f;
-                if(bgm.volume >= 1)
+                bgm[0].volume += 0.01f;
+                if(bgm[0].volume >= 1)
                 {
-                    bgm.volume = 1;
+                    bgm[0].volume = 1;
                     changeMusic = false;
                 }
             }

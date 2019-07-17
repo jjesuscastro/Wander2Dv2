@@ -28390,6 +28390,16 @@ PrefabInstance:
       propertyPath: endScene.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadNewScene
       objectReference: {fileID: 0}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: stopMusicOnScene
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
+        type: 3}
+      propertyPath: newClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c1066c8bf579be4da4979713bf6e7ae, type: 3}
     - target: {fileID: 8225728285365012456, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
       propertyPath: m_Camera

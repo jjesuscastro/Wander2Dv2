@@ -10286,7 +10286,7 @@ PrefabInstance:
     - target: {fileID: 8225728284593693342, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
       propertyPath: stopMusicOnScene
-      value: 30
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8225728285365012456, guid: b002bae57a96d244dbff283f49e6e70b,
         type: 3}
