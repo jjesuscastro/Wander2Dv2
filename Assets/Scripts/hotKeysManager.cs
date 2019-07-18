@@ -2,24 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UI;
+using GameManager;
 
 public class hotKeysManager : MonoBehaviour
 {
     bool isOpen = false;
+    JournalUI journal;
+    IdleUI idleUI;
+    DialogueManager dManager;
+
+    void Start()
+    {
+        journal = JournalUI.instance;
+        idleUI = IdleUI.instance;
+        dManager = DialogueManager.instance;
+    }
 
     void Update()
     {
-        if(Input.GetButtonDown("Journal") && !isOpen)
+        if(journal == null || idleUI == null || dManager == null)
         {
-            JournalUI.instance.gameObject.SetActive(true);
-            IdleUI.instance.gameObject.SetActive(false);
-            JournalUI.instance.ToggleUI();
+            journal = JournalUI.instance;
+            idleUI = IdleUI.instance;
+            dManager = DialogueManager.instance;
+        }
+        if(Input.GetButtonDown("Journal") && !isOpen && !dManager.dialogueOpen)
+        {
+            journal.gameObject.SetActive(true);
+            idleUI.gameObject.SetActive(false);
+            journal.ToggleUI();
             isOpen = true;
         } else if(Input.GetButtonDown("Journal") && isOpen)
         {
-            JournalUI.instance.gameObject.SetActive(false);
-            IdleUI.instance.gameObject.SetActive(true);
-            JournalUI.instance.CloseUI();
+            journal.gameObject.SetActive(false);
+            idleUI.gameObject.SetActive(true);
+            journal.CloseUI();
             isOpen = false;
         }
     }
