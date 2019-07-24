@@ -5693,7 +5693,7 @@ MonoBehaviour:
   sentences:
   - This place....
   - Everything seems so unstable...
-  - It's a bit unnerving
+  - It's a bit unnerving.
 --- !u!1 &315427318
 GameObject:
   m_ObjectHideFlags: 0
@@ -14138,15 +14138,15 @@ MonoBehaviour:
   - Nick
   sentences:
   - The machine manufactures everything here.
-  - The crates you see all around? Those are filled with products made by the machine
-  - However, things started to change when father died. The machine became too greedy
+  - The crates you see all around? Those are filled with products made by the machine.
+  - However, things started to change when father died. The machine became too greedy.
   - It asks for more and more materials each time.
   - Also, it wants to be cleaned everyday!!
   - "And recently, I don\u2019t know..."
   - "Or maybe it\u2019s just me, but I think it also wants me...!"
   - "That\u2019s why I was not able to visit it recently."
   - "I\u2019m kind of afraid\u2026"
-  - " I\u2019m glad you\u2019re here. Now, I feel less\u2026 nervous"
+  - " I\u2019m glad you\u2019re here. Now, I feel less\u2026 nervous."
 --- !u!1 &814198647
 GameObject:
   m_ObjectHideFlags: 0
@@ -16785,13 +16785,13 @@ MonoBehaviour:
   - Ziv
   - Ziv
   sentences:
-  - The machine's getting closer
+  - The machine's getting closer.
   - I'm scared!!
   - What if something bad happens?!!
   - What if the machine wants take me?!!
   - Help!!!
-  - It's alright
-  - Just take deep breaths
+  - It's alright.
+  - Just take deep breaths.
   - Let's go together, ok?
 --- !u!1 &928463218
 GameObject:
@@ -17146,7 +17146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938160325}
   m_LocalRotation: {x: -0, y: -0, z: -0.32163513, w: 0.9468638}
-  m_LocalPosition: {x: 673.4, y: -261.5, z: 0}
+  m_LocalPosition: {x: 656, y: -342.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1232324975}
@@ -30385,6 +30385,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1464181321}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2120264263}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!212 &1682399599
@@ -31617,7 +31639,7 @@ MonoBehaviour:
   names:
   - Ziv
   sentences:
-  - Some machines up ahead are still turned off. There should a a switch somewhere
+  - Some machines up ahead are still turned off. There should be a switch somewhere
     near.
 --- !u!114 &1748174436
 MonoBehaviour:
@@ -32366,7 +32388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768457671}
   m_LocalRotation: {x: -0, y: -0, z: -0.32163513, w: 0.9468638}
-  m_LocalPosition: {x: 656.9, y: -343.2, z: 0}
+  m_LocalPosition: {x: 678.9, y: -264.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1232324975}
@@ -32850,7 +32872,7 @@ MonoBehaviour:
   - Nick
   - Nick
   sentences:
-  - Thanks for the help.. that was nerve wracking
+  - Thanks for the help.. That was nerve wracking.
   - It's no problem.. but we have to keep moving!!
   - I have to get to the machine!!!
 --- !u!1 &1790077247
@@ -33059,13 +33081,13 @@ MonoBehaviour:
   - Nick
   sentences:
   - By the way, I'm sorry for not introducing myself.
-  - My name is Nick
-  - I own this place
+  - My name is Nick.
+  - I own this place.
   - Aren't you a little too young to manage a huge place like this?
   - Well, yeah but...
-  - This used to be my dad's until he passed away
+  - This used to be my dad's until he passed away.
   - I don't want to let him down, so I make sure that EVERYTHING here is in proper
-    order
+    order.
   - Especially the machine!
   - What machine?
   - No more questions!!
@@ -35809,8 +35831,8 @@ MonoBehaviour:
   - Ziv
   - Ziv
   sentences:
-  - Phew... that was scary... I felt like I could fall anytime
-  - I should be more careful
+  - Phew... that was scary... I felt like I could fall anytime.
+  - I should be more careful.
 --- !u!1 &1963633216
 GameObject:
   m_ObjectHideFlags: 0
@@ -37537,7 +37559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077429091}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 135.63, y: -116.89, z: 0}
+  m_LocalPosition: {x: 135.63, y: -116.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 131858333}
@@ -38840,12 +38862,12 @@ PrefabInstance:
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1
+      value: 303
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1
+      value: -111.4
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
