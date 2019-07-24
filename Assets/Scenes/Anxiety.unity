@@ -5693,7 +5693,7 @@ MonoBehaviour:
   sentences:
   - This place....
   - Everything seems so unstable...
-  - It's a bit unnerving
+  - It's a bit unnerving.
 --- !u!1 &315427318
 GameObject:
   m_ObjectHideFlags: 0
@@ -14138,15 +14138,15 @@ MonoBehaviour:
   - Nick
   sentences:
   - The machine manufactures everything here.
-  - The crates you see all around? Those are filled with products made by the machine
-  - However, things started to change when father died. The machine became too greedy
+  - The crates you see all around? Those are filled with products made by the machine.
+  - However, things started to change when father died. The machine became too greedy.
   - It asks for more and more materials each time.
   - Also, it wants to be cleaned everyday!!
   - "And recently, I don\u2019t know..."
   - "Or maybe it\u2019s just me, but I think it also wants me...!"
   - "That\u2019s why I was not able to visit it recently."
   - "I\u2019m kind of afraid\u2026"
-  - " I\u2019m glad you\u2019re here. Now, I feel less\u2026 nervous"
+  - " I\u2019m glad you\u2019re here. Now, I feel less\u2026 nervous."
 --- !u!1 &814198647
 GameObject:
   m_ObjectHideFlags: 0
@@ -16785,13 +16785,13 @@ MonoBehaviour:
   - Ziv
   - Ziv
   sentences:
-  - The machine's getting closer
+  - The machine's getting closer.
   - I'm scared!!
   - What if something bad happens?!!
   - What if the machine wants take me?!!
   - Help!!!
-  - It's alright
-  - Just take deep breaths
+  - It's alright.
+  - Just take deep breaths.
   - Let's go together, ok?
 --- !u!1 &928463218
 GameObject:
@@ -32850,7 +32850,7 @@ MonoBehaviour:
   - Nick
   - Nick
   sentences:
-  - Thanks for the help.. that was nerve wracking
+  - Thanks for the help.. That was nerve wracking.
   - It's no problem.. but we have to keep moving!!
   - I have to get to the machine!!!
 --- !u!1 &1790077247
@@ -33059,13 +33059,13 @@ MonoBehaviour:
   - Nick
   sentences:
   - By the way, I'm sorry for not introducing myself.
-  - My name is Nick
-  - I own this place
+  - My name is Nick.
+  - I own this place.
   - Aren't you a little too young to manage a huge place like this?
   - Well, yeah but...
-  - This used to be my dad's until he passed away
+  - This used to be my dad's until he passed away.
   - I don't want to let him down, so I make sure that EVERYTHING here is in proper
-    order
+    order.
   - Especially the machine!
   - What machine?
   - No more questions!!
@@ -35809,8 +35809,8 @@ MonoBehaviour:
   - Ziv
   - Ziv
   sentences:
-  - Phew... that was scary... I felt like I could fall anytime
-  - I should be more careful
+  - Phew... that was scary... I felt like I could fall anytime.
+  - I should be more careful.
 --- !u!1 &1963633216
 GameObject:
   m_ObjectHideFlags: 0
