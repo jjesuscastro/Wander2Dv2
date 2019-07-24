@@ -26970,8 +26970,8 @@ MonoBehaviour:
   - Leo
   sentences:
   - Thanks for helping me!
-  - It's no problem
-  - besides, I guess it was nice to see my old treehouse again after a while
+  - It's no problem.
+  - besides, I guess it was nice to see my old treehouse again after a while.
 --- !u!1 &1416785333
 GameObject:
   m_ObjectHideFlags: 0
