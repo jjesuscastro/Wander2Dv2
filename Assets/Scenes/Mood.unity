@@ -4947,7 +4947,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.4299998, y: 2.22}
+    oldSize: {x: 3.43, y: 2.22}
     newSize: {x: 3.4299998, y: 2.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9622,7 +9622,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 37, y: 22.499998}
+    oldSize: {x: 37, y: 22.5}
     newSize: {x: 37, y: 22.499998}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11813,7 +11813,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.4299998, y: 2.22}
+    oldSize: {x: 3.43, y: 2.22}
     newSize: {x: 3.4299998, y: 2.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -19210,7 +19210,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.4299998, y: 2.22}
+    oldSize: {x: 3.43, y: 2.22}
     newSize: {x: 3.4299998, y: 2.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -25564,7 +25564,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 37, y: 22.499998}
+    oldSize: {x: 37, y: 22.5}
     newSize: {x: 37, y: 22.499998}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -39874,7 +39874,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.4299998, y: 2.22}
+    oldSize: {x: 3.43, y: 2.22}
     newSize: {x: 3.4299998, y: 2.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -43305,26 +43305,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: dialogueBox
       objectReference: {fileID: 0}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 1894929982}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_fontMaterial
-      value: 
-      objectReference: {fileID: 1894929982}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1987609392723748473, guid: de2f3801f99199246a472a09087bc242,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43436,6 +43416,26 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1987609392715125913, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1894929982}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_fontMaterial
+      value: 
+      objectReference: {fileID: 1894929982}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
@@ -43625,12 +43625,12 @@ PrefabInstance:
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 883.5
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -51.9
+      value: 4.34
       objectReference: {fileID: 0}
     - target: {fileID: 1942920235223777127, guid: 24bcf18534e26c943986b166f237b92f,
         type: 3}
