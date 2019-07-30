@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: nP1
   m_EditorClassIdentifier: 
   name: n + 1
-  icon: {fileID: 21300000, guid: 9887723a8c3ac2142a66e29bc4a4aec2, type: 3}
+  icon: {fileID: 21300002, guid: e7a42a35b7104f24a94135fb4d337163, type: 3}
