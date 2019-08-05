@@ -119,6 +119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 801950989570960653}
+  - component: {fileID: 2666294123050586428}
   - component: {fileID: 801950989570960642}
   - component: {fileID: 801950989570960643}
   - component: {fileID: 801950989570960641}
@@ -149,6 +150,19 @@ RectTransform:
   m_AnchoredPosition: {x: 306.1, y: -139.0843}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2666294123050586428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801950989570960654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9dd5b4e23f71d34d843754c2033bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newIcon: {fileID: 21300000, guid: 1c4c22d2dc42d944c8bf51c3ad598aca, type: 3}
 --- !u!222 &801950989570960642
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -177,7 +191,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1c4c22d2dc42d944c8bf51c3ad598aca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3fc44667e22fb314fb2df471a8f6a493, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

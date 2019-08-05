@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Object;
+using UI;
 
 namespace GameManager
 {
@@ -38,6 +39,7 @@ namespace GameManager
             // if(onEntryChanged != null)
             //     onEntryChanged.Invoke();
 
+            JournalButton.instance.NewJournal();
             return true;
         }
 

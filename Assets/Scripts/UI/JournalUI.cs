@@ -66,6 +66,8 @@ namespace UI
                 npcEnabled = false;
                 npc.enabled = true;
             }
+
+            JournalButton.instance.DefaultJournal();
         }
 
         public void CenterPage()
