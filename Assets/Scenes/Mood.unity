@@ -43385,26 +43385,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: dialogueBox
       objectReference: {fileID: 0}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 1894929982}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_fontMaterial
-      value: 
-      objectReference: {fileID: 1894929982}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1987609392723748473, guid: de2f3801f99199246a472a09087bc242,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43516,6 +43496,26 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1987609392715125913, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1894929982}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_fontMaterial
+      value: 
+      objectReference: {fileID: 1894929982}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987609392153730629, guid: de2f3801f99199246a472a09087bc242,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
