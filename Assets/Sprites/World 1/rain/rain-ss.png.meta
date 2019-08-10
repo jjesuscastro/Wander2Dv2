@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 75303ba44329bf6478eca89e62c7ae4e
+guid: 15dc08d5ba72f8a429d4d6d5075349e9
 TextureImporter:
   fileIDToRecycleName:
-    21300000: rain-ss-WHITE_0
-    21300002: rain-ss-WHITE_1
-    21300004: rain-ss-WHITE_2
-    21300006: rain-ss-WHITE_3
-    21300008: rain-ss-WHITE_4
-    21300010: rain-ss-WHITE_5
-    21300012: rain-ss-WHITE_6
-    21300014: rain-ss-WHITE_7
-    21300016: rain-ss-WHITE_8
-    21300018: rain-ss-WHITE_9
+    21300000: rain-ss_0
+    21300002: rain-ss_1
+    21300004: rain-ss_2
+    21300006: rain-ss_3
+    21300008: rain-ss_4
+    21300010: rain-ss_5
+    21300012: rain-ss_6
+    21300014: rain-ss_7
+    21300016: rain-ss_8
+    21300018: rain-ss_9
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -73,9 +73,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
+    textureCompression: 2
+    compressionQuality: 100
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -84,9 +84,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
+    textureCompression: 2
+    compressionQuality: 100
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -95,9 +95,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
+    textureCompression: 2
+    compressionQuality: 100
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rain-ss-WHITE_0
+      name: rain-ss_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,13 +119,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04f4d16d9d1415d4abdf9c20e81d9227
+      spriteID: 8260f22e1e86e7e42932b1f544449460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rain-ss-WHITE_1
+      name: rain-ss_1
       rect:
         serializedVersion: 2
         x: 1200
@@ -139,13 +139,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 388d0c4122ddc3444995049ba55faf18
+      spriteID: ab918abef14ca794aa0d8f57b5e4ff94
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rain-ss-WHITE_2
+      name: rain-ss_2
       rect:
         serializedVersion: 2
         x: 2400
@@ -159,13 +159,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7dd0ac2abb95bf48896373a4ac44e5c
+      spriteID: a55c200da7dab0e4481ef68b5b1bf090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rain-ss-WHITE_3
+      name: rain-ss_3
       rect:
         serializedVersion: 2
         x: 3600
@@ -179,13 +179,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4fb8ed3dce857940b6f0da7380a6afe
+      spriteID: 4a1954dbf4535b44cab3f8cf88720fb9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rain-ss-WHITE_4
+      name: rain-ss_4
       rect:
         serializedVersion: 2
         x: 4800
@@ -199,13 +199,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 797da2ca37364984e9a189322bb4dc1d
+      spriteID: c4da44451e130214b93151f5c121da57
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rain-ss-WHITE_5
+      name: rain-ss_5
       rect:
         serializedVersion: 2
         x: 0
@@ -219,13 +219,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a475fb811dd2fbe4baf69dd57acc4061
+      spriteID: f7044957b64e05e4793ba8efa802623e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rain-ss-WHITE_6
+      name: rain-ss_6
       rect:
         serializedVersion: 2
         x: 1200
@@ -239,13 +239,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 559d5f50fa12d6143a2045b8fc380857
+      spriteID: b1a970de55177284a949d790c0ae6ba3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rain-ss-WHITE_7
+      name: rain-ss_7
       rect:
         serializedVersion: 2
         x: 2400
@@ -259,13 +259,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35b02678429ced340ba905acc5242650
+      spriteID: 8d48df3db820b334ca859fabd128388a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rain-ss-WHITE_8
+      name: rain-ss_8
       rect:
         serializedVersion: 2
         x: 3600
@@ -279,13 +279,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b79e5578cb766d43bbb327621840ead
+      spriteID: 8ed8f577d82c5524e866fe134c1b1be8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rain-ss-WHITE_9
+      name: rain-ss_9
       rect:
         serializedVersion: 2
         x: 4800
@@ -299,7 +299,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a063c5860e89747478856aea7c70758c
+      spriteID: 571ea7c884692c24b8c4a627d2a0a495
       vertices: []
       indices: 
       edges: []
@@ -307,7 +307,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: bbfe7211472d9fa4883a854d9cda3b72
+    spriteID: 4914eef36b7b61342bc55eec134717ac
     vertices: []
     indices: 
     edges: []
