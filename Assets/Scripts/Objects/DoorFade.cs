@@ -112,6 +112,12 @@ namespace Object
 
             return false;
         }
+
+        public void AutoInteract()
+        {
+            fadeIn = true;
+            hasInteracted = true;
+        }
     }
 
 }

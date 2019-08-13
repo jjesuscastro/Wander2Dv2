@@ -86,6 +86,12 @@ namespace Player
             mentalHealthEffect.Stop();
         }
 
+        public void setHealth(float healthValue)
+        {
+            health = healthValue;
+            changeHealth(0);
+        }
+
         public void changeHealth(float damageValue)
         {
             health += damageValue;

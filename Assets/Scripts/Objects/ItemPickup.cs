@@ -23,6 +23,8 @@ namespace Object
 
             if (wasPickedUp)
             {
+                if(onPickup != null)
+                    onPickup.Invoke();
                 Destroy(gameObject);
                 PopupNotification.instance.ShowPopup("Picked up " + item.name + "!");
             }
