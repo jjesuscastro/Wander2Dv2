@@ -31,6 +31,14 @@ public class ThunderFlash : MonoBehaviour
                 Invoke("Toggle", delay);
                 firstCall = false;
             }
+        } else {
+            Color color = whiteCover.GetComponent<SpriteRenderer>().color;
+
+            color.a -= fadeRate;
+            if (color.a <= 0)
+                color.a = 0;
+
+            whiteCover.GetComponent<SpriteRenderer>().color = color;
         }
     }
 
