@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Object
 {
@@ -26,6 +27,7 @@ namespace Object
         float timer = 0f;
         public bool mcAllowed = true;
         public bool npcAllowed = true;
+        public UnityEvent onEnter;
 
         // Use this for initialization
         void Start()
@@ -65,6 +67,8 @@ namespace Object
             {
                 fadecover = true;
                 MovePlayers();
+                if(onEnter != null)
+                    onEnter.Invoke();
                 timer = 0;
             }
 

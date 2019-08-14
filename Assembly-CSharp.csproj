@@ -60,6 +60,7 @@
      <Compile Include="Assets\Reporter\Test\Rotate.cs" />
      <Compile Include="Assets\Reporter\Test\TestReporter.cs" />
      <Compile Include="Assets\Scripts\AlarmTrigger.cs" />
+     <Compile Include="Assets\Scripts\AudioController.cs" />
      <Compile Include="Assets\Scripts\BasicFollow.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraToWorld.cs" />
