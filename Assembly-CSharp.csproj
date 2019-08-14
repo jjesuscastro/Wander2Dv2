@@ -127,6 +127,7 @@
      <Compile Include="Assets\Scripts\Player\ShizoMentalHealth.cs" />
      <Compile Include="Assets\Scripts\SelfDestroy.cs" />
      <Compile Include="Assets\Scripts\SingletonButtons.cs" />
+     <Compile Include="Assets\Scripts\ThunderFlash.cs" />
      <Compile Include="Assets\Scripts\UI\InventorySlot.cs" />
      <Compile Include="Assets\Scripts\UI\InventoryUI.cs" />
      <Compile Include="Assets\Scripts\UI\JournalButton.cs" />
