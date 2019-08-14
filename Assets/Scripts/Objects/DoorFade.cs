@@ -121,6 +121,7 @@ namespace Object
         {
             fadeIn = true;
             hasInteracted = true;
+            Debug.Log("[DoorFade.cs] - AutoInteract() with DoorFade invoked.");
         }
     }
 

@@ -16,6 +16,8 @@ public class WheelCollection : MonoBehaviour
             if(collectedAll != null)
                 collectedAll.Invoke();
             collectedCount += 1;
+
+            Debug.Log("[WheelCollection.cs] - All wheels collected, invoking event.");
         }
     }
 

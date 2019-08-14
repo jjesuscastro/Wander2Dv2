@@ -58,10 +58,12 @@ public class ThunderFlash : MonoBehaviour
     public void EnableStorm()
     {
         isEnabled = true;
+        Debug.Log("[ThunderFlash.cs] - Enabled thunder storm.");
     }
 
     public void DisableStorm()
     {
         isEnabled = false;
+        Debug.Log("[ThunderFlash.cs] - Disabled thunder storm.");
     }
 }
